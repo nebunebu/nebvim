@@ -27,6 +27,7 @@
         config = {
           plugins = with pkgs.vimPlugins; [
             rose-pine
+            lualine-nvim
           ];
         };
       };
