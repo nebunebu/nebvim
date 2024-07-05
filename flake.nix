@@ -8,11 +8,8 @@
   };
 
 
-  outputs = {
-    self,
-    nixpkgs,
-    ...
-  } @ inputs: let
+  outputs = inputs: let
+    inherit (inputs) self nixpkgs;
     forAllSystems = function:
       nixpkgs.lib.genAttrs [
         "x86_64-linux"
