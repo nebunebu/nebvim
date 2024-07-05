@@ -1,4 +1,3 @@
-vim.cmd.colorscheme("rose-pine")
-
-vim.notify("Hello from init.lua!", vim.log.levels.INFO)
+require("neb.options")
+require("neb.colorscheme")
 require("neb.plugins.lualine")
