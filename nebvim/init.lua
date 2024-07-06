@@ -7,6 +7,7 @@ require("neb.plugins.rainbow-delimiters")
 require("neb.plugins.triptych")
 require("neb.plugins.which-key")
 require("neb.plugins.endwise")
+require("neb.plugins.barbecue")
 
 -- NOTE: Lsp
 require("neb.plugins.lsp.lsp-zero")

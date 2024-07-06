@@ -47,6 +47,10 @@
               # colorscheme
               rose-pine
 
+              # bars and lines
+              barbecue-nvim
+              nvim-navic
+
               # statusline
               lualine-nvim
 
