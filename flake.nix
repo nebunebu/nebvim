@@ -34,32 +34,52 @@
           config = {
             plugins = with pkgs.vimPlugins; [
               plenary-nvim
-              nvim-web-devicons
-              rose-pine
+
+              # keybindings
+              which-key-nvim
+
+              # syntax
               nvim-treesitter.withAllGrammars
-              comment-nvim
-              todo-comments-nvim
+
+              # icons
+              nvim-web-devicons
+
+              # colorscheme
+              rose-pine
+
+              # statusline
+              lualine-nvim
+
+              # lsp
+              lsp-zero-nvim
+              nvim-lspconfig
+              lspkind-nvim
+
+              # cmp
+              nvim-cmp
+              cmp-buffer
+              luasnip
+              cmp_luasnip
+
+              # editing support
+              indent-blankline-nvim
               nvim-autopairs
               rainbow-delimiters-nvim
-              indent-blankline-nvim
-              lualine-nvim
-              vim-tmux-navigator
+              nvim-treesitter-endwise
+
+              # comments
+              comment-nvim
+              todo-comments-nvim
+
+              # file browsing
               telescope-nvim
-              which-key-nvim
               (pkgs.vimUtils.buildVimPlugin {
                 src = inputs.triptych-nvim;
                 name = "triptych";
               })
 
-              # NOTE: Lsp
-              lsp-zero-nvim
-              nvim-lspconfig
-              lspkind-nvim
-
-              nvim-cmp
-              cmp-buffer
-              luasnip
-              cmp_luasnip
+              # tmux
+              vim-tmux-navigator
             ];
           };
         }).overrideAttrs (old: {
@@ -71,9 +91,9 @@
               pkgs.ripgrep
 
               # NOTE: always available language servers
-              # pkgs.marksman
               pkgs.vscode-langservers-extracted # for jsonls
               pkgs.markdown-oxide
+              # TODO: add bashls
             ])
           ];
         });
