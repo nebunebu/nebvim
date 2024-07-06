@@ -5,6 +5,12 @@
       url = "github:wires-org/tolerable-nvim-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Plugins
+    triptych-nvim = {
+      url = "github:simonmclean/triptych.nvim";
+      flake = false;
+    };
   };
 
   outputs = inputs: let
@@ -27,9 +33,21 @@
           };
           config = {
             plugins = with pkgs.vimPlugins; [
-              nvim-treesitter.withAllGrammars
+              plenary-nvim
+              nvim-web-devicons
               rose-pine
+              nvim-treesitter.withAllGrammars
+              comment-nvim
+              todo-comments-nvim
+              nvim-autopairs
               lualine-nvim
+              vim-tmux-navigator
+              telescope-nvim
+              which-key-nvim
+              (pkgs.vimUtils.buildVimPlugin {
+                src = inputs.triptych-nvim;
+                name = "triptych";
+              })
             ];
           };
         }).overrideAttrs (old: {
