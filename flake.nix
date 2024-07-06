@@ -37,7 +37,7 @@
     devShells = forAllSystems (pkgs: {
       default = pkgs.mkShell {
         name = "nebvim";
-        packages = [ pkgs.cowsay ];
+        packages = [ ];
       };
     });
   };
