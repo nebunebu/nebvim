@@ -41,6 +41,7 @@
               todo-comments-nvim
               nvim-autopairs
               rainbow-delimiters-nvim
+              indent-blankline-nvim
               lualine-nvim
               vim-tmux-navigator
               telescope-nvim
