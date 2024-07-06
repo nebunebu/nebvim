@@ -225,7 +225,8 @@
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
-        "tolerable": "tolerable"
+        "tolerable": "tolerable",
+        "triptych-nvim": "triptych-nvim"
       }
     },
     "tolerable": {
@@ -246,6 +247,22 @@
       "original": {
         "owner": "wires-org",
         "repo": "tolerable-nvim-nix",
+        "type": "github"
+      }
+    },
+    "triptych-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1717345760,
+        "narHash": "sha256-fL5+0kKMBBMnUPJoIRZJpbakGFDToToLUZpvX55Awik=",
+        "owner": "simonmclean",
+        "repo": "triptych.nvim",
+        "rev": "d7ced78687c2ab203743edf0725761f6664f66cb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "simonmclean",
+        "repo": "triptych.nvim",
         "type": "github"
       }
     }
