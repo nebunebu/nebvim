@@ -42,7 +42,7 @@ And to add as a home-manager package,
 
 ## Contributing
 
-If you see any issues, or have any feedback or suggestions, feel free to submit and issue
+If you see any issues, or have any feedback or suggestions, feel free to submit an issue
 or make a pull request.
 
 ## Special Thanks
