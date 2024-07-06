@@ -33,7 +33,7 @@
         };
       };
     });
-
+    # TODO: add checks
     devShells = forAllSystems (pkgs: {
       default = pkgs.mkShell {
         name = "nebvim";
