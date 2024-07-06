@@ -33,11 +33,12 @@
         };
       };
     });
-  };
 
-  # checks = {};
-  devShells.${system}.default = pkgs.mkShell {
-    name = "nebvim";
-    packages = [ pkgs.cowsay ];
+    devShells = forAllSystems (pkgs: {
+      default = pkgs.mkShell {
+        name = "nebvim";
+        packages = [ pkgs.cowsay ];
+      };
+    });
   };
 }
