@@ -40,6 +40,7 @@
               comment-nvim
               todo-comments-nvim
               nvim-autopairs
+              rainbow-delimiters-nvim
               lualine-nvim
               vim-tmux-navigator
               telescope-nvim
