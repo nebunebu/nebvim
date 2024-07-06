@@ -19,7 +19,7 @@
       ] (system: function nixpkgs.legacyPackages.${system});
   in {
     packages = forAllSystems (pkgs: {
-      default = inputs.tolerable.makeNeovimConfig "nebvim" {
+      neovim = inputs.tolerable.makeNeovimConfig "nebvim" {
         inherit pkgs;
         src = pkgs.lib.fileset.toSource {
           root = ./.;
