@@ -2,12 +2,16 @@
 
 My personal neovim config using [tolerable](https://github.com/wires-org/tolerable-nvim-nix).
 
+## Warning
+
+This is a work in progress
+
 ## Usage
 
 To use without installing,
 
 ```sh
-nix run github:nebunebu/nebvim#neovim
+nix run github:nebunebu/nebvim
 ```
 
 ## Installation
@@ -26,7 +30,7 @@ To add as a system package,
 { inputs, pkgs, ...}:
 
 {
-  enviornment.systemPackages = [ inputs.nebvim.packages."${pkgs.system}".neovim ];
+  enviornment.systemPackages = [ inputs.nebvim.packages."${pkgs.system}".default ];
 }
 ```
 
@@ -36,7 +40,7 @@ And to add as a home-manager package,
 { inputs, pkgs, ...}:
 
 {
-  home.packages = [ inputs.nebvim.packages."${pkgs.system}".neovim ];
+  home.packages = [ inputs.nebvim.packages."${pkgs.system}".default ];
 }
 ```
 
