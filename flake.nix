@@ -50,6 +50,10 @@
                 src = inputs.triptych-nvim;
                 name = "triptych";
               })
+
+              # NOTE: Lsp
+              lsp-zero-nvim
+              nvim-lspconfig
             ];
           };
         }).overrideAttrs (old: {
@@ -59,6 +63,11 @@
             ":"
             (pkgs.lib.makeBinPath [
               pkgs.ripgrep
+
+              # NOTE: always available language servers
+              # pkgs.marksman
+              pkgs.markdown-oxide
+
             ])
           ];
         });
@@ -72,7 +81,11 @@
       in {
         default = pkgs.mkShell {
           name = "nebvim";
-          packages = [ ];
+          packages = [
+            # NOTE: project specific language servers
+            pkgs.nixd
+            pkgs.lua-language-server
+          ];
         };
       }
     );
