@@ -12,6 +12,7 @@ require("neb.plugins.barbecue")
 -- NOTE: Lsp
 require("neb.plugins.lsp.lsp-zero")
 require("neb.plugins.lsp.lspconfig")
+require("neb.plugins.lsp.fidget")
 
 -- NOTE: Cmp
 require("neb.plugins.cmp")

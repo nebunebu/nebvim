@@ -58,6 +58,7 @@
               lsp-zero-nvim
               nvim-lspconfig
               lspkind-nvim
+              fidget-nvim
 
               # cmp
               nvim-cmp
