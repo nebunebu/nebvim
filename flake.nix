@@ -66,8 +66,8 @@
 
               # NOTE: always available language servers
               # pkgs.marksman
+              pkgs.vscode-langservers-extracted # for jsonls
               pkgs.markdown-oxide
-
             ])
           ];
         });
