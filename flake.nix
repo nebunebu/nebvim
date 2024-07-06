@@ -54,6 +54,12 @@
               # NOTE: Lsp
               lsp-zero-nvim
               nvim-lspconfig
+              lspkind-nvim
+
+              nvim-cmp
+              cmp-buffer
+              luasnip
+              cmp_luasnip
             ];
           };
         }).overrideAttrs (old: {

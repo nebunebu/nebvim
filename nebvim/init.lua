@@ -10,3 +10,6 @@ require("neb.plugins.which-key")
 -- NOTE: Lsp
 require("neb.plugins.lsp.lsp-zero")
 require("neb.plugins.lsp.lspconfig")
+
+-- NOTE: Cmp
+require("neb.plugins.cmp")
