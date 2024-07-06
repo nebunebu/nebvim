@@ -5,7 +5,7 @@ My personal neovim config using [tolerable](https://github.com/wires-org/tolerab
 ## Usage & Installation
 
 ```sh
-nix run github:nebunebu/nebvim
+nix run github:nebunebu/nebvim#neovim
 ```
 
 ```nix
