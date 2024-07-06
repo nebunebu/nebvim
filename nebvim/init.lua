@@ -6,6 +6,7 @@ require("neb.plugins.autopairs")
 require("neb.plugins.rainbow-delimiters")
 require("neb.plugins.triptych")
 require("neb.plugins.which-key")
+require("neb.plugins.endwise")
 
 -- NOTE: Lsp
 require("neb.plugins.lsp.lsp-zero")
