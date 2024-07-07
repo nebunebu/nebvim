@@ -38,66 +38,74 @@
                 fileset = ./nebvim;
               };
               config = {
-                plugins = with pkgs.vimPlugins; [
-                  plenary-nvim
+                plugins =
+                  let
+                    withDeps = mainPlugin: deps: {
+                      plugin = mainPlugin;
+                      depenencies = deps;
+                    };
+                  in
+                  with pkgs.vimPlugins;
+                  [
+                    plenary-nvim
 
-                  # keybindings
-                  which-key-nvim
+                    # keybindings
+                    which-key-nvim
 
-                  # syntax
-                  nvim-treesitter.withAllGrammars
+                    # syntax
+                    nvim-treesitter.withAllGrammars
 
-                  # icons
-                  nvim-web-devicons
+                    # icons
+                    nvim-web-devicons
 
-                  # colorscheme
-                  rose-pine
+                    # colorscheme
+                    rose-pine
 
-                  # bars and lines
-                  barbecue-nvim
-                  nvim-navic
+                    # bars and lines
+                    (withDeps barbecue-nvim [ nvim-navic ])
+                    # nvim-navic
 
-                  # statusline
-                  lualine-nvim
+                    # statusline
+                    lualine-nvim
 
-                  # lsp
-                  lsp-zero-nvim
-                  nvim-lspconfig
-                  lspkind-nvim
-                  fidget-nvim
+                    # lsp
+                    lsp-zero-nvim
+                    nvim-lspconfig
+                    lspkind-nvim
+                    fidget-nvim
 
-                  # cmp
-                  nvim-cmp
-                  cmp-nvim-lsp
-                  cmp-buffer
-                  cmp_luasnip
+                    # cmp
+                    nvim-cmp
+                    cmp-nvim-lsp
+                    cmp-buffer
+                    cmp_luasnip
 
-                  # formatters
-                  conform-nvim
+                    # formatters
+                    conform-nvim
 
-                  # linters
-                  nvim-lint
+                    # linters
+                    nvim-lint
 
-                  # editing support
-                  indent-blankline-nvim
-                  nvim-autopairs
-                  rainbow-delimiters-nvim
-                  nvim-treesitter-endwise
+                    # editing support
+                    indent-blankline-nvim
+                    nvim-autopairs
+                    rainbow-delimiters-nvim
+                    nvim-treesitter-endwise
 
-                  # comments
-                  comment-nvim
-                  todo-comments-nvim
+                    # comments
+                    comment-nvim
+                    todo-comments-nvim
 
-                  # file browsing
-                  telescope-nvim
-                  (pkgs.vimUtils.buildVimPlugin {
-                    src = inputs.triptych-nvim;
-                    name = "triptych";
-                  })
+                    # file browsing
+                    telescope-nvim
+                    (pkgs.vimUtils.buildVimPlugin {
+                      src = inputs.triptych-nvim;
+                      name = "triptych";
+                    })
 
-                  # tmux
-                  vim-tmux-navigator
-                ];
+                    # tmux
+                    vim-tmux-navigator
+                  ];
               };
             }).overrideAttrs
               (old: {
@@ -128,20 +136,22 @@
         {
           default = pkgs.mkShell {
             name = "nebvim";
-            packages = [
-              # NOTE: project specific language servers
-              pkgs.nixd
-              pkgs.lua-language-server
-
-              # linters
-              pkgs.luajitPackages.luacheck
-              pkgs.deadnix
-              pkgs.statix
-
-              # formatters
-              pkgs.stylua
-              pkgs.nixfmt-rfc-style
-            ];
+            packages =
+              let
+                luaPackages = builtins.attrValues {
+                  inherit (pkgs) lua-language-server stylua;
+                  inherit (pkgs.luajitPackages) luacheck;
+                };
+                nixPackages = builtins.attrValues {
+                  inherit (pkgs)
+                    nixd
+                    deadnix
+                    statix
+                    nixfmt-rfc-style
+                    ;
+                };
+              in
+              luaPackages ++ nixPackages;
           };
         }
       );
