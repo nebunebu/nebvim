@@ -16,6 +16,11 @@
       url = "github:ChuufMaster/markdown-toc";
       flake = false;
     };
+
+    markview = {
+      url = "github:OXY2DEV/markview.nvim";
+      flake = false;
+    };
   };
 
   outputs =
@@ -120,10 +125,17 @@
                         telescope-nvim
                       ];
                     }
-                    mkdnflow-nvim
+                    {
+                    plugin = mkdnflow-nvim;
+                    dependencies = [ plenary-nvim ];
+                    }
                     (pkgs.vimUtils.buildVimPlugin {
                       src = inputs.markdown-toc;
                       name = "markdown-toc";
+                    })
+                    (pkgs.vimUtils.buildVimPlugin {
+                      src = inputs.markview;
+                      name = "markview";
                     })
                     # tmux
                     vim-tmux-navigator

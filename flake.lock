@@ -167,6 +167,22 @@
         "type": "github"
       }
     },
+    "markview": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720269816,
+        "narHash": "sha256-w6yn8aNcJMLRbzaRuj3gj4x2J/20wUROLM6j39wpZek=",
+        "owner": "OXY2DEV",
+        "repo": "markview.nvim",
+        "rev": "a959d77ca7e9f05175e3ee4e582db40b338c9164",
+        "type": "github"
+      },
+      "original": {
+        "owner": "OXY2DEV",
+        "repo": "markview.nvim",
+        "type": "github"
+      }
+    },
     "neovim-src": {
       "flake": false,
       "locked": {
@@ -241,6 +257,7 @@
     "root": {
       "inputs": {
         "markdown-toc": "markdown-toc",
+        "markview": "markview",
         "nixpkgs": "nixpkgs",
         "tolerable": "tolerable",
         "triptych-nvim": "triptych-nvim"
