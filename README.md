@@ -2,7 +2,8 @@
 
 My personal neovim config using [tolerable](https://github.com/wires-org/tolerable-nvim-nix).
 
-[!Warning] This is a work in progress
+> [!CAUTION]
+> This is a work in progress
 
 ## Usage
 
