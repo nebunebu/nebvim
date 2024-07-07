@@ -10,6 +10,7 @@ require("neb.plugins.endwise")
 require("neb.plugins.barbecue")
 require("neb.plugins.conform")
 require("neb.plugins.lint")
+require("neb.plugins.luasnip")
 
 -- NOTE: Lsp
 require("neb.plugins.lsp.lsp-zero")
