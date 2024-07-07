@@ -68,8 +68,8 @@
 
                   # cmp
                   nvim-cmp
+                  cmp-nvim-lsp
                   cmp-buffer
-                  luasnip
                   cmp_luasnip
 
                   # formatters
