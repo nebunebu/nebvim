@@ -45,13 +45,15 @@
               config = {
                 plugins =
                   let
-                    withDeps = mainPlugin: deps: {
-                      plugin = mainPlugin;
-                      depenencies = deps;
+                    # FIX: refactor this
+                    triptych = pkgs.vimUtils.buildVimPlugin {
+                      src = inputs.triptych-nvim;
+                      name = "triptych";
                     };
                   in
                   with pkgs.vimPlugins;
                   [
+                    triptych
                     plenary-nvim
                     direnv-vim
 
@@ -62,17 +64,20 @@
                     nvim-treesitter.withAllGrammars
 
                     # icons
-                    nvim-web-devicons
+                    # nvim-web-devicons
 
                     # colorscheme
                     rose-pine
 
-                    # bars and lines
-                    (withDeps barbecue-nvim [ nvim-navic ])
-                    # nvim-navic
+                    {
+                      plugin = barbecue-nvim;
+                      dependencies = [ nvim-navic ];
+                    }
 
-                    # statusline
-                    lualine-nvim
+                    {
+                      plugin = lualine-nvim;
+                      # dependencies = [];
+                    }
 
                     # lsp
                     lsp-zero-nvim
@@ -96,7 +101,10 @@
                     indent-blankline-nvim
                     nvim-autopairs
                     rainbow-delimiters-nvim
-                    nvim-treesitter-endwise
+                    {
+                      plugin = nvim-treesitter-endwise;
+                      dependencies = [ nvim-treesitter.withAllGrammars ];
+                    }
 
                     # comments
                     comment-nvim
@@ -104,11 +112,19 @@
 
                     # file browsing
                     telescope-nvim
+                    {
+                      plugin = cheatsheet-nvim;
+                      dependencies = [
+                        popup-nvim
+                        plenary-nvim
+                        telescope-nvim
+                      ];
+                    }
+                    mkdnflow-nvim
                     (pkgs.vimUtils.buildVimPlugin {
-                      src = inputs.triptych-nvim;
-                      name = "triptych";
+                      src = inputs.markdown-toc;
+                      name = "markdown-toc";
                     })
-
                     # tmux
                     vim-tmux-navigator
                   ];
@@ -119,15 +135,17 @@
                   "--prefix"
                   "PATH"
                   ":"
-                  (pkgs.lib.makeBinPath [
-                    pkgs.ripgrep
-
-                    # NOTE: always available language servers
-                    pkgs.vscode-langservers-extracted # for jsonls
-                    pkgs.markdown-oxide
-                    pkgs.markdownlint-cli
-                    # TODO: add bashls
-                  ])
+                  (pkgs.lib.makeBinPath (
+                    builtins.attrValues {
+                      inherit (pkgs)
+                        ripgrep
+                        markdown-oxide
+                        markdownlint-cli
+                        vscode-langservers-extracted # for jsonls
+                        # TODO: add bash language server
+                        ;
+                    }
+                  ))
                 ];
               });
         }
