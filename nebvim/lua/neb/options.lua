@@ -5,7 +5,7 @@ local config = {
 	opt = {
 		clipboard = "unnamedplus",
 
-		-- autochdir = true,
+		autochdir = true,
 
 		number = true,
 		relativenumber = true,
