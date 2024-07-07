@@ -9,6 +9,7 @@ require("neb.plugins.which-key")
 require("neb.plugins.endwise")
 require("neb.plugins.barbecue")
 require("neb.plugins.conform")
+require("neb.plugins.lint")
 
 -- NOTE: Lsp
 require("neb.plugins.lsp.lsp-zero")

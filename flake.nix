@@ -72,8 +72,11 @@
                   luasnip
                   cmp_luasnip
 
-                  # formatter
+                  # formatters
                   conform-nvim
+
+                  # linters
+                  nvim-lint
 
                   # editing support
                   indent-blankline-nvim
@@ -128,6 +131,11 @@
               # NOTE: project specific language servers
               pkgs.nixd
               pkgs.lua-language-server
+
+              # linters
+              pkgs.luajitPackages.luacheck
+              pkgs.deadnix
+              pkgs.statix
 
               # formatters
               pkgs.stylua

@@ -1,33 +1,33 @@
 local config = {
-  g = {
-    mapleader = " "
-  },
-  opt = {
-    clipboard = "unnamedplus",
+	g = {
+		mapleader = " ",
+	},
+	opt = {
+		clipboard = "unnamedplus",
 
-    -- autochdir = true,
+		-- autochdir = true,
 
-    number = true,
-    relativenumber = true,
+		number = true,
+		relativenumber = true,
 
-    expandtab = true,
-    shiftwidth = 2,
-    tabstop = 2,
-    smarttab = true,
+		expandtab = true,
+		shiftwidth = 2,
+		tabstop = 2,
+		smarttab = true,
 
-    undofile = true,
-    swapfile = false,
+		undofile = true,
+		swapfile = false,
 
-    ignorecase = true,
-    smartcase = true,
-    incsearch = true,
+		ignorecase = true,
+		smartcase = true,
+		incsearch = true,
 
-    -- fillchars = { eob = " "},
-  }
+		-- fillchars = { eob = " "},
+	},
 }
 
-for scope, table in  pairs(config) do
-  for option, value in pairs(table) do
-    vim[scope][option] = value
-  end
+for scope, table in pairs(config) do
+	for option, value in pairs(table) do
+		vim[scope][option] = value
+	end
 end
