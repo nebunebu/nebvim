@@ -87,6 +87,9 @@
                       # dependencies = [];
                     }
 
+                    marks-nvim
+                    neogit
+
                     # lsp
                     lsp-zero-nvim
                     nvim-lspconfig
@@ -130,8 +133,8 @@
                       ];
                     }
                     {
-                    plugin = mkdnflow-nvim;
-                    dependencies = [ plenary-nvim ];
+                      plugin = mkdnflow-nvim;
+                      dependencies = [ plenary-nvim ];
                     }
                     (pkgs.vimUtils.buildVimPlugin {
                       src = inputs.markdown-toc;
