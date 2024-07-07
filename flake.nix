@@ -48,6 +48,7 @@
                   with pkgs.vimPlugins;
                   [
                     plenary-nvim
+                    direnv-vim
 
                     # keybindings
                     which-key-nvim
