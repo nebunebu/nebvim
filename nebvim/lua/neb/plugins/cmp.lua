@@ -15,6 +15,10 @@ cmp.setup({
 			ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
 		}),
 	},
+	preselect = "item",
+	completion = {
+		completeopt = "menu,menuone,noinsert",
+	},
 	mapping = cmp.mapping.preset.insert({
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
 		["<Tab>"] = cmp_action.luasnip_supertab(),
