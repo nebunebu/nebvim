@@ -1,6 +1,7 @@
 require("neb.options")
 require("neb.colorscheme")
 require("neb.plugins.treesitter")
+require("neb.plugins.direnv")
 require("neb.plugins.lualine")
 require("neb.plugins.autopairs")
 require("neb.plugins.rainbow-delimiters")
