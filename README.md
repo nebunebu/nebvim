@@ -5,6 +5,13 @@ My personal neovim config using [tolerable](https://github.com/wires-org/tolerab
 > [!CAUTION]
 > This is a work in progress
 
+## CONTENTS
+
+- [Usage](<#usage>)
+- [Installation](<#installation>)
+- [Contributing](<#contributing>)
+- [Special Thanks](<#special-thanks>)
+
 ## Usage
 
 To use without installing,
