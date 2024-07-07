@@ -30,7 +30,8 @@ To add as a system package,
 { inputs, pkgs, ...}:
 
 {
-  enviornment.systemPackages = [ inputs.nebvim.packages."${pkgs.system}".default ];
+  enviornment.systemPackages =
+    [ inputs.nebvim.packages."${pkgs.system}".default ];
 }
 ```
 
@@ -46,8 +47,8 @@ And to add as a home-manager package,
 
 ## Contributing
 
-If you see any issues, or have any feedback or suggestions, feel free to submit an issue
-or make a pull request.
+If you see any issues, or have any feedback or suggestions, feel free to submit
+an issue or make a pull request.
 
 ## Special Thanks
 
