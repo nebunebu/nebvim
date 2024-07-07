@@ -1,6 +1,4 @@
--- BUG: supertab interfering with normal tab
 local cmp = require("cmp")
--- local cmp_format = require("lsp-zero").cmp_format({details = true})
 local cmp_action = require("lsp-zero").cmp_action()
 
 cmp.setup({

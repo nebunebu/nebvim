@@ -14,7 +14,7 @@ require("neb.plugins.lint")
 require("neb.plugins.markdown-toc")
 require("neb.plugins.mkdnflow")
 require("neb.plugins.markview")
--- require("neb.plugins.luasnip")
+require("neb.plugins.luasnip")
 
 -- NOTE: Lsp
 require("neb.plugins.lsp.lsp-zero")

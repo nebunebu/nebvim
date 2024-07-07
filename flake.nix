@@ -94,6 +94,7 @@
                     fidget-nvim
 
                     # cmp
+                    luasnip
                     nvim-cmp
                     cmp-nvim-lsp
                     cmp-buffer
