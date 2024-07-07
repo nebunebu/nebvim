@@ -151,6 +151,22 @@
         "type": "github"
       }
     },
+    "markdown-toc": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1718440771,
+        "narHash": "sha256-g2Su4CRVs6VEaWoTGkCrgSFqMYGKzVTPzODhOUsywWM=",
+        "owner": "ChuufMaster",
+        "repo": "markdown-toc",
+        "rev": "94a6dbcd43019424804624050299bbdc61f5e374",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ChuufMaster",
+        "repo": "markdown-toc",
+        "type": "github"
+      }
+    },
     "neovim-src": {
       "flake": false,
       "locked": {
@@ -224,6 +240,7 @@
     },
     "root": {
       "inputs": {
+        "markdown-toc": "markdown-toc",
         "nixpkgs": "nixpkgs",
         "tolerable": "tolerable",
         "triptych-nvim": "triptych-nvim"

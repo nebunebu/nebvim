@@ -11,6 +11,11 @@
       url = "github:simonmclean/triptych.nvim";
       flake = false;
     };
+
+    markdown-toc = {
+      url = "github:ChuufMaster/markdown-toc";
+      flake = false;
+    };
   };
 
   outputs =
