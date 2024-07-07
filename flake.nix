@@ -111,6 +111,7 @@
                     # NOTE: always available language servers
                     pkgs.vscode-langservers-extracted # for jsonls
                     pkgs.markdown-oxide
+                    pkgs.markdownlint-cli
                     # TODO: add bashls
                   ])
                 ];
