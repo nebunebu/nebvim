@@ -9,6 +9,7 @@ My personal neovim config using [tolerable](https://github.com/wires-org/tolerab
 
 - [Usage](<#usage>)
 - [Installation](<#installation>)
+- [Configuration](<#configuration>)
 - [Contributing](<#contributing>)
 - [Special Thanks](<#special-thanks>)
 
@@ -50,6 +51,11 @@ And to add as a home-manager package,
   home.packages = [ inputs.nebvim.packages."${pkgs.system}".default ];
 }
 ```
+
+## Configuration
+
+> [!CAUTION]
+> This is a work in progress
 
 ## Contributing
 

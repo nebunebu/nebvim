@@ -55,102 +55,72 @@
               config = {
                 plugins =
                   let
-                    # FIX: refactor this
-                    triptych = pkgs.vimUtils.buildVimPlugin {
-                      src = inputs.triptych-nvim;
-                      name = "triptych";
-                    };
+                    flakePlugins = [
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.markdown-toc;
+                        name = "markdown-toc";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.markview;
+                        name = "markview";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.direnv-nvim;
+                        name = "direnv";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.triptych-nvim;
+                        name = "triptych";
+                      })
+                    ];
                   in
-                  with pkgs.vimPlugins;
-                  [
-                    triptych
-                    plenary-nvim
-                    # keybindings
-                    which-key-nvim
+                  flakePlugins
+                  ++ [ pkgs.vimPlugins.nvim-treesitter.withAllGrammars ]
+                  ++ builtins.attrValues {
+                    inherit (pkgs.vimPlugins)
+                      rose-pine # colorscheme
+                      which-key-nvim
+                      plenary-nvim
+                      nvim-web-devicons
+                      nvim-navic
+                      barbecue-nvim
+                      lualine-nvim
 
-                    # syntax
-                    nvim-treesitter.withAllGrammars
+                      marks-nvim
+                      neogit
+                      lsp-zero-nvim
+                      nvim-lspconfig
+                      lspkind-nvim
+                      fidget-nvim
 
-                    # icons
-                    # nvim-web-devicons
+                      # cmp
+                      luasnip
+                      nvim-cmp
+                      cmp-nvim-lsp
+                      cmp-buffer
+                      cmp_luasnip
 
-                    # colorscheme
-                    rose-pine
+                      # formatters
+                      conform-nvim
 
-                    {
-                      plugin = barbecue-nvim;
-                      dependencies = [ nvim-navic ];
-                    }
+                      # linters
+                      nvim-lint
 
-                    {
-                      plugin = lualine-nvim;
-                      # dependencies = [];
-                    }
+                      # editing support
+                      indent-blankline-nvim
+                      nvim-autopairs
+                      rainbow-delimiters-nvim
+                      nvim-treesitter-endwise
 
-                    marks-nvim
-                    neogit
+                      comment-nvim
+                      todo-comments-nvim
 
-                    # lsp
-                    lsp-zero-nvim
-                    nvim-lspconfig
-                    lspkind-nvim
-                    fidget-nvim
-
-                    # cmp
-                    luasnip
-                    nvim-cmp
-                    cmp-nvim-lsp
-                    cmp-buffer
-                    cmp_luasnip
-
-                    # formatters
-                    conform-nvim
-
-                    # linters
-                    nvim-lint
-
-                    # editing support
-                    indent-blankline-nvim
-                    nvim-autopairs
-                    rainbow-delimiters-nvim
-                    {
-                      plugin = nvim-treesitter-endwise;
-                      dependencies = [ nvim-treesitter.withAllGrammars ];
-                    }
-
-                    # comments
-                    comment-nvim
-                    todo-comments-nvim
-
-                    # file browsing
-                    telescope-nvim
-                    {
-                      plugin = cheatsheet-nvim;
-                      dependencies = [
-                        popup-nvim
-                        plenary-nvim
-                        telescope-nvim
-                      ];
-                    }
-                    {
-                      plugin = mkdnflow-nvim;
-                      dependencies = [ plenary-nvim ];
-                    }
-                    (pkgs.vimUtils.buildVimPlugin {
-                      src = inputs.markdown-toc;
-                      name = "markdown-toc";
-                    })
-                    (pkgs.vimUtils.buildVimPlugin {
-                      src = inputs.markview;
-                      name = "markview";
-                    })
-                    (pkgs.vimUtils.buildVimPlugin {
-                      src = inputs.direnv-nvim;
-                      name = "direnv";
-                    })
-                    # tmux
-                    vim-tmux-navigator
-                  ];
+                      telescope-nvim
+                      mkdnflow-nvim
+                      # tmux
+                      vim-tmux-navigator
+                      ;
+                  };
               };
             }).overrideAttrs
               (old: {
@@ -159,27 +129,41 @@
                   "PATH"
                   ":"
                   (pkgs.lib.makeBinPath (
-                    builtins.attrValues {
-                      inherit (pkgs)
-                        ripgrep
-                        direnv
-                        markdown-oxide
-                        markdownlint-cli
-                        vscode-langservers-extracted # for jsonls
-                        nixd
-                        deadnix
-                        statix
-                        nixfmt-rfc-style
-                        ;
-                      inherit (pkgs.nodePackages) bash-language-server;
-                    }
+                    let
+                      bashPackages = builtins.attrValues {
+                        inherit (pkgs.nodePackages)
+                          bash-lanaguage-server # bashls
+                          ;
+                        inherit (pkgs)
+                          shellcheck # shellcheck
+                          shfmt # shfmt
+                          ;
+                      };
+                      generalPackages = builtins.attrValues { inherit (pkgs) ripgrep direnv; };
+                      markdownPackages = builtins.attrValues { inherit (pkgs) markdown-oxide markdownlint-cli; };
+                      nixPackages = builtins.attrValues {
+                        inherit (pkgs)
+                          nixd
+                          deadnix
+                          statix
+                          nixfmt-rfc-style
+                          ;
+                      };
+                      serializedDataPackages = builtins.attrValues {
+                        inherit (pkgs)
+                          vscode-langservers-extracted # jsonls
+                          jq-lsp # jqls
+                          yaml-language-server # yamlls
+                          ;
+                      };
+                    in
+                    bashPackages ++ generalPackages ++ markdownPackages ++ nixPackages ++ serializedDataPackages
                   ))
                 ];
               });
         }
       );
 
-      # TODO: add checks
       devShells = forAllSystems (
         system:
         let
@@ -194,16 +178,8 @@
                   inherit (pkgs) lua-language-server stylua;
                   inherit (pkgs.luajitPackages) luacheck;
                 };
-                nixPackages = builtins.attrValues {
-                  inherit (pkgs)
-                    nixd
-                    deadnix
-                    statix
-                    nixfmt-rfc-style
-                    ;
-                };
               in
-              luaPackages ++ nixPackages;
+              luaPackages;
           };
         }
       );

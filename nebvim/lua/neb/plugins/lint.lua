@@ -1,10 +1,10 @@
 require("lint").linters_by_ft = {
-  bash = { "shellcheck" },
+	bash = { "shellcheck" },
 	lua = { "luacheck" },
-  markdown = { "markdownlint" },
+	markdown = { "markdownlint" },
 	nix = { "deadnix", "statix" },
-  tex = {},
-  zsh = { "zsh" }
+	tex = {},
+	zsh = { "zsh" },
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
