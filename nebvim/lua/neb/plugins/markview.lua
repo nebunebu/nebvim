@@ -43,6 +43,10 @@ markview.setup({
 			group_name = "CHECKBOX_PENDING",
 			value = { fg = "#f6c177" },
 		},
+		{
+			group_name = "CODE_BLOCKS",
+			value = { bg = "#26233a" },
+		},
 	}),
 	headings = {
 		-- FIX: signs not on a single line
@@ -175,5 +179,23 @@ markview.setup({
 			text = "",
 			hl = "CHECKBOX_PENDING",
 		},
+	},
+	code_blocks = {
+		enable = true,
+
+		style = "language",
+		hl = "CODE_BLOCKS",
+
+		min_width = 60,
+		pad_amount = 3,
+
+		language_names = {
+			{ "py", "python" },
+			{ "cpp", "C++" },
+		},
+		language_direction = "right",
+
+		sign = true,
+		sign_hl = nil,
 	},
 })
