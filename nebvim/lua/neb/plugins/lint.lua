@@ -9,8 +9,6 @@ require("lint").linters_by_ft = {
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 	callback = function()
-		-- try_lint without arguments runs the linters defined in `linters_by_ft`
-		-- for the current filetype
 		require("lint").try_lint()
 	end,
 })
@@ -23,4 +21,15 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 -- 	return "󱉶 " .. table.concat(linters, ", ")
 -- end
 --
--- require("lint").get_running()
+-- require("lualine").setup({
+-- 	sections = { lualine_x = { lint_progress } },
+-- })
+--
+-- vim.api.nvim_create_user_command("DisplayRunningLinters", function()
+-- 	local linters = require("lint").get_running()
+-- 	if #linters == 0 then
+-- 		print("No linters are currently running.")
+-- 	else
+-- 		print("Running linters: ", table.concat(linters, ","))
+-- 	end
+-- end, {})
