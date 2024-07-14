@@ -166,6 +166,10 @@
                         markdown-oxide
                         markdownlint-cli
                         vscode-langservers-extracted # for jsonls
+                        nixd
+                        deadnix
+                        statix
+                        nixfmt-rfc-style
                         # TODO: add bash language server
                         ;
                     }
