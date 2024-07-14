@@ -31,6 +31,18 @@ markview.setup({
 			group_name = "TABLES",
 			value = { fg = "#c4a7e7" },
 		},
+		{
+			group_name = "CHECKBOX_CHECKED",
+			value = { fg = "#31748f" },
+		},
+		{
+			group_name = "CHECKBOX_UNCHECKED",
+			value = { fg = "#eb6f92" },
+		},
+		{
+			group_name = "CHECKBOX_PENDING",
+			value = { fg = "#f6c177" },
+		},
 	}),
 	headings = {
 		-- FIX: signs not on a single line
@@ -147,6 +159,21 @@ markview.setup({
 			"TABLES",
 			"TABLES",
 			"TABLES",
+		},
+	},
+	checkboxes = {
+		enable = true,
+		checked = {
+			text = "✔",
+			hl = "CHECKBOX_CHECKED",
+		},
+		unchecked = {
+			text = "✘",
+			hl = "CHECKBOX_UNCHECKED",
+		},
+		pending = {
+			text = "",
+			hl = "CHECKBOX_PENDING",
 		},
 	},
 })
