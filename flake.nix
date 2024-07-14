@@ -132,7 +132,7 @@
                     let
                       bashPackages = builtins.attrValues {
                         inherit (pkgs.nodePackages)
-                          bash-lanaguage-server # bashls
+                          bash-language-server # bashls
                           ;
                         inherit (pkgs)
                           shellcheck # shellcheck
