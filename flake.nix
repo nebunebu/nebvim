@@ -170,8 +170,8 @@
                         deadnix
                         statix
                         nixfmt-rfc-style
-                        # TODO: add bash language server
                         ;
+                      inherit (pkgs.nodePackages) bash-language-server;
                     }
                   ))
                 ];
