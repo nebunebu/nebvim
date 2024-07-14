@@ -116,7 +116,8 @@
                       todo-comments-nvim
 
                       telescope-nvim
-                      mkdnflow-nvim
+                      # mkdnflow-nvim
+
                       # tmux
                       vim-tmux-navigator
                       ;
