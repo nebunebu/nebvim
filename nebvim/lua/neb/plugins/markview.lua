@@ -27,14 +27,18 @@ markview.setup({
 			group_name = "H6",
 			value = { bg = "#9ccfd8", fg = "#191724" },
 		},
+		{
+			group_name = "tables_hl",
+			value = { fg = "#c4a7e7" },
+		},
 	}),
 	headings = {
+		-- FIX: signs not on a single line
 		shift_width = 0,
 		heading_1 = {
 			style = "label",
 			icon = "󰼏  ",
 			-- sign = "󰓹 ",
-			-- 
 			hl = "H1",
 			padding_left = " ",
 			corner_left = " ─── ✦",
@@ -101,6 +105,48 @@ markview.setup({
 			padding_right = " ",
 			corner_right = "✦✦✦✦✦✦ ─── ",
 			corner_right_hl = "H6",
+		},
+	},
+	tables = {
+		enable = true,
+		text = {
+			"╭",
+			"─",
+			"╮",
+			"┬",
+			"├",
+			"│",
+			"┤",
+			"┼",
+			"╰",
+			"─",
+			"╯",
+			"┴",
+
+			-- These are used to indicate text alignment
+			-- The last 2 are used for "center" alignment
+			"╼",
+			"╾",
+			"╴",
+			"╶",
+		},
+		hl = {
+			"tables_hl",
+			"tables_hl",
+			"tables_hl",
+			"tables_hl",
+			"tables_hl",
+			"tables_hl",
+			"tables_hl",
+			"tables_hl",
+			"tables_hl",
+			"tables_hl",
+			"tables_hl",
+			"tables_hl",
+			"tables_hl",
+			"tables_hl",
+			"tables_hl",
+			"tables_hl",
 		},
 	},
 })
