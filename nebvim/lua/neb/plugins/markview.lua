@@ -363,7 +363,7 @@ markview.setup({
 			},
 			{
 				match_string = "TIP",
-				callout_preview = " Tip",
+				callout_preview = " Tip",
 				callout_preview_hl = "fg_green",
 
 				border = "▋",
