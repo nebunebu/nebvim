@@ -85,6 +85,7 @@
                       nvim-navic
                       barbecue-nvim
                       lualine-nvim
+                      alpha-nvim
 
                       marks-nvim
                       neogit
