@@ -78,6 +78,7 @@
                   ++ [ pkgs.vimPlugins.nvim-treesitter.withAllGrammars ]
                   ++ builtins.attrValues {
                     inherit (pkgs.vimPlugins)
+                      image-nvim
                       rose-pine # colorscheme
                       which-key-nvim
                       plenary-nvim
@@ -141,7 +142,15 @@
                           shfmt # shfmt
                           ;
                       };
-                      generalPackages = builtins.attrValues { inherit (pkgs) ripgrep direnv; };
+                      generalPackages = builtins.attrValues {
+                        inherit (pkgs)
+                          ripgrep
+                          direnv
+                          curl
+                          imagemagick
+                          ;
+                        inherit (pkgs.luajitPackages) magick;
+                      };
                       markdownPackages = builtins.attrValues { inherit (pkgs) markdown-oxide markdownlint-cli; };
                       nixPackages = builtins.attrValues {
                         inherit (pkgs)
