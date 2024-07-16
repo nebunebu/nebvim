@@ -26,6 +26,10 @@
       url = "github:OXY2DEV/markview.nvim";
       flake = false;
     };
+    img-clip = {
+      url = "github:HakonHarnes/img-clip.nvim";
+      flake = false;
+    };
   };
 
   outputs =
@@ -72,6 +76,10 @@
                         src = inputs.triptych-nvim;
                         name = "triptych";
                       })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.img-clip;
+                        name = "img-clip";
+                      })
                     ];
                   in
                   flakePlugins
@@ -79,6 +87,7 @@
                   ++ builtins.attrValues {
                     inherit (pkgs.vimPlugins)
                       image-nvim
+
                       rose-pine # colorscheme
                       which-key-nvim
                       plenary-nvim
