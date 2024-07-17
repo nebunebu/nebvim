@@ -151,15 +151,25 @@
                           shfmt # shfmt
                           ;
                       };
-                      generalPackages = builtins.attrValues {
-                        inherit (pkgs)
-                          ripgrep
-                          direnv
-                          curl
-                          imagemagick
-                          ;
-                        inherit (pkgs.luajitPackages) magick;
-                      };
+                      generalPackages =
+                        builtins.attrValues {
+
+                          # (pkgs.nerdfonts.override {
+                          #   fonts = [
+                          #     "DroidSansMono"
+                          #     "JetBrainsMono"
+                          #   ];
+                          # })
+                          inherit (pkgs)
+                            ripgrep
+                            direnv
+                            curl
+                            imagemagick
+                            ;
+                          inherit (pkgs.luajitPackages) magick;
+
+                        }
+                        ++ [ (pkgs.nerdfonts.override { fonts = "DroidSansMono"; }) ];
                       markdownPackages = builtins.attrValues { inherit (pkgs) markdown-oxide markdownlint-cli; };
                       nixPackages = builtins.attrValues {
                         inherit (pkgs)
