@@ -8,6 +8,10 @@ wk.register({
 			"<cmd>lua require('Comment.api').toggle.linewise.current()<CR>",
 			"Toggle Line Comment",
 		},
+		p = {
+			"<cmd>PasteImage<CR>",
+			"Paste Image",
+		},
 		h = {
 			"<cmd>nohlsearch<CR>",
 			"Clear Search Highlights",
