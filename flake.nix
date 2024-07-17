@@ -151,25 +151,17 @@
                           shfmt # shfmt
                           ;
                       };
-                      generalPackages =
-                        builtins.attrValues {
+                      generalPackages = builtins.attrValues {
+                        inherit (pkgs)
+                          ripgrep
+                          direnv
+                          curl
+                          imagemagick
+                          ;
+                        inherit (pkgs.luajitPackages) magick;
 
-                          # (pkgs.nerdfonts.override {
-                          #   fonts = [
-                          #     "DroidSansMono"
-                          #     "JetBrainsMono"
-                          #   ];
-                          # })
-                          inherit (pkgs)
-                            ripgrep
-                            direnv
-                            curl
-                            imagemagick
-                            ;
-                          inherit (pkgs.luajitPackages) magick;
-
-                        }
-                        ++ [ (pkgs.nerdfonts.override { fonts = "DroidSansMono"; }) ];
+                      };
+                      fonts = [ (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; }) ];
                       markdownPackages = builtins.attrValues { inherit (pkgs) markdown-oxide markdownlint-cli; };
                       nixPackages = builtins.attrValues {
                         inherit (pkgs)
@@ -187,7 +179,12 @@
                           ;
                       };
                     in
-                    bashPackages ++ generalPackages ++ markdownPackages ++ nixPackages ++ serializedDataPackages
+                    bashPackages
+                    ++ generalPackages
+                    ++ markdownPackages
+                    ++ nixPackages
+                    ++ serializedDataPackages
+                    ++ fonts
                   ))
                 ];
               });
