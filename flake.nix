@@ -161,7 +161,6 @@
                         inherit (pkgs.luajitPackages) magick;
 
                       };
-                      fonts = [ (pkgs.nerdfonts.override { fonts = [ "DroidSansMono" ]; }) ];
                       markdownPackages = builtins.attrValues { inherit (pkgs) markdown-oxide markdownlint-cli; };
                       nixPackages = builtins.attrValues {
                         inherit (pkgs)
@@ -179,12 +178,7 @@
                           ;
                       };
                     in
-                    bashPackages
-                    ++ generalPackages
-                    ++ markdownPackages
-                    ++ nixPackages
-                    ++ serializedDataPackages
-                    ++ fonts
+                    bashPackages ++ generalPackages ++ markdownPackages ++ nixPackages ++ serializedDataPackages
                   ))
                 ];
               });
