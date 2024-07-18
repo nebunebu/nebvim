@@ -21,7 +21,7 @@ local links = {
 		{ type = "text", val = "Quick links", opts = { hl = "SpecialComment", position = "center" } },
 		{ type = "padding", val = 1 },
 		dashboard.button("c", "󱄅  .nix-config", ":e $HOME/.nix-config/flake.nix <CR>"),
-		dashboard.button("n", "  nebvim", ":e $HOME/Projects/nebvim/flake.nix <CR>"),
+		dashboard.button("n", "  nebvim", ":e $HOME/.nebvim/flake.nix <CR>"),
 		dashboard.button("w", "󰖬  wiki", ":e $HOME/.wiki/index.md <CR>"),
 		dashboard.button("e", "  new file", ":enew <CR>"),
 		dashboard.button("q", "󰩈  quit", ":qa<CR>"),
@@ -70,6 +70,8 @@ theta.config = {
 }
 
 require("alpha").setup(theta.config)
+
+vim.api.nvim_create_user_command("AlphaTab", "tabnew | Alpha", {})
 
 -- NOTE: supposed to hide cursor
 -- BUG: cursor hidden when not in alpha
