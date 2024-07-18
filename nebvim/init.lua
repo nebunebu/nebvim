@@ -19,6 +19,7 @@ require("neb.plugins.rainbow-delimiters")
 require("neb.plugins.treesitter")
 require("neb.plugins.triptych")
 require("neb.plugins.which-key")
+require("neb.plugins.surround")
 
 -- NOTE: Lsp
 require("neb.plugins.lsp.lsp-zero")

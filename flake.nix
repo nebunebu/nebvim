@@ -96,6 +96,7 @@
                   ++ builtins.attrValues {
                     inherit (pkgs.vimPlugins)
                       image-nvim
+                      nvim-surround
 
                       rose-pine # colorscheme
                       which-key-nvim
