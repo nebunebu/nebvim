@@ -6,7 +6,7 @@ wk.add({
 	{
 		mode = "n",
 		{ "<leader>h", "<cmd>nohlsearch<cr>", desc = "dehighlight search" },
-		{ "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current<cr>", desc = "Toggle Comment" },
+		{ "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<cr>", desc = "Toggle Comment" },
 		{ "<leader>t", "<cmd>Triptych<cr>", desc = "Open Triptych" },
 		{ "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste Image" },
 		{ "<leader>b", "<cmd>AlphaTab<cr>", desc = "Open Alpha in new tab" },
