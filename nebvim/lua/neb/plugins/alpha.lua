@@ -33,12 +33,9 @@ local links = {
 	position = "center",
 }
 
-local quote = {
+local footer = {
 	type = "text",
-	val = {
-		[[ A really good quote ]],
-		[[         - Somebody  ]],
-	},
+	val = require("fortune").get_fortune(),
 	opts = {
 		position = "center",
 		hl = "function",
@@ -55,7 +52,7 @@ theta.config = {
 		{ type = "padding", val = 2 },
 		recent,
 		{ type = "padding", val = 2 },
-		quote,
+		footer,
 		{ type = "padding", val = 2 },
 	},
 	opts = {

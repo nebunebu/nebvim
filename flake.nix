@@ -22,6 +22,11 @@
       flake = false;
     };
 
+    fortune = {
+      url = "github:rubiin/fortune.nvim";
+      flake = false;
+    };
+
     markview = {
       url = "github:OXY2DEV/markview.nvim";
       flake = false;
@@ -63,6 +68,10 @@
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.markdown-toc;
                         name = "markdown-toc";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.fortune;
+                        name = "fortune";
                       })
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.markview;
