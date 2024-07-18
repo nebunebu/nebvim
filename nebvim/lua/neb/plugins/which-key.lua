@@ -2,82 +2,40 @@ require("which-key").setup({})
 
 local wk = require("which-key")
 
-wk.register({
-	["<leader>"] = {
-		["/"] = {
-			"<cmd>lua require('Comment.api').toggle.linewise.current()<CR>",
-			"Toggle Line Comment",
-		},
-		p = {
-			"<cmd>PasteImage<CR>",
-			"Paste Image",
-		},
-		h = {
-			"<cmd>nohlsearch<CR>",
-			"Clear Search Highlights",
-		},
-		t = {
-			"<cmd>Triptych<CR>",
-			"Open Triptych",
-		},
-		["m"] = {
-			name = "Markdown",
-			v = {
-				"<cmd>Markview toggleAll<CR>",
-				"Toggle Markview",
-			},
-			c = {
-				"<cmd>GenerateTOC<CR>",
-				"Create Table of Contents",
-			},
-		},
-		["f"] = {
-			name = "Telescope",
-			f = {
-				"<cmd>Telescope find_files<CR>",
-				"Find files",
-			},
-			o = {
-				"<cmd>Telescope oldfiles<CR>",
-				"Find old files",
-			},
-			m = {
-				"<cmd>Telescope man_pages<CR>",
-				"Find man pages",
-			},
-			c = {
-				"<cmd>Telescope current_buffer_fuzzy_find<CR>",
-				"Find in current buffer",
-			},
-			h = {
-				"<cmd>Telescope help_tags<CR>",
-				"Find help tags",
-			},
-			p = {
-				"<cmd>Telescope projects<CR>",
-				"Find in projects",
-			},
-			g = {
-				"<cmd>Telescope live_grep<CR>",
-				"Find with live_grep",
-			},
-		},
-	},
-}, { mode = "n" })
+wk.add({
+	{
+		mode = "n",
+		{ "<leader>h", "<cmd>nohlsearch<cr>", desc = "dehighlight search" },
+		{ "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current<cr>", desc = "Toggle Comment" },
+		{ "<leader>t", "<cmd>Triptych<cr>", desc = "Open Triptych" },
+		{ "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste Image" },
 
-wk.register({
-	["<"] = {
-		"<gv",
-		"Dedent and keep selection",
+		-- Markdown
+		{ "<leader>m", group = "markdown", icon = " " },
+		{ "<leader>mv", "<cmd>Markview toggleAll<cr>", desc = "Toggle Markview" },
+		{ "<leader>mc", "<cmd>GenerateTOC<cr>", desc = "Generate Markodwn TOC" },
+
+		-- Direnv
+		{ "<leader>d", group = "direnv", icon = "" },
+
+		-- Telescope
+		{ "<leader>f", group = "telescope" },
+		{ "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Find in current buffer" },
+		{ "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find files" },
+		{ "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Find with live_grep" },
+		{ "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Find help tags" },
+		{ "<leader>fm", "<cmd>Telescope man_pages<CR>", desc = "Find man pages" },
+		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Find old files" },
+		-- { "<leader>fp", "<cmd>Telescope projects<CR>", desc = "Find in projects" },
 	},
-	[">"] = {
-		">gv",
-		"Dedent and keep selection",
-	},
-	["<leader>"] = {
-		["/"] = {
+	{
+		mode = { "x" },
+		{ "<", "<gv", desc = "Dedent and keep selection" },
+		{ ">", ">gv", desc = "Indent and keep selection" },
+		{
+			"<leader>/",
 			"<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
-			"Toggle Line Comment",
+			desc = "Toggle Comment",
 		},
 	},
-}, { mode = "x" })
+})
