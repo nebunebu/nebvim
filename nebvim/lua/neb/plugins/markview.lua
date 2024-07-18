@@ -37,7 +37,7 @@ markview.setup({
 		},
 		{
 			group_name = "fg_gray",
-			value = { bg = "#9ccfd8", fg = "#908caa" },
+			value = { bg = "#191724", fg = "#908caa" },
 		},
 		{
 			group_name = "fg_green",
