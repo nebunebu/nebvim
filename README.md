@@ -3,7 +3,9 @@
 My personal neovim config using [tolerable](https://github.com/wires-org/tolerable-nvim-nix).
 
 > [!CAUTION]
-> This is a work in progress
+> This is a work in progress and is under constant development.
+> This README does not necessarily reflect the current state of the
+> configuration.
 
 ## CONTENTS
 
