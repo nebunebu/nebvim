@@ -21,9 +21,12 @@ local config = {
 		ignorecase = true,
 		smartcase = true,
 		incsearch = true,
-		guifont = "DroidSansMono:h12",
+		fillchars = { eob = " " },
 
-		-- fillchars = { eob = " "},
+		wrap = true,
+		linebreak = true,
+		showbreak = "+++",
+		breakindent = true,
 	},
 }
 

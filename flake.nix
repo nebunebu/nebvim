@@ -31,6 +31,7 @@
       url = "github:OXY2DEV/markview.nvim";
       flake = false;
     };
+
     img-clip = {
       url = "github:HakonHarnes/img-clip.nvim";
       flake = false;
