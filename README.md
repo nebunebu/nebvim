@@ -8,6 +8,7 @@ My personal neovim config using [tolerable](https://github.com/wires-org/tolerab
 ## CONTENTS
 
 - [Usage](<#usage>)
+- [Gallery](<#gallery>)
 - [Installation](<#installation>)
 - [Configuration](<#configuration>)
 - [Contributing](<#contributing>)
@@ -20,6 +21,10 @@ To use without installing,
 ```sh
 nix run github:nebunebu/nebvim
 ```
+
+## Gallery
+
+![Greeter](.assets/alpha.png)
 
 ## Installation
 
@@ -54,8 +59,8 @@ And to add as a home-manager package,
 
 ## Configuration
 
-> [!CAUTION]
-> This is a work in progress
+> [!NOTE]
+> Coming Soon
 
 ## Contributing
 
