@@ -25,7 +25,7 @@ local config = {
 
 		wrap = true,
 		linebreak = true,
-		showbreak = "+++",
+		showbreak = "↪ ",
 		breakindent = true,
 	},
 }
