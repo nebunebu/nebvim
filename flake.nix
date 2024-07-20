@@ -121,6 +121,7 @@
                       cmp-nvim-lsp
                       cmp-buffer
                       cmp_luasnip
+                      cmp-async-path
 
                       # formatters
                       conform-nvim
