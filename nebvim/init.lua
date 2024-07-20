@@ -1,6 +1,6 @@
 require("neb.options")
 require("neb.colorscheme")
--- require("neb.plugins.mkdnflow")
+require("neb.plugins.mkdnflow")
 require("neb.plugins.fortune") -- must be before alpha
 require("neb.plugins.alpha")
 require("neb.plugins.autopairs")
