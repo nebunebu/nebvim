@@ -7,10 +7,10 @@
     };
 
     # Plugins
-    direnv-nvim = {
-      url = "github:NotAShelf/direnv.nvim";
-      flake = false;
-    };
+    # direnv-nvim = {
+    #   url = "github:NotAShelf/direnv.nvim";
+    #   flake = false;
+    # };
 
     triptych-nvim = {
       url = "github:simonmclean/triptych.nvim";
@@ -78,10 +78,10 @@
                         src = inputs.markview;
                         name = "markview";
                       })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.direnv-nvim;
-                        name = "direnv";
-                      })
+                      # (pkgs.vimUtils.buildVimPlugin {
+                      #   src = inputs.direnv-nvim;
+                      #   name = "direnv";
+                      # })
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.triptych-nvim;
                         name = "triptych";
