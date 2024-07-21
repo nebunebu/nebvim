@@ -27,7 +27,18 @@ wk.add({
 		{ "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Find help tags" },
 		{ "<leader>fm", "<cmd>Telescope man_pages<CR>", desc = "Find man pages" },
 		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Find old files" },
-		-- { "<leader>fp", "<cmd>Telescope projects<CR>", desc = "Find in projects" },
+		-- NOTE: project keybinds
+		-- Default mappings (normal mode):
+		-- d 	delete currently selected project
+		-- r 	rename currently selected project
+		-- c 	create a project*
+		-- s 	search inside files within your project
+		-- b 	browse inside files within your project
+		-- w 	change to the selected project's directory without opening it
+		-- R 	find a recently opened file within your project
+		-- f 	find a file within your project (same as <CR>)
+		-- o 	change current cd scope
+		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Find in project" },
 	},
 	{
 		mode = { "x" },
