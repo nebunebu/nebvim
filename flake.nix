@@ -36,6 +36,15 @@
       url = "github:HakonHarnes/img-clip.nvim";
       flake = false;
     };
+
+    nerdy-nvim = {
+      url = "github:2KAbhishek/nerdy.nvim";
+      flake = false;
+    };
+    telescope-emoji-nvim = {
+      url = "github:xiyaowong/telescope-emoji.nvim";
+      flake = false;
+    };
   };
 
   outputs =
@@ -90,6 +99,14 @@
                         src = inputs.img-clip;
                         name = "img-clip";
                       })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.nerdy-nvim;
+                        name = "nerdy-nvim";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.telescope-emoji-nvim;
+                        name = "telescope-emoji-nvim";
+                      })
                     ];
                   in
                   flakePlugins
@@ -98,7 +115,6 @@
                     inherit (pkgs.vimPlugins)
                       image-nvim
                       nvim-surround
-                      telescope-project-nvim
 
                       rose-pine # colorscheme
                       which-key-nvim
@@ -139,7 +155,12 @@
                       comment-nvim
                       todo-comments-nvim
 
+                      # Telescope
                       telescope-nvim
+                      telescope-project-nvim
+                      # telescope-manix
+                      dressing-nvim
+
                       mkdnflow-nvim
 
                       # tmux
@@ -167,6 +188,7 @@
                       generalPackages = builtins.attrValues {
                         inherit (pkgs)
                           ripgrep
+                          # manix
                           direnv
                           curl
                           imagemagick

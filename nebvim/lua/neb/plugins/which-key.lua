@@ -39,6 +39,9 @@ wk.add({
 		-- f 	find a file within your project (same as <CR>)
 		-- o 	change current cd scope
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Find in project" },
+		{ "<leader>fc", group = "telescope character" },
+		{ "<leader>fcg", "<cmd>Telescope nerdy<CR>", desc = "Find nerdfont glyph" },
+		{ "<leader>fce", "<cmd>Telescope emoji<CR>", desc = "Find emoji" },
 	},
 	{
 		mode = { "x" },
