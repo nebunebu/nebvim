@@ -328,6 +328,7 @@
         "nerdy-nvim": "nerdy-nvim",
         "nixpkgs": "nixpkgs",
         "telescope-emoji-nvim": "telescope-emoji-nvim",
+        "telescope-git-conflicts-nvim": "telescope-git-conflicts-nvim",
         "tolerable": "tolerable",
         "triptych-nvim": "triptych-nvim"
       }
@@ -345,6 +346,22 @@
       "original": {
         "owner": "xiyaowong",
         "repo": "telescope-emoji.nvim",
+        "type": "github"
+      }
+    },
+    "telescope-git-conflicts-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1705233568,
+        "narHash": "sha256-W4rQdKEv4ydhVE1PK/R26eKQTKlqO7zVjY6EfQ/jslg=",
+        "owner": "Snikimonkd",
+        "repo": "telescope-git-conflicts.nvim",
+        "rev": "1ac7040f601d16ab3800bdda6f5912a0e385cb29",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Snikimonkd",
+        "repo": "telescope-git-conflicts.nvim",
         "type": "github"
       }
     },

@@ -49,6 +49,11 @@
       url = "github:axkirillov/easypick.nvim";
       flake = false;
     };
+
+    telescope-git-conflicts-nvim = {
+      url = "github:Snikimonkd/telescope-git-conflicts.nvim";
+      flake = false;
+    };
   };
 
   outputs =
@@ -114,6 +119,10 @@
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.easypick-nvim;
                         name = "easypick-nvim";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.telescope-git-conflicts-nvim;
+                        name = "telescope-git-conflicts-nvim";
                       })
                     ];
                   in

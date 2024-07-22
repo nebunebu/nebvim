@@ -22,6 +22,7 @@ require("telescope").setup({
 require("telescope").load_extension("project")
 require("telescope").load_extension("nerdy")
 require("telescope").load_extension("emoji")
+require("telescope").load_extension("conflicts")
 -- NOTE: extensions to add
 -- telescope-repo.nvim
 -- telescope-tele-tabby
@@ -33,7 +34,6 @@ require("telescope").load_extension("emoji")
 -- telescope-manix
 -- easypick.nvim
 -- telescope-tabs
--- telescope-git-conflicts
 -- telescope-dap.nvim
 -- telescope-git-diffs.nvim
 -- toggleterm-manager.nvim

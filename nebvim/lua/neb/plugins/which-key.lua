@@ -53,6 +53,8 @@ wk.add({
 		{ "<leader>fs", group = "Telescope symbol" },
 		{ "<leader>fsg", "<cmd>Telescope nerdy<CR>", desc = "Find nerdfont glyph" },
 		{ "<leader>fse", "<cmd>Telescope emoji<CR>", desc = "Find emoji" },
+
+		{ "<leader>fvc", "<cmd>Telescope conflicts<CR>", desc = "Find git conflicts" },
 	},
 	{
 		mode = { "x" },
