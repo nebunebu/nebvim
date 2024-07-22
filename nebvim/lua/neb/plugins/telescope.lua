@@ -16,6 +16,9 @@ require("telescope").setup({
 	},
 })
 
+-- [[ NOTE: consider using https://github.com/nvim-telescope/telescope-symbols.nvim/ instead of  nerdy and emoji
+-- ]]
+
 require("telescope").load_extension("project")
 require("telescope").load_extension("nerdy")
 require("telescope").load_extension("emoji")

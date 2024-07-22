@@ -19,6 +19,12 @@ wk.add({
 		-- Direnv
 		{ "<leader>d", group = "direnv", icon = "" },
 
+		-- Quickfix
+		{ "<leader>q", group = "quickfix" },
+		{ "<leader>qt", "<cmd>TodoQuickFix<CR>", desc = "QuickFix Todo Comments" },
+
+		-- Loclist
+
 		-- Telescope
 		{ "<leader>f", group = "telescope" },
 		{ "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Find in current buffer" },
@@ -39,9 +45,14 @@ wk.add({
 		-- f 	find a file within your project (same as <CR>)
 		-- o 	change current cd scope
 		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Find in project" },
-		{ "<leader>fc", group = "telescope character" },
-		{ "<leader>fcg", "<cmd>Telescope nerdy<CR>", desc = "Find nerdfont glyph" },
-		{ "<leader>fce", "<cmd>Telescope emoji<CR>", desc = "Find emoji" },
+		{ "<leader>fp", "<cmd>Telescope project<CR>", desc = "Find in project" },
+
+		{ "<leader>ft", group = "Telescope todo-comments" },
+		{ "<leader>ftp", "<cmd>TodoTelescope<CR>", desc = "Find project todo-comments" },
+
+		{ "<leader>fs", group = "Telescope symbol" },
+		{ "<leader>fsg", "<cmd>Telescope nerdy<CR>", desc = "Find nerdfont glyph" },
+		{ "<leader>fse", "<cmd>Telescope emoji<CR>", desc = "Find emoji" },
 	},
 	{
 		mode = { "x" },
