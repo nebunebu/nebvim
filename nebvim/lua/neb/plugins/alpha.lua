@@ -51,9 +51,9 @@ theta.config = {
 		links,
 		{ type = "padding", val = 2 },
 		recent,
-		{ type = "padding", val = 2 },
+		{ type = "padding", val = 0 },
 		footer,
-		{ type = "padding", val = 2 },
+		{ type = "padding", val = 0 },
 	},
 	opts = {
 		noautocmd = false,
