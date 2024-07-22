@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "easypick-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1713343035,
+        "narHash": "sha256-CmWE63p5frSaPC4C+Tu2ztSDdpQbyGPv+PBHt9m4cnk=",
+        "owner": "axkirillov",
+        "repo": "easypick.nvim",
+        "rev": "3ce209d05d402ba40e29e6b69b759eb8421b145a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "axkirillov",
+        "repo": "easypick.nvim",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -304,6 +320,7 @@
     },
     "root": {
       "inputs": {
+        "easypick-nvim": "easypick-nvim",
         "fortune": "fortune",
         "img-clip": "img-clip",
         "markdown-toc": "markdown-toc",

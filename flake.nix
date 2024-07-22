@@ -45,6 +45,10 @@
       url = "github:xiyaowong/telescope-emoji.nvim";
       flake = false;
     };
+    easypick-nvim = {
+      url = "github:axkirillov/easypick.nvim";
+      flake = false;
+    };
   };
 
   outputs =
@@ -106,6 +110,10 @@
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.telescope-emoji-nvim;
                         name = "telescope-emoji-nvim";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.easypick-nvim;
+                        name = "easypick-nvim";
                       })
                     ];
                   in
