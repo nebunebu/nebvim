@@ -5,6 +5,7 @@ require("lint").linters_by_ft = {
 	nix = { "deadnix", "statix" },
 	tex = {},
 	zsh = { "zsh" },
+	javascript = { "eslint" },
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
