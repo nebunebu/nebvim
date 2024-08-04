@@ -6,3 +6,4 @@ require("lspconfig").lua_ls.setup({}) --
 require("lspconfig").markdown_oxide.setup({}) -- obsidian markdown -- NOTE: system-wide
 require("lspconfig").nixd.setup({}) -- NOTE: system-wide
 require("lspconfig").yamlls.setup({}) -- NOTE: system-wide
+require("lspconfig").yamlls.setup({}) -- NOTE: system-wide
