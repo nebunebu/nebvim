@@ -5,6 +5,8 @@ require("conform").setup({
 		nix = { { "nixpkgs_fmt", "nixfmt" } },
 		javascript = { "prettierd" },
 	},
+
+	format_on_save = { lsp_format = "fallback" },
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
