@@ -12,6 +12,11 @@
     #   flake = false;
     # };
 
+    flow-nvim = {
+      url = "github:0xstepit/flow.nvim";
+      flake = false;
+    };
+
     triptych-nvim = {
       url = "github:simonmclean/triptych.nvim";
       flake = false;
@@ -87,6 +92,10 @@
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.markdown-toc;
                         name = "markdown-toc";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.flow-nvim;
+                        name = "flow-nvim";
                       })
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.fortune;
