@@ -202,35 +202,10 @@
                   ":"
                   (pkgs.lib.makeBinPath (
                     let
-                      bashPackages = builtins.attrValues {
-                        inherit (pkgs.nodePackages)
-                          bash-language-server # bashls
-                          ;
-                        inherit (pkgs)
-                          shellcheck # shellcheck
-                          shfmt # shfmt
-                          ;
-                      };
-                      generalPackages = builtins.attrValues {
-                        inherit (pkgs)
-                          ripgrep
-                          # manix
-                          direnv
-                          curl
-                          imagemagick
-                          ;
-                        inherit (pkgs.luajitPackages) magick;
-
-                      };
+                      bashPackages = builtins.attrValues (import ./pkgs/bash.nix { inherit pkgs; });
+                      generalPackages = builtins.attrValues (import ./pkgs/general.nix { inherit pkgs; });
+                      nixPackages = builtins.attrValues (import ./pkgs/nix.nix { inherit pkgs; });
                       markdownPackages = builtins.attrValues { inherit (pkgs) markdown-oxide markdownlint-cli; };
-                      nixPackages = builtins.attrValues {
-                        inherit (pkgs)
-                          nixd
-                          deadnix
-                          statix
-                          nixfmt-rfc-style
-                          ;
-                      };
                       serializedDataPackages = builtins.attrValues {
                         inherit (pkgs)
                           vscode-langservers-extracted # jsonls
