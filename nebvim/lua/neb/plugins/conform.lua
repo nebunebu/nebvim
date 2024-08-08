@@ -2,7 +2,7 @@ require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
 		markdown = { "markdownlint" },
-		nix = { { "nixpkgs_fmt", "nixfmt" }, stop_after_first = true },
+		nix = { "nixpkgs_fmt", "nixfmt", stop_after_first = true },
 		javascript = { "prettierd" },
 	},
 })
