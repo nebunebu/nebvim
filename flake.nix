@@ -46,6 +46,7 @@
       url = "github:2KAbhishek/nerdy.nvim";
       flake = false;
     };
+
     telescope-emoji-nvim = {
       url = "github:xiyaowong/telescope-emoji.nvim";
       flake = false;
@@ -142,7 +143,7 @@
                       image-nvim
                       nvim-surround
 
-                      rose-pine # colorscheme
+                      rose-pine# colorscheme
                       which-key-nvim
                       plenary-nvim
                       nvim-web-devicons
@@ -202,19 +203,13 @@
                   ":"
                   (pkgs.lib.makeBinPath (
                     let
-                      bashPackages = builtins.attrValues (import ./pkgs/bash.nix { inherit pkgs; });
-                      generalPackages = builtins.attrValues (import ./pkgs/general.nix { inherit pkgs; });
-                      nixPackages = builtins.attrValues (import ./pkgs/nix.nix { inherit pkgs; });
-                      markdownPackages = builtins.attrValues { inherit (pkgs) markdown-oxide markdownlint-cli; };
-                      serializedDataPackages = builtins.attrValues {
-                        inherit (pkgs)
-                          vscode-langservers-extracted # jsonls
-                          jq-lsp # jqls
-                          yaml-language-server # yamlls
-                          ;
-                      };
+                      useToolSuite = filePath: builtins.attrValues (import filePath { inherit pkgs; });
                     in
-                    bashPackages ++ generalPackages ++ markdownPackages ++ nixPackages ++ serializedDataPackages
+                    useToolSuite ./toolSuites/bash.nix
+                      ++ useToolSuite ./toolSuites/general.nix
+                      ++ useToolSuite ./toolSuites/markdown.nix
+                      ++ useToolSuite ./toolSuites/nix.nix
+                      ++ useToolSuite ./toolSuites/serializedData.nix
                   ))
                 ];
               });
@@ -231,12 +226,9 @@
             name = "nebvim";
             packages =
               let
-                luaPackages = builtins.attrValues {
-                  inherit (pkgs) lua-language-server stylua;
-                  inherit (pkgs.luajitPackages) luacheck;
-                };
+                useToolSuite = filePath: builtins.attrValues (import filePath { inherit pkgs; });
               in
-              luaPackages;
+              useToolSuite ./toolSuites/lua.nix;
           };
         }
       );
