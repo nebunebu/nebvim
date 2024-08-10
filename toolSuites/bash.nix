@@ -2,10 +2,10 @@
 {
   # bashPackages = builtins.attrValues {
   inherit (pkgs.nodePackages)
-    bash-language-server # bashls
+    bash-language-server# bashls
     ;
   inherit (pkgs)
-    shellcheck # shellcheck
-    shfmt # shfmt
+    shellcheck# shellcheck
+    shfmt# shfmt
     ;
 }

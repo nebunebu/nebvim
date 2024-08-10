@@ -12,6 +12,21 @@
     #   flake = false;
     # };
 
+    tiny-inline-diagnostic-nvim = {
+      url = "github:rachartier/tiny-inline-diagnostic.nvim";
+      flake = false;
+    };
+
+    tiny-code-action-nvim = {
+      url = "github:rachartier/tiny-code-action.nvim";
+      flake = false;
+    };
+
+    tiny-devicons-auto-colors-nvim = {
+      url = "github:rachartier/tiny-devicons-auto-colors.nvim";
+      flake = false;
+    };
+
     flow-nvim = {
       url = "github:0xstepit/flow.nvim";
       flake = false;
@@ -133,6 +148,18 @@
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.telescope-git-conflicts-nvim;
                         name = "telescope-git-conflicts-nvim";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.tiny-inline-diagnostic-nvim;
+                        name = "tiny-inline-diagnostic-nvim";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.tiny-code-action-nvim;
+                        name = "tiny-code-action-nvim";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.tiny-devicons-auto-colors-nvim;
+                        name = "tiny-devicons-auto-colors-nvim";
                       })
                     ];
                   in

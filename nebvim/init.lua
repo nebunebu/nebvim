@@ -24,6 +24,10 @@ require("neb.plugins.triptych")
 require("neb.plugins.which-key")
 require("neb.plugins.surround")
 
+require("neb.plugins.tiny-inline-diagnostic")
+require("neb.plugins.tiny-code-action")
+require("neb.plugins.tiny-devicons-auto-colors")
+
 -- NOTE: Lsp
 require("neb.plugins.lsp.lsp-zero")
 require("neb.plugins.lsp.lspconfig")
