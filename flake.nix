@@ -12,6 +12,11 @@
     #   flake = false;
     # };
 
+    # direnv-vim = {
+    #   url = "github:direnv/direnv.vim";
+    #   flake = false;
+    # };
+
     tiny-inline-diagnostic-nvim = {
       url = "github:rachartier/tiny-inline-diagnostic.nvim";
       flake = false;
@@ -105,6 +110,10 @@
                 plugins =
                   let
                     flakePlugins = [
+                      # (pkgs.vimUtils.buildVimPlugin {
+                      #   src = inputs.direnv-vim;
+                      #   name = "direnv-vim";
+                      # })
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.markdown-toc;
                         name = "markdown-toc";
