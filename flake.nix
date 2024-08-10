@@ -178,6 +178,7 @@
                     inherit (pkgs.vimPlugins)
                       image-nvim
                       nvim-surround
+                      toggleterm-nvim
 
                       rose-pine# colorscheme
                       which-key-nvim
