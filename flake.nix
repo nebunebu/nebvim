@@ -17,6 +17,7 @@
     #   flake = false;
     # };
 
+    # NOTE: made pr
     tiny-inline-diagnostic-nvim = {
       url = "github:rachartier/tiny-inline-diagnostic.nvim";
       flake = false;
@@ -52,6 +53,7 @@
       flake = false;
     };
 
+    # NOTE: think in nixpkgs
     markview = {
       url = "github:OXY2DEV/markview.nvim";
       flake = false;
