@@ -23,6 +23,11 @@
       flake = false;
     };
 
+    helpview-nvim = {
+      url = "github:OXY2DEV/helpview.nvim";
+      flake = false;
+    };
+
     tiny-code-action-nvim = {
       url = "github:rachartier/tiny-code-action.nvim";
       flake = false;
@@ -131,6 +136,10 @@
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.markview;
                         name = "markview";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.helpview;
+                        name = "helpview";
                       })
                       # (pkgs.vimUtils.buildVimPlugin {
                       #   src = inputs.direnv-nvim;
