@@ -176,7 +176,7 @@
         "type": "github"
       }
     },
-    "helpview-nvim": {
+    "helpview": {
       "flake": false,
       "locked": {
         "lastModified": 1723436613,
@@ -355,7 +355,7 @@
         "easypick-nvim": "easypick-nvim",
         "flow-nvim": "flow-nvim",
         "fortune": "fortune",
-        "helpview-nvim": "helpview-nvim",
+        "helpview": "helpview",
         "img-clip": "img-clip",
         "markdown-toc": "markdown-toc",
         "markview": "markview",

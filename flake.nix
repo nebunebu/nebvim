@@ -23,7 +23,7 @@
       flake = false;
     };
 
-    helpview-nvim = {
+    helpview = {
       url = "github:OXY2DEV/helpview.nvim";
       flake = false;
     };
