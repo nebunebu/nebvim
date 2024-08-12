@@ -43,6 +43,7 @@
       flake = false;
     };
 
+    # NOTE: in unstable
     triptych-nvim = {
       url = "github:simonmclean/triptych.nvim";
       flake = false;
