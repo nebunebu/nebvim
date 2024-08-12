@@ -6,17 +6,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Plugins
-    # direnv-nvim = {
-    #   url = "github:NotAShelf/direnv.nvim";
-    #   flake = false;
-    # };
-
-    # direnv-vim = {
-    #   url = "github:direnv/direnv.vim";
-    #   flake = false;
-    # };
-
     # NOTE: made pr
     tiny-inline-diagnostic-nvim = {
       url = "github:rachartier/tiny-inline-diagnostic.nvim";
@@ -43,12 +32,6 @@
       flake = false;
     };
 
-    # NOTE: in unstable
-    triptych-nvim = {
-      url = "github:simonmclean/triptych.nvim";
-      flake = false;
-    };
-
     markdown-toc = {
       url = "github:ChuufMaster/markdown-toc";
       flake = false;
@@ -56,12 +39,6 @@
 
     fortune = {
       url = "github:rubiin/fortune.nvim";
-      flake = false;
-    };
-
-    # NOTE: think in nixpkgs
-    markview = {
-      url = "github:OXY2DEV/markview.nvim";
       flake = false;
     };
 
@@ -79,6 +56,7 @@
       url = "github:xiyaowong/telescope-emoji.nvim";
       flake = false;
     };
+
     easypick-nvim = {
       url = "github:axkirillov/easypick.nvim";
       flake = false;
@@ -135,10 +113,6 @@
                         name = "fortune";
                       })
                       (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.markview;
-                        name = "markview";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.helpview;
                         name = "helpview";
                       })
@@ -146,10 +120,6 @@
                       #   src = inputs.direnv-nvim;
                       #   name = "direnv";
                       # })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.triptych-nvim;
-                        name = "triptych";
-                      })
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.img-clip;
                         name = "img-clip";
@@ -192,6 +162,8 @@
                       nvim-surround
                       toggleterm-nvim
                       nix-develop-nvim
+                      triptych-nvim
+                      markview-nvim
 
                       nvim-colorizer-lua
 

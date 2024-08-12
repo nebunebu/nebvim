@@ -247,22 +247,6 @@
         "type": "github"
       }
     },
-    "markview": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1723400991,
-        "narHash": "sha256-dx6xydpLm0mg3QkZFPBT2Uc/14gu2yJWt0SFv95ccUg=",
-        "owner": "OXY2DEV",
-        "repo": "markview.nvim",
-        "rev": "03290ce2e0c9e426c53dc9a1efabd8a6ee1f4904",
-        "type": "github"
-      },
-      "original": {
-        "owner": "OXY2DEV",
-        "repo": "markview.nvim",
-        "type": "github"
-      }
-    },
     "neovim-src": {
       "flake": false,
       "locked": {
@@ -358,7 +342,6 @@
         "helpview": "helpview",
         "img-clip": "img-clip",
         "markdown-toc": "markdown-toc",
-        "markview": "markview",
         "nerdy-nvim": "nerdy-nvim",
         "nixpkgs": "nixpkgs",
         "telescope-emoji-nvim": "telescope-emoji-nvim",
@@ -366,8 +349,7 @@
         "tiny-code-action-nvim": "tiny-code-action-nvim",
         "tiny-devicons-auto-colors-nvim": "tiny-devicons-auto-colors-nvim",
         "tiny-inline-diagnostic-nvim": "tiny-inline-diagnostic-nvim",
-        "tolerable": "tolerable",
-        "triptych-nvim": "triptych-nvim"
+        "tolerable": "tolerable"
       }
     },
     "telescope-emoji-nvim": {
@@ -468,22 +450,6 @@
       "original": {
         "owner": "wires-org",
         "repo": "tolerable-nvim-nix",
-        "type": "github"
-      }
-    },
-    "triptych-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1717345760,
-        "narHash": "sha256-fL5+0kKMBBMnUPJoIRZJpbakGFDToToLUZpvX55Awik=",
-        "owner": "simonmclean",
-        "repo": "triptych.nvim",
-        "rev": "d7ced78687c2ab203743edf0725761f6664f66cb",
-        "type": "github"
-      },
-      "original": {
-        "owner": "simonmclean",
-        "repo": "triptych.nvim",
         "type": "github"
       }
     }
