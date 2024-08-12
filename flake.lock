@@ -16,6 +16,22 @@
         "type": "github"
       }
     },
+    "detour-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1716854632,
+        "narHash": "sha256-BxwgNCE2jont9ghEeiA/0FOjllXob1vRpD8/vvzbRNw=",
+        "owner": "carbon-steel",
+        "repo": "detour.nvim",
+        "rev": "705b562888e2a7e9d5bac5b858b88d698a049220",
+        "type": "github"
+      },
+      "original": {
+        "owner": "carbon-steel",
+        "repo": "detour.nvim",
+        "type": "github"
+      }
+    },
     "easypick-nvim": {
       "flake": false,
       "locked": {
@@ -353,6 +369,7 @@
     "root": {
       "inputs": {
         "cellular-automaton": "cellular-automaton",
+        "detour-nvim": "detour-nvim",
         "easypick-nvim": "easypick-nvim",
         "flow-nvim": "flow-nvim",
         "fortune": "fortune",

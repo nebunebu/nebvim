@@ -23,6 +23,11 @@
       flake = false;
     };
 
+    detour-nvim = {
+      url = "github:carbon-steel/detour.nvim";
+      flake = false;
+    };
+
     cellular-automaton = {
       url = "github:Eandrju/cellular-automaton.nvim";
       flake = false;
@@ -107,6 +112,10 @@
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.cellular-automaton;
                         name = "cellular-automaton";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.detour-nvim;
+                        name = "detour";
                       })
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.markdown-toc;
