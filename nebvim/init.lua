@@ -26,6 +26,7 @@ require("neb.plugins.surround")
 require("neb.plugins.toggleterm")
 require("neb.plugins.quarto")
 require("neb.plugins.colorizer")
+require("neb.plugins.nix-develop")
 
 require("neb.plugins.tiny-inline-diagnostic")
 require("neb.plugins.tiny-code-action")

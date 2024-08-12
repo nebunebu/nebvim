@@ -181,6 +181,7 @@
                       image-nvim
                       nvim-surround
                       toggleterm-nvim
+                      nix-develop-nvim
 
                       nvim-colorizer-lua
 
