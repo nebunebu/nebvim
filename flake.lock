@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "cellular-automaton": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1719777869,
+        "narHash": "sha256-nIv7ISRk0+yWd1lGEwAV6u1U7EFQj/T9F8pU6O0Wf0s=",
+        "owner": "Eandrju",
+        "repo": "cellular-automaton.nvim",
+        "rev": "11aea08aa084f9d523b0142c2cd9441b8ede09ed",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Eandrju",
+        "repo": "cellular-automaton.nvim",
+        "type": "github"
+      }
+    },
     "easypick-nvim": {
       "flake": false,
       "locked": {
@@ -336,6 +352,7 @@
     },
     "root": {
       "inputs": {
+        "cellular-automaton": "cellular-automaton",
         "easypick-nvim": "easypick-nvim",
         "flow-nvim": "flow-nvim",
         "fortune": "fortune",

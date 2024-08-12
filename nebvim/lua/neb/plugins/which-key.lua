@@ -27,6 +27,12 @@ wk.add({
 		{ "<leader>q", group = "quickfix" },
 		{ "<leader>qt", "<cmd>TodoQuickFix<CR>", desc = "QuickFix Todo Comments" },
 
+		-- Quickfix
+		{ "<leader>c", group = "cellular automaton" },
+		{ "<leader>cr", "<cmd>CellularAutomaton make_it_rain<CR>", desc = "make it rain" },
+		{ "<leader>cg", "<cmd>CellularAutomaton game_of_life<CR>", desc = "game of life" },
+		{ "<leader>cs", "<cmd>CellularAutomaton scramble<CR>", desc = "scramble" },
+		{ "<leader>cl", "<cmd>CellularAutomaton slide<CR>", desc = "slide" },
 		-- Loclist
 
 		-- Telescope

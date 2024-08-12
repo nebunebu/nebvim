@@ -22,6 +22,11 @@
       flake = false;
     };
 
+    cellular-automaton = {
+      url = "github:Eandrju/cellular-automaton.nvim";
+      flake = false;
+    };
+
     tiny-devicons-auto-colors-nvim = {
       url = "github:rachartier/tiny-devicons-auto-colors.nvim";
       flake = false;
@@ -96,6 +101,10 @@
                 plugins =
                   let
                     flakePlugins = [
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.cellular-automaton;
+                        name = "cellular-automaton";
+                      })
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.markdown-toc;
                         name = "markdown-toc";
