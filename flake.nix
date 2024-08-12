@@ -225,6 +225,7 @@
                       telescope-nvim
                       telescope-project-nvim
                       # telescope-manix
+                      quarto-nvim
                       dressing-nvim
 
                       mkdnflow-nvim

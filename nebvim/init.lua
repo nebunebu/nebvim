@@ -24,6 +24,7 @@ require("neb.plugins.triptych")
 require("neb.plugins.which-key")
 require("neb.plugins.surround")
 require("neb.plugins.toggleterm")
+require("neb.plugins.quarto")
 
 require("neb.plugins.tiny-inline-diagnostic")
 require("neb.plugins.tiny-code-action")
