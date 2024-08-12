@@ -182,6 +182,8 @@
                       nvim-surround
                       toggleterm-nvim
 
+                      nvim-colorizer-lua
+
                       rose-pine# colorscheme
                       which-key-nvim
                       plenary-nvim
