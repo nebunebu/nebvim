@@ -96,10 +96,6 @@
                 plugins =
                   let
                     flakePlugins = [
-                      # (pkgs.vimUtils.buildVimPlugin {
-                      #   src = inputs.direnv-vim;
-                      #   name = "direnv-vim";
-                      # })
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.markdown-toc;
                         name = "markdown-toc";
@@ -116,10 +112,6 @@
                         src = inputs.helpview;
                         name = "helpview";
                       })
-                      # (pkgs.vimUtils.buildVimPlugin {
-                      #   src = inputs.direnv-nvim;
-                      #   name = "direnv";
-                      # })
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.img-clip;
                         name = "img-clip";
