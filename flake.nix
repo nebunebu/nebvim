@@ -12,6 +12,7 @@
       flake = false;
     };
 
+    # NOTE: made pr
     helpview = {
       url = "github:OXY2DEV/helpview.nvim";
       flake = false;
@@ -42,11 +43,13 @@
       flake = false;
     };
 
+    # NOTE: made pr
     fortune = {
       url = "github:rubiin/fortune.nvim";
       flake = false;
     };
 
+    # NOTE: made pr
     img-clip = {
       url = "github:HakonHarnes/img-clip.nvim";
       flake = false;
