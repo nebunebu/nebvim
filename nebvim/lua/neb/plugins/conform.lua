@@ -4,7 +4,7 @@ require("conform").setup({
 		javascript = { "prettierd" },
 		lua = { "stylua" },
 		markdown = { "markdownlint" },
-		nix = { { "nixpkgs_fmt", "nixfmt" } },
+		nix = { "nixpkgs_fmt", "nixfmt", stop_after_first = true },
 		scss = { "prettierd" },
 		tex = { "latexindent" },
 		typescript = { "prettierd" },
