@@ -182,6 +182,7 @@
                     inherit (pkgs.vimPlugins)
                       image-nvim
                       hardtime-nvim
+                      precognition-nvim
                       nvim-surround
                       toggleterm-nvim
                       nix-develop-nvim

@@ -33,6 +33,7 @@ require("neb.plugins.cellular-automaton")
 require("neb.plugins.detour")
 require("neb.plugins.oil")
 require("neb.plugins.hardtime")
+require("neb.plugins.precognition")
 
 require("neb.plugins.tiny-inline-diagnostic")
 require("neb.plugins.tiny-code-action")
