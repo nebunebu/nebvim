@@ -181,6 +181,7 @@
                   ++ builtins.attrValues {
                     inherit (pkgs.vimPlugins)
                       image-nvim
+                      hardtime-nvim
                       nvim-surround
                       toggleterm-nvim
                       nix-develop-nvim
