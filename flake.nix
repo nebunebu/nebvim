@@ -18,6 +18,11 @@
       flake = false;
     };
 
+    markview = {
+      url = "github:OXY2DEV/markview.nvim";
+      flake = false;
+    };
+
     tiny-code-action-nvim = {
       url = "github:rachartier/tiny-code-action.nvim";
       flake = false;
@@ -114,6 +119,10 @@
                         name = "cellular-automaton";
                       })
                       (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.markview;
+                        name = "markview";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.detour-nvim;
                         name = "detour";
                       })
@@ -176,7 +185,7 @@
                       toggleterm-nvim
                       nix-develop-nvim
                       triptych-nvim
-                      markview-nvim
+                      # markview-nvim
 
                       nvim-colorizer-lua
 
