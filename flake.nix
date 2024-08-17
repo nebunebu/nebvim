@@ -186,6 +186,7 @@
                       nix-develop-nvim
                       triptych-nvim
                       # markview-nvim
+                      oil-nvim
 
                       nvim-colorizer-lua
 

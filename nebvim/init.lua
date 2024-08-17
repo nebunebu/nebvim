@@ -30,6 +30,7 @@ require("neb.plugins.colorizer")
 require("neb.plugins.nix-develop")
 require("neb.plugins.cellular-automaton")
 require("neb.plugins.detour")
+require("neb.plugins.oil")
 
 require("neb.plugins.tiny-inline-diagnostic")
 require("neb.plugins.tiny-code-action")
