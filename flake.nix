@@ -26,6 +26,7 @@
       flake = false;
     };
 
+    # NOTE: made pr
     cellular-automaton = {
       url = "github:Eandrju/cellular-automaton.nvim";
       flake = false;
