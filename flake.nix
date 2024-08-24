@@ -6,6 +6,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    dev-environments.url = "github:nebunebu/dev-enviornments";
+
+
+    # PLUGINS
     # NOTE: made pr
     tiny-inline-diagnostic-nvim = {
       url = "github:rachartier/tiny-inline-diagnostic.nvim";
@@ -186,6 +190,13 @@
                   "--prefix"
                   "PATH"
                   ":"
+                  # (pkgs.lib.makeBinPath [
+                  # (inputs.dev-environments.lib.${system}.bash pkgs).use
+                  # (inputs.dev-environments.lib.${system}.json pkgs).use
+                  # (inputs.dev-environments.lib.${system}.markdown pkgs).use
+                  # (inputs.dev-environments.lib.${system}.nix pkgs).use
+                  # (inputs.dev-environments.lib.${system}.yaml pkgs).use
+                  # ])
                   (pkgs.lib.makeBinPath (
                     let
                       useToolSuite = filePath: builtins.attrValues (import filePath { inherit pkgs; });
@@ -209,11 +220,9 @@
         {
           default = pkgs.mkShell {
             name = "nebvim";
-            packages =
-              let
-                useToolSuite = filePath: builtins.attrValues (import filePath { inherit pkgs; });
-              in
-              useToolSuite ./toolSuites/lua.nix;
+            packages = [
+              (inputs.dev-environments.lib.${system}.lua pkgs).use
+            ];
           };
         }
       );
