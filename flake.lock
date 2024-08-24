@@ -16,22 +16,6 @@
         "type": "github"
       }
     },
-    "detour-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1716854632,
-        "narHash": "sha256-BxwgNCE2jont9ghEeiA/0FOjllXob1vRpD8/vvzbRNw=",
-        "owner": "carbon-steel",
-        "repo": "detour.nvim",
-        "rev": "705b562888e2a7e9d5bac5b858b88d698a049220",
-        "type": "github"
-      },
-      "original": {
-        "owner": "carbon-steel",
-        "repo": "detour.nvim",
-        "type": "github"
-      }
-    },
     "dev-environments": {
       "inputs": {
         "nixpkgs": "nixpkgs",
@@ -159,38 +143,6 @@
         "type": "indirect"
       }
     },
-    "flow-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1721741746,
-        "narHash": "sha256-9/bAKR2n/AQOvp0wwgmL75pzE6V4yKupSAP6/rLnH/E=",
-        "owner": "0xstepit",
-        "repo": "flow.nvim",
-        "rev": "3af4d4d1b8a99c34e060de6fdaa5babc596a50c1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "0xstepit",
-        "repo": "flow.nvim",
-        "type": "github"
-      }
-    },
-    "fortune": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1721286253,
-        "narHash": "sha256-ZF3Ott2chCbcGpOefuWR3cn6y/MN76Y78weGVugV0U8=",
-        "owner": "rubiin",
-        "repo": "fortune.nvim",
-        "rev": "29a99fbf887a2d48693f1eaa1893f84cde60af54",
-        "type": "github"
-      },
-      "original": {
-        "owner": "rubiin",
-        "repo": "fortune.nvim",
-        "type": "github"
-      }
-    },
     "git-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_3",
@@ -304,22 +256,6 @@
         "type": "github"
       }
     },
-    "img-clip": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1723736130,
-        "narHash": "sha256-MRY/l3s6pTvIsjm2Q7qH7nNWkmYSrfeU7KTfH8JAgFs=",
-        "owner": "HakonHarnes",
-        "repo": "img-clip.nvim",
-        "rev": "0e047d80bb08753e8899b5101e88624e54c5d4ad",
-        "type": "github"
-      },
-      "original": {
-        "owner": "HakonHarnes",
-        "repo": "img-clip.nvim",
-        "type": "github"
-      }
-    },
     "markdown-toc": {
       "flake": false,
       "locked": {
@@ -333,22 +269,6 @@
       "original": {
         "owner": "ChuufMaster",
         "repo": "markdown-toc",
-        "type": "github"
-      }
-    },
-    "markview": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1724249003,
-        "narHash": "sha256-A+Cyp7k7fcDgax2dcDqwkKI8gNuNDADLT6Th5F/7/LY=",
-        "owner": "OXY2DEV",
-        "repo": "markview.nvim",
-        "rev": "1cec6fc4f3b5a066dbb42205e8187139654dea1f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "OXY2DEV",
-        "repo": "markview.nvim",
         "type": "github"
       }
     },
@@ -498,22 +418,16 @@
     "root": {
       "inputs": {
         "cellular-automaton": "cellular-automaton",
-        "detour-nvim": "detour-nvim",
         "dev-environments": "dev-environments",
         "easypick-nvim": "easypick-nvim",
-        "flow-nvim": "flow-nvim",
-        "fortune": "fortune",
         "helpview": "helpview",
-        "img-clip": "img-clip",
         "markdown-toc": "markdown-toc",
-        "markview": "markview",
         "nerdy-nvim": "nerdy-nvim",
         "nixpkgs": "nixpkgs_2",
         "telescope-emoji-nvim": "telescope-emoji-nvim",
         "telescope-git-conflicts-nvim": "telescope-git-conflicts-nvim",
         "tiny-code-action-nvim": "tiny-code-action-nvim",
         "tiny-devicons-auto-colors-nvim": "tiny-devicons-auto-colors-nvim",
-        "tiny-inline-diagnostic-nvim": "tiny-inline-diagnostic-nvim",
         "tolerable": "tolerable"
       }
     },
@@ -578,22 +492,6 @@
       "original": {
         "owner": "rachartier",
         "repo": "tiny-devicons-auto-colors.nvim",
-        "type": "github"
-      }
-    },
-    "tiny-inline-diagnostic-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1723985829,
-        "narHash": "sha256-PMmM1HvxQvWMI8e3WweX6CsglVgBNJRAbRrTkgdQrTI=",
-        "owner": "rachartier",
-        "repo": "tiny-inline-diagnostic.nvim",
-        "rev": "91de9d4362555f41cb4fee77e568b17e396b3163",
-        "type": "github"
-      },
-      "original": {
-        "owner": "rachartier",
-        "repo": "tiny-inline-diagnostic.nvim",
         "type": "github"
       }
     },

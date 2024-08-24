@@ -8,10 +8,13 @@
     toggleterm-nvim
     nix-develop-nvim
     triptych-nvim
-    # markview-nvim
+    markview-nvim
     oil-nvim
+    tiny-inline-diagnostic-nvim
+
 
     nvim-colorizer-lua
+    img-clip-nvim
 
     rose-pine# colorscheme
     which-key-nvim
@@ -21,6 +24,7 @@
     barbecue-nvim
     lualine-nvim
     alpha-nvim
+    fortune-nvim
 
     marks-nvim
     neogit

@@ -11,29 +11,13 @@
 
     # PLUGINS
     # NOTE: made pr
-    tiny-inline-diagnostic-nvim = {
-      url = "github:rachartier/tiny-inline-diagnostic.nvim";
-      flake = false;
-    };
-
-    # NOTE: made pr
     helpview = {
       url = "github:OXY2DEV/helpview.nvim";
       flake = false;
     };
 
-    markview = {
-      url = "github:OXY2DEV/markview.nvim";
-      flake = false;
-    };
-
     tiny-code-action-nvim = {
       url = "github:rachartier/tiny-code-action.nvim";
-      flake = false;
-    };
-
-    detour-nvim = {
-      url = "github:carbon-steel/detour.nvim";
       flake = false;
     };
 
@@ -47,25 +31,8 @@
       flake = false;
     };
 
-    flow-nvim = {
-      url = "github:0xstepit/flow.nvim";
-      flake = false;
-    };
-
     markdown-toc = {
       url = "github:ChuufMaster/markdown-toc";
-      flake = false;
-    };
-
-    # NOTE: made pr
-    fortune = {
-      url = "github:rubiin/fortune.nvim";
-      flake = false;
-    };
-
-    # NOTE: made pr
-    img-clip = {
-      url = "github:HakonHarnes/img-clip.nvim";
       flake = false;
     };
 
@@ -123,32 +90,12 @@
                         name = "cellular-automaton";
                       })
                       (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.markview;
-                        name = "markview";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.detour-nvim;
-                        name = "detour";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.markdown-toc;
                         name = "markdown-toc";
                       })
                       (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.flow-nvim;
-                        name = "flow-nvim";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.fortune;
-                        name = "fortune";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.helpview;
                         name = "helpview";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.img-clip;
-                        name = "img-clip";
                       })
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.nerdy-nvim;
@@ -165,10 +112,6 @@
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.telescope-git-conflicts-nvim;
                         name = "telescope-git-conflicts-nvim";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.tiny-inline-diagnostic-nvim;
-                        name = "tiny-inline-diagnostic-nvim";
                       })
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.tiny-code-action-nvim;
