@@ -256,6 +256,22 @@
         "type": "github"
       }
     },
+    "journal-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1718263999,
+        "narHash": "sha256-IhevbPwiN3u6pDtY6FVVYsEdezAI2OjqKIZ0MSl3rgI=",
+        "owner": "jakobkhansen",
+        "repo": "journal.nvim",
+        "rev": "006d9900cad5c378ed4b4cb89eb8696fb2383042",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jakobkhansen",
+        "repo": "journal.nvim",
+        "type": "github"
+      }
+    },
     "markdown-toc": {
       "flake": false,
       "locked": {
@@ -421,6 +437,7 @@
         "dev-environments": "dev-environments",
         "easypick-nvim": "easypick-nvim",
         "helpview": "helpview",
+        "journal-nvim": "journal-nvim",
         "markdown-toc": "markdown-toc",
         "nerdy-nvim": "nerdy-nvim",
         "nixpkgs": "nixpkgs_2",

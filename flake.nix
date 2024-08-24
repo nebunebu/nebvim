@@ -16,6 +16,11 @@
       flake = false;
     };
 
+    journal-nvim = {
+      url = "github:jakobkhansen/journal.nvim";
+      flake = false;
+    };
+
     tiny-code-action-nvim = {
       url = "github:rachartier/tiny-code-action.nvim";
       flake = false;
@@ -88,6 +93,10 @@
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.cellular-automaton;
                         name = "cellular-automaton";
+                      })
+                      (pkgs.vimUtils.buildVimPlugin {
+                        src = inputs.journal-nvim;
+                        name = "journal-nvim";
                       })
                       (pkgs.vimUtils.buildVimPlugin {
                         src = inputs.markdown-toc;
