@@ -77,6 +77,8 @@
                       (inputs.dev-environments.lib.${system}.bash pkgs).use
                         ++ (inputs.dev-environments.lib.${system}.json pkgs).use
                         ++ (inputs.dev-environments.lib.${system}.nix pkgs).use
+                        ++ (inputs.dev-environments.lib.${system}.xml pkgs).use
+                        ++ (inputs.dev-environments.lib.${system}.yaml pkgs).use
                     )))
                 ];
               });
