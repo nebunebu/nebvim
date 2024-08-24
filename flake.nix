@@ -5,62 +5,19 @@
       url = "github:wires-org/tolerable-nvim-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     dev-environments.url = "github:nebunebu/dev-enviornments";
 
-
     # PLUGINS
-    # NOTE: made pr
-    helpview = {
-      url = "github:OXY2DEV/helpview.nvim";
-      flake = false;
-    };
-
-    journal-nvim = {
-      url = "github:jakobkhansen/journal.nvim";
-      flake = false;
-    };
-
-    tiny-code-action-nvim = {
-      url = "github:rachartier/tiny-code-action.nvim";
-      flake = false;
-    };
-
-    # NOTE: made pr
-    cellular-automaton = {
-      url = "github:Eandrju/cellular-automaton.nvim";
-      flake = false;
-    };
-
-    tiny-devicons-auto-colors-nvim = {
-      url = "github:rachartier/tiny-devicons-auto-colors.nvim";
-      flake = false;
-    };
-
-    markdown-toc = {
-      url = "github:ChuufMaster/markdown-toc";
-      flake = false;
-    };
-
-    nerdy-nvim = {
-      url = "github:2KAbhishek/nerdy.nvim";
-      flake = false;
-    };
-
-    telescope-emoji-nvim = {
-      url = "github:xiyaowong/telescope-emoji.nvim";
-      flake = false;
-    };
-
-    easypick-nvim = {
-      url = "github:axkirillov/easypick.nvim";
-      flake = false;
-    };
-
-    telescope-git-conflicts-nvim = {
-      url = "github:Snikimonkd/telescope-git-conflicts.nvim";
-      flake = false;
-    };
+    helpview = { url = "github:OXY2DEV/helpview.nvim"; flake = false; }; # NOTE: pr
+    journal-nvim = { url = "github:jakobkhansen/journal.nvim"; flake = false; };
+    tiny-code-action-nvim = { url = "github:rachartier/tiny-code-action.nvim"; flake = false; };
+    cellular-automaton = { url = "github:Eandrju/cellular-automaton.nvim"; flake = false; }; #NOTE: pr
+    tiny-devicons-auto-colors-nvim = { url = "github:rachartier/tiny-devicons-auto-colors.nvim"; flake = false; };
+    markdown-toc = { url = "github:ChuufMaster/markdown-toc"; flake = false; };
+    nerdy-nvim = { url = "github:2KAbhishek/nerdy.nvim"; flake = false; };
+    telescope-emoji-nvim = { url = "github:xiyaowong/telescope-emoji.nvim"; flake = false; };
+    easypick-nvim = { url = "github:axkirillov/easypick.nvim"; flake = false; };
+    telescope-git-conflicts-nvim = { url = "github:Snikimonkd/telescope-git-conflicts.nvim"; flake = false; };
   };
 
   outputs =
@@ -78,6 +35,22 @@
         system:
         let
           pkgs = inputs.nixpkgs.legacyPackages.${system};
+          mkFlakePlugins = map
+            (plugin: pkgs.vimUtils.buildVimPlugin {
+              src = inputs.${plugin};
+              name = plugin;
+            }) [
+            "cellular-automaton"
+            "journal-nvim"
+            "markdown-toc"
+            "helpview"
+            "nerdy-nvim"
+            "telescope-emoji-nvim"
+            "easypick-nvim"
+            "telescope-git-conflicts-nvim"
+            "tiny-code-action-nvim"
+            "tiny-devicons-auto-colors-nvim"
+          ];
         in
         {
           default =
@@ -88,52 +61,7 @@
                 fileset = ./nebvim;
               };
               config = {
-                plugins =
-                  let
-                    flakePlugins = [
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.cellular-automaton;
-                        name = "cellular-automaton";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.journal-nvim;
-                        name = "journal-nvim";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.markdown-toc;
-                        name = "markdown-toc";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.helpview;
-                        name = "helpview";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.nerdy-nvim;
-                        name = "nerdy-nvim";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.telescope-emoji-nvim;
-                        name = "telescope-emoji-nvim";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.easypick-nvim;
-                        name = "easypick-nvim";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.telescope-git-conflicts-nvim;
-                        name = "telescope-git-conflicts-nvim";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.tiny-code-action-nvim;
-                        name = "tiny-code-action-nvim";
-                      })
-                      (pkgs.vimUtils.buildVimPlugin {
-                        src = inputs.tiny-devicons-auto-colors-nvim;
-                        name = "tiny-devicons-auto-colors-nvim";
-                      })
-                    ];
-                  in
-                  flakePlugins
+                plugins = mkFlakePlugins
                   ++ [ pkgs.vimPlugins.nvim-treesitter.withAllGrammars ]
                   ++ builtins.attrValues (import ./plugins.nix { inherit pkgs; });
               };
