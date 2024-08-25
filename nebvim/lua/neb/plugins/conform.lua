@@ -13,6 +13,7 @@ require("conform").setup({
 		typescript = { "prettierd" },
 		xml = { "xmlformat" },
 		yaml = { "yamlfmt" },
+		["*"] = { "trim_whitespace", "trim_newlines" },
 	},
 
 	format_on_save = { lsp_format = "fallback" },
