@@ -5,7 +5,7 @@
       url = "github:wires-org/tolerable-nvim-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    dev-environments.url = "github:nebunebu/dev-enviornments";
+    tool-suites.url = "github:nebunebu/tool-suites";
 
     # PLUGINS
     helpview = { url = "github:OXY2DEV/helpview.nvim"; flake = false; }; # NOTE: pr
@@ -72,33 +72,38 @@
                   "PATH"
                   ":"
 
-                  (toString
-                    (pkgs.lib.makeBinPath (
-                      (inputs.dev-environments.lib.${system}.bash pkgs).use
-                        ++ (inputs.dev-environments.lib.${system}.json pkgs).use
-                        ++ (inputs.dev-environments.lib.${system}.nix pkgs).use
-                        ++ (inputs.dev-environments.lib.${system}.xml pkgs).use
-                        ++ (inputs.dev-environments.lib.${system}.yaml pkgs).use
-                    )))
+                  # (toString
+                  #   (pkgs.lib.makeBinPath (
+                  #     (inputs.tool-suites.lib.${system}.bash pkgs).use
+                  #       ++ (inputs.tool-suites.lib.${system}.json pkgs).use
+                  #       ++ (inputs.tool-suites.lib.${system}.nix pkgs).use
+                  #       ++ (inputs.tool-suites.lib.${system}.xml pkgs).use
+                  #       ++ (inputs.tool-suites.lib.${system}.yaml pkgs).use
+                  #   )))
                 ];
               });
         }
       );
 
-      devShells = forAllSystems
+      devShells = builtins.mapAttrs
         (
-          system:
-          let
-            pkgs = inputs.nixpkgs.legacyPackages.${system};
-          in
-          {
-            default = pkgs.mkShell {
-              name = "nebvim";
-              packages = [
-                (inputs.dev-environments.lib.${system}.lua pkgs).use
-              ];
-            };
-          }
-        );
+          system: _:
+            let
+              pkgs = import inputs.nixpkgs {
+                inherit system;
+                overlays = [ inputs.tool-suites.overlays.default ];
+              };
+            in
+            {
+              default = pkgs.mkShell {
+                name = "testShell";
+                packages = [
+                  pkgs.tool-suite.lua
+                  pkgs.tool-suite.nix
+                ];
+              };
+            }
+        )
+        inputs.nixpkgs.legacyPackages;
     };
 }
