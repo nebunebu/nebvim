@@ -1,5 +1,8 @@
 require("conform").setup({
 	formatters_by_ft = {
+		bash = { "shfmt" },
+		json = { "fixjson" },
+		html = { "htmlbeautifier" },
 		css = { "prettierd" },
 		javascript = { "prettierd" },
 		lua = { "stylua" },
@@ -8,6 +11,8 @@ require("conform").setup({
 		scss = { "prettierd" },
 		tex = { "latexindent" },
 		typescript = { "prettierd" },
+		xml = { "xmlformat" },
+		yaml = { "yamlfmt" },
 	},
 
 	format_on_save = { lsp_format = "fallback" },
