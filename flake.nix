@@ -20,21 +20,14 @@
     telescope-git-conflicts-nvim = { url = "github:Snikimonkd/telescope-git-conflicts.nvim"; flake = false; };
   };
 
-  outputs =
-    inputs:
-    let
-      forAllSystems = inputs.nixpkgs.lib.genAttrs [
-        "x86_64-linux"
-        "x86_64-darwin"
-        "aarch64-linux"
-        "aarch64-darwin"
-      ];
-    in
-    {
-      packages = forAllSystems (
-        system:
+  outputs = inputs: {
+    packages = builtins.mapAttrs
+      (system: _:
         let
-          pkgs = inputs.nixpkgs.legacyPackages.${system};
+          pkgs = import inputs.nixpkgs {
+            inherit system;
+            overlays = [ inputs.tool-suites.overlays.default ];
+          };
           mkFlakePlugins = map
             (plugin: pkgs.vimUtils.buildVimPlugin {
               src = inputs.${plugin};
@@ -71,39 +64,38 @@
                   "--prefix"
                   "PATH"
                   ":"
-
-                  # (toString
-                  #   (pkgs.lib.makeBinPath (
-                  #     (inputs.tool-suites.lib.${system}.bash pkgs).use
-                  #       ++ (inputs.tool-suites.lib.${system}.json pkgs).use
-                  #       ++ (inputs.tool-suites.lib.${system}.nix pkgs).use
-                  #       ++ (inputs.tool-suites.lib.${system}.xml pkgs).use
-                  #       ++ (inputs.tool-suites.lib.${system}.yaml pkgs).use
-                  #   )))
+                  (builtins.toString
+                    (pkgs.lib.makeBinPath (
+                      pkgs.tool-suite.bash
+                        ++ pkgs.tool-suite.json
+                        ++ pkgs.tool-suite.nix
+                        ++ pkgs.tool-suite.xml
+                        ++ pkgs.tool-suite.yaml
+                    )))
                 ];
               });
         }
-      );
+      )
+      inputs.nixpkgs.legacyPackages;
 
-      devShells = builtins.mapAttrs
-        (
-          system: _:
-            let
-              pkgs = import inputs.nixpkgs {
-                inherit system;
-                overlays = [ inputs.tool-suites.overlays.default ];
-              };
-            in
-            {
-              default = pkgs.mkShell {
-                name = "testShell";
-                packages = [
-                  pkgs.tool-suite.lua
-                  pkgs.tool-suite.nix
-                ];
-              };
-            }
-        )
-        inputs.nixpkgs.legacyPackages;
-    };
+    devShells = builtins.mapAttrs
+      (
+        system: _:
+          let
+            pkgs = import inputs.nixpkgs {
+              inherit system;
+              overlays = [ inputs.tool-suites.overlays.default ];
+            };
+          in
+          {
+            default = pkgs.mkShell {
+              name = "testShell";
+              packages = [
+                pkgs.tool-suite.lua
+              ];
+            };
+          }
+      )
+      inputs.nixpkgs.legacyPackages;
+  };
 }
