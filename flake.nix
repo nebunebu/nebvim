@@ -69,6 +69,8 @@
                       pkgs.tool-suite.bash
                         ++ pkgs.tool-suite.json
                         ++ pkgs.tool-suite.nix
+                        # ++ pkgs.tool-suite.md
+                        # ++ pkgs.tool-suite.nvim-additions
                         ++ pkgs.tool-suite.xml
                         ++ pkgs.tool-suite.yaml
                     )))
