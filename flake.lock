@@ -422,11 +422,11 @@
     },
     "tool-suites": {
       "locked": {
-        "lastModified": 1724594627,
-        "narHash": "sha256-3lfCG1DZ9dRILU8/xPKu+Pzqq14PZlcOzbl+i1pkIq0=",
+        "lastModified": 1724611930,
+        "narHash": "sha256-R3q0aS2TR0QwSF/L0mlIkFxMlQvzSg8/J7MrCxHiOTQ=",
         "owner": "nebunebu",
         "repo": "tool-suites",
-        "rev": "ebde3c7b474febe7ebdbe1a36a8a1fff30168d41",
+        "rev": "33c062c4e09d515018d2c0c17dcdda09c4ce7996",
         "type": "github"
       },
       "original": {
