@@ -1,6 +1,5 @@
 require("conform").setup({
 	formatters_by_ft = {
-		bash = { "shfmt" },
 		json = { "fixjson" },
 		html = { "htmlbeautifier" },
 		css = { "prettierd" },
@@ -9,6 +8,7 @@ require("conform").setup({
 		markdown = { "markdownlint" },
 		nix = { "nixpkgs_fmt", "nixfmt", stop_after_first = true },
 		scss = { "prettierd" },
+		sh = { "shfmt" },
 		tex = { "latexindent" },
 		typescript = { "prettierd" },
 		xml = { "xmlformat" },
