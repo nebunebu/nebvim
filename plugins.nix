@@ -1,41 +1,16 @@
 { pkgs, ... }:
 {
   inherit (pkgs.vimPlugins)
-    image-nvim
-    hardtime-nvim
-    helpview-nvim
-    cellular-automation-nvim
-    precognition-nvim
-    nvim-surround
-    toggleterm-nvim
-    nix-develop-nvim
-    triptych-nvim
-    markview-nvim
-    oil-nvim
-    tiny-inline-diagnostic-nvim
-
-
-    nvim-colorizer-lua
-    img-clip-nvim
-
-    rose-pine# colorscheme
-    which-key-nvim
+    # Utilities
     plenary-nvim
-    nvim-web-devicons
-    nvim-navic
-    barbecue-nvim
-    lualine-nvim
-    alpha-nvim
-    fortune-nvim
 
-    marks-nvim
-    neogit
+    # LSP
     lsp-zero-nvim
     nvim-lspconfig
     lspkind-nvim
     fidget-nvim
 
-    # cmp
+    # Completion
     luasnip
     nvim-cmp
     cmp-nvim-lsp
@@ -43,32 +18,75 @@
     cmp_luasnip
     cmp-async-path
 
-    # formatters
-    conform-nvim
+    # NoteTaking
+    mkdnflow-nvim
 
-    # linters
-    nvim-lint
+    # File Explorers
+    triptych-nvim
+    oil-nvim
 
-    # editing support
+    # Color
+    # Startup
+    alpha-nvim
+    fortune-nvim
+
+    # Media
+    image-nvim
+
+    # Terminal Integration
+    # Git
+    # Motion
+
+    # Editing Support
     indent-blankline-nvim
     nvim-autopairs
-    rainbow-delimiters-nvim
     nvim-treesitter-endwise
-
     comment-nvim
     todo-comments-nvim
+
+    # Tmux
+    vim-tmux-navigator
+
+    # UI and Aesthetics
+    rose-pine# colorscheme
+    lualine-nvim
+    rainbow-delimiters-nvim
+    helpview-nvim
+
+    # Formatters and Linters
+    nvim-lint
+    conform-nvim
+
+
+    hardtime-nvim
+    cellular-automata-nvim
+    precognition-nvim
+    nvim-surround
+    toggleterm-nvim
+    nix-develop-nvim
+    markview-nvim
+    tiny-inline-diagnostic-nvim
+
+
+    nvim-colorizer-lua
+    img-clip-nvim
+
+    which-key-nvim
+    nvim-web-devicons
+    nvim-navic
+    barbecue-nvim
+
+    marks-nvim
+    neogit
+
 
     # Telescope
     telescope-nvim
     telescope-project-nvim
-    # telescope-manix
+
     quarto-nvim
     otter-nvim
     dressing-nvim
 
-    mkdnflow-nvim
-
-    # tmux
-    vim-tmux-navigator
     ;
 }
