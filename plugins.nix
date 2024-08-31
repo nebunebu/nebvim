@@ -4,7 +4,7 @@
     image-nvim
     hardtime-nvim
     helpview-nvim
-    cellualr-automation-nvim
+    cellular-automation-nvim
     precognition-nvim
     nvim-surround
     toggleterm-nvim
