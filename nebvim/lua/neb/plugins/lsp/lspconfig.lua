@@ -7,6 +7,6 @@ require("lspconfig").jsonls.setup({})
 require("lspconfig").lua_ls.setup({})
 require("lspconfig").markdown_oxide.setup({})
 require("lspconfig").nixd.setup({})
-require("lspconfig").texlab.setup({}) -- latex
-require("lspconfig").texlab.setup({}) -- latex
+require("lspconfig").texlab.setup({})
+require("lspconfig").tsserver.setup({})
 require("lspconfig").lemminx.setup({})
