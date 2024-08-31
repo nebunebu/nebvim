@@ -59,7 +59,7 @@
 
 
     hardtime-nvim
-    cellular-automata-nvim
+    cellular-automaton-nvim
     precognition-nvim
     nvim-surround
     toggleterm-nvim
