@@ -3,6 +3,8 @@
   inherit (pkgs.vimPlugins)
     image-nvim
     hardtime-nvim
+    helpview-nvim
+    cellualr-automation-nvim
     precognition-nvim
     nvim-surround
     toggleterm-nvim

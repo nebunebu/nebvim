@@ -8,10 +8,8 @@
     tool-suites.url = "github:nebunebu/tool-suites";
 
     # PLUGINS
-    helpview = { url = "github:OXY2DEV/helpview.nvim"; flake = false; }; # NOTE: pr
     journal-nvim = { url = "github:jakobkhansen/journal.nvim"; flake = false; };
     tiny-code-action-nvim = { url = "github:rachartier/tiny-code-action.nvim"; flake = false; };
-    cellular-automaton = { url = "github:Eandrju/cellular-automaton.nvim"; flake = false; }; #NOTE: pr
     tiny-devicons-auto-colors-nvim = { url = "github:rachartier/tiny-devicons-auto-colors.nvim"; flake = false; };
     markdown-toc = { url = "github:ChuufMaster/markdown-toc"; flake = false; };
     nerdy-nvim = { url = "github:2KAbhishek/nerdy.nvim"; flake = false; };
@@ -33,10 +31,8 @@
               src = inputs.${plugin};
               name = plugin;
             }) [
-            "cellular-automaton"
             "journal-nvim"
             "markdown-toc"
-            "helpview"
             "nerdy-nvim"
             "telescope-emoji-nvim"
             "easypick-nvim"
