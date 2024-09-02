@@ -79,3 +79,4 @@ an issue or make a pull request.
 
 - [wires-org/tolerable-nvim-nix](https://github.com/wires-org/tolerable-nvim-nix)
 - [mrshmllow/nvim-candy](https://github.com/mrshmllow/nvim-candy)
+- All the plugin authors and contributors who make this configuration possible
