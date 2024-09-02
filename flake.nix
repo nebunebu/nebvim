@@ -56,21 +56,27 @@
               };
             }).overrideAttrs
               (old: {
-                generatedWrapperArgs = (old.generatedWrapperArgs or [ ]) ++ [
-                  "--prefix"
-                  "PATH"
-                  ":"
-                  (builtins.toString
-                    (pkgs.lib.makeBinPath (
-                      pkgs.tool-suite.bash
-                        ++ pkgs.tool-suite.json
-                        ++ pkgs.tool-suite.nix
-                        ++ pkgs.tool-suite.md
-                        ++ pkgs.tool-suite.nvim-tools
-                        ++ pkgs.tool-suite.xml
-                        ++ pkgs.tool-suite.yaml
-                    )))
-                ];
+                generatedWrapperArgs =
+                  let
+                    toolSuites = builtins.attrValues {
+                      inherit (pkgs.tool-suite)
+                        bash
+                        json
+                        nix
+                        md
+                        nvim-tools
+                        xml
+                        yaml
+                        ;
+                    };
+                    toolPath = pkgs.lib.makeBinPath (builtins.concatLists toolSuites);
+                  in
+                  (old.generatedWrapperArgs or [ ]) ++ [
+                    "--prefix"
+                    "PATH"
+                    ":"
+                    (builtins.toString toolPath)
+                  ];
               });
         }
       )
