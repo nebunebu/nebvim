@@ -3,6 +3,7 @@ local def_hls = markview.configuration.highlight_groups
 
 markview.setup({
 	hybrid_modes = { "n" },
+	filetypes = { "markdown", "quarto" },
 	callbacks = {
 		on_enable = function(_, win)
 			vim.wo[win].conceallevel = 2
