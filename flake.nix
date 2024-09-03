@@ -11,13 +11,18 @@
           # }}}
 
           # {{{ mkFlakePlugins function
+          # Filters through inputs names with the suffix -nvim
+          # and makes plugins from those inputs
+          # Plugin inputs with names ending in "-nvim" are automatically
+          # built. 
           mkFlakePlugins = map
             (plugin: pkgs.vimUtils.buildVimPlugin {
               src = inputs.${plugin};
               name = plugin;
             })
-            (
-              inputs.nixpkgs.lib.filter (inputs.nixpkgs.lib.hasSuffix "-nvim") (inputs.nixpkgs.lib.attrNames inputs)
+            (inputs.nixpkgs.lib.filter
+              (inputs.nixpkgs.lib.hasSuffix "-nvim")
+              (inputs.nixpkgs.lib.attrNames inputs)
             );
           # }}}
         in
