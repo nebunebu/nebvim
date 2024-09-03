@@ -191,7 +191,7 @@
     };
     tool-suites.url = "github:nebunebu/tool-suites";
 
-    # NOTE: Flake Inputs for plugins
+    # {{{  NOTE: Flake Inputs for plugins
 
     # Utilities
     plenary-nvim = { url = "github:nvim-lua/plenary.nvim"; flake = false; };
@@ -299,5 +299,6 @@
     # Vim Habits
     # hardtime-nvim
     # precognition-nvim
+    # }}}
   };
 }
