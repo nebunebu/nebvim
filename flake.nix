@@ -7,120 +7,127 @@
             inherit system;
             overlays = [ inputs.tool-suites.overlays.default ];
           };
+
+          # {{{ mkFlakePlugins function
           mkFlakePlugins = map
             (plugin: pkgs.vimUtils.buildVimPlugin {
               src = inputs.${plugin};
               name = plugin;
-            }) [
-            # NOTE: I hate this
+            })
+            # }}}
 
-            # Utilities
-            "plenary-nvim"
+            # {{{ NOTE: Plugins
+            [
+              # FIX: Deduplicate, should be able to map over flake inputs
 
-            # LSP
-            "lsp-zero-nvim"
-            "lspconfig-nvim"
-            "lspkind-nvim"
-            "fidget-nvim"
-            "barbecue-nvim"
-            "nvim-navic-nvim"
+              # Utilities
+              "plenary-nvim"
 
-            # Linting
-            "nvim-lint-nvim"
-            "tiny-inline-diagnostic-nvim"
+              # LSP
+              "lsp-zero-nvim"
+              "lspconfig-nvim"
+              "lspkind-nvim"
+              "fidget-nvim"
+              "barbecue-nvim"
+              "nvim-navic-nvim"
 
-            # Formatters
-            "conform-nvim"
+              # Linting
+              "nvim-lint-nvim"
+              "tiny-inline-diagnostic-nvim"
 
-            # Completion
-            "nvim-cmp-nvim"
-            "cmp-nvim-lsp-nvim"
-            "cmp-buffer-nvim"
-            "cmp-luasnip-nvim"
-            "cmp-async-path-nvim"
+              # Formatters
+              "conform-nvim"
 
-            # Snippets
-            "luasnip-nvim"
+              # Completion
+              "nvim-cmp-nvim"
+              "cmp-nvim-lsp-nvim"
+              "cmp-buffer-nvim"
+              "cmp-luasnip-nvim"
+              "cmp-async-path-nvim"
 
-            # Editing Support
-            "indent-blankline-nvim"
-            "nvim-autopairs-nvim"
-            "nvim-treesitter-endwise-nvim"
-            "rainbow-delimitters-nvim"
-            "nvim-surround-nvim"
+              # Snippets
+              "luasnip-nvim"
 
-            # Comments
-            "comment-nvim"
-            "todo-comments-nvim"
+              # Editing Support
+              "indent-blankline-nvim"
+              "nvim-autopairs-nvim"
+              "nvim-treesitter-endwise-nvim"
+              "rainbow-delimitters-nvim"
+              "nvim-surround-nvim"
 
-            # File Explorers
-            "triptych-nvim" # Swap to yazi plugin
-            "oil-nvim"
+              # Comments
+              "comment-nvim"
+              "todo-comments-nvim"
 
-            # Telescope
-            "telescope-nvim"
-            "telescope-project-nvim" # replace with whatever auto adds git repos
-            "nerdy-nvim"
-            "telescope-emoji-nvim"
-            "easypick-nvim"
-            "telescope-git-conflicts-nvim"
+              # File Explorers
+              "triptych-nvim" # Swap to yazi plugin
+              "oil-nvim"
 
-            # Startup
-            "alpha-nvim"
-            "fortune-nvim"
+              # Telescope
+              "telescope-nvim"
+              "telescope-project-nvim" # replace with whatever auto adds git repos
+              "nerdy-nvim"
+              "telescope-emoji-nvim"
+              "easypick-nvim"
+              "telescope-git-conflicts-nvim"
 
-            # Tmux Integration
-            "vim-tmux-navigator-nvim"
-            # "nvim-tmux-navigator-nvim"
+              # Startup
+              "alpha-nvim"
+              "fortune-nvim"
 
-            # Stuff not in nixpkgs
-            "journal-nvim"
-            "tiny-code-action-nvim"
-            "tiny-devicons-auto-colors-nvim"
-            "markdown-toc"
+              # Tmux Integration
+              "vim-tmux-navigator-nvim"
+              # "nvim-tmux-navigator-nvim"
 
-            # UI and Aesthetics
-            "rose-pine-nvim"
-            "nvim-lualine-nvim"
-            "helpview-nvim"
-            "markview-nvim"
-            "nvim-web-devicons-nvim"
-            "dressing-nvim"
+              # Stuff not in nixpkgs
+              "journal-nvim"
+              "tiny-code-action-nvim"
+              "tiny-devicons-auto-colors-nvim"
+              "markdown-toc"
 
-            # Writing
-            "mkdnflow-nvim"
-            "quarto-nvim"
-            "otter-nvim"
+              # UI and Aesthetics
+              "rose-pine-nvim"
+              "nvim-lualine-nvim"
+              "helpview-nvim"
+              "markview-nvim"
+              "nvim-web-devicons-nvim"
+              "dressing-nvim"
 
-            # Image Handling
-            "img-clip-nvim"
-            "image-nvim"
+              # Writing
+              "mkdnflow-nvim"
+              "quarto-nvim"
+              "otter-nvim"
 
-            # Terminal Integration
-            "toggleterm-nvim"
+              # Image Handling
+              "img-clip-nvim"
+              "image-nvim"
 
-            # Git Integration
-            "neogit-nvim"
+              # Terminal Integration
+              "toggleterm-nvim"
 
-            # Marks
-            "marks-nvim"
+              # Git Integration
+              "neogit-nvim"
 
-            # Keybinds
-            "which-key-nvim"
+              # Marks
+              "marks-nvim"
 
-            # Nix Direnv Integration
-            "nix-develop-nvim"
+              # Keybinds
+              "which-key-nvim"
 
-            # Colors
-            "colorize-lua-nvim"
+              # Nix Direnv Integration
+              "nix-develop-nvim"
 
-            # Other
-            "cellular-automaton-nvim"
+              # Colors
+              "colorize-lua-nvim"
 
-            # Vim Habits
-            # hardtime-nvim
-            # precognition-nvim
-          ];
+              # Other
+              "cellular-automaton-nvim"
+
+              # Vim Habits
+              # hardtime-nvim
+              # precognition-nvim
+            ];
+          # }}}
         in
         {
           default =
@@ -138,17 +145,22 @@
               (old: {
                 generatedWrapperArgs =
                   let
-                    toolSuites = builtins.attrValues {
-                      inherit (pkgs.tool-suite)
-                        bash
-                        json
-                        nix
-                        md
-                        nvim-tools
-                        xml
-                        yaml
-                        ;
-                    };
+                    toolSuites = builtins.attrValues
+                      {
+                        # FIX: image-nvim complains that magick is not
+                        # in path. It is in pkgs.tool-suite.nvim-tools
+                        # adding here results in set not list error.
+                        # inherit (pkgs.lua51Packages) magick;
+                        inherit (pkgs.tool-suite)
+                          bash
+                          json
+                          nix
+                          md
+                          nvim-tools
+                          xml
+                          yaml
+                          ;
+                      };
                     toolPath = pkgs.lib.makeBinPath (builtins.concatLists toolSuites);
                   in
                   (old.generatedWrapperArgs or [ ]) ++ [
