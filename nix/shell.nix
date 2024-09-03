@@ -17,4 +17,4 @@ builtins.mapAttrs
       };
     }
   )
-  inputs.nixpkgs.legacyPackages;
+  inputs.nixpkgs.legacyPackages
