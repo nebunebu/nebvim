@@ -9,6 +9,11 @@ require("neb.plugins.barbecue")
 require("neb.plugins.cellular-automaton")
 require("neb.plugins.colorizer")
 require("neb.plugins.conform")
+
+-- NOTE: DAP
+require("neb.plugins.dap.dap-ui")
+require("neb.plugins.dap.one-small-step-for-vimkind")
+
 require("neb.plugins.detour")
 require("neb.plugins.easypick")
 require("neb.plugins.endwise")

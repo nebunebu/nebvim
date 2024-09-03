@@ -90,6 +90,13 @@
     barbecue-nvim = { url = "github:utilyre/barbecue.nvim"; flake = false; };
     nvim-navic-nvim = { url = "github:SmiteshP/nvim-navic"; flake = false; };
 
+    # DAP
+    dap-nvim = { url = "github:mfussenegger/nvim-dap"; flake = false; };
+    dap-ui-nvim = { url = "github:rcarriga/nvim-dap-ui"; flake = false; };
+    nio-nvim = { url = "github:nvim-neotest/nvim-nio"; flake = false; };
+    one-small-step-for-vimkind-nvim = { url = "github:jbyuki/one-small-step-for-vimkind"; flake = false; };
+    telescope-dap-nvim = { url = "github:nvim-telescope/telescope-dap.nvim"; flake = false; };
+
     # Linting
     nvim-lint-nvim = { url = "github:mfussenegger/nvim-lint"; flake = false; };
     tiny-inline-diagnostic-nvim = { url = "github:rachartier/tiny-inline-diagnostic.nvim"; flake = false; };
@@ -142,7 +149,7 @@
     journal-nvim = { url = "github:jakobkhansen/journal.nvim"; flake = false; };
     tiny-code-action-nvim = { url = "github:rachartier/tiny-code-action.nvim"; flake = false; };
     tiny-devicons-auto-colors-nvim = { url = "github:rachartier/tiny-devicons-auto-colors.nvim"; flake = false; };
-    markdown-toc = { url = "github:ChuufMaster/markdown-toc"; flake = false; };
+    markdown-toc-nvim = { url = "github:ChuufMaster/markdown-toc"; flake = false; };
 
     # UI and Aesthetics
     rose-pine-nvim = { url = "github:rose-pine/neovim"; flake = false; };

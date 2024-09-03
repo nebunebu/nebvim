@@ -23,6 +23,7 @@ require("telescope").load_extension("project")
 require("telescope").load_extension("nerdy")
 require("telescope").load_extension("emoji")
 require("telescope").load_extension("conflicts")
+require("telescope").load_extension("dap")
 -- NOTE: extensions to add
 -- telescope-repo.nvim
 -- telescope-tele-tabby

@@ -1,1 +1,1 @@
-require("dapui").setup()
+require("dapui").setup({})
