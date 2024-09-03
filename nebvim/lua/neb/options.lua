@@ -31,6 +31,10 @@ set_options("opt", {
 	-- swap and undo files
 	undofile = true,
 	swapfile = false,
+	--folds
+	foldmethod = "marker",
+	foldmarker = "{{{,}}}",
+
 	-- other
 	fillchars = { eob = " " },
 })
