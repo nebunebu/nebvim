@@ -84,6 +84,8 @@
 
     # {{{  NOTE: Flake Inputs for plugins
 
+    obsidian-nvim = { url = "github:epwalsh/obsidian.nvim"; flake = false; };
+
     # Utilities
     plenary-nvim = { url = "github:nvim-lua/plenary.nvim"; flake = false; };
 

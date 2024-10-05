@@ -37,4 +37,7 @@ set_options("opt", {
 
 	-- other
 	fillchars = { eob = " " },
+
+	-- required for obsidian.nvim
+	conceallevel = 1,
 })

@@ -878,6 +878,22 @@
         "type": "github"
       }
     },
+    "obsidian-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722536347,
+        "narHash": "sha256-mbq7fAPmlwOAbWlN3lGX9WGBKTV8cAPZx8pnRCyszJc=",
+        "owner": "epwalsh",
+        "repo": "obsidian.nvim",
+        "rev": "14e0427bef6c55da0d63f9a313fd9941be3a2479",
+        "type": "github"
+      },
+      "original": {
+        "owner": "epwalsh",
+        "repo": "obsidian.nvim",
+        "type": "github"
+      }
+    },
     "oil-nvim": {
       "flake": false,
       "locked": {
@@ -1018,6 +1034,7 @@
         "nvim-surround-nvim": "nvim-surround-nvim",
         "nvim-treesitter-endwise-nvim": "nvim-treesitter-endwise-nvim",
         "nvim-web-devicons-nvim": "nvim-web-devicons-nvim",
+        "obsidian-nvim": "obsidian-nvim",
         "oil-nvim": "oil-nvim",
         "one-small-step-for-vimkind-nvim": "one-small-step-for-vimkind-nvim",
         "otter-nvim": "otter-nvim",

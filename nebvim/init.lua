@@ -41,6 +41,8 @@ require("neb.plugins.triptych")
 require("neb.plugins.which-key")
 -- require("neb.plugins.precognition")
 
+require("neb.plugins.obsidian")
+
 require("neb.plugins.tiny-inline-diagnostic")
 require("neb.plugins.tiny-code-action")
 require("neb.plugins.tiny-devicons-auto-colors")
