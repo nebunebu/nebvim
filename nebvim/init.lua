@@ -14,10 +14,8 @@ require("neb.plugins.conform")
 require("neb.plugins.dap.dap-ui")
 require("neb.plugins.dap.one-small-step-for-vimkind")
 
-require("neb.plugins.detour")
 require("neb.plugins.easypick")
 require("neb.plugins.endwise")
--- require("neb.plugins.hardtime")
 require("neb.plugins.helpview")
 -- require("neb.plugins.image")
 require("neb.plugins.img-clip")
@@ -39,7 +37,6 @@ require("neb.plugins.toggleterm")
 require("neb.plugins.treesitter")
 require("neb.plugins.triptych")
 require("neb.plugins.which-key")
--- require("neb.plugins.precognition")
 
 require("neb.plugins.obsidian")
 

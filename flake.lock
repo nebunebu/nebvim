@@ -167,38 +167,6 @@
         "type": "github"
       }
     },
-    "journal-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1718263999,
-        "narHash": "sha256-IhevbPwiN3u6pDtY6FVVYsEdezAI2OjqKIZ0MSl3rgI=",
-        "owner": "jakobkhansen",
-        "repo": "journal.nvim",
-        "rev": "006d9900cad5c378ed4b4cb89eb8696fb2383042",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jakobkhansen",
-        "repo": "journal.nvim",
-        "type": "github"
-      }
-    },
-    "markdown-toc-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1724660668,
-        "narHash": "sha256-zWoIPvIF4cwQEWvgG53fHsoKYV3koLkaT8FZed8zcrE=",
-        "owner": "ChuufMaster",
-        "repo": "markdown-toc",
-        "rev": "1454bf3b4bcb855f7df41c59dfae08cc824141a0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ChuufMaster",
-        "repo": "markdown-toc",
-        "type": "github"
-      }
-    },
     "neovim-src": {
       "flake": false,
       "locked": {
@@ -289,8 +257,6 @@
     "root": {
       "inputs": {
         "easypick-nvim": "easypick-nvim",
-        "journal-nvim": "journal-nvim",
-        "markdown-toc-nvim": "markdown-toc-nvim",
         "nerdy-nvim": "nerdy-nvim",
         "nixpkgs": "nixpkgs",
         "telescope-emoji-nvim": "telescope-emoji-nvim",

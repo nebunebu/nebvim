@@ -102,7 +102,6 @@
 
     # Writing
     obsidian-nvim
-    mkdnflow-nvim#TODO: remove
     quarto-nvim
     otter-nvim
 
@@ -116,8 +115,6 @@
 
     # Other
     cellular-automaton-nvim
-    # hardtime-nvim
-    # precognition-nvim
     ;
 }
 

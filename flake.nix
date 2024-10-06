@@ -86,10 +86,8 @@
     # {{{  NOTE: Flake Inputs for plugins
 
     # # Stuff not in nixpkgs
-    journal-nvim = { url = "github:jakobkhansen/journal.nvim"; flake = false; };
     tiny-code-action-nvim = { url = "github:rachartier/tiny-code-action.nvim"; flake = false; };
     tiny-devicons-auto-colors-nvim = { url = "github:rachartier/tiny-devicons-auto-colors.nvim"; flake = false; };
-    markdown-toc-nvim = { url = "github:ChuufMaster/markdown-toc"; flake = false; };
     telescope-git-conflicts-nvim = { url = "github:Snikimonkd/telescope-git-conflicts.nvim"; flake = false; };
     nerdy-nvim = { url = "github:2KAbhishek/nerdy.nvim"; flake = false; };
     telescope-emoji-nvim = { url = "github:xiyaowong/telescope-emoji.nvim"; flake = false; };
