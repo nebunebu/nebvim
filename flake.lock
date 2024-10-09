@@ -281,7 +281,7 @@
         "tiny-code-action-nvim": "tiny-code-action-nvim",
         "tiny-devicons-auto-colors-nvim": "tiny-devicons-auto-colors-nvim",
         "tolerable": "tolerable",
-        "tool-suites": "tool-suites"
+        "tool-suites": "tool-suites",
         "yamlmatter-nvim": "yamlmatter-nvim"
       }
     },
