@@ -9,7 +9,7 @@ local lsp_configs = {
 	"markdown_oxide",
 	"nixd",
 	"texlab",
-	"tsserver",
+	"ts_ls",
 	"lemminx",
 }
 
