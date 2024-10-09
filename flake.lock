@@ -282,6 +282,7 @@
         "tiny-devicons-auto-colors-nvim": "tiny-devicons-auto-colors-nvim",
         "tolerable": "tolerable",
         "tool-suites": "tool-suites"
+        "yamlmatter-nvim": "yamlmatter-nvim"
       }
     },
     "telescope-emoji-nvim": {
@@ -381,6 +382,22 @@
       "original": {
         "owner": "nebunebu",
         "repo": "tool-suites",
+        "type": "github"
+      }
+    },
+    "yamlmatter-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726974342,
+        "narHash": "sha256-GdyZebkNvIfqW2tJWSUIQXZI6Uxrtbpa5JGFqNzKLS0=",
+        "owner": "ray-x",
+        "repo": "yamlmatter.nvim",
+        "rev": "222893021ab846fd100c7a98c017a57f92b7c677",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ray-x",
+        "repo": "yamlmatter.nvim",
         "type": "github"
       }
     }
