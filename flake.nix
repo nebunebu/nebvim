@@ -83,16 +83,18 @@
     };
     tool-suites.url = "github:nebunebu/tool-suites";
 
-    # {{{  NOTE: Flake Inputs for plugins
+    # NOTE: Flake Inputs for plugins
+    # {{{ 
 
-    # # Stuff not in nixpkgs
+    # Stuff not in nixpkgs
     tiny-code-action-nvim = { url = "github:rachartier/tiny-code-action.nvim"; flake = false; };
     tiny-devicons-auto-colors-nvim = { url = "github:rachartier/tiny-devicons-auto-colors.nvim"; flake = false; };
     telescope-git-conflicts-nvim = { url = "github:Snikimonkd/telescope-git-conflicts.nvim"; flake = false; };
     nerdy-nvim = { url = "github:2KAbhishek/nerdy.nvim"; flake = false; };
     telescope-emoji-nvim = { url = "github:xiyaowong/telescope-emoji.nvim"; flake = false; };
     easypick-nvim = { url = "github:axkirillov/easypick.nvim"; flake = false; };
-
-    # # }}}
+    haunt-nvim = { url = "github:adigitoleo/haunt.nvim"; flake = false; };
+    yamlmatter-nvim = { url = "github:ray-x/yamlmatter.nvim"; flake = false; };
+    # }}}
   };
 }

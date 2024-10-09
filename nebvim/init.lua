@@ -38,6 +38,8 @@ require("neb.plugins.treesitter")
 require("neb.plugins.triptych")
 require("neb.plugins.which-key")
 
+require("neb.plugins.haunt")
+
 require("neb.plugins.obsidian")
 
 require("neb.plugins.tiny-inline-diagnostic")

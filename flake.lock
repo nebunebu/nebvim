@@ -144,6 +144,22 @@
         "type": "github"
       }
     },
+    "haunt-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1727278854,
+        "narHash": "sha256-7djuMyBPVd+ewlDmPmCst0coP15oAZ8hQgA1gy75D9A=",
+        "owner": "adigitoleo",
+        "repo": "haunt.nvim",
+        "rev": "c1cdd77a4c4a1e320b02ff988b92543e7596fa62",
+        "type": "github"
+      },
+      "original": {
+        "owner": "adigitoleo",
+        "repo": "haunt.nvim",
+        "type": "github"
+      }
+    },
     "hercules-ci-effects": {
       "inputs": {
         "flake-parts": "flake-parts_2",
@@ -257,6 +273,7 @@
     "root": {
       "inputs": {
         "easypick-nvim": "easypick-nvim",
+        "haunt-nvim": "haunt-nvim",
         "nerdy-nvim": "nerdy-nvim",
         "nixpkgs": "nixpkgs",
         "telescope-emoji-nvim": "telescope-emoji-nvim",
