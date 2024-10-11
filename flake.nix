@@ -97,6 +97,7 @@
     yamlmatter-nvim = { url = "github:ray-x/yamlmatter.nvim"; flake = false; };
     volt-nvim = { url = "github:NvChad/volt"; flake = false; };
     minty-nvim = { url = "github:NvChad/minty"; flake = false; };
+    # menu-nvim = { url = "github:NvChad/menu"; flake = false; };
     # }}}
   };
 }
