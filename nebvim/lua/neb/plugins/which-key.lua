@@ -1,5 +1,4 @@
 require("which-key").setup({})
-
 local wk = require("which-key")
 
 wk.add({
@@ -31,6 +30,28 @@ wk.add({
 		{ "<leader>u", group = "UrlView" },
 		{ "<leader>ub", "<cmd>UrlView buffer<CR>", desc = "UrlView Buffer to Clipboard" },
 		{ "<leader>uf", "<cmd>UrlView flake action=gitdev<CR>", desc = "UrlView Flake Inputs to git-dev" },
+
+		-- Obsidian
+		{ "<leader>o", group = "Obsidian" },
+		{ "<leader>os", "<cmd>ObsidianSearch<CR>", desc = "Search Default Obsidian vault" },
+		-- "<cmd>ObsidianQuickSwitch<CR>",
+		-- "<cmd>ObsidianNew<CR>",
+		-- "<cmd>ObsidianFollowLink<CR>",
+		-- "<cmd>ObsidianBacklinks<CR>",
+		-- "<cmd>ObsidianTags<CR>",
+		-- "<cmd>ObsidianToday<CR>",
+		-- "<cmd>ObsidianTemplate<CR>",
+		-- "<cmd>ObsidianSearch<CR>",
+		-- "<cmd>ObsidianLink<CR>",
+		-- "<cmd>ObsidianLinkNew<CR>",
+		-- "<cmd>ObsidianLinks<CR>",
+		-- "<cmd>ObsidianExtractNote<CR>",
+		-- "<cmd>ObsidianWorkspace<CR>",
+		-- "<cmd>ObsidianPasteImg<CR>",
+		-- "<cmd>ObsidianRename<CR>",
+		-- "<cmd>ObsidianToggleCheckbox<CR>",
+		-- "<cmd>ObsidianNewFromTemplate<CR>",
+		-- "<cmd>ObsidianTOC<CR>",
 
 		-- Quickfix
 		{ "<leader>c", group = "cellular automaton" },
