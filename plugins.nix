@@ -30,6 +30,8 @@
     cmp_luasnip
     cmp-async-path
 
+    urlview-nvim
+
 
     # DAP
     nvim-dap

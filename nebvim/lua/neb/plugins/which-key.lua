@@ -27,12 +27,17 @@ wk.add({
 		{ "<leader>q", group = "quickfix" },
 		{ "<leader>qt", "<cmd>TodoQuickFix<CR>", desc = "QuickFix Todo Comments" },
 
+		-- Urlview
+		{ "<leader>u", group = "UrlView" },
+		{ "<leader>ub", "<cmd>UrlView buffer<CR>", desc = "UrlView Buffer to Clipboard" },
+		{ "<leader>uf", "<cmd>UrlView flake action=gitdev<CR>", desc = "UrlView Flake Inputs to git-dev" },
+
 		-- Quickfix
 		{ "<leader>c", group = "cellular automaton" },
 		{ "<leader>cr", "<cmd>CellularAutomaton make_it_rain<CR>", desc = "make it rain" },
 		{ "<leader>cg", "<cmd>CellularAutomaton game_of_life<CR>", desc = "game of life" },
 		{ "<leader>cs", "<cmd>CellularAutomaton scramble<CR>", desc = "scramble" },
-		{ "<leader>cl", "<cmd>CellularAutomaton slide<CR>", desc = "slide" },
+		{ "<leader>cl", "<cmd>CellularAutomaton slide<CR>", desc = "scramble" },
 		-- Loclist
 
 		-- Telescope

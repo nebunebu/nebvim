@@ -13,6 +13,7 @@ require("neb.plugins.conform")
 require("neb.plugins.minty")
 -- require("neb.plugins.spaceless")
 require("neb.plugins.git-dev")
+require("neb.plugins.urlview")
 
 -- NOTE: DAP
 require("neb.plugins.dap.dap-ui")
