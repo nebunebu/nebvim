@@ -10,6 +10,8 @@ require("neb.plugins.cellular-automaton")
 require("neb.plugins.colorizer")
 require("neb.plugins.conform")
 
+require("neb.plugins.minty")
+
 -- NOTE: DAP
 require("neb.plugins.dap.dap-ui")
 require("neb.plugins.dap.one-small-step-for-vimkind")

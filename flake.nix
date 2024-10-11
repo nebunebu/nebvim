@@ -95,6 +95,8 @@
     easypick-nvim = { url = "github:axkirillov/easypick.nvim"; flake = false; };
     haunt-nvim = { url = "github:adigitoleo/haunt.nvim"; flake = false; };
     yamlmatter-nvim = { url = "github:ray-x/yamlmatter.nvim"; flake = false; };
+    volt-nvim = { url = "github:NvChad/volt"; flake = false; };
+    minty-nvim = { url = "github:NvChad/minty"; flake = false; };
     # }}}
   };
 }
