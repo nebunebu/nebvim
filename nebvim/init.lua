@@ -11,6 +11,7 @@ require("neb.plugins.colorizer")
 require("neb.plugins.conform")
 
 require("neb.plugins.minty")
+-- require("neb.plugins.spaceless")
 
 -- NOTE: DAP
 require("neb.plugins.dap.dap-ui")

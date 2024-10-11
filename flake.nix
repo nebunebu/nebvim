@@ -98,6 +98,7 @@
     volt-nvim = { url = "github:NvChad/volt"; flake = false; };
     minty-nvim = { url = "github:NvChad/minty"; flake = false; };
     # menu-nvim = { url = "github:NvChad/menu"; flake = false; };
+    # spaceless-nvim = { url = "github:lewis6991/spaceless.nvim"; flake = false; };
     # }}}
   };
 }
