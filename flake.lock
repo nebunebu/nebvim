@@ -92,6 +92,22 @@
         "type": "indirect"
       }
     },
+    "git-dev-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1719255840,
+        "narHash": "sha256-xzXW5rkvDQsS+XjA8E3/Kmjf5yb4tf6q14Ge7mnfjzM=",
+        "owner": "moyiz",
+        "repo": "git-dev.nvim",
+        "rev": "57c62bdccbe35eba19532791218fc8fcc24d0d82",
+        "type": "github"
+      },
+      "original": {
+        "owner": "moyiz",
+        "repo": "git-dev.nvim",
+        "type": "github"
+      }
+    },
     "git-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -289,6 +305,7 @@
     "root": {
       "inputs": {
         "easypick-nvim": "easypick-nvim",
+        "git-dev-nvim": "git-dev-nvim",
         "haunt-nvim": "haunt-nvim",
         "minty-nvim": "minty-nvim",
         "nerdy-nvim": "nerdy-nvim",

@@ -99,6 +99,7 @@
     minty-nvim = { url = "github:NvChad/minty"; flake = false; };
     # menu-nvim = { url = "github:NvChad/menu"; flake = false; };
     # spaceless-nvim = { url = "github:lewis6991/spaceless.nvim"; flake = false; };
+    git-dev-nvim = { url = "github:moyiz/git-dev.nvim"; flake = false; };
     # }}}
   };
 }
