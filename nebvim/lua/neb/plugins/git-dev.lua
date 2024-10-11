@@ -25,6 +25,6 @@ require("git-dev").setup({
 		if selected_path then
 			vim.cmd("edit " .. selected_path)
 		end
-		vim.cmd("Triptych")
+		-- vim.cmd("Triptych")
 	end,
 })
