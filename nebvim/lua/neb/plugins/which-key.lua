@@ -33,9 +33,20 @@ wk.add({
 
 		-- Obsidian
 		{ "<leader>o", group = "Obsidian" },
-		{ "<leader>os", "<cmd>ObsidianSearch<CR>", desc = "Search Default Obsidian vault" },
-		-- "<cmd>ObsidianQuickSwitch<CR>",
-		-- "<cmd>ObsidianNew<CR>",
+		{ "<leader>of", group = "Obsidian Find" },
+		{ "<leader>off", "<cmd>ObsidianQuickSwitch<CR>", desc = "Find file in vault" },
+		{ "<leader>ofg", "<cmd>ObsidianSearch<CR>", desc = "rg vault" },
+		{ "<leader>ofl", "<cmd>ObsidianLinks<CR>", desc = "Find Links in Current Buffer" },
+		{ "<leader>ofb", "<cmd>ObsidianBacklinks<CR>", desc = "Find Backlinks in Current Buffer" },
+		{ "<leader>oft", "<cmd>ObsidianTags<CR>", desc = "Find Tags in Vault" },
+
+		{ "<leader>on", group = "Obsidian New" },
+		{ "<leader>onn", "<cmd>ObsidianNew<CR>", desc = "Open a new note" },
+		{ "<leader>ont", "<cmd>ObsidianNewFromTemplate<CR>", desc = "Create a New Note from a Template" },
+		{ "<leader>onl", "<cmd>ObsidianLinkNew<CR>", desc = "Create a new link from visually selected text" },
+
+		-- { "<leader>ont", "<cmd>ObsidianNew<CR>", desc = "Open a new note" },
+
 		-- "<cmd>ObsidianFollowLink<CR>",
 		-- "<cmd>ObsidianBacklinks<CR>",
 		-- "<cmd>ObsidianTags<CR>",
