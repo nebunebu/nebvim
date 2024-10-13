@@ -10,6 +10,8 @@ require("neb.plugins.cellular-automaton")
 require("neb.plugins.colorizer")
 require("neb.plugins.conform")
 
+require("neb.commands")
+
 require("neb.plugins.minty")
 -- require("neb.plugins.spaceless")
 require("neb.plugins.git-dev")
