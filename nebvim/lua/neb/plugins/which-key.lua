@@ -43,7 +43,6 @@ wk.add({
 		{ "<leader>on", group = "Obsidian New" },
 		{ "<leader>onn", "<cmd>ObsidianNew<CR>", desc = "Open a new note" },
 		{ "<leader>ont", "<cmd>ObsidianNewFromTemplate<CR>", desc = "Create a New Note from a Template" },
-		{ "<leader>onl", "<cmd>ObsidianLinkNew<CR>", desc = "Create a new link from visually selected text" },
 
 		-- { "<leader>ont", "<cmd>ObsidianNew<CR>", desc = "Open a new note" },
 
@@ -105,6 +104,7 @@ wk.add({
 	},
 	{
 		mode = { "x" },
+		{ "<leader>onl", "<cmd>ObsidianLinkNew<CR>", desc = "Create a new link from visually selected text" },
 		{ "<", "<gv", desc = "Dedent and keep selection" },
 		{ ">", ">gv", desc = "Indent and keep selection" },
 		{
