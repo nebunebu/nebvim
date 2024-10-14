@@ -22,6 +22,7 @@ local links = {
 		{ type = "padding", val = 1 },
 		dashboard.button("c", "󱄅  .nix-config", ":e $HOME/.nix-config/flake.nix <CR>"),
 		dashboard.button("n", "  nebvim", ":e $HOME/.nebvim/flake.nix <CR>"),
+		dashboard.button("v", "󱉼  obsidian vault", ":e $HOME/.vault/index.md <CR>"),
 		dashboard.button("w", "󰖬  wiki", ":e $HOME/.wiki/index.md <CR>"),
 		dashboard.button("e", "  new file", ":enew <CR>"),
 		dashboard.button("q", "󰩈  quit", ":qa<CR>"),
