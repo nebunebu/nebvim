@@ -28,7 +28,7 @@ nix run github:nebunebu/nebvim
 
 ### Greeter
 
-![Greeter](https://imgur.com/4ztr5CR)
+![Greeter](https://imgur.com/4ztr5CR.png)
 
 <!-- ### Markdown Rendering -->
 <!---->
