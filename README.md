@@ -28,11 +28,11 @@ nix run github:nebunebu/nebvim
 
 ### Greeter
 
-![Greeter](.assets/alpha.png)
+![Greeter](https://imgur.com/4ztr5CR)
 
-### Markdown Rendering
-
-![Md](.assets/mdrendering.gif)
+<!-- ### Markdown Rendering -->
+<!---->
+<!-- ![Md](.assets/mdrendering.gif) -->
 
 ## Installation
 
