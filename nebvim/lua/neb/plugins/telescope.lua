@@ -43,6 +43,22 @@ require("telescope").setup({
 				vim.api.nvim_put({ emoji.value }, "c", false, true)
 			end,
 		},
+		repo = {
+			list = {
+				fd_opts = {
+					"-E",
+					".local",
+					"-E",
+					".cache",
+					"-E",
+					"ags-collection",
+					"-E",
+					"node_modules",
+					"-E",
+					".cargo",
+				},
+			},
+		},
 	},
 })
 
