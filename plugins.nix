@@ -51,7 +51,6 @@
     # Telescope
     telescope-nvim
     # telescope-manix
-    telescope-project-nvim#TODO: replace
 
     # Editing Support
     indent-blankline-nvim
