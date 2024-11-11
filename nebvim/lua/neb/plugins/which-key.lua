@@ -79,7 +79,7 @@ wk.add({
 		{ "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Find help tags" },
 		{ "<leader>fm", "<cmd>Telescope man_pages<CR>", desc = "Find man pages" },
 		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Find old files" },
-		{ "<leader>fp", "<cmd>Telescope repo cached_list<CR>", desc = "Find Project" },
+		{ "<leader>fp", "<cmd>Telescope repo list<CR>", desc = "Find Project" },
 
 		{ "<leader>ft", group = "Telescope todo-comments" },
 		{ "<leader>ftp", "<cmd>TodoTelescope<CR>", desc = "Find project todo-comments" },
