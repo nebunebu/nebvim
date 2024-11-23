@@ -1,8 +1,11 @@
 require("neb.options")
 require("neb.colorscheme")
 require("neb.autocmd")
-require("neb.plugins.fortune") -- must be before alpha
-require("neb.plugins.alpha")
+
+-- require("neb.plugins.fortune") -- must be before alpha
+-- require("neb.plugins.alpha")
+
+-- FIX: Broken
 -- require("neb.plugins.direnv")
 require("neb.plugins.autopairs")
 require("neb.plugins.barbecue")
@@ -17,6 +20,9 @@ require("neb.plugins.minty")
 require("neb.plugins.git-dev")
 require("neb.plugins.urlview")
 
+-- NOTE: Snacks
+require("neb.plugins.snacks").setup({})
+
 -- NOTE: DAP
 require("neb.plugins.dap.dap-ui")
 require("neb.plugins.dap.one-small-step-for-vimkind")
@@ -24,12 +30,18 @@ require("neb.plugins.dap.one-small-step-for-vimkind")
 require("neb.plugins.easypick")
 require("neb.plugins.endwise")
 require("neb.plugins.helpview")
+
+-- FIX: Broken
 -- require("neb.plugins.image")
+
 require("neb.plugins.img-clip")
 require("neb.plugins.nvim-lint")
 require("neb.plugins.lualine")
 require("neb.plugins.luasnip")
-require("neb.plugins.markview")
+
+-- FIX: Broken
+-- require("neb.plugins.markview")
+
 require("neb.plugins.nix-develop")
 require("neb.plugins.oil")
 require("neb.plugins.quarto")

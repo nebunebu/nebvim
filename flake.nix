@@ -65,7 +65,9 @@
                     "--prefix"
                     "PATH"
                     ":"
-                    (builtins.toString toolPath)
+                    (builtins.toString (toolPath + ":"
+                    +
+                    (pkgs.lib.makeBinPath [ pkgs.fortune pkgs.timg ])))
                   ];
               });
         }
