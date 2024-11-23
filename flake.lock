@@ -310,6 +310,7 @@
         "minty-nvim": "minty-nvim",
         "nerdy-nvim": "nerdy-nvim",
         "nixpkgs": "nixpkgs",
+        "snacks-nvim": "snacks-nvim",
         "telescope-emoji-nvim": "telescope-emoji-nvim",
         "telescope-git-conflicts-nvim": "telescope-git-conflicts-nvim",
         "telescope-repo-nvim": "telescope-repo-nvim",
@@ -319,6 +320,22 @@
         "tool-suites": "tool-suites",
         "volt-nvim": "volt-nvim",
         "yamlmatter-nvim": "yamlmatter-nvim"
+      }
+    },
+    "snacks-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732317016,
+        "narHash": "sha256-Zwk9i//nX6PCKcbilu5vAyt+O7c5pqU/JYyTgjPMfeA=",
+        "owner": "folke",
+        "repo": "snacks.nvim",
+        "rev": "417e07c0d22173a0a50ed8207e913ba25b96088e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "snacks.nvim",
+        "type": "github"
       }
     },
     "telescope-emoji-nvim": {
