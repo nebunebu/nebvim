@@ -25,7 +25,7 @@ return {
 		-- TODO: get kitty graphics protocall working
 		{
 			section = "terminal",
-			cmd = "timg -C ~/Downloads/goya.jpg",
+			cmd = "timg -C ~/Downloads/rose-goya.jpg",
 			height = 18,
 			indent = 0,
 		},
