@@ -22,10 +22,10 @@ return {
 			},
 			padding = 1,
 		},
-		-- TODO: center image
+		-- TODO: get kitty graphics protocall working
 		{
 			section = "terminal",
-			cmd = "timg ~/Downloads/goya.jpg",
+			cmd = "timg -C ~/Downloads/goya.jpg",
 			height = 18,
 			indent = 0,
 		},
