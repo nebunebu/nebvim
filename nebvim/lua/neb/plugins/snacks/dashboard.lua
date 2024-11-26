@@ -27,7 +27,7 @@ return {
 			section = "terminal",
 			cmd = "timg ~/Downloads/goya.jpg",
 			height = 18,
-			indent = 5,
+			indent = 0,
 		},
 		-- NOTE: Kept as an example
 		{
@@ -48,6 +48,6 @@ return {
 			gap = 0,
 			padding = 1,
 		},
-		{ section = "recent_files", title = { "Recent" }, pane = 2, indent = 2, limit = 5, padding = 1 },
+		{ section = "recent_files", title = { "Recent" }, pane = 2, indent = 2, limit = 5, padding = 3 },
 	},
 }
