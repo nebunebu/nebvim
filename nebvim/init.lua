@@ -3,7 +3,7 @@ require("neb.colorscheme")
 require("neb.autocmd")
 
 require("neb.plugins.fortune") -- must be before alpha
--- require("neb.plugins.alpha")
+require("neb.plugins.alpha")
 
 -- FIX: Broken
 -- require("neb.plugins.direnv")

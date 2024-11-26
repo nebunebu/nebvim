@@ -3,7 +3,8 @@ local M = {}
 function M.setup()
 	local config = {
 		bigfile = require("neb.plugins.snacks.bigfile"),
-		dashboard = require("neb.plugins.snacks.dashboard"),
+		--  NOTE: keep using alpha
+		-- dashboard = require("neb.plugins.snacks.dashboard"),
 
 		-- require("neb.plugins.snacks.bufdelete")
 		-- require("neb.plugins.snacks.debug")
