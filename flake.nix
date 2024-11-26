@@ -89,6 +89,8 @@
     # {{{ 
 
     # Stuff not in nixpkgs
+    # menu-nvim = { url = "github:NvChad/menu"; flake = false; };
+    # spaceless-nvim = { url = "github:lewis6991/spaceless.nvim"; flake = false; };
     tiny-code-action-nvim = { url = "github:rachartier/tiny-code-action.nvim"; flake = false; };
     tiny-devicons-auto-colors-nvim = { url = "github:rachartier/tiny-devicons-auto-colors.nvim"; flake = false; };
     telescope-git-conflicts-nvim = { url = "github:Snikimonkd/telescope-git-conflicts.nvim"; flake = false; };
@@ -101,9 +103,8 @@
     minty-nvim = { url = "github:NvChad/minty"; flake = false; };
     telescope-repo-nvim = { url = "github:cljoly/telescope-repo.nvim"; flake = false; };
     snacks-nvim = { url = "github:folke/snacks.nvim"; flake = false; };
-    # menu-nvim = { url = "github:NvChad/menu"; flake = false; };
-    # spaceless-nvim = { url = "github:lewis6991/spaceless.nvim"; flake = false; };
     git-dev-nvim = { url = "github:moyiz/git-dev.nvim"; flake = false; };
+    smear-cursor-nvim = { url = "github:sphamba/smear-cursor.nvim"; flake = false; };
     # }}}
   };
 }
