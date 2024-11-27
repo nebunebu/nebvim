@@ -1,6 +1,22 @@
 require("which-key").setup({})
 local wk = require("which-key")
 
+local function copy_diagnostics()
+	local diagnostics = vim.diagnostic.get()
+	if #diagnostics == 0 then
+		vim.notify("No diagnostics found")
+		return
+	end
+
+	local lines = {}
+	for _, d in ipairs(diagnostics) do
+		table.insert(lines, string.format("Line %d: %s", d.lnum + 1, d.message))
+	end
+
+	vim.fn.setreg("+", table.concat(lines, "\n"))
+	vim.notify(#diagnostics .. " diagnostics copied to clipboard")
+end
+
 wk.add({
 	{
 		mode = "n",
@@ -10,11 +26,15 @@ wk.add({
 		{ "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste Image" },
 		{ "<leader>b", "<cmd>AlphaTab<cr>", desc = "Open Alpha in new tab" },
 
+		-- Diagnostics
+		{ "<leader>d", group = "diagnostics" },
+		{ "<leader>dl", "<cmd>lua vim.diagnostic.setloclist()<CR>", desc = "Diagnostics to loclist" },
+		{ "<leader>dc", copy_diagnostics, desc = "Copy diagnostics to clipboard" },
+
 		-- Markdown
 		{ "<leader>m", group = "markdown", icon = " " },
 		{ "<leader>mv", "<cmd>Markview toggleAll<cr>", desc = "Toggle Markview" },
 		{ "<leader>mc", "<cmd>GenerateTOC<cr>", desc = "Generate Markodwn TOC" },
-
 		-- Quickfix
 		{ "<leader>q", group = "quickfix" },
 		{ "<leader>qt", "<cmd>TodoQuickFix<CR>", desc = "QuickFix Todo Comments" },

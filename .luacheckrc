@@ -7,5 +7,7 @@ std = {
 		"require",
 		"pairs",
 		"ipairs",
+		"string",
+		"table",
 	},
 }
