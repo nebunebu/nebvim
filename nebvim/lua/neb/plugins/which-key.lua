@@ -30,6 +30,7 @@ wk.add({
 		{ "<leader>d", group = "diagnostics" },
 		{ "<leader>dl", "<cmd>lua vim.diagnostic.setloclist()<CR>", desc = "Diagnostics to loclist" },
 		{ "<leader>dc", copy_diagnostics, desc = "Copy diagnostics to clipboard" },
+		{ "<leader>dh", "<cmd>lua Snacks.notifier.show_history()<CR>", desc = "Show notification history" },
 
 		-- Markdown
 		{ "<leader>m", group = "markdown", icon = " " },

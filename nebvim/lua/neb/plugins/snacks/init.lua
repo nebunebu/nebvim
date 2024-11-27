@@ -3,6 +3,8 @@ local M = {}
 function M.setup()
 	local config = {
 		bigfile = require("neb.plugins.snacks.bigfile"),
+		notifier = require("neb.plugins.snacks.notifier"),
+		quickfile = require("neb.plugins.snacks.quickfile"),
 		--  NOTE: keep using alpha
 		-- dashboard = require("neb.plugins.snacks.dashboard"),
 
