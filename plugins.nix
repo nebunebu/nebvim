@@ -88,9 +88,6 @@
     # Marks
     marks-nvim
 
-    # Terminal Integration
-    toggleterm-nvim
-
     # Keybinds
     which-key-nvim
 

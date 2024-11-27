@@ -18,10 +18,6 @@ wk.add({
 		-- Direnv
 		{ "<leader>d", group = "direnv", icon = "" },
 
-		-- Toggleterm
-		{ "<leader> ", group = "toggleterm", icon = "" },
-		{ "<leader> t", "<cmd>ToggleTerm<CR>", desc = "ToggleTerm" },
-
 		-- Quickfix
 		{ "<leader>q", group = "quickfix" },
 		{ "<leader>qt", "<cmd>TodoQuickFix<CR>", desc = "QuickFix Todo Comments" },

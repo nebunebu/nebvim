@@ -83,6 +83,5 @@ require("telescope").load_extension("repo")
 -- telescope-tabs
 -- telescope-dap.nvim
 -- telescope-git-diffs.nvim
--- toggleterm-manager.nvim
 -- ad-telescope-extensions.nvim
 -- telescope-extension-maker
