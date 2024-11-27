@@ -35,8 +35,7 @@ require("neb.plugins.nvim-lint")
 require("neb.plugins.lualine")
 require("neb.plugins.luasnip")
 
--- FIX: Broken
--- require("neb.plugins.markview")
+require("neb.plugins.markview")
 
 require("neb.plugins.nix-develop")
 require("neb.plugins.oil")

@@ -10,7 +10,7 @@ markview.setup({
 			vim.wo[win].concealcursor = "c"
 		end,
 	},
-	highlight_groups = vim.list_extend(def_hls, {
+	highlight_groups = {
 		{
 			group_name = "rev_purple",
 			value = { bg = "#c4a7e7", fg = "#191724" },
@@ -75,7 +75,7 @@ markview.setup({
 			group_name = "fg_gray",
 			value = { fg = "#908caa" },
 		},
-	}),
+	},
 	headings = {
 		-- FIX: signs not on a single line
 		shift_width = 0,
