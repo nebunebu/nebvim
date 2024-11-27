@@ -82,26 +82,24 @@ require("alpha").setup(theta.config)
 
 vim.api.nvim_create_user_command("AlphaTab", "tabnew | Alpha", {})
 
--- NOTE: supposed to hide cursor
--- BUG: cursor hidden when not in alpha
--- vim.api.nvim_create_autocmd("User", {
--- 	pattern = "AlphaReady",
--- 	desc = "hide cursor for alpha",
--- 	callback = function()
--- 		-- FIX: vim.api.nvim_get_hl_by_name deprecated
--- 		local hl = vim.api.nvim_get_hl_by_name("Cursor", true)
--- 		hl.blend = 100
--- 		vim.api.nvim_set_hl(0, "Cursor", hl)
--- 		vim.opt.guicursor:append("a:Cursor/lCursor")
--- 	end,
--- })
--- vim.api.nvim_create_autocmd("BufUnload", {
--- 	buffer = 0,
--- 	desc = "show cursor after alpha",
--- 	callback = function()
--- 		local hl = vim.api.nvim_get_hl_by_name("Cursor", true)
--- 		hl.blend = 0
--- 		vim.api.nvim_set_hl(0, "Cursor", hl)
--- 		vim.opt.guicursor:remove("a:Cursor/lCursor")
--- 	end,
--- })
+vim.api.nvim_create_autocmd("User", {
+	pattern = "AlphaReady",
+	desc = "hide cursor for alpha",
+	callback = function()
+		local hl = vim.api.nvim_get_hl(0, { name = "Cursor" })
+		hl.blend = 100
+		vim.api.nvim_set_hl(0, "Cursor", hl)
+		vim.opt.guicursor:append("a:Cursor/lCursor")
+	end,
+})
+
+vim.api.nvim_create_autocmd("BufUnload", {
+	buffer = 0,
+	desc = "show cursor after alpha",
+	callback = function()
+		local hl = vim.api.nvim_get_hl(0, { name = "Cursor" })
+		hl.blend = 0
+		vim.api.nvim_set_hl(0, "Cursor", hl)
+		vim.opt.guicursor:remove("a:Cursor/lCursor")
+	end,
+})
