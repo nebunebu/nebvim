@@ -17,6 +17,11 @@ require("neb.plugins.minty")
 require("neb.plugins.git-dev")
 require("neb.plugins.urlview")
 
+-- NOTE: Tiny
+require("neb.plugins.tiny.inline-diagnostic")
+require("neb.plugins.tiny.code-action")
+require("neb.plugins.tiny.devicons-auto-colors")
+
 -- NOTE: Mini
 require("neb.plugins.mini.animate")
 
@@ -55,10 +60,6 @@ require("neb.plugins.haunt")
 require("neb.plugins.yamlmatter")
 
 require("neb.plugins.obsidian")
-
-require("neb.plugins.tiny-inline-diagnostic")
-require("neb.plugins.tiny-code-action")
-require("neb.plugins.tiny-devicons-auto-colors")
 
 -- NOTE: Lsp
 require("neb.plugins.lsp.lsp-zero")
