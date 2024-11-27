@@ -14,6 +14,16 @@ local header = {
 		hl = "SpecialKey",
 	},
 }
+local subheader = {
+	type = "text",
+	val = {
+		[[ ───── embrace the silence ───── ]],
+	},
+	opts = {
+		position = "center",
+		hl = "Operator",
+	},
+}
 
 local links = {
 	type = "group",
@@ -22,14 +32,10 @@ local links = {
 		{ type = "padding", val = 1 },
 		dashboard.button("c", "󱄅  .nix-config", ":e $HOME/.nix-config/flake.nix <CR>"),
 		dashboard.button("n", "  nebvim", ":e $HOME/.nebvim/flake.nix <CR>"),
+		dashboard.button("a", " ags", ":e $HOME/.config/ags/flake.nix <CR>"),
 		dashboard.button("v", "󱉼  obsidian vault", ":e $HOME/.vault/index.md <CR>"),
-		dashboard.button("w", "󰖬  wiki", ":e $HOME/.wiki/index.md <CR>"),
-		dashboard.button("e", "  new file", ":enew <CR>"),
-		dashboard.button("q", "󰩈  quit", ":qa<CR>"),
 		-- dashboard.button("b", " blog", ":qa<CR>"),
-		-- dashboard.button("p", " projects", ":qa<CR>"),
-		-- dashboard.button("r", "  Recent files", ":Telescope oldfiles <CR>"),
-		-- dashboard.button("f", "  Find files", ":Telescope find_files <CR>"),
+		-- dashboard.button("w", "󰖬  wiki", ":e $HOME/.wiki/index.md <CR>"),
 	},
 	position = "center",
 }
@@ -48,6 +54,8 @@ theta.config = {
 	layout = {
 		{ type = "padding", val = 2 },
 		header,
+		{ type = "padding", val = 2 },
+		subheader,
 		{ type = "padding", val = 2 },
 		links,
 		{ type = "padding", val = 2 },
