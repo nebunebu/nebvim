@@ -5,8 +5,6 @@ require("neb.autocmd")
 require("neb.plugins.fortune") -- must be before alpha
 require("neb.plugins.alpha")
 
--- FIX: Broken
--- require("neb.plugins.direnv")
 require("neb.plugins.autopairs")
 require("neb.plugins.barbecue")
 require("neb.plugins.cellular-automaton")
@@ -30,7 +28,6 @@ require("neb.plugins.easypick")
 require("neb.plugins.endwise")
 require("neb.plugins.helpview")
 
--- FIX: Broken
 require("neb.plugins.image")
 require("neb.plugins.img-clip")
 

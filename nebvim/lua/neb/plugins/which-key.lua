@@ -15,9 +15,6 @@ wk.add({
 		{ "<leader>mv", "<cmd>Markview toggleAll<cr>", desc = "Toggle Markview" },
 		{ "<leader>mc", "<cmd>GenerateTOC<cr>", desc = "Generate Markodwn TOC" },
 
-		-- Direnv
-		{ "<leader>d", group = "direnv", icon = "" },
-
 		-- Quickfix
 		{ "<leader>q", group = "quickfix" },
 		{ "<leader>qt", "<cmd>TodoQuickFix<CR>", desc = "QuickFix Todo Comments" },
