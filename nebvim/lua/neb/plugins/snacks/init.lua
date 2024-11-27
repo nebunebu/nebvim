@@ -5,6 +5,7 @@ function M.setup()
 		bigfile = require("neb.plugins.snacks.bigfile"),
 		notifier = require("neb.plugins.snacks.notifier"),
 		quickfile = require("neb.plugins.snacks.quickfile"),
+		lazygit = require("neb.plugins.snacks.lazygit"),
 		--  NOTE: keep using alpha
 		-- dashboard = require("neb.plugins.snacks.dashboard"),
 
@@ -12,7 +13,6 @@ function M.setup()
 		-- require("neb.plugins.snacks.debug")
 		-- require("neb.plugins.snacks.git")
 		-- require("neb.plugins.snacks.gitbrowse")
-		-- require("neb.plugins.snacks.lazygit")
 		-- require("neb.plugins.snacks.notify")
 		-- require("neb.plugins.snacks.notifier")
 		-- require("neb.plugins.snacks.quickfile")

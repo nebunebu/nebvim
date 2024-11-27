@@ -26,6 +26,8 @@ wk.add({
 		{ "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste Image" },
 		{ "<leader>b", "<cmd>AlphaTab<cr>", desc = "Open Alpha in new tab" },
 
+		{ "<leader>lg", "<cmd>lua Snacks.lazygit.open()<CR>", desc = "Open lazygit" },
+
 		-- Diagnostics
 		{ "<leader>d", group = "diagnostics" },
 		{ "<leader>dl", "<cmd>lua vim.diagnostic.setloclist()<CR>", desc = "Diagnostics to loclist" },
