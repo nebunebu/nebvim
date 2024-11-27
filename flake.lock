@@ -302,6 +302,22 @@
         "type": "github"
       }
     },
+    "px-to-rem-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722000546,
+        "narHash": "sha256-E0ybC0EOloV5fcvSkMrhbJnMgvZw7QF33b0oNmOiKf0=",
+        "owner": "jsongerber",
+        "repo": "nvim-px-to-rem",
+        "rev": "92c812bbc2f2ac2869c02d816c5e7c9843d9e06a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jsongerber",
+        "repo": "nvim-px-to-rem",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "easypick-nvim": "easypick-nvim",
@@ -310,6 +326,7 @@
         "minty-nvim": "minty-nvim",
         "nerdy-nvim": "nerdy-nvim",
         "nixpkgs": "nixpkgs",
+        "px-to-rem-nvim": "px-to-rem-nvim",
         "snacks-nvim": "snacks-nvim",
         "telescope-emoji-nvim": "telescope-emoji-nvim",
         "telescope-git-conflicts-nvim": "telescope-git-conflicts-nvim",

@@ -67,6 +67,7 @@
                       # NOTE: move to a tool suite
                       pkgs.luajitPackages.magick
                       pkgs.delta
+                      pkgs.prettierd
                     ])))
                   ];
               });
@@ -89,8 +90,7 @@
     # {{{ 
 
     # Stuff not in nixpkgs
-    # menu-nvim = { url = "github:NvChad/menu"; flake = false; };
-    # spaceless-nvim = { url = "github:lewis6991/spaceless.nvim"; flake = false; };
+    px-to-rem-nvim = { url = "github:jsongerber/nvim-px-to-rem"; flake = false; };
     tiny-code-action-nvim = { url = "github:rachartier/tiny-code-action.nvim"; flake = false; };
     tiny-devicons-auto-colors-nvim = { url = "github:rachartier/tiny-devicons-auto-colors.nvim"; flake = false; };
     telescope-git-conflicts-nvim = { url = "github:Snikimonkd/telescope-git-conflicts.nvim"; flake = false; };

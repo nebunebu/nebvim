@@ -14,6 +14,7 @@ require("neb.plugins.conform")
 require("neb.commands")
 
 require("neb.plugins.minty")
+require("neb.plugins.px-to-rem")
 require("neb.plugins.git-dev")
 require("neb.plugins.urlview")
 
