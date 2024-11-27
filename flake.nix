@@ -66,6 +66,7 @@
                     (pkgs.lib.makeBinPath [
                       # NOTE: move to a tool suite
                       pkgs.luajitPackages.magick
+                      pkgs.delta
                     ])))
                   ];
               });
