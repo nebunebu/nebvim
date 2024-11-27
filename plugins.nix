@@ -11,6 +11,8 @@
     # Colorscheme
     rose-pine
 
+    mini-nvim
+
     # LSP
     lsp-zero-nvim
     nvim-lspconfig

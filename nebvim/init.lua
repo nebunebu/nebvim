@@ -17,6 +17,9 @@ require("neb.plugins.minty")
 require("neb.plugins.git-dev")
 require("neb.plugins.urlview")
 
+-- NOTE: Mini
+require("neb.plugins.mini.animate")
+
 -- NOTE: Snacks
 require("neb.plugins.snacks").setup()
 
