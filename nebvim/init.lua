@@ -16,12 +16,11 @@ require("neb.plugins.conform")
 require("neb.commands")
 
 require("neb.plugins.minty")
--- require("neb.plugins.spaceless")
 require("neb.plugins.git-dev")
 require("neb.plugins.urlview")
 
 -- NOTE: Snacks
-require("neb.plugins.snacks").setup({})
+require("neb.plugins.snacks").setup()
 
 -- NOTE: DAP
 require("neb.plugins.dap.dap-ui")
@@ -32,9 +31,9 @@ require("neb.plugins.endwise")
 require("neb.plugins.helpview")
 
 -- FIX: Broken
--- require("neb.plugins.image")
-
+require("neb.plugins.image")
 require("neb.plugins.img-clip")
+
 require("neb.plugins.nvim-lint")
 require("neb.plugins.lualine")
 require("neb.plugins.luasnip")

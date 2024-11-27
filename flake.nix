@@ -45,10 +45,6 @@
                   let
                     toolSuites = builtins.attrValues
                       {
-                        # FIX: image-nvim complains that magick is not
-                        # in path. It is in pkgs.tool-suite.nvim-tools
-                        # adding here results in set not list error.
-                        # inherit (pkgs.lua51Packages) magick;
                         inherit (pkgs.tool-suite)
                           bash
                           json
@@ -67,7 +63,10 @@
                     ":"
                     (builtins.toString (toolPath + ":"
                     +
-                    (pkgs.lib.makeBinPath [ pkgs.fortune pkgs.timg ])))
+                    (pkgs.lib.makeBinPath [
+                      # NOTE: move to a tool suite
+                      pkgs.luajitPackages.magick
+                    ])))
                   ];
               });
         }
