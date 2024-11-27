@@ -104,7 +104,6 @@
     telescope-repo-nvim = { url = "github:cljoly/telescope-repo.nvim"; flake = false; };
     snacks-nvim = { url = "github:folke/snacks.nvim"; flake = false; };
     git-dev-nvim = { url = "github:moyiz/git-dev.nvim"; flake = false; };
-    smear-cursor-nvim = { url = "github:sphamba/smear-cursor.nvim"; flake = false; };
     # }}}
   };
 }

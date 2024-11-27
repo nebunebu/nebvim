@@ -12,7 +12,6 @@ require("neb.plugins.barbecue")
 require("neb.plugins.cellular-automaton")
 require("neb.plugins.colorizer")
 require("neb.plugins.conform")
-require("neb.plugins.smear-cursor")
 
 require("neb.commands")
 
