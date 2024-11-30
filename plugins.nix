@@ -40,7 +40,7 @@
     # nvim-dap-virtualtext
     nvim-dap-ui
     nvim-nio
-    # one-small-step-for-vimkind-nvim = { url = "github:jbyuki/one-small-step-for-vimkind"; flake = false; };
+    one-small-step-for-vimkind
     telescope-dap-nvim
 
     # Linting

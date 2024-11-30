@@ -28,11 +28,42 @@ wk.add({
 
 		{ "<leader>lg", "<cmd>lua Snacks.lazygit.open()<CR>", desc = "Open lazygit" },
 
+    -- Debug Adapter Protocol
+    { "<leader>d", group = "debug" },
+    -- Core debugging
+    { "<leader>dc", "<cmd>DapContinue<CR>", desc = "Continue/Start Debugging" },
+    { "<leader>db", "<cmd>DapToggleBreakpoint<CR>", desc = "Toggle Breakpoint" },
+    { "<leader>dx", "<cmd>DapTerminate<CR>", desc = "Terminate Session" },
+
+    -- Stepping
+    { "<leader>ds", group = "step" },
+    { "<leader>dsi", "<cmd>DapStepInto<CR>", desc = "Step Into" },
+    { "<leader>dso", "<cmd>DapStepOver<CR>", desc = "Step Over" },
+    { "<leader>dsO", "<cmd>DapStepOut<CR>", desc = "Step Out" },
+
+    -- UI Elements
+    { "<leader>dr", "<cmd>DapToggleRepl<CR>", desc = "Toggle REPL" },
+    { "<leader>dt", function() require("dapui").toggle() end, desc = "Toggle UI" },
+
+    -- Evaluation
+    { "<leader>de", "<cmd>DapEval<CR>", desc = "Evaluate Expression" },
+
+    -- Session Management
+    { "<leader>dn", "<cmd>DapNew<CR>", desc = "New Session" },
+    { "<leader>dd", "<cmd>DapDisconnect<CR>", desc = "Disconnect" },
+    { "<leader>dl", "<cmd>DapLoadLaunchJSON<CR>", desc = "Load launch.json" },
+
+    -- Advanced/Debug
+    { "<leader>da", group = "advanced" },
+    { "<leader>dar", "<cmd>DapRestartFrame<CR>", desc = "Restart Frame" },
+    { "<leader>dal", "<cmd>DapShowLog<CR>", desc = "Show DAP Log" },
+    { "<leader>das", "<cmd>DapSetLogLevel<CR>", desc = "Set Log Level" },
+
 		-- Diagnostics
-		{ "<leader>d", group = "diagnostics" },
-		{ "<leader>dl", "<cmd>lua vim.diagnostic.setloclist()<CR>", desc = "Diagnostics to loclist" },
-		{ "<leader>dc", copy_diagnostics, desc = "Copy diagnostics to clipboard" },
-		{ "<leader>dh", "<cmd>lua Snacks.notifier.show_history()<CR>", desc = "Show notification history" },
+		{ "<leader>x", group = "diagnostics" },
+		{ "<leader>xl", "<cmd>lua vim.diagnostic.setloclist()<CR>", desc = "Diagnostics to loclist" },
+		{ "<leader>xc", copy_diagnostics, desc = "Copy diagnostics to clipboard" },
+		{ "<leader>xh", "<cmd>lua Snacks.notifier.show_history()<CR>", desc = "Show notification history" },
 
 		-- Markdown
 		{ "<leader>m", group = "markdown", icon = " " },
