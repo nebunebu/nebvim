@@ -10,7 +10,7 @@ builtins.mapAttrs
     in
     {
       default = pkgs.mkShell {
-        name = "testShell";
+        name = "nebvim";
         packages = [
           pkgs.tool-suite.lua
         ];
