@@ -68,6 +68,13 @@
                       pkgs.luajitPackages.magick
                       pkgs.delta
                       pkgs.prettierd
+
+                      pkgs.bashdb
+                      pkgs.nodejs
+                      pkgs.bash
+                      pkgs.bash-completion
+                      pkgs.coreutils # For cat, mkfifo
+                      pkgs.procps # For pkill
                     ])))
                   ];
               });

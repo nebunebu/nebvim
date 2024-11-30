@@ -1,7 +1,15 @@
+local dap = require("dap")
+
 dap.adapters.bashdb = {
 	type = "executable",
-	command = vim.fn.stdpath("data") .. "/mason/packages/bash-debug-adapter/bash-debug-adapter",
+	command = "bashdb",
 	name = "bashdb",
+	options = {
+		env = {
+			DEBUG_DAP = "true",
+			TERM = "xterm-256color", -- Try to fix the emacs terminal issue
+		},
+	},
 }
 
 dap.configurations.sh = {
@@ -10,16 +18,10 @@ dap.configurations.sh = {
 		request = "launch",
 		name = "Launch file",
 		showDebugOutput = true,
-		pathBashdb = vim.fn.stdpath("data") .. "/mason/packages/bash-debug-adapter/extension/bashdb_dir/bashdb",
-		pathBashdbLib = vim.fn.stdpath("data") .. "/mason/packages/bash-debug-adapter/extension/bashdb_dir",
 		trace = true,
 		file = "${file}",
 		program = "${file}",
 		cwd = "${workspaceFolder}",
-		pathCat = "cat",
-		pathBash = "/bin/bash",
-		pathMkfifo = "mkfifo",
-		pathPkill = "pkill",
 		args = {},
 		env = {},
 		terminalKind = "integrated",

@@ -31,6 +31,7 @@ require("neb.plugins.snacks").setup()
 
 -- NOTE: DAP
 require("neb.plugins.dap.dap-ui")
+require("neb.plugins.dap.bashdb")
 require("neb.plugins.dap.one-small-step-for-vimkind")
 
 require("neb.plugins.easypick")
