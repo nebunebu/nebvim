@@ -75,6 +75,9 @@
                       pkgs.bash-completion
                       pkgs.coreutils # For cat, mkfifo
                       pkgs.procps # For pkill
+
+                      pkgs.luajitPackages.busted
+                      pkgs.luajitPackages.busted-htest
                     ])))
                   ];
               });

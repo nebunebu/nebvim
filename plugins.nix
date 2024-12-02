@@ -7,11 +7,13 @@
 
     # Utilities
     plenary-nvim
+    mini-nvim
 
     # Colorscheme
     rose-pine
 
-    mini-nvim
+    # Testing
+    nvim-test
 
     # LSP
     lsp-zero-nvim

@@ -18,6 +18,8 @@ require("neb.plugins.px-to-rem")
 require("neb.plugins.git-dev")
 require("neb.plugins.urlview")
 
+require("neb.plugins.nvim-test")
+
 -- NOTE: Tiny
 require("neb.plugins.tiny.inline-diagnostic")
 require("neb.plugins.tiny.code-action")
