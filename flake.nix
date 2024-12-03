@@ -78,6 +78,10 @@
 
                       pkgs.luajitPackages.busted
                       pkgs.luajitPackages.busted-htest
+                      pkgs.stylua
+                      pkgs.luajitPackages.luacheck
+                      pkgs.lua-language-server
+                      # TODO: add lua debugger
                     ])))
                   ];
               });
