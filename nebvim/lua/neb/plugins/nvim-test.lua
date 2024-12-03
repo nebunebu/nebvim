@@ -5,7 +5,7 @@ require("nvim-test").setup({
 	silent = false, -- less notifications
 	term = "terminal", -- a terminal to run ("terminal"|"toggleterm")
 	termOpts = {
-		direction = "vertical", -- terminal's direction ("horizontal"|"vertical"|"float")
+		direction = "float", -- terminal's direction ("horizontal"|"vertical"|"float")
 		width = 96, -- terminal's width (for vertical|float)
 		height = 24, -- terminal's height (for horizontal|float)
 		go_back = false, -- return focus to original window after executing
@@ -41,10 +41,26 @@ require("nvim-test.runners.jest"):setup({
 
 require("nvim-test.runners.busted"):setup({
 	command = "busted",
-  args = {"-p", "_spec.lua$", "--lpath=?.lua;src/?.lua;../?.lua;../src/?.lua"},
+	args = { "-p", "_spec.lua$", "--lpath=?.lua;src/?.lua;../?.lua;../src/?.lua" },
 	env = {},
-  file_pattern = "\\v(.+_spec\\.lua|.+\\.lua)$",
+	file_pattern = "\\v(.+_spec\\.lua|.+\\.lua)$",
 	find_files = { "{name}_spec.{ext}" },
 	filename_modifier = nil,
 	working_directory = nil,
+})
+
+vim.api.nvim_create_autocmd("TermOpen", {
+	pattern = "*",
+	callback = function()
+		local win_config = vim.api.nvim_win_get_config(0)
+		if win_config.relative ~= "" then
+			-- Terminal mode mappings
+			vim.keymap.set("t", "<Esc>", [[<C-\><C-n>:q<CR>]], { buffer = true, nowait = true })
+			vim.keymap.set("t", "q", [[<C-\><C-n>:q<CR>]], { buffer = true, nowait = true })
+
+			-- Normal mode mappings
+			vim.keymap.set("n", "<Esc>", ":q<CR>", { buffer = true, nowait = true })
+			vim.keymap.set("n", "q", ":q<CR>", { buffer = true, nowait = true })
+		end
+	end,
 })
