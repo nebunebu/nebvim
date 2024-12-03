@@ -28,36 +28,50 @@ wk.add({
 
 		{ "<leader>lg", "<cmd>lua Snacks.lazygit.open()<CR>", desc = "Open lazygit" },
 
-    -- Debug Adapter Protocol
-    { "<leader>d", group = "debug" },
-    -- Core debugging
-    { "<leader>dc", "<cmd>DapContinue<CR>", desc = "Continue/Start Debugging" },
-    { "<leader>db", "<cmd>DapToggleBreakpoint<CR>", desc = "Toggle Breakpoint" },
-    { "<leader>dx", "<cmd>DapTerminate<CR>", desc = "Terminate Session" },
+		{ "<leader>n", group = "nvim-test" },
+		{ "<leader>ne", "<CMD>:TestEdit<CR>", desc = "Test edit" },
+		{ "<leader>ni", "<CMD>:TestInfo<CR>", desc = "Test info" },
+		{ "<leader>nl", "<CMD>:TestLast<CR>", desc = "Test last" },
+		{ "<leader>nn", "<CMD>:TestNearest<CR>", desc = "Test nearest" },
+		{ "<leader>ns", "<CMD>:TestSuite<CR>", desc = "Test suite" },
+		{ "<leader>nv", "<CMD>:TestVisit<CR>", desc = "Test visit" },
 
-    -- Stepping
-    { "<leader>ds", group = "step" },
-    { "<leader>dsi", "<cmd>DapStepInto<CR>", desc = "Step Into" },
-    { "<leader>dso", "<cmd>DapStepOver<CR>", desc = "Step Over" },
-    { "<leader>dsO", "<cmd>DapStepOut<CR>", desc = "Step Out" },
+		-- Debug Adapter Protocol
+		{ "<leader>d", group = "debug" },
+		-- Core debugging
+		{ "<leader>dc", "<cmd>DapContinue<CR>", desc = "Continue/Start Debugging" },
+		{ "<leader>db", "<cmd>DapToggleBreakpoint<CR>", desc = "Toggle Breakpoint" },
+		{ "<leader>dx", "<cmd>DapTerminate<CR>", desc = "Terminate Session" },
 
-    -- UI Elements
-    { "<leader>dr", "<cmd>DapToggleRepl<CR>", desc = "Toggle REPL" },
-    { "<leader>dt", function() require("dapui").toggle() end, desc = "Toggle UI" },
+		-- Stepping
+		{ "<leader>ds", group = "step" },
+		{ "<leader>dsi", "<cmd>DapStepInto<CR>", desc = "Step Into" },
+		{ "<leader>dso", "<cmd>DapStepOver<CR>", desc = "Step Over" },
+		{ "<leader>dsO", "<cmd>DapStepOut<CR>", desc = "Step Out" },
 
-    -- Evaluation
-    { "<leader>de", "<cmd>DapEval<CR>", desc = "Evaluate Expression" },
+		-- UI Elements
+		{ "<leader>dr", "<cmd>DapToggleRepl<CR>", desc = "Toggle REPL" },
+		{
+			"<leader>dt",
+			function()
+				require("dapui").toggle()
+			end,
+			desc = "Toggle UI",
+		},
 
-    -- Session Management
-    { "<leader>dn", "<cmd>DapNew<CR>", desc = "New Session" },
-    { "<leader>dd", "<cmd>DapDisconnect<CR>", desc = "Disconnect" },
-    { "<leader>dl", "<cmd>DapLoadLaunchJSON<CR>", desc = "Load launch.json" },
+		-- Evaluation
+		{ "<leader>de", "<cmd>DapEval<CR>", desc = "Evaluate Expression" },
 
-    -- Advanced/Debug
-    { "<leader>da", group = "advanced" },
-    { "<leader>dar", "<cmd>DapRestartFrame<CR>", desc = "Restart Frame" },
-    { "<leader>dal", "<cmd>DapShowLog<CR>", desc = "Show DAP Log" },
-    { "<leader>das", "<cmd>DapSetLogLevel<CR>", desc = "Set Log Level" },
+		-- Session Management
+		{ "<leader>dn", "<cmd>DapNew<CR>", desc = "New Session" },
+		{ "<leader>dd", "<cmd>DapDisconnect<CR>", desc = "Disconnect" },
+		{ "<leader>dl", "<cmd>DapLoadLaunchJSON<CR>", desc = "Load launch.json" },
+
+		-- Advanced/Debug
+		{ "<leader>da", group = "advanced" },
+		{ "<leader>dar", "<cmd>DapRestartFrame<CR>", desc = "Restart Frame" },
+		{ "<leader>dal", "<cmd>DapShowLog<CR>", desc = "Show DAP Log" },
+		{ "<leader>das", "<cmd>DapSetLogLevel<CR>", desc = "Set Log Level" },
 
 		-- Diagnostics
 		{ "<leader>x", group = "diagnostics" },
