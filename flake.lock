@@ -160,6 +160,22 @@
         "type": "github"
       }
     },
+    "global-note-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1707927069,
+        "narHash": "sha256-fp5V2rKoyQwYPF1/cDbL+j+KC7VLPh6iWt92NkPkgOY=",
+        "owner": "backdround",
+        "repo": "global-note.nvim",
+        "rev": "1e0d4bba425d971ed3ce40d182c574a25507115c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "backdround",
+        "repo": "global-note.nvim",
+        "type": "github"
+      }
+    },
     "haunt-nvim": {
       "flake": false,
       "locked": {
@@ -322,6 +338,7 @@
       "inputs": {
         "easypick-nvim": "easypick-nvim",
         "git-dev-nvim": "git-dev-nvim",
+        "global-note-nvim": "global-note-nvim",
         "haunt-nvim": "haunt-nvim",
         "minty-nvim": "minty-nvim",
         "nerdy-nvim": "nerdy-nvim",

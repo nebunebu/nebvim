@@ -3,13 +3,10 @@ local action_state = require("telescope.actions.state")
 
 require("telescope").setup({
 	defaults = {
-		-- layout_config = {
-		-- 	vertical = { width = 0.75 },
-		-- 	-- other layout configuration here
-		-- },
-		-- other defaults configuration here
+		file_ignore_patterns = {
+			"%.local/share/nebvim/global%-note/global%.md$",
+		},
 	},
-	-- other configuration values here
 	pickers = {
 		help_tags = {
 			mappings = {
