@@ -21,6 +21,7 @@ require("neb.plugins.urlview")
 require("neb.plugins.nvim-test")
 
 require("neb.plugins.global-note")
+require("neb.plugins.taskwarrior")
 
 -- NOTE: Tiny
 require("neb.plugins.tiny.inline-diagnostic")

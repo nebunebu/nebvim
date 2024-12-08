@@ -345,6 +345,7 @@
         "nixpkgs": "nixpkgs",
         "px-to-rem-nvim": "px-to-rem-nvim",
         "snacks-nvim": "snacks-nvim",
+        "taskwarrior-nvim": "taskwarrior-nvim",
         "telescope-emoji-nvim": "telescope-emoji-nvim",
         "telescope-git-conflicts-nvim": "telescope-git-conflicts-nvim",
         "telescope-repo-nvim": "telescope-repo-nvim",
@@ -369,6 +370,22 @@
       "original": {
         "owner": "folke",
         "repo": "snacks.nvim",
+        "type": "github"
+      }
+    },
+    "taskwarrior-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1710976454,
+        "narHash": "sha256-KwUnAoPDlDMYL2KZo94yyNqwwhXLstt2Fy95RB7rZpw=",
+        "owner": "ribelo",
+        "repo": "taskwarrior.nvim",
+        "rev": "5383427b88912ff3c37653d76e48b1fc197844dc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ribelo",
+        "repo": "taskwarrior.nvim",
         "type": "github"
       }
     },

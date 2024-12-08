@@ -119,6 +119,7 @@
     snacks-nvim = { url = "github:folke/snacks.nvim"; flake = false; };
     git-dev-nvim = { url = "github:moyiz/git-dev.nvim"; flake = false; };
     global-note-nvim = { url = "github:backdround/global-note.nvim"; flake = false; };
+    taskwarrior-nvim = { url = "github:ribelo/taskwarrior.nvim"; flake = false; };
     # }}}
   };
 }
