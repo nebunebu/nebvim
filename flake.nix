@@ -69,6 +69,8 @@
                       pkgs.delta
                       pkgs.prettierd
 
+                      pkgs.fzf
+
                       pkgs.bashdb
                       pkgs.nodejs
                       pkgs.bash

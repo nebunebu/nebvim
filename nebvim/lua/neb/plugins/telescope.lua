@@ -35,6 +35,7 @@ require("telescope").setup({
 		},
 	},
 	extensions = {
+		fzf = {},
 		emoji = {
 			action = function(emoji)
 				vim.api.nvim_put({ emoji.value }, "c", false, true)
@@ -63,6 +64,7 @@ require("telescope").setup({
 -- ]]
 --
 
+require("telescope").load_extension("fzf")
 require("telescope").load_extension("nerdy")
 require("telescope").load_extension("emoji")
 require("telescope").load_extension("conflicts")

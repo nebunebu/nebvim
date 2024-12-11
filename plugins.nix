@@ -56,6 +56,7 @@
 
     # Telescope
     telescope-nvim
+    telescope-fzf-native-nvim
     # telescope-manix
 
     # Editing Support
