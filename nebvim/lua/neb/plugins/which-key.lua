@@ -145,6 +145,7 @@ wk.add({
 		{ "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find files" },
 		{ "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Find with live_grep" },
 		{ "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Find help tags" },
+		{ "<leader>fH", "<cmd>Telescope heading<CR>", desc = "Find markdown headers" },
 		{ "<leader>fm", "<cmd>Telescope man_pages<CR>", desc = "Find man pages" },
 		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Find old files" },
 		{ "<leader>fp", "<cmd>Telescope repo list<CR>", desc = "Find Project" },

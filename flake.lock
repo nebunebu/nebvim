@@ -348,6 +348,7 @@
         "taskwarrior-nvim": "taskwarrior-nvim",
         "telescope-emoji-nvim": "telescope-emoji-nvim",
         "telescope-git-conflicts-nvim": "telescope-git-conflicts-nvim",
+        "telescope-heading-nvim": "telescope-heading-nvim",
         "telescope-repo-nvim": "telescope-repo-nvim",
         "tiny-code-action-nvim": "tiny-code-action-nvim",
         "tiny-devicons-auto-colors-nvim": "tiny-devicons-auto-colors-nvim",
@@ -418,6 +419,22 @@
       "original": {
         "owner": "Snikimonkd",
         "repo": "telescope-git-conflicts.nvim",
+        "type": "github"
+      }
+    },
+    "telescope-heading-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1718109830,
+        "narHash": "sha256-29nSqK4sWI3m5hHviGBfiSN/GPh8oXGiYrrTmN2okRk=",
+        "owner": "crispgm",
+        "repo": "telescope-heading.nvim",
+        "rev": "e85c0f69cb64048f56e76548dcb2f10277576df9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "crispgm",
+        "repo": "telescope-heading.nvim",
         "type": "github"
       }
     },

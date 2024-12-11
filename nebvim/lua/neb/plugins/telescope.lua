@@ -35,6 +35,7 @@ require("telescope").setup({
 		},
 	},
 	extensions = {
+		heading = { treesitter = true },
 		fzf = {},
 		emoji = {
 			action = function(emoji)
@@ -64,11 +65,12 @@ require("telescope").setup({
 -- ]]
 --
 
-require("telescope").load_extension("fzf")
-require("telescope").load_extension("nerdy")
-require("telescope").load_extension("emoji")
 require("telescope").load_extension("conflicts")
 require("telescope").load_extension("dap")
+require("telescope").load_extension("emoji")
+require("telescope").load_extension("fzf")
+require("telescope").load_extension("heading")
+require("telescope").load_extension("nerdy")
 require("telescope").load_extension("repo")
 -- NOTE: extensions to add
 -- telescope-tele-tabby

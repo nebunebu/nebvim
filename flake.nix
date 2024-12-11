@@ -106,22 +106,25 @@
     # {{{ 
 
     # Stuff not in nixpkgs
-    px-to-rem-nvim = { url = "github:jsongerber/nvim-px-to-rem"; flake = false; };
-    tiny-code-action-nvim = { url = "github:rachartier/tiny-code-action.nvim"; flake = false; };
-    tiny-devicons-auto-colors-nvim = { url = "github:rachartier/tiny-devicons-auto-colors.nvim"; flake = false; };
-    telescope-git-conflicts-nvim = { url = "github:Snikimonkd/telescope-git-conflicts.nvim"; flake = false; };
-    nerdy-nvim = { url = "github:2KAbhishek/nerdy.nvim"; flake = false; };
-    telescope-emoji-nvim = { url = "github:xiyaowong/telescope-emoji.nvim"; flake = false; };
-    easypick-nvim = { url = "github:axkirillov/easypick.nvim"; flake = false; };
-    haunt-nvim = { url = "github:adigitoleo/haunt.nvim"; flake = false; };
-    yamlmatter-nvim = { url = "github:ray-x/yamlmatter.nvim"; flake = false; };
-    volt-nvim = { url = "github:NvChad/volt"; flake = false; };
-    minty-nvim = { url = "github:NvChad/minty"; flake = false; };
-    telescope-repo-nvim = { url = "github:cljoly/telescope-repo.nvim"; flake = false; };
-    snacks-nvim = { url = "github:folke/snacks.nvim"; flake = false; };
     git-dev-nvim = { url = "github:moyiz/git-dev.nvim"; flake = false; };
     global-note-nvim = { url = "github:backdround/global-note.nvim"; flake = false; };
+    haunt-nvim = { url = "github:adigitoleo/haunt.nvim"; flake = false; };
+    minty-nvim = { url = "github:NvChad/minty"; flake = false; };
+    px-to-rem-nvim = { url = "github:jsongerber/nvim-px-to-rem"; flake = false; };
+    snacks-nvim = { url = "github:folke/snacks.nvim"; flake = false; };
+    tiny-code-action-nvim = { url = "github:rachartier/tiny-code-action.nvim"; flake = false; };
+    tiny-devicons-auto-colors-nvim = { url = "github:rachartier/tiny-devicons-auto-colors.nvim"; flake = false; };
+    volt-nvim = { url = "github:NvChad/volt"; flake = false; };
+    yamlmatter-nvim = { url = "github:ray-x/yamlmatter.nvim"; flake = false; };
+
+    # Telescope Based
+    easypick-nvim = { url = "github:axkirillov/easypick.nvim"; flake = false; };
+    nerdy-nvim = { url = "github:2KAbhishek/nerdy.nvim"; flake = false; };
     taskwarrior-nvim = { url = "github:ribelo/taskwarrior.nvim"; flake = false; };
+    telescope-emoji-nvim = { url = "github:xiyaowong/telescope-emoji.nvim"; flake = false; };
+    telescope-git-conflicts-nvim = { url = "github:Snikimonkd/telescope-git-conflicts.nvim"; flake = false; };
+    telescope-heading-nvim = { url = "github:crispgm/telescope-heading.nvim"; flake = false; };
+    telescope-repo-nvim = { url = "github:cljoly/telescope-repo.nvim"; flake = false; };
     # }}}
   };
 }
