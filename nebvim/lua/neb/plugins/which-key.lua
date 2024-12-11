@@ -36,6 +36,13 @@ wk.add({
 		{ "<leader>ns", "<CMD>:TestSuite<CR>", desc = "Test suite" },
 		{ "<leader>nv", "<CMD>:TestVisit<CR>", desc = "Test visit" },
 
+		-- Window resizing
+		{ "<C>", group = "window-resize" },
+		{ "<C-h>", "<cmd>vertical resize -1<CR>", desc = "Decrease window width" },
+		{ "<C-l>", "<cmd>vertical resize +1<CR>", desc = "Increase window width" },
+		{ "<C-k>", "<cmd>resize +1<CR>", desc = "Increase window height" },
+		{ "<C-j>", "<cmd>resize -1<CR>", desc = "Decrease window height" },
+
 		-- Debug Adapter Protocol
 		{ "<leader>d", group = "debug" },
 		-- Core debugging
