@@ -9,6 +9,8 @@
     plenary-nvim
     mini-nvim
 
+    vim-tridactyl
+
     # Colorscheme
     rose-pine
 
