@@ -22,26 +22,18 @@ wk.add({
 		mode = "n",
 		{ "<leader>h", "<cmd>nohlsearch<cr>", desc = "dehighlight search" },
 		{ "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<cr>", desc = "Toggle Comment" },
-		{ "<leader>t", "<cmd>Triptych<cr>", desc = "Open Triptych" },
 		{ "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste Image" },
 		{ "<leader>b", "<cmd>AlphaTab<cr>", desc = "Open Alpha in new tab" },
 
 		{ "<leader>lg", "<cmd>lua Snacks.lazygit.open()<CR>", desc = "Open lazygit" },
 
-		{ "<leader>n", group = "nvim-test" },
-		{ "<leader>ne", "<CMD>:TestEdit<CR>", desc = "Test edit" },
-		{ "<leader>ni", "<CMD>:TestInfo<CR>", desc = "Test info" },
-		{ "<leader>nl", "<CMD>:TestLast<CR>", desc = "Test last" },
-		{ "<leader>nn", "<CMD>:TestNearest<CR>", desc = "Test nearest" },
-		{ "<leader>ns", "<CMD>:TestSuite<CR>", desc = "Test suite" },
-		{ "<leader>nv", "<CMD>:TestVisit<CR>", desc = "Test visit" },
-
 		-- Window resizing
-		{ "<C>", group = "window-resize" },
-		{ "<C-h>", "<cmd>vertical resize -1<CR>", desc = "Decrease window width" },
-		{ "<C-l>", "<cmd>vertical resize +1<CR>", desc = "Increase window width" },
-		{ "<C-k>", "<cmd>resize +1<CR>", desc = "Increase window height" },
-		{ "<C-j>", "<cmd>resize -1<CR>", desc = "Decrease window height" },
+		-- FIX: interfers with tmux binds
+		-- { "<C>", group = "window-resize" },
+		-- { "<C-h>", "<cmd>vertical resize -1<CR>", desc = "Decrease window width" },
+		-- { "<C-l>", "<cmd>vertical resize +1<CR>", desc = "Increase window width" },
+		-- { "<C-k>", "<cmd>resize +1<CR>", desc = "Increase window height" },
+		-- { "<C-j>", "<cmd>resize -1<CR>", desc = "Decrease window height" },
 
 		-- Debug Adapter Protocol
 		{ "<leader>d", group = "debug" },
@@ -58,13 +50,6 @@ wk.add({
 
 		-- UI Elements
 		{ "<leader>dr", "<cmd>DapToggleRepl<CR>", desc = "Toggle REPL" },
-		{
-			"<leader>dt",
-			function()
-				require("dapui").toggle()
-			end,
-			desc = "Toggle UI",
-		},
 
 		-- Evaluation
 		{ "<leader>de", "<cmd>DapEval<CR>", desc = "Evaluate Expression" },
@@ -93,11 +78,6 @@ wk.add({
 		-- Quickfix
 		{ "<leader>q", group = "quickfix" },
 		{ "<leader>qt", "<cmd>TodoQuickFix<CR>", desc = "QuickFix Todo Comments" },
-
-		-- Urlview
-		{ "<leader>u", group = "UrlView" },
-		{ "<leader>ub", "<cmd>UrlView buffer<CR>", desc = "UrlView Buffer to Clipboard" },
-		{ "<leader>uf", "<cmd>UrlView flake action=gitdev<CR>", desc = "UrlView Flake Inputs to git-dev" },
 
 		-- Obsidian
 		{ "<leader>o", group = "Obsidian" },
@@ -132,32 +112,12 @@ wk.add({
 		-- "<cmd>ObsidianTOC<CR>",
 
 		-- Quickfix
-		{ "<leader>c", group = "cellular automaton" },
-		{ "<leader>cr", "<cmd>CellularAutomaton make_it_rain<CR>", desc = "make it rain" },
-		{ "<leader>cg", "<cmd>CellularAutomaton game_of_life<CR>", desc = "game of life" },
-		{ "<leader>cs", "<cmd>CellularAutomaton scramble<CR>", desc = "scramble" },
-		{ "<leader>cl", "<cmd>CellularAutomaton slide<CR>", desc = "scramble" },
+		-- { "<leader>c", group = "cellular automaton" },
+		-- { "<leader>cr", "<cmd>CellularAutomaton make_it_rain<CR>", desc = "make it rain" },
+		-- { "<leader>cg", "<cmd>CellularAutomaton game_of_life<CR>", desc = "game of life" },
+		-- { "<leader>cs", "<cmd>CellularAutomaton scramble<CR>", desc = "scramble" },
+		-- { "<leader>cl", "<cmd>CellularAutomaton slide<CR>", desc = "scramble" },
 		-- Loclist
-
-		-- Telescope
-		{ "<leader>f", group = "telescope" },
-		{ "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Find in current buffer" },
-		{ "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find files" },
-		{ "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Find with live_grep" },
-		{ "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Find help tags" },
-		{ "<leader>fH", "<cmd>Telescope heading<CR>", desc = "Find markdown headers" },
-		{ "<leader>fm", "<cmd>Telescope man_pages<CR>", desc = "Find man pages" },
-		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Find old files" },
-		{ "<leader>fp", "<cmd>Telescope repo list<CR>", desc = "Find Project" },
-
-		{ "<leader>ft", group = "Telescope todo-comments" },
-		{ "<leader>ftp", "<cmd>TodoTelescope<CR>", desc = "Find project todo-comments" },
-
-		{ "<leader>fs", group = "Telescope symbol" },
-		{ "<leader>fsg", "<cmd>Telescope nerdy<CR>", desc = "Find nerdfont glyph" },
-		{ "<leader>fse", "<cmd>Telescope emoji<CR>", desc = "Find emoji" },
-
-		{ "<leader>fvc", "<cmd>Telescope conflicts<CR>", desc = "Find git conflicts" },
 	},
 	{
 		mode = { "x" },

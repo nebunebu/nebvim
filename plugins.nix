@@ -1,9 +1,43 @@
 { pkgs, ... }:
+let
+  mkLazyLoadable = pluginName: {
+    ${pluginName} = pkgs.vimPlugins.${pluginName}.overrideAttrs (_: { optional = true; });
+  };
+  mkLazyLoadables = plugins: builtins.foldl' (acc: plugin: acc // (mkLazyLoadable plugin)) { } plugins;
+in
+mkLazyLoadables [
+  "cellular-automaton-nvim"
+  "markview-nvim"
+  "nvim-test"
+  "urlview-nvim"
 
-# Plugins from nixpkgs-unstable
+  # Quarto
+  "quarto-nvim"
+  "otter-nvim"
 
-{
+  # "oil-nvim"
+  "triptych-nvim"
+  "nix-develop-nvim"
+  # Debugging
+  "nvim-dap-ui"
+  "nvim-nio"
+  # Telescope
+  "telescope-nvim"
+  "telescope-fzf-native-nvim"
+  "telescope-dap-nvim"
+] // {
+
+  # TODO: add as lazy loaded
+  # - nvim-dap
+  # - helpview-nvim
+  ## markdown ft
+  # - image-nvim
+  # -img-clip-nvim
+  # obsidian-nvim
+
   inherit (pkgs.vimPlugins)
+
+    lz-n
 
     # Utilities
     plenary-nvim
@@ -14,8 +48,9 @@
     # Colorscheme
     rose-pine
 
-    # Testing
-    nvim-test
+    # # DAP
+    # nvim-dap-virtualtext
+    one-small-step-for-vimkind
 
     # LSP
     lsp-zero-nvim
@@ -36,16 +71,6 @@
     cmp_luasnip
     cmp-async-path
 
-    urlview-nvim
-
-
-    # DAP
-    nvim-dap
-    # nvim-dap-virtualtext
-    nvim-dap-ui
-    nvim-nio
-    one-small-step-for-vimkind
-    telescope-dap-nvim
 
     # Linting
     nvim-lint
@@ -54,10 +79,6 @@
     # Formatting
     conform-nvim
 
-    # Telescope
-    telescope-nvim
-    telescope-fzf-native-nvim
-    # telescope-manix
 
     # Editing Support
     indent-blankline-nvim
@@ -70,10 +91,6 @@
     comment-nvim
     todo-comments-nvim
 
-    # File Explorers
-    triptych-nvim
-    oil-nvim
-
     # Status Line
     lualine-nvim
     # lualine-lsp-progress
@@ -81,7 +98,6 @@
 
     # UI and Aesthetics
     helpview-nvim
-    markview-nvim
     nvim-web-devicons
     dressing-nvim
 
@@ -90,6 +106,7 @@
     image-nvim
 
     # Git
+    # TODO: maybe just remove
     neogit
 
     # Marks
@@ -98,8 +115,6 @@
     # Keybinds
     which-key-nvim
 
-    # Nix Direnv
-    nix-develop-nvim
 
     # Colors
     nvim-colorizer-lua
@@ -107,8 +122,6 @@
 
     # Writing
     obsidian-nvim
-    quarto-nvim
-    otter-nvim
 
     # Startup
     fortune-nvim
@@ -116,10 +129,5 @@
 
     # Tmux Integration
     vim-tmux-navigator
-    # nvim-tmux-navigator-nvim = { url = "github:alexghergh/nvim-tmux-navigation"; flake = false; };
-
-    # Other
-    cellular-automaton-nvim
     ;
 }
-
