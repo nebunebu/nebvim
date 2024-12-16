@@ -17,11 +17,11 @@ require("lz.n").load(require("neb.plugins.quarto"))
 require("lz.n").load(require("neb.plugins.global-note"))
 
 require("lz.n").load(require("neb.plugins.dap.dap-ui"))
--- require("lz.n").load(require("neb.plugins.oil"))
 
 require("neb.plugins.fortune") -- must be before alpha
 require("neb.plugins.alpha")
 
+require("neb.plugins.oil")
 require("neb.plugins.autopairs")
 require("neb.plugins.barbecue")
 require("neb.plugins.colorizer")

@@ -15,7 +15,7 @@ mkLazyLoadables [
   "quarto-nvim"
   "otter-nvim"
 
-  # "oil-nvim"
+  "oil-nvim"
   "triptych-nvim"
   "nix-develop-nvim"
   # Debugging
@@ -38,7 +38,6 @@ mkLazyLoadables [
   inherit (pkgs.vimPlugins)
 
     lz-n
-
     # Utilities
     plenary-nvim
     mini-nvim
