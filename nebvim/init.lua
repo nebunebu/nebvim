@@ -74,12 +74,8 @@ require("neb.plugins.yamlmatter")
 -- require("neb.plugins.obsidian")
 
 -- NOTE: Lsp
--- require("neb.plugins.lsp.lsp-zero")
 require("neb.plugins.lsp.lspconfig")
 require("neb.plugins.lsp.fidget")
-
--- NOTE: Cmp
--- require("neb.plugins.cmp")
 
 -- Blink
 require("neb.plugins.blink")

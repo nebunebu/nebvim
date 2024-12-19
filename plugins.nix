@@ -53,24 +53,13 @@ mkLazyLoadables [
     one-small-step-for-vimkind
 
     # LSP
-    lsp-zero-nvim
     nvim-lspconfig
-    lspkind-nvim
     fidget-nvim
     barbecue-nvim
     nvim-navic
 
     # Snippets
     luasnip
-
-    # Completion
-    nvim-cmp
-    cmp-nvim-lsp
-    # cmp-nvim-lua
-    cmp-buffer
-    cmp_luasnip
-    cmp-async-path
-
 
     # Linting
     nvim-lint
@@ -93,8 +82,6 @@ mkLazyLoadables [
 
     # Status Line
     lualine-nvim
-    # lualine-lsp-progress
-    # git-prompt-string-lualine-nvim
 
     # UI and Aesthetics
     helpview-nvim
