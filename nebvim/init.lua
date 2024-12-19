@@ -15,6 +15,7 @@ require("lz.n").load(require("neb.plugins.nix-develop"))
 require("lz.n").load(require("neb.plugins.telescope"))
 require("lz.n").load(require("neb.plugins.quarto"))
 require("lz.n").load(require("neb.plugins.global-note"))
+require("lz.n").load(require("neb.plugins.helpview"))
 
 require("lz.n").load(require("neb.plugins.dap.dap-ui"))
 
@@ -40,20 +41,16 @@ require("neb.plugins.tiny.inline-diagnostic")
 require("neb.plugins.tiny.code-action")
 require("neb.plugins.tiny.devicons-auto-colors")
 
--- NOTE: Mini
 require("neb.plugins.mini.animate")
 
 -- NOTE: Snacks
 require("neb.plugins.snacks").setup()
 
--- NOTE: DAP
-require("neb.plugins.dap.dap-ui")
 require("neb.plugins.dap.bashdb")
 require("neb.plugins.dap.one-small-step-for-vimkind")
 
 require("neb.plugins.easypick")
 require("neb.plugins.endwise")
-require("neb.plugins.helpview")
 
 -- require("neb.plugins.image")
 require("neb.plugins.img-clip")

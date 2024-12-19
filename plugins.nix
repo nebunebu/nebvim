@@ -25,11 +25,11 @@ mkLazyLoadables [
   "telescope-nvim"
   "telescope-fzf-native-nvim"
   "telescope-dap-nvim"
+  "helpview-nvim"
 ] // {
 
   # TODO: add as lazy loaded
   # - nvim-dap
-  # - helpview-nvim
   ## markdown ft
   # - image-nvim
   # -img-clip-nvim

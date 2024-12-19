@@ -26,6 +26,7 @@ function M.print_lazy_status()
 		"urlview",
 		"taskwarrior",
 		"nix-develop",
+		"helpview",
 	}
 
 	for _, plugin in ipairs(plugins) do
