@@ -2,7 +2,7 @@ require("neb.options")
 require("neb.colorscheme")
 require("neb.autocmd")
 
-require("neb.debug")
+-- require("neb.debug")
 
 require("lz.n").load("neb.lz")
 
