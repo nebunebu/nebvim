@@ -33,14 +33,14 @@ require("blink.cmp").setup({
 		},
 
 		menu = {
-			border = "single",
+			border = "rounded",
 		},
 
 		documentation = {
 			auto_show = true,
 			auto_show_delay_ms = 250,
 			window = {
-				border = "single",
+				border = "rounded",
 			},
 		},
 	},
@@ -48,7 +48,7 @@ require("blink.cmp").setup({
 	signature = {
 		enabled = true,
 		window = {
-			border = "single",
+			border = "rounded",
 		},
 	},
 })
