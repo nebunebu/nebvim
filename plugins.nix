@@ -42,9 +42,9 @@ mkLazyLoadables [
     blink-cmp
     plenary-nvim
     rose-pine
+    mini-animate
 
     # Utilities
-    mini-nvim
 
     vim-tridactyl
 
