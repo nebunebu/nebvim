@@ -116,7 +116,6 @@
     yamlmatter-nvim = { url = "github:ray-x/yamlmatter.nvim"; flake = false; };
 
     # Telescope Based
-    easypick-nvim = { url = "github:axkirillov/easypick.nvim"; flake = false; };
     nerdy-nvim = { url = "github:2KAbhishek/nerdy.nvim"; flake = false; };
     taskwarrior-nvim = { url = "github:ribelo/taskwarrior.nvim"; flake = false; };
     telescope-emoji-nvim = { url = "github:xiyaowong/telescope-emoji.nvim"; flake = false; };
