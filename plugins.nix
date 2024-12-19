@@ -37,16 +37,18 @@ mkLazyLoadables [
 
   inherit (pkgs.vimPlugins)
 
+    # NOTE: don't lazy load
     lz-n
     blink-cmp
-    # Utilities
     plenary-nvim
+    rose-pine
+
+    # Utilities
     mini-nvim
 
     vim-tridactyl
 
     # Colorscheme
-    rose-pine
 
     # # DAP
     # nvim-dap-virtualtext
