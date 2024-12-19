@@ -38,6 +38,7 @@ mkLazyLoadables [
   inherit (pkgs.vimPlugins)
 
     lz-n
+    blink-cmp
     # Utilities
     plenary-nvim
     mini-nvim

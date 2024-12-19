@@ -106,6 +106,10 @@
     # {{{ 
 
     # Stuff not in nixpkgs
+    # blink-nvim = {
+    #   url = "github:Saghen/blink.cmp";
+    #   flake = false;
+    # };
     git-dev-nvim = { url = "github:moyiz/git-dev.nvim"; flake = false; };
     global-note-nvim = { url = "github:backdround/global-note.nvim"; flake = false; };
     haunt-nvim = { url = "github:adigitoleo/haunt.nvim"; flake = false; };
