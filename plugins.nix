@@ -94,10 +94,6 @@ mkLazyLoadables [
     img-clip-nvim
     image-nvim
 
-    # Git
-    # TODO: maybe just remove
-    neogit
-
     # Marks
     marks-nvim
 
