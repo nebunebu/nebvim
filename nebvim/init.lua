@@ -1,23 +1,29 @@
 require("neb.options")
 require("neb.colorscheme")
 require("neb.autocmd")
-
--- require("neb.debug")
+require("neb.commands")
 
 require("lz.n").load("neb.lz")
 
-require("lz.n").load(require("neb.plugins.taskwarrior"))
-require("lz.n").load(require("neb.plugins.urlview"))
-require("lz.n").load(require("neb.plugins.markview"))
-require("lz.n").load(require("neb.plugins.cellular-automaton"))
-require("lz.n").load(require("neb.plugins.triptych"))
-require("lz.n").load(require("neb.plugins.nix-develop"))
-require("lz.n").load(require("neb.plugins.telescope"))
-require("lz.n").load(require("neb.plugins.quarto"))
-require("lz.n").load(require("neb.plugins.global-note"))
-require("lz.n").load(require("neb.plugins.helpview"))
+local lz_plugins = {
+	"cellular-automaton",
+	"helpview",
+	"triptych",
+	"nix-develop",
+	"global-note",
+	"urlview",
+	"taskwarrior",
+	"telescope",
+	-- NOTE: I don't think this is working with nested dirs
+	-- "dap.dap-ui",
+	-- NOTE: Not Lazy Loading
+	"markview",
+	"quarto",
+}
 
-require("lz.n").load(require("neb.plugins.dap.dap-ui"))
+require("neb.lz").setup(lz_plugins)
+
+-- require("lz.n").load(require("neb.plugins.dap.dap-ui"))
 
 require("neb.plugins.fortune") -- must be before alpha
 require("neb.plugins.alpha")
@@ -28,10 +34,8 @@ require("neb.plugins.barbecue")
 require("neb.plugins.colorizer")
 require("neb.plugins.conform")
 
-require("neb.commands")
-
 require("neb.plugins.minty")
-require("neb.plugins.px-to-rem")
+-- require("neb.plugins.px-to-rem")
 require("neb.plugins.git-dev")
 
 require("neb.plugins.nvim-test")

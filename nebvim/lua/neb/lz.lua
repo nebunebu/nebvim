@@ -1,8 +1,22 @@
 local M = {}
 
+---@diagnostic disable-next-line: undefined-global
+local pcall = pcall
+---@diagnostic disable-next-line: undefined-global
+local package = package
+---@diagnostic disable-next-line: undefined-global
+local math = math
+
+M.plugins = {} -- Store plugins list
+
+function M.setup(plugins)
+	M.plugins = plugins
+	M.load_plugins()
+end
+
 function M.load_plugins()
-	for _, plugin in pairs(M.plugins) do -- Changed to use _ for unused index
-		local ok, spec = pcall(require, "neb.lz." .. plugin)
+	for _, plugin in pairs(M.plugins) do
+		local ok, spec = pcall(require, "neb.plugins." .. plugin)
 		if ok then
 			require("lz.n").load(spec)
 		else
@@ -26,19 +40,25 @@ end
 function M.print_lazy_status()
 	local status = {}
 	local max_length = 0
+	local sorted_plugins = {}
 
 	-- First collect status and find longest name
 	for _, plugin in ipairs(M.plugins) do
 		status[plugin] = M.is_plugin_loaded(plugin)
 		max_length = math.max(max_length, #plugin)
+		table.insert(sorted_plugins, plugin)
 	end
+
+	-- Sort plugins alphabetically
+	table.sort(sorted_plugins)
 
 	-- Add some padding to max_length
 	max_length = max_length + 2
 
 	vim.api.nvim_echo({ { "Plugin Load Status:", "Title" } }, false, {})
 
-	for plugin, loaded in pairs(status) do
+	for _, plugin in ipairs(sorted_plugins) do
+		local loaded = status[plugin]
 		local status_text = loaded and "Loaded" or "Not Loaded"
 		local hl_group = loaded and "Statement" or "DiagnosticWarn"
 		-- Create padding
