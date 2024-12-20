@@ -23,7 +23,7 @@ local lz_plugins = {
 
 require("neb.lz").setup(lz_plugins)
 
--- require("lz.n").load(require("neb.plugins.dap.dap-ui"))
+require("lz.n").load(require("neb.plugins.dap.dap-ui"))
 
 require("neb.plugins.fortune") -- must be before alpha
 require("neb.plugins.alpha")
@@ -35,7 +35,7 @@ require("neb.plugins.colorizer")
 require("neb.plugins.conform")
 
 require("neb.plugins.minty")
--- require("neb.plugins.px-to-rem")
+require("neb.plugins.px-to-rem")
 require("neb.plugins.git-dev")
 
 require("neb.plugins.nvim-test")
