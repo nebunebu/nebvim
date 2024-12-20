@@ -1,9 +1,9 @@
 require("conform").setup({
 	formatters_by_ft = {
-		json = { "fixjson" },
-		html = { "htmlbeautifier" },
 		css = { "prettierd" },
+		html = { "htmlbeautifier" },
 		javascript = { "prettierd" },
+		json = { "fixjson" },
 		lua = { "stylua" },
 		markdown = { "markdownlint" },
 		nix = { "nixpkgs_fmt", "nixfmt", stop_after_first = true },
