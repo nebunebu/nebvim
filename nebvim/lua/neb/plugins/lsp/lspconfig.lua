@@ -13,7 +13,7 @@ local lsp_configs = {
 	"texlab",
 	"ts_ls",
 	"lemminx",
-	"rust_analyzer",
+	-- "rust_analyzer",
 }
 
 for _, lsp in ipairs(lsp_configs) do
