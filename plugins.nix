@@ -10,11 +10,10 @@ mkLazyLoadables [
   "markview-nvim"
   "nvim-test"
   "urlview-nvim"
-
+  "rustaceanvim"
   # Quarto
   "quarto-nvim"
   "otter-nvim"
-
   "oil-nvim"
   "triptych-nvim"
   "nix-develop-nvim"
@@ -36,7 +35,6 @@ mkLazyLoadables [
   # obsidian-nvim
 
   inherit (pkgs.vimPlugins)
-
     # NOTE: don't lazy load
     lz-n
     blink-cmp

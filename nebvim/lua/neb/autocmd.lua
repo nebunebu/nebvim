@@ -23,3 +23,18 @@ vim.api.nvim_create_autocmd("FileType", {
 		end, { buffer = true, expr = true })
 	end,
 })
+
+-- Set up the highlight group
+vim.api.nvim_set_hl(0, "LspInlayHint", {
+	fg = "#c4a7e7",
+	bg = "#191724",
+	italic = true,
+})
+
+-- Auto-enable for specific filetypes
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "rust" },
+	callback = function()
+		vim.lsp.inlay_hint.enable(true)
+	end,
+})
