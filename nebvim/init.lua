@@ -23,6 +23,8 @@ local lz_plugins = {
 
 require("neb.lz").setup(lz_plugins)
 
+require("neb.plugins.rustaceanvim")
+
 require("lz.n").load(require("neb.plugins.dap.dap-ui"))
 
 require("neb.plugins.fortune") -- must be before alpha

@@ -30,11 +30,3 @@ vim.api.nvim_set_hl(0, "LspInlayHint", {
 	bg = "#191724",
 	italic = true,
 })
-
--- Auto-enable for specific filetypes
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "rust" },
-	callback = function()
-		vim.lsp.inlay_hint.enable(true)
-	end,
-})
