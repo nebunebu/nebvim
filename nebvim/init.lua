@@ -73,7 +73,7 @@ require("neb.plugins.treesitter")
 require("neb.plugins.which-key")
 
 require("neb.plugins.haunt")
-require("neb.plugins.yamlmatter")
+-- require("neb.plugins.yamlmatter")
 
 -- require("neb.plugins.obsidian")
 -- NOTE: Lsp
