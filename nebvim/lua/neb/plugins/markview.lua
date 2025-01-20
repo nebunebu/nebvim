@@ -197,7 +197,8 @@ return {
 			checkboxes = {
 				enable = true,
 				checked = {
-					text = "✔",
+					-- text = "✔",
+					text = "󰄬",
 					hl = "fg_green",
 				},
 				unchecked = {
