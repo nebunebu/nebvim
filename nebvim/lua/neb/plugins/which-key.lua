@@ -78,46 +78,6 @@ wk.add({
 		-- Quickfix
 		{ "<leader>q", group = "quickfix" },
 		{ "<leader>qt", "<cmd>TodoQuickFix<CR>", desc = "QuickFix Todo Comments" },
-
-		-- Obsidian
-		{ "<leader>o", group = "Obsidian" },
-		{ "<leader>of", group = "Obsidian Find" },
-		{ "<leader>off", "<cmd>ObsidianQuickSwitch<CR>", desc = "Find file in vault" },
-		{ "<leader>ofg", "<cmd>ObsidianSearch<CR>", desc = "rg vault" },
-		{ "<leader>ofl", "<cmd>ObsidianLinks<CR>", desc = "Find Links in Current Buffer" },
-		{ "<leader>ofb", "<cmd>ObsidianBacklinks<CR>", desc = "Find Backlinks in Current Buffer" },
-		{ "<leader>oft", "<cmd>ObsidianTags<CR>", desc = "Find Tags in Vault" },
-
-		{ "<leader>on", group = "Obsidian New" },
-		{ "<leader>onn", "<cmd>ObsidianNew<CR>", desc = "Open a new note" },
-		{ "<leader>ont", "<cmd>ObsidianNewFromTemplate<CR>", desc = "Create a New Note from a Template" },
-
-		-- { "<leader>ont", "<cmd>ObsidianNew<CR>", desc = "Open a new note" },
-
-		-- "<cmd>ObsidianFollowLink<CR>",
-		-- "<cmd>ObsidianBacklinks<CR>",
-		-- "<cmd>ObsidianTags<CR>",
-		-- "<cmd>ObsidianToday<CR>",
-		-- "<cmd>ObsidianTemplate<CR>",
-		-- "<cmd>ObsidianSearch<CR>",
-		-- "<cmd>ObsidianLink<CR>",
-		-- "<cmd>ObsidianLinkNew<CR>",
-		-- "<cmd>ObsidianLinks<CR>",
-		-- "<cmd>ObsidianExtractNote<CR>",
-		-- "<cmd>ObsidianWorkspace<CR>",
-		-- "<cmd>ObsidianPasteImg<CR>",
-		-- "<cmd>ObsidianRename<CR>",
-		-- "<cmd>ObsidianToggleCheckbox<CR>",
-		-- "<cmd>ObsidianNewFromTemplate<CR>",
-		-- "<cmd>ObsidianTOC<CR>",
-
-		-- Quickfix
-		-- { "<leader>c", group = "cellular automaton" },
-		-- { "<leader>cr", "<cmd>CellularAutomaton make_it_rain<CR>", desc = "make it rain" },
-		-- { "<leader>cg", "<cmd>CellularAutomaton game_of_life<CR>", desc = "game of life" },
-		-- { "<leader>cs", "<cmd>CellularAutomaton scramble<CR>", desc = "scramble" },
-		-- { "<leader>cl", "<cmd>CellularAutomaton slide<CR>", desc = "scramble" },
-		-- Loclist
 	},
 	{
 		mode = { "x" },

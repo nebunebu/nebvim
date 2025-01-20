@@ -25,6 +25,8 @@ mkLazyLoadables [
   "telescope-fzf-native-nvim"
   "telescope-dap-nvim"
   "helpview-nvim"
+  # Markdown
+  "obsidian-nvim"
 ] // {
 
   # TODO: add as lazy loaded
@@ -32,7 +34,6 @@ mkLazyLoadables [
   ## markdown ft
   # - image-nvim
   # -img-clip-nvim
-  # obsidian-nvim
 
   inherit (pkgs.vimPlugins)
     # NOTE: don't lazy load
@@ -102,9 +103,6 @@ mkLazyLoadables [
     # Colors
     nvim-colorizer-lua
 
-
-    # Writing
-    obsidian-nvim
 
     # Startup
     fortune-nvim

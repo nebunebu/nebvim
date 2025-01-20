@@ -14,6 +14,8 @@ local lz_plugins = {
 	"urlview",
 	"taskwarrior",
 	"telescope",
+
+	"obsidian",
 	-- NOTE: I don't think this is working with nested dirs
 	-- "dap.dap-ui",
 	-- NOTE: Not Lazy Loading
@@ -74,7 +76,6 @@ require("neb.plugins.haunt")
 require("neb.plugins.yamlmatter")
 
 -- require("neb.plugins.obsidian")
-
 -- NOTE: Lsp
 require("neb.plugins.lsp.lspconfig")
 require("neb.plugins.lsp.fidget")
