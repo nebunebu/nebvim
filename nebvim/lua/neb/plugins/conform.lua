@@ -7,7 +7,11 @@ require("conform").setup({
 		json = { "fixjson" },
 		lua = { "stylua" },
 		markdown = { "markdownlint" },
-		nix = { "nixpkgs_fmt", "nixfmt", stop_after_first = true },
+		nix = {
+			-- "nixpkgs_fmt",
+			"nixfmt",
+			stop_after_first = true,
+		},
 		rust = { "rustfmt" },
 		scss = { "prettierd" },
 		sh = { "shfmt" },
