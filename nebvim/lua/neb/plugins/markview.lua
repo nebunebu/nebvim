@@ -216,8 +216,8 @@ return {
 				style = "language",
 				hl = "layer2",
 
-				min_width = 60,
-				pad_amount = 3,
+				min_width = 55,
+				pad_amount = 1,
 
 				language_names = {
 					{ "py", "python" },
