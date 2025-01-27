@@ -1,9 +1,12 @@
 { pkgs, ... }:
 let
   mkLazyLoadable = pluginName: {
-    ${pluginName} = pkgs.vimPlugins.${pluginName}.overrideAttrs (_: { optional = true; });
+    ${pluginName} = pkgs.vimPlugins.${pluginName}.overrideAttrs (_: {
+      optional = true;
+    });
   };
-  mkLazyLoadables = plugins: builtins.foldl' (acc: plugin: acc // (mkLazyLoadable plugin)) { } plugins;
+  mkLazyLoadables =
+    plugins: builtins.foldl' (acc: plugin: acc // (mkLazyLoadable plugin)) { } plugins;
 in
 mkLazyLoadables [
   "cellular-automaton-nvim"
@@ -23,11 +26,13 @@ mkLazyLoadables [
   # Telescope
   "telescope-nvim"
   "telescope-fzf-native-nvim"
+  "telescope-manix"
   "telescope-dap-nvim"
   "helpview-nvim"
   # Markdown
   "obsidian-nvim"
-] // {
+]
+// {
 
   # TODO: add as lazy loaded
   # - nvim-dap
@@ -69,7 +74,6 @@ mkLazyLoadables [
     # Formatting
     conform-nvim
 
-
     # Editing Support
     indent-blankline-nvim
     nvim-autopairs
@@ -99,10 +103,8 @@ mkLazyLoadables [
     # Keybinds
     which-key-nvim
 
-
     # Colors
     nvim-colorizer-lua
-
 
     # Startup
     fortune-nvim

@@ -11,6 +11,53 @@ return {
 		{ "<leader>fo", "<cmd>Telescope oldfiles<CR>", desc = "Find old files" },
 		{ "<leader>fp", "<cmd>Telescope repo list<CR>", desc = "Find Project" },
 
+		{ "<leader>fn", group = "Manix" },
+		{
+			"<leader>fnh",
+			function()
+				require("telescope-manix").search({
+					manix_args = { "--source", "hm-options" },
+				})
+			end,
+			desc = "Search Home Manager options",
+		},
+		{
+			"<leader>fno",
+			function()
+				require("telescope-manix").search({
+					manix_args = { "--source", "nixos-options" },
+				})
+			end,
+			desc = "Search NixOS Options",
+		},
+		{
+			"<leader>fnd",
+			function()
+				require("telescope-manix").search({
+					manix_args = { "--source", "nixpkgs-doc" },
+				})
+			end,
+			desc = "Search Nixpkgs Doc",
+		},
+		{
+			"<leader>fnc",
+			function()
+				require("telescope-manix").search({
+					manix_args = { "--source", "nixpgks-comments" },
+				})
+			end,
+			desc = "Search NixOS Nixpkgs Comments",
+		},
+		{
+			"<leader>fnt",
+			function()
+				require("telescope-manix").search({
+					manix_args = { "--source", "nixpgks-tree" },
+				})
+			end,
+			desc = "Search Nixpkgs Tree",
+		},
+
 		{ "<leader>ft", group = "Telescope todo-comments" },
 		{ "<leader>ftp", "<cmd>TodoTelescope<CR>", desc = "Find project todo-comments" },
 
@@ -65,6 +112,11 @@ return {
 						vim.api.nvim_put({ emoji.value }, "c", false, true)
 					end,
 				},
+				default_opts = {
+					manix_args = {},
+					-- Set to true to search for the word under the cursor
+					cword = false,
+				},
 				repo = {
 					list = {
 						fd_opts = {
@@ -92,6 +144,7 @@ return {
 		require("telescope").load_extension("emoji")
 		require("telescope").load_extension("fzf")
 		require("telescope").load_extension("heading")
+		require("telescope").load_extension("manix")
 		require("telescope").load_extension("nerdy")
 		require("telescope").load_extension("repo")
 		-- NOTE: extensions to add
