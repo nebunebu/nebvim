@@ -25,19 +25,37 @@ return {
 		-- TODO: get kitty graphics protocall working
 		{
 			section = "terminal",
-			cmd = "timg -C ~/Downloads/rose-goya.jpg",
+			-- cmd = 'timg -C -p k "https://fastly.picsum.photos/id/1041/200/200.jpg?hmac=1CDPtzGhHDqltV1i3b5YV4hY9UYY_6ubvXbxJO9QchQ"',
 			height = 18,
 			indent = 0,
+			cmd = function()
+				-- Try to get pixel dimensions using TIOCGWINSZ
+				local handle = io.popen("stty size")
+				local output = handle:read("*a")
+				handle:close()
+
+				-- Parse rows and columns
+				local rows, cols = output:match("(%d+)%s+(%d+)")
+
+				-- Calculate appropriate height based on terminal size
+				local img_height = math.floor(tonumber(rows) * 0.3) -- 30% of terminal height
+
+				-- Return the command string with calculated height
+				return string.format(
+					'timg -C -p k --height=%d "https://fastly.picsum.photos/id/1041/200/200.jpg?hmac=1CDPtzGhHDqltV1i3b5YV4hY9UYY_6ubvXbxJO9QchQ"',
+					img_height
+				)
+			end,
 		},
 		-- NOTE: Kept as an example
-		{
-			section = "terminal",
-			cmd = "pokemon-colorscripts -r --no-title; sleep .1",
-			random = 10,
-			indent = 4,
-			height = 30,
-			enabled = false,
-		},
+		-- {
+		-- 	section = "terminal",
+		-- 	cmd = "pokemon-colorscripts -r --no-title; sleep .1",
+		-- 	random = 10,
+		-- 	indent = 4,
+		-- 	height = 30,
+		-- 	enabled = false,
+		-- },
 
 		{ section = "header", pane = 2 },
 		{

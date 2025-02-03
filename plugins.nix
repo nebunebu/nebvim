@@ -47,6 +47,7 @@ mkLazyLoadables [
     plenary-nvim
     rose-pine
     mini-animate
+    snacks-nvim
 
     # Utilities
 

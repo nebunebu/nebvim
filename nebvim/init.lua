@@ -38,16 +38,16 @@ require("neb.plugins.barbecue")
 require("neb.plugins.colorizer")
 require("neb.plugins.conform")
 
-require("neb.plugins.minty")
-require("neb.plugins.px-to-rem")
-require("neb.plugins.git-dev")
+-- require("neb.plugins.minty")
+-- require("neb.plugins.px-to-rem")
+-- require("neb.plugins.git-dev")
 
 require("neb.plugins.nvim-test")
 
 -- NOTE: Tiny
 require("neb.plugins.tiny.inline-diagnostic")
-require("neb.plugins.tiny.code-action")
-require("neb.plugins.tiny.devicons-auto-colors")
+-- require("neb.plugins.tiny.code-action")
+-- require("neb.plugins.tiny.devicons-auto-colors")
 
 require("neb.plugins.mini.animate")
 
@@ -72,7 +72,7 @@ require("neb.plugins.todo-comments")
 require("neb.plugins.treesitter")
 require("neb.plugins.which-key")
 
-require("neb.plugins.haunt")
+-- require("neb.plugins.haunt")
 -- require("neb.plugins.yamlmatter")
 
 -- require("neb.plugins.obsidian")

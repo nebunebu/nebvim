@@ -24,7 +24,13 @@ require("blink.cmp").setup({
 	},
 
 	sources = {
-		default = { "lsp", "luasnip", "buffer", "path" },
+		default = {
+			"lsp",
+			-- "luasnip",
+			"buffer",
+			"path",
+		},
+		cmdline = {},
 	},
 
 	completion = {
@@ -34,6 +40,9 @@ require("blink.cmp").setup({
 
 		menu = {
 			border = "rounded",
+			-- auto_show = function(ctx)
+			-- 	return ctx.mode ~= "cmdline" or not vim.tbl_contains({ "/", "?" }, vim.fn.getcmdtype())
+			-- end,
 		},
 
 		documentation = {

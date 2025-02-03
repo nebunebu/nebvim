@@ -65,7 +65,7 @@ return {
 		{ "<leader>fsg", "<cmd>Telescope nerdy<CR>", desc = "Find nerdfont glyph" },
 		{ "<leader>fse", "<cmd>Telescope emoji<CR>", desc = "Find emoji" },
 
-		{ "<leader>fvc", "<cmd>Telescope conflicts<CR>", desc = "Find git conflicts" },
+		-- { "<leader>fvc", "<cmd>Telescope conflicts<CR>", desc = "Find git conflicts" },
 	},
 	after = function()
 		local actions = require("telescope.actions")
@@ -139,14 +139,14 @@ return {
 		-- [[ NOTE: consider using https://github.com/nvim-telescope/telescope-symbols.nvim/ instead of  nerdy and emoji
 		-- ]]
 		--
-		require("telescope").load_extension("conflicts")
+		-- require("telescope").load_extension("conflicts")
 		require("telescope").load_extension("dap")
-		require("telescope").load_extension("emoji")
+		-- require("telescope").load_extension("emoji")
 		require("telescope").load_extension("fzf")
-		require("telescope").load_extension("heading")
+		-- require("telescope").load_extension("heading")
 		require("telescope").load_extension("manix")
-		require("telescope").load_extension("nerdy")
-		require("telescope").load_extension("repo")
+		-- require("telescope").load_extension("nerdy")
+		-- require("telescope").load_extension("repo")
 		-- NOTE: extensions to add
 		-- telescope-tele-tabby
 		-- browser-bookmarks.nvim
