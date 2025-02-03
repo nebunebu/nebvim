@@ -118,26 +118,22 @@
     #   url = "github:moyiz/git-dev.nvim";
     #   flake = false;
     # };
-    # global-note-nvim = {
-    #   url = "github:backdround/global-note.nvim";
-    #   flake = false;
-    # };
-    # haunt-nvim = {
-    #   url = "github:adigitoleo/haunt.nvim";
-    #   flake = false;
-    # };
+    global-note-nvim = {
+      url = "github:backdround/global-note.nvim";
+      flake = false;
+    };
+    haunt-nvim = {
+      url = "github:adigitoleo/haunt.nvim";
+      flake = false;
+    };
     # minty-nvim = {
     #   url = "github:NvChad/minty";
     #   flake = false;
     # };
-    # px-to-rem-nvim = {
-    #   url = "github:jsongerber/nvim-px-to-rem";
-    #   flake = false;
-    # };
-    # snacks-nvim = {
-    #   url = "github:folke/snacks.nvim";
-    #   flake = false;
-    # };
+    px-to-rem-nvim = {
+      url = "github:jsongerber/nvim-px-to-rem";
+      flake = false;
+    };
     # tiny-code-action-nvim = {
     #   url = "github:rachartier/tiny-code-action.nvim";
     #   flake = false;
@@ -150,11 +146,6 @@
     #   url = "github:NvChad/volt";
     #   flake = false;
     # };
-    # yamlmatter-nvim = {
-    #   url = "github:ray-x/yamlmatter.nvim";
-    #   flake = false;
-    # };
-    #
     # # Telescope Based
     # nerdy-nvim = {
     #   url = "github:2KAbhishek/nerdy.nvim";

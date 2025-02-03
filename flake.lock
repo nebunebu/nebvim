@@ -123,6 +123,38 @@
         "type": "github"
       }
     },
+    "global-note-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1707927069,
+        "narHash": "sha256-fp5V2rKoyQwYPF1/cDbL+j+KC7VLPh6iWt92NkPkgOY=",
+        "owner": "backdround",
+        "repo": "global-note.nvim",
+        "rev": "1e0d4bba425d971ed3ce40d182c574a25507115c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "backdround",
+        "repo": "global-note.nvim",
+        "type": "github"
+      }
+    },
+    "haunt-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1737265446,
+        "narHash": "sha256-ePf5YnxKqfusLKD4K8wGE6kCAHYmf3KOB2wqmMAEO+4=",
+        "owner": "adigitoleo",
+        "repo": "haunt.nvim",
+        "rev": "5f96968844f77fef4756df0f14b9d8e9077691e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "adigitoleo",
+        "repo": "haunt.nvim",
+        "type": "github"
+      }
+    },
     "hercules-ci-effects": {
       "inputs": {
         "flake-parts": "flake-parts_2",
@@ -218,9 +250,28 @@
         "type": "github"
       }
     },
+    "px-to-rem-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1738441433,
+        "narHash": "sha256-L2tLkh25baL6NZMDylnA40qdhCX7eu6DZHqvuWFObBo=",
+        "owner": "jsongerber",
+        "repo": "nvim-px-to-rem",
+        "rev": "6fd8bf53f5177149a5f033027c31ea8638c79267",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jsongerber",
+        "repo": "nvim-px-to-rem",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
+        "global-note-nvim": "global-note-nvim",
+        "haunt-nvim": "haunt-nvim",
         "nixpkgs": "nixpkgs",
+        "px-to-rem-nvim": "px-to-rem-nvim",
         "tolerable": "tolerable",
         "tool-suites": "tool-suites"
       }

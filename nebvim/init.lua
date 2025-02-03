@@ -14,7 +14,7 @@ local lz_plugins = {
 	"urlview",
 	"taskwarrior",
 	"telescope",
-
+	-- "haunt",
 	"obsidian",
 	-- NOTE: I don't think this is working with nested dirs
 	-- "dap.dap-ui",
@@ -25,6 +25,7 @@ local lz_plugins = {
 
 require("neb.lz").setup(lz_plugins)
 
+require("neb.plugins.haunt")
 require("neb.plugins.rustaceanvim")
 
 require("lz.n").load(require("neb.plugins.dap.dap-ui"))
@@ -72,7 +73,6 @@ require("neb.plugins.todo-comments")
 require("neb.plugins.treesitter")
 require("neb.plugins.which-key")
 
--- require("neb.plugins.haunt")
 -- require("neb.plugins.yamlmatter")
 
 -- require("neb.plugins.obsidian")
