@@ -78,6 +78,7 @@
                       pkgs.delta
                       pkgs.prettierd
                       pkgs.timg
+                      pkgs.tinymist
 
                       pkgs.fzf
 
