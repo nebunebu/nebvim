@@ -7,7 +7,7 @@ return {
 
 		markview.setup({
 			hybrid_modes = { "n" },
-			filetypes = { "markdown", "quarto", "typst", "latex" },
+			filetypes = { "markdown", "quarto", "typst", "latex", "codecompanion" },
 			callbacks = {
 				on_enable = function(_, win)
 					vim.wo[win].conceallevel = 2

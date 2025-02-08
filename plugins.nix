@@ -10,6 +10,7 @@ let
 in
 mkLazyLoadables [
   "cellular-automaton-nvim"
+  "codecompanion-nvim"
   "markview-nvim"
   "nvim-test"
   "urlview-nvim"
