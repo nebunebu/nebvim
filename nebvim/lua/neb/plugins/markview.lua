@@ -7,7 +7,7 @@ return {
 
 		markview.setup({
 			hybrid_modes = { "n" },
-			filetypes = { "markdown", "quarto" },
+			filetypes = { "markdown", "quarto", "typst", "latex" },
 			callbacks = {
 				on_enable = function(_, win)
 					vim.wo[win].conceallevel = 2
@@ -217,7 +217,7 @@ return {
 				hl = "layer2",
 
 				min_width = 55,
-				pad_amount = 1,
+				pad_amount = 0,
 
 				language_names = {
 					{ "py", "python" },
@@ -421,25 +421,25 @@ return {
 			},
 			list_items = {
 				marker_minus = {
-					add_padding = true,
+					add_padding = false,
 
 					text = "",
 					hl = "fg_gray",
 				},
 				marker_plus = {
-					add_padding = true,
+					add_padding = false,
 
 					text = "",
 					hl = "fg_gray",
 				},
 				marker_star = {
-					add_padding = true,
+					add_padding = false,
 
 					text = "",
 					text_hl = "fg_gray",
 				},
 				marker_dot = {
-					add_padding = true,
+					add_padding = false,
 				},
 			},
 		})
