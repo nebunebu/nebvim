@@ -12,6 +12,7 @@ require("conform").setup({
 			"nixfmt",
 			stop_after_first = true,
 		},
+		python = { "black" },
 		rust = { "rustfmt" },
 		scss = { "prettierd" },
 		sh = { "shfmt" },

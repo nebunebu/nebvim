@@ -13,6 +13,7 @@ local lsp_configs = {
 	"texlab",
 	"ts_ls",
 	"lemminx",
+	"pylsp",
 	"tinymist", --typst
 	-- "rust_analyzer",
 }
