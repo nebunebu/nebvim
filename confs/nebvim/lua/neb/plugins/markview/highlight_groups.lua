@@ -1,0 +1,66 @@
+return {
+	-- {
+	-- 	group_name = "rev_purple",
+	-- 	value = { bg = "#c4a7e7", fg = "#191724" },
+	-- },
+	-- {
+	-- 	group_name = "rev_cyan",
+	-- 	value = { bg = "#9ccfd8", fg = "#191724" },
+	-- },
+	-- {
+	-- 	group_name = "rev_pink",
+	-- 	value = { bg = "#ebbcba", fg = "#191724" },
+	-- },
+	-- {
+	-- 	group_name = "rev_yellow",
+	-- 	value = { bg = "#f6c177", fg = "#191724" },
+	-- },
+	-- {
+	-- 	group_name = "rev_green",
+	-- 	value = { bg = "#31748f", fg = "#191724" },
+	-- },
+	-- {
+	-- 	group_name = "rev_cyan",
+	-- 	value = { bg = "#9ccfd8", fg = "#191724" },
+	-- },
+	-- {
+	-- 	group_name = "rev_gray",
+	-- 	value = { bg = "#908caa", fg = "#26233a" },
+	-- },
+	-- {
+	-- 	group_name = "layer2",
+	-- 	value = { bg = "#26233a" },
+	-- },
+	-- {
+	-- 	group_name = "fg_gray",
+	-- 	value = { bg = "#191724", fg = "#908caa" },
+	-- },
+	-- {
+	-- 	group_name = "fg_green",
+	-- 	value = { fg = "#31748f" },
+	-- },
+	-- {
+	-- 	group_name = "fg_red",
+	-- 	value = { fg = "#eb6f92" },
+	-- },
+	-- {
+	-- 	group_name = "fg_yellow",
+	-- 	value = { fg = "#f6c177" },
+	-- },
+	-- {
+	-- 	group_name = "fg_pink",
+	-- 	value = { fg = "#ebbcba" },
+	-- },
+	-- {
+	-- 	group_name = "fg_cyan",
+	-- 	value = { fg = "#9ccfd8" },
+	-- },
+	-- {
+	-- 	group_name = "fg_purple",
+	-- 	value = { fg = "#c4a7e7" },
+	-- },
+	-- {
+	-- 	group_name = "fg_gray",
+	-- 	value = { fg = "#908caa" },
+	-- },
+}
