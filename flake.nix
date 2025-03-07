@@ -34,6 +34,35 @@
       in
       # }}}
       {
+
+        # NOTE: lightweight configuration for use as a manpager
+        nman = (
+          inputs.tolerable.makeNeovimConfig "nman" {
+            inherit pkgs;
+            src = pkgs.lib.fileset.toSource {
+              root = ./.;
+              fileset = ./nman;
+            };
+            config = {
+              plugins = builtins.attrValues (import ./nman/plugins.nix { inherit pkgs; });
+            };
+          }
+        );
+
+        # NOTE: For experimentation
+        tvim = (
+          inputs.tolerable.makeNeovimConfig "tvim" {
+            inherit pkgs;
+            src = pkgs.lib.fileset.toSource {
+              root = ./.;
+              fileset = ./tvim;
+            };
+            config = {
+              plugins = builtins.attrValues (import ./tvim/plugins.nix { inherit pkgs; });
+            };
+          }
+        );
+
         default =
           (inputs.tolerable.makeNeovimConfig "nebvim" {
             inherit pkgs;
