@@ -23,6 +23,8 @@ local lz_plugins = {
 
 require("neb.lz").setup(lz_plugins)
 
+require("neb.plugins.nvim-highlight-colors")
+
 require("neb.plugins.lualine")
 require("neb.plugins.treesitter")
 require("neb.plugins.which-key")
@@ -42,7 +44,6 @@ require("lz.n").load(require("neb.plugins.dap.dap-ui"))
 -- require("neb.plugins.alpha")
 require("neb.plugins.autopairs")
 require("neb.plugins.barbecue")
-require("neb.plugins.colorizer")
 require("neb.plugins.dap.bashdb")
 require("neb.plugins.dap.one-small-step-for-vimkind")
 -- require("neb.plugins.git-dev")

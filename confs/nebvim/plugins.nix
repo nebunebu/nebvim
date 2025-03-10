@@ -40,6 +40,7 @@ mkLazyLoadables [
     ;
 
   inherit (pkgs.vimPlugins)
+    nvim-highlight-colors
     comment-nvim
     lz-n
     rose-pine
@@ -60,7 +61,6 @@ mkLazyLoadables [
     mini-animate
     nerdy-nvim
     nvim-autopairs
-    nvim-colorizer-lua
     nvim-lint
     nvim-lspconfig
     nvim-navic
