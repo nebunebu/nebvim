@@ -4,8 +4,8 @@
     # lua
     stylua
     # nix
-
     # bash
+    imagemagick
 
     ;
 }

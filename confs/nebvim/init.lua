@@ -40,8 +40,6 @@ require("neb.plugins.surround")
 require("neb.plugins.todo-comments")
 
 require("lz.n").load(require("neb.plugins.dap.dap-ui"))
--- require("neb.plugins.fortune") -- must be before alpha
--- require("neb.plugins.alpha")
 require("neb.plugins.autopairs")
 require("neb.plugins.barbecue")
 require("neb.plugins.dap.bashdb")
