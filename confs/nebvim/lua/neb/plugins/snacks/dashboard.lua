@@ -20,14 +20,13 @@ return {
 		{
 			section = "header",
 			align = "center",
-			padidnt = 3,
 			pane = 1,
+			padding = 2,
 		},
 		{
 			section = "image",
 			height = 19,
-			-- source = "https://i.imgur.com/ntbQVTt.png",
-			source = "~/roseified-tempus_edax_rerum.png",
+			source = "https://i.imgur.com/Fd1dPrU.png",
 			hl = "SnacksDashboardNormal",
 			pane = 1,
 			align = "center",
