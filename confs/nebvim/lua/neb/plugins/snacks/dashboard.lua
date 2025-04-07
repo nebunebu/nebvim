@@ -1,10 +1,10 @@
 return {
 	preset = {
 		header = [[
-        ███████████████████████████████████████
-        █▄─▀█▄─▄█▄─▄▄─█▄─▄─▀█▄─█─▄█▄─▄█▄─▀█▀─▄█
-        ██─█▄▀─███─▄█▀██─▄─▀██▄▀▄███─███─█▄█─██
-        ▀▄▄▄▀▀▄▄▀▄▄▄▄▄▀▄▄▄▄▀▀▀▀▄▀▀▀▄▄▄▀▄▄▄▀▄▄▄▀
+███████████████████████████████████████
+█▄─▀█▄─▄█▄─▄▄─█▄─▄─▀█▄─█─▄█▄─▄█▄─▀█▀─▄█
+██─█▄▀─███─▄█▀██─▄─▀██▄▀▄███─███─█▄█─██
+▀▄▄▄▀▀▄▄▀▄▄▄▄▄▀▄▄▄▄▀▀▀▀▄▀▀▀▄▄▄▀▄▄▄▀▄▄▄▀
     ]],
 		keys = {
 			{ icon = "󱄅", key = "c", desc = "nix-config", action = ":e $HOME/.nix-config/flake.nix" },
@@ -25,12 +25,13 @@ return {
 		},
 		{
 			section = "image",
-			height = 16,
-			-- source can be a function that returns location (path or url) or a string representing the location
-			source = "https://www.bumpworthy.com/highrez/TheDawnIsYourEnemy_1600x1200.jpg",
-			-- align = "center",
+			height = 19,
+			-- source = "https://i.imgur.com/ntbQVTt.png",
+			source = "~/roseified-tempus_edax_rerum.png",
 			hl = "SnacksDashboardNormal",
 			pane = 1,
+			align = "center",
+			padding = 1,
 		},
 
 		function()
