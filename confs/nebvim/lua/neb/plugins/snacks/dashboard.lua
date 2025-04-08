@@ -21,17 +21,17 @@ return {
 			section = "header",
 			align = "center",
 			pane = 1,
-			padding = 2,
+			-- padding = 2,
 		},
-		{
-			section = "image",
-			height = 19,
-			source = "https://i.imgur.com/Fd1dPrU.png",
-			hl = "SnacksDashboardNormal",
-			pane = 1,
-			align = "center",
-			padding = 1,
-		},
+		-- {
+		-- 	section = "image",
+		-- 	height = 19,
+		-- 	source = "https://i.imgur.com/Fd1dPrU.png",
+		-- 	hl = "SnacksDashboardNormal",
+		-- 	pane = 1,
+		-- 	align = "center",
+		-- 	padding = 1,
+		-- },
 
 		function()
 			local version_output = vim.fn.execute("version")
@@ -44,7 +44,7 @@ return {
 				},
 				align = "center",
 				padding = { 1, 2 },
-				pane = 1,
+				-- pane = 1,
 			}
 		end,
 		{
@@ -52,7 +52,7 @@ return {
 			title = { "Quick Links", hl = "Function" },
 			indent = 2,
 			padding = 3,
-			pane = 2,
+			-- pane = 2,
 		},
 		{
 			section = "recent_files",
@@ -60,7 +60,7 @@ return {
 			indent = 2,
 			limit = 5,
 			padding = 3,
-			pane = 2,
+			-- pane = 2,
 		},
 	},
 }

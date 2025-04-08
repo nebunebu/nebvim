@@ -30,7 +30,7 @@ function M.setup()
 		},
 	}
 
-	require("neb.plugins.snacks.dashboard_image_patch").apply_patch()
+	-- require("neb.plugins.snacks.dashboard_image_patch").apply_patch()
 	require("snacks").setup(config)
 end
 

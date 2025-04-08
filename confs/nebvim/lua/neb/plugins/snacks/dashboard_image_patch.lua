@@ -5,6 +5,55 @@ function M.apply_patch()
 	local status_ok_dashboard, dashboard = pcall(require, "snacks.dashboard")
 	local status_ok_util, util = pcall(require, "snacks.util")
 	local status_ok_image, image = pcall(require, "snacks.image")
+	local status_ok_terminal, terminal = pcall(require, "snacks.image.terminal")
+
+	if status_ok_terminal then
+		-- Patch the environments list with reordered and updated tmux logic
+		local envs = terminal and terminal._environments or terminal.environments
+		if envs then
+			-- Remove old tmux if present
+			for i = #envs, 1, -1 do
+				if envs[i].name == "tmux" then
+					table.remove(envs, i)
+				end
+			end
+
+			-- Add improved tmux env to the top
+			table.insert(envs, 1, {
+				name = "tmux",
+				env = { TERM = "tmux", TMUX = true },
+				setup = function()
+					pcall(vim.fn.system, { "tmux", "set", "-p", "allow-passthrough", "all" })
+				end,
+				transform = function(data)
+					return ("\027Ptmux;" .. data:gsub("\027", "\027\027")) .. "\027\\"
+				end,
+			})
+
+			-- Add logic to detect TERM inside tmux if needed
+			local old_env_fn = terminal.env
+			terminal.env = function()
+				local result = old_env_fn()
+				local tmux_detected = os.getenv("TMUX")
+				if tmux_detected then
+					local ok, term = pcall(vim.fn.system, { "tmux", "display-message", "-p", "#{client_termname}" })
+					if ok and type(term) == "string" then
+						term = vim.trim(term)
+						for _, e in ipairs(envs) do
+							if e.env and e.env.TERM == term then
+								e.detected = true
+								result.name = result.name .. "/" .. e.name
+								result.supported = e.supported
+								result.remote = e.remote
+								break
+							end
+						end
+					end
+				end
+				return result
+			end
+		end
+	end
 
 	if not (status_ok_snacks and status_ok_dashboard and status_ok_util and status_ok_image) then
 		vim.notify("Failed to load required snacks modules for patching image section", vim.log.levels.WARN)
