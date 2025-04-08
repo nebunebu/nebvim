@@ -60,6 +60,7 @@ mkLazyLoadables [
     marks-nvim
     mini-animate
     nerdy-nvim
+    rainbow-delimiters-nvim
     nvim-autopairs
     nvim-lint
     nvim-lspconfig
