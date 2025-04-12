@@ -40,6 +40,8 @@ mkLazyLoadables [
     ;
 
   inherit (pkgs.vimPlugins)
+    alpha-nvim
+    fortune-nvim
     nvim-highlight-colors
     comment-nvim
     lz-n
@@ -53,7 +55,7 @@ mkLazyLoadables [
     dressing-nvim
     fidget-nvim
     helpview-nvim
-    image-nvim
+    # image-nvim
     img-clip-nvim
     indent-blankline-nvim
     luasnip

@@ -23,6 +23,9 @@ local lz_plugins = {
 
 require("neb.lz").setup(lz_plugins)
 
+-- require("neb.plugins.fortune") -- must be before alpha
+-- require("neb.plugins.alpha")
+
 require("neb.plugins.nvim-highlight-colors")
 
 require("neb.plugins.lualine")
@@ -46,7 +49,7 @@ require("neb.plugins.dap.bashdb")
 require("neb.plugins.dap.one-small-step-for-vimkind")
 -- require("neb.plugins.git-dev")
 -- require("neb.plugins.haunt")
-require("neb.plugins.image")
+-- require("neb.plugins.image")
 require("neb.plugins.img-clip")
 require("neb.plugins.lsp.fidget")
 require("neb.plugins.luasnip")

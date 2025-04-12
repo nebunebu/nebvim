@@ -25,7 +25,8 @@ return {
 		},
 		-- {
 		-- 	section = "image",
-		-- 	height = 19,
+		-- 	-- height = 19,
+		-- 	height = 15,
 		-- 	source = "https://i.imgur.com/Fd1dPrU.png",
 		-- 	hl = "SnacksDashboardNormal",
 		-- 	pane = 1,

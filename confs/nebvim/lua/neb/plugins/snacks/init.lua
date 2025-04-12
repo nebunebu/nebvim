@@ -4,8 +4,8 @@ function M.setup()
 	local config = {
 		bigfile = require("neb.plugins.snacks.bigfile"),
 		-- bufdelete = require("neb.plugins.snacks.bufdelete"),
-		-- dashboard = require("neb.plugins.snacks.dashboard"),
-		-- image = require("neb.plugins.snacks.image"),
+		dashboard = require("neb.plugins.snacks.dashboard"),
+		image = require("neb.plugins.snacks.image"),
 		debug = require("neb.plugins.snacks.debug"),
 		git = require("neb.plugins.snacks.git"),
 		-- gitbrowse = require("neb.plugins.snacks.gitbrowse"),
@@ -30,7 +30,7 @@ function M.setup()
 		},
 	}
 
-	-- require("neb.plugins.snacks.dashboard_image_patch").apply_patch()
+	require("neb.plugins.snacks.dashboard_image_patch").apply_patch()
 	require("snacks").setup(config)
 end
 
