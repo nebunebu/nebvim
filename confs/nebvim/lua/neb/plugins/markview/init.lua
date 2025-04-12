@@ -1,6 +1,6 @@
 return {
 	"markview.nvim",
-	ft = { "markdown", "quarto", "typst" },
+	ft = { "markdown", "quarto" },
 	enabled = true,
 	after = function()
 		local markview = require("markview")
