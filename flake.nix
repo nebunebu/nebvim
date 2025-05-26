@@ -16,11 +16,16 @@
         let
           pkgs = inputs.nixpkgs.legacyPackages.${system};
           mkNvimConf = (import ./nix/lib.nix { inherit inputs pkgs; }).mkNvimConf;
+          configuredManvim = (mkNvimConf "manvim");
         in
         {
           default = (mkNvimConf "nebvim");
           nebvim = (mkNvimConf "nebvim");
-          manvim = (mkNvimConf "manvim");
+          # manvim = (mkNvimConf "manvim");
+          manvim = pkgs.runCommand "manvim-exec" {} ''
+            mkdir -p $out/bin
+            ln -s "${configuredManvim}/bin/nvim" "$out/bin/manvim"
+          '';
           testvim = (mkNvimConf "testvim");
         }
       );
