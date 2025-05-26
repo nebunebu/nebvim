@@ -22,7 +22,7 @@
           default = (mkNvimConf "nebvim");
           nebvim = (mkNvimConf "nebvim");
           # manvim = (mkNvimConf "manvim");
-          manvim = pkgs.runCommand "manvim-exec" {} ''
+          manvim = pkgs.runCommand "manvim" {} ''
             mkdir -p $out/bin
             ln -s "${configuredManvim}/bin/nvim" "$out/bin/manvim"
           '';
