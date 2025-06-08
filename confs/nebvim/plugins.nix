@@ -11,7 +11,7 @@ let
     plugins: builtins.foldl' (acc: plugin: acc // (mkLazyLoadable plugin)) { } plugins;
 in
 mkLazyLoadables [
-  "markview-nvim"
+  # "markview-nvim"
   "urlview-nvim"
   "triptych-nvim"
   "telescope-nvim"

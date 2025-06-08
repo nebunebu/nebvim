@@ -7,7 +7,7 @@ require("lz.n").load("neb.lz")
 
 local lz_plugins = {
 	"triptych",
-	"markview",
+	-- "markview",
 	"cellular-automaton",
 	"codecompanion",
 	"dap.dap-ui",
