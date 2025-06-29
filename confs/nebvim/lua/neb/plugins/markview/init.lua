@@ -6,7 +6,9 @@ return {
 		local markview = require("markview")
 		markview.setup({
 			preview = {
-				hybrid_modes = { "n" },
+				hybrid_modes = {
+					"n",
+				},
 				-- filetypes = { "markdown", "quarto", "typst", "latex", "codecompanion" },
 				callbacks = {
 					on_enable = function(_, win)
