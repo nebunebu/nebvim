@@ -51,9 +51,11 @@ mkLazyLoadables [
     ;
 
   inherit (pkgs.vimPlugins)
+    # NOTE: avante
     blink-cmp-avante
     avante-nvim
     nui-nvim
+    render-markdown-nvim
 
     alpha-nvim
     fortune-nvim
