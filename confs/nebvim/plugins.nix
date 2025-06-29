@@ -29,7 +29,6 @@ mkLazyLoadables [
   "telescope-fzf-native-nvim"
 
   "cellular-automaton-nvim"
-  "codecompanion-nvim"
   "helpview-nvim"
   "nix-develop-nvim"
   "nvim-dap-ui"

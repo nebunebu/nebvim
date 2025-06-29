@@ -8,7 +8,6 @@ require("lz.n").load("neb.lz")
 local lz_plugins = {
 	"triptych",
 	"cellular-automaton",
-	"codecompanion",
 	"dap.dap-ui",
 	"helpview",
 	"nix-develop",
