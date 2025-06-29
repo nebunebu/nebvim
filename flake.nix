@@ -32,7 +32,6 @@
             mkdir -p $out/bin
             ln -s "${configuredManvim}/bin/nvim" "$out/bin/manvim"
           '';
-          testvim = (mkNvimConf "testvim");
         }
       );
   };

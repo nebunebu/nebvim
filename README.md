@@ -2,7 +2,7 @@
 
 My personal neovim config using [tolerable](https://github.com/wires-org/tolerable-nvim-nix).
 
-> \[!CAUTION\]
+> [!CAUTION]
 > This is a work in progress and is under constant development.
 > This README does not necessarily reflect the current state of the
 > configuration.
@@ -69,7 +69,7 @@ And to add as a home-manager package,
 
 ## Configuration
 
-> \[!NOTE\]
+> [!NOTE]
 > Coming Soon
 
 ## Contributing
