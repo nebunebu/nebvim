@@ -23,7 +23,6 @@ let
   };
 in
 mkLazyLoadables [
-  # "markview-nvim"
   "urlview-nvim"
   "triptych-nvim"
   "telescope-nvim"
