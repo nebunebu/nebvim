@@ -20,16 +20,14 @@
     packages =
       inputs.nixpkgs.legacyPackages
       |> builtins.mapAttrs (
-        system: _:
+        _system: pkgs:
         let
-          pkgs = inputs.nixpkgs.legacyPackages.${system};
           mkNvimConf = (import ./nix/lib.nix { inherit inputs pkgs; }).mkNvimConf;
           configuredManvim = (mkNvimConf "manvim");
         in
         {
           default = (mkNvimConf "nebvim");
           nebvim = (mkNvimConf "nebvim");
-          # manvim = (mkNvimConf "manvim");
           manvim = pkgs.runCommand "manvim" { } ''
             mkdir -p $out/bin
             ln -s "${configuredManvim}/bin/nvim" "$out/bin/manvim"
