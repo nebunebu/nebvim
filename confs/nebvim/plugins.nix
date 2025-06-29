@@ -24,7 +24,6 @@ mkLazyLoadables [
   "nvim-dap-ui"
   "nvim-nio"
   "nvim-test"
-  "obsidian-nvim"
   "oil-nvim"
   "otter-nvim"
   "quarto-nvim"

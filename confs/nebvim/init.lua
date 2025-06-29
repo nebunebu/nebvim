@@ -13,12 +13,10 @@ local lz_plugins = {
 	"dap.dap-ui",
 	"helpview",
 	"nix-develop",
-	"obsidian",
 	"quarto",
 	"taskwarrior",
 	"telescope",
 	"urlview",
-	-- "haunt",
 }
 
 require("neb.lz").setup(lz_plugins)
@@ -56,7 +54,6 @@ require("neb.plugins.luasnip")
 require("neb.plugins.mini.animate")
 -- require("neb.plugins.minty")
 require("neb.plugins.nvim-test")
-require("neb.plugins.obsidian")
 require("neb.plugins.oil")
 -- require("neb.plugins.px-to-rem")
 require("neb.plugins.rustaceanvim")

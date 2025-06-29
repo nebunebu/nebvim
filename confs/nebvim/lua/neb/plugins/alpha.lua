@@ -34,8 +34,7 @@ local links = {
 		dashboard.button("n", "  nebvim", ":e $HOME/.nebvim/flake.nix <CR>"),
 		dashboard.button("a", "  ags", ":e $HOME/.config/ags/flake.nix <CR>"),
 		dashboard.button("v", "󱉼  obsidian vault", ":e $HOME/.vault/index.md <CR>"),
-		-- dashboard.button("b", " blog", ":qa<CR>"),
-		-- dashboard.button("w", "󰖬  wiki", ":e $HOME/.wiki/index.md <CR>"),
+		dashboard.button("w", "󰖬  wiki", ":e $HOME/.wiki/index.md <CR>"),
 	},
 	position = "center",
 }
