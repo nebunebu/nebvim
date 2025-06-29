@@ -26,6 +26,8 @@ require("neb.lz").setup(lz_plugins)
 require("neb.plugins.nvim-highlight-colors")
 
 require("neb.plugins.avante")
+require("neb.plugins.blink-cmp-avante")
+
 require("neb.plugins.nvim-highlight-colors")
 
 require("neb.plugins.lualine")

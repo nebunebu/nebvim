@@ -25,16 +25,26 @@ require("blink.cmp").setup({
 
 	sources = {
 		default = {
+			"avante",
 			"lsp",
-			-- "luasnip",
 			"buffer",
 			"path",
+			-- "luasnip",
 		},
-	},
+		providers = {
+			avante = {
+				module = "blink-cmp-avante",
+				name = "Avante",
+				opts = {
+					-- options for blink-cmp-avante
+				},
+			},
+		},
 
-	-- cmdline = {
-	-- 	sources = {},
-	-- },
+		-- cmdline = {
+		-- 	sources = {},
+		-- },
+	},
 
 	completion = {
 		list = {
