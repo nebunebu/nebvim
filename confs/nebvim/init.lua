@@ -27,6 +27,7 @@ require("neb.lz").setup(lz_plugins)
 require("neb.plugins.nvim-highlight-colors")
 
 require("neb.plugins.lualine")
+require("neb.plugins.neowiki")
 require("neb.plugins.treesitter")
 require("neb.plugins.which-key")
 
