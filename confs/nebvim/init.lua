@@ -11,7 +11,6 @@ local lz_plugins = {
 	"dap.dap-ui",
 	"helpview",
 	"nix-develop",
-	"quarto",
 	"taskwarrior",
 	"telescope",
 	"urlview",

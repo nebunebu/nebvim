@@ -35,8 +35,6 @@ mkLazyLoadables [
   "nvim-nio"
   "nvim-test"
   "oil-nvim"
-  "otter-nvim"
-  "quarto-nvim"
   "rustaceanvim"
   "telescope-dap-nvim"
   "telescope-manix"
