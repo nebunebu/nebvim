@@ -97,17 +97,5 @@ mkLazyLoadables [
     ;
   inherit
     neowiki-nvim
-
-    # NOTE: not in nixpkgs
-    # volt-nvim
-    # tiny-code-action-nvim
-    # telescope-repo-nvim
-    # telescope-heading-nvim
-    # taskwarrior-nvim
-    # px-to-rem-nvim
-    # haunt-nvim
-    # minty-nvim
-    # git-dev-nvim
-    # global-note-nvim
     ;
 }
