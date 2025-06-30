@@ -23,7 +23,10 @@ require("neb.lz").setup(lz_plugins)
 
 require("neb.plugins.lsp.luals")
 require("neb.plugins.lsp.nixd")
+require("neb.plugins.lsp.marksman")
+
 require("neb.plugins.lsp.lsp")
+
 require("neb.plugins.nvim-highlight-colors")
 
 require("neb.plugins.avante")

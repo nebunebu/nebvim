@@ -12,5 +12,7 @@
     lua-language-server
     # nix
     nixd
+    # markdown
+    marksman
     ;
 }
