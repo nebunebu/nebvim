@@ -8,7 +8,6 @@ require("conform").setup({
 		lua = { "stylua" },
 		markdown = { "markdownlint" },
 		nix = {
-			-- "nixpkgs_fmt",
 			"nixfmt",
 			stop_after_first = true,
 		},

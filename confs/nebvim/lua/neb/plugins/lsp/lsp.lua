@@ -1,6 +1,7 @@
 vim.lsp.enable("luals")
 vim.lsp.enable("marksman")
 vim.lsp.enable("nixd")
+vim.lsp.enable("qmlls")
 
 -- TODO:
 -- vscode-language-servers-extracted
