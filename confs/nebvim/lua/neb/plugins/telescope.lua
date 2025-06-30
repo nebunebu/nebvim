@@ -72,11 +72,6 @@ return {
 		local action_state = require("telescope.actions.state")
 
 		require("telescope").setup({
-			defaults = {
-				file_ignore_patterns = {
-					"%.local/share/nebvim/global%-note/global%.md$",
-				},
-			},
 			pickers = {
 				help_tags = {
 					mappings = {
