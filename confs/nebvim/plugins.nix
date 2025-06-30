@@ -56,7 +56,6 @@ mkLazyLoadables [
     nui-nvim
     render-markdown-nvim
 
-    alpha-nvim
     fortune-nvim
     nvim-highlight-colors
     comment-nvim

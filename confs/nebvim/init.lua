@@ -17,9 +17,6 @@ local lz_plugins = {
 
 require("neb.lz").setup(lz_plugins)
 
--- require("neb.plugins.fortune") -- must be before alpha
--- require("neb.plugins.alpha")
-
 require("neb.plugins.nvim-highlight-colors")
 
 require("neb.plugins.avante")
