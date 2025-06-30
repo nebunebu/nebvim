@@ -1,8 +1,16 @@
 { pkgs, ... }:
 {
+
+  inherit (pkgs.luajitPackages)
+    luacheck
+    ;
   inherit (pkgs)
-    stylua
-    imagemagick
     direnv
+    imagemagick
+    # lua
+    stylua
+    lua-language-server
+    # nix
+    nixd
     ;
 }

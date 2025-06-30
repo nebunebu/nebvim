@@ -79,7 +79,6 @@ mkLazyLoadables [
     rainbow-delimiters-nvim
     nvim-autopairs
     nvim-lint
-    nvim-lspconfig
     nvim-navic
     nvim-surround
     nvim-treesitter-endwise

@@ -5,6 +5,7 @@ inputs.nixpkgs.legacyPackages
     default = pkgs.mkShell {
       name = "nebvim";
       packages = [
+        pkgs.cowsay
       ];
     };
   }
