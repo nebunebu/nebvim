@@ -7,6 +7,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixneovimplugins.url = "github:NixNeovim/NixNeovimPlugins";
+
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,8 +22,14 @@
     packages =
       inputs.nixpkgs.legacyPackages
       |> builtins.mapAttrs (
-        _system: pkgs:
+        system: _pkgs:
         let
+          pkgs = import inputs.nixpkgs {
+            inherit system;
+            overlays = [
+              inputs.nixneovimplugins.overlays.default
+            ];
+          };
           mkNvimConf = (import ./nix/lib.nix { inherit inputs pkgs; }).mkNvimConf;
           configuredManvim = (mkNvimConf "manvim");
         in
