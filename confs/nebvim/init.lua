@@ -10,7 +10,6 @@ local lz_plugins = {
 	"cellular-automaton",
 	"dap.dap-ui",
 	"helpview",
-	"taskwarrior",
 	"telescope",
 	"urlview",
 }
