@@ -3,5 +3,6 @@
   inherit (pkgs)
     stylua
     imagemagick
+    direnv
     ;
 }

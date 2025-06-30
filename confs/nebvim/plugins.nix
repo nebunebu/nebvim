@@ -46,6 +46,10 @@ mkLazyLoadables [
     withAllGrammars
     ;
 
+  inherit (pkgs.vimExtraPlugins)
+    direnv-nvim
+    ;
+
   inherit (pkgs.vimPlugins)
     # NOTE: avante
     blink-cmp-avante

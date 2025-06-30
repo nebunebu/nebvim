@@ -10,7 +10,7 @@ local lz_plugins = {
 	"cellular-automaton",
 	"dap.dap-ui",
 	"helpview",
-	"nix-develop",
+	-- "nix-develop",
 	"taskwarrior",
 	"telescope",
 	"urlview",
@@ -26,6 +26,7 @@ require("neb.plugins.nvim-highlight-colors")
 require("neb.plugins.avante")
 require("neb.plugins.blink-cmp-avante")
 
+require("neb.plugins.direnv")
 require("neb.plugins.nvim-highlight-colors")
 
 require("neb.plugins.lualine")
