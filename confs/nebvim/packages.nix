@@ -14,5 +14,6 @@
     nixd
     # markdown
     marksman
+    markdownlint-cli2
     ;
 }
