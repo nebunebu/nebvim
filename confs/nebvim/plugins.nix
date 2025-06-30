@@ -75,7 +75,6 @@ mkLazyLoadables [
     indent-blankline-nvim
     luasnip
     marks-nvim
-    mini-animate
     nerdy-nvim
     rainbow-delimiters-nvim
     nvim-autopairs
