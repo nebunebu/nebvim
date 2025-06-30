@@ -30,7 +30,6 @@ mkLazyLoadables [
 
   "cellular-automaton-nvim"
   "helpview-nvim"
-  "nix-develop-nvim"
   "nvim-dap-ui"
   "nvim-nio"
   "nvim-test"
