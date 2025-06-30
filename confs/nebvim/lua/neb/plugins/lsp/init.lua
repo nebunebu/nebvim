@@ -6,6 +6,6 @@ local servers = {
 }
 
 for _, server in ipairs(servers) do
-	require("neb.plugins.lsp." .. server)
+	require("neb.plugins.lsp.servers" .. server)
 	vim.lsp.enable(server)
 end
