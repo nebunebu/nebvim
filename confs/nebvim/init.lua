@@ -14,6 +14,11 @@ local lz_plugins = {
 	"urlview",
 }
 
+-- require("neb.plugins.git-dev")
+-- require("neb.plugins.haunt")
+-- require("neb.plugins.image")
+-- require("neb.plugins.px-to-rem")
+
 require("neb.lz").setup(lz_plugins)
 
 require("neb.plugins.nvim-highlight-colors")
@@ -44,15 +49,12 @@ require("neb.plugins.autopairs")
 require("neb.plugins.barbecue")
 require("neb.plugins.dap.bashdb")
 require("neb.plugins.dap.one-small-step-for-vimkind")
--- require("neb.plugins.git-dev")
--- require("neb.plugins.haunt")
--- require("neb.plugins.image")
 require("neb.plugins.img-clip")
 require("neb.plugins.lsp.fidget")
 require("neb.plugins.luasnip")
 require("neb.plugins.nvim-test")
 require("neb.plugins.oil")
--- require("neb.plugins.px-to-rem")
+
 require("neb.plugins.rustaceanvim")
 -- require("neb.plugins.tiny.code-action")
 require("neb.plugins.tiny.devicons-auto-colors")
