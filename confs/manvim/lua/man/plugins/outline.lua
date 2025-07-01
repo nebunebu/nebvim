@@ -1,9 +1,3 @@
-return {
-	"outline",
-	keys = {
-		{ "<leader>o", "<cmd>Outline<cr>", desc = "Toggle Outline" },
-	},
-	after = function()
-		require("outline").setup({})
-	end,
-}
+require("outline").setup({})
+
+vim.keymap.set("n", "<leader>o", "<cmd>Outline<cr>", { desc = "Toggle Outline" })
