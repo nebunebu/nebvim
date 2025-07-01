@@ -56,6 +56,10 @@ mkLazyLoadables [
     nui-nvim
     render-markdown-nvim
 
+    # lsp
+    outline-nvim
+    fidget-nvim
+
     fortune-nvim
     nvim-highlight-colors
     comment-nvim
@@ -68,7 +72,6 @@ mkLazyLoadables [
     blink-cmp
     conform-nvim
     dressing-nvim
-    fidget-nvim
     helpview-nvim
     # image-nvim
     img-clip-nvim
