@@ -12,12 +12,28 @@ local lz_plugins = {
 	"helpview",
 	"telescope",
 	"urlview",
+	"neowiki",
+	"gitsigns",
+	"which-key",
+	"conform",
+	"oil",
+	"nvim-lint",
+	"todo-comments",
+	"luasnip",
+	"nvim-test",
+	"surround",
+	"endwise",
+	"rainbow-delimiters",
+	"autopairs",
 }
 
 -- require("neb.plugins.git-dev")
 -- require("neb.plugins.haunt")
 -- require("neb.plugins.image")
 -- require("neb.plugins.px-to-rem")
+--
+-- NOTE: prob should be in ./lua/neb/plugins/lsp/ui/
+-- require("neb.plugins.barbecue")
 
 require("neb.lz").setup(lz_plugins)
 
@@ -25,7 +41,6 @@ require("neb.plugins.lsp")
 
 require("neb.plugins.nvim-highlight-colors")
 
-require("neb.plugins.gitsigns")
 require("neb.plugins.avante")
 require("neb.plugins.blink-cmp-avante")
 
@@ -33,28 +48,15 @@ require("neb.plugins.direnv")
 require("neb.plugins.nvim-highlight-colors")
 
 require("neb.plugins.lualine")
-require("neb.plugins.neowiki")
 require("neb.plugins.treesitter")
-require("neb.plugins.which-key")
 
 require("neb.plugins.blink")
-require("neb.plugins.conform")
-require("neb.plugins.endwise")
-require("neb.plugins.nvim-lint")
-require("neb.plugins.rainbow-delimiters")
 require("neb.plugins.snacks").setup()
-require("neb.plugins.surround")
-require("neb.plugins.todo-comments")
 
 require("lz.n").load(require("neb.plugins.dap.dap-ui"))
-require("neb.plugins.autopairs")
-require("neb.plugins.barbecue")
 require("neb.plugins.dap.bashdb")
 require("neb.plugins.dap.one-small-step-for-vimkind")
 require("neb.plugins.img-clip")
-require("neb.plugins.luasnip")
-require("neb.plugins.nvim-test")
-require("neb.plugins.oil")
 
 require("neb.plugins.rustaceanvim")
 -- require("neb.plugins.tiny.code-action")

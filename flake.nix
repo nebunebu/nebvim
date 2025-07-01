@@ -26,20 +26,13 @@
         let
           pkgs = import inputs.nixpkgs {
             inherit system;
-            overlays = [
-              inputs.nixneovimplugins.overlays.default
-            ];
+            overlays = import ./nix/overlays.nix { inherit inputs; };
           };
-          mkNvimConf = (import ./nix/lib.nix { inherit inputs pkgs; }).mkNvimConf;
-          configuredManvim = (mkNvimConf "manvim");
         in
         {
-          default = (mkNvimConf "nebvim");
-          nebvim = (mkNvimConf "nebvim");
-          manvim = pkgs.runCommand "manvim" { } ''
-            mkdir -p $out/bin
-            ln -s "${configuredManvim}/bin/nvim" "$out/bin/manvim"
-          '';
+          default = pkgs.lib.mkNvimConf "nebvim";
+          nebvim = pkgs.lib.mkNvimConf "nebvim";
+          manvim = pkgs.lib.mkNvimConf "manvim";
         }
       );
   };

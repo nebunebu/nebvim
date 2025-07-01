@@ -1,1 +1,7 @@
-require("nvim-autopairs").setup({})
+return {
+	"autopairs",
+	event = "BufReadPre",
+	after = function()
+		require("nvim-autopairs").setup({})
+	end,
+}
