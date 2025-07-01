@@ -5,5 +5,6 @@
     rose-pine
     lualine-nvim
     vim-tmux-navigator
+    outline-nvim
     ;
 }

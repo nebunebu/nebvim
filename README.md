@@ -72,6 +72,25 @@ And to add as a home-manager package,
 > [!NOTE]
 > Coming Soon
 
+### Configurations
+
+This repository provides multiple Neovim configurations, each tailored for a specific use case:
+
+-   **`nebvim` (default)**: A full-featured Neovim IDE, complete with plugins for development, debugging, and more.
+-   **`manvim`**: A minimal configuration designed to be used as a `MANPAGER`, providing a clean and efficient way to read man pages.
+
+### Plugin Management
+
+The file `confs/nebvim/plugins.nix` serves as the primary plugin manager for this configuration. You can add plugins from three main sources:
+
+-   **`pkgs.vimPlugins`**: The standard Nixpkgs repository for Vim plugins.
+-   **`pkgs.vimExtraPlugins`**: An overlay providing additional community plugins.
+-   **Flakes**: You can build plugins directly from flake inputs using the `lib.lz.build` helper.
+
+The `plugins.nix` file contains examples of each method.
+
+Any runtime dependencies required by your plugins (e.g., external commands, libraries) should be added to `confs/nebvim/packages.nix`.
+
 ### Nix Functions
 
 This configuration exposes the following functions under `pkgs.lib`:

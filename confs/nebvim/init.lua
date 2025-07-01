@@ -25,6 +25,9 @@ local lz_plugins = {
 	"endwise",
 	"rainbow-delimiters",
 	"autopairs",
+	"nvim-highlight-colors",
+	"img-clip",
+	"rustaceanvim",
 }
 
 -- require("neb.plugins.git-dev")
@@ -39,13 +42,10 @@ require("neb.lz").setup(lz_plugins)
 
 require("neb.plugins.lsp")
 
-require("neb.plugins.nvim-highlight-colors")
-
 require("neb.plugins.avante")
 require("neb.plugins.blink-cmp-avante")
 
 require("neb.plugins.direnv")
-require("neb.plugins.nvim-highlight-colors")
 
 require("neb.plugins.lualine")
 require("neb.plugins.treesitter")
@@ -56,9 +56,7 @@ require("neb.plugins.snacks").setup()
 require("lz.n").load(require("neb.plugins.dap.dap-ui"))
 require("neb.plugins.dap.bashdb")
 require("neb.plugins.dap.one-small-step-for-vimkind")
-require("neb.plugins.img-clip")
 
-require("neb.plugins.rustaceanvim")
 -- require("neb.plugins.tiny.code-action")
 require("neb.plugins.tiny.devicons-auto-colors")
 -- require("neb.plugins.tiny.inline-diagnostic")
