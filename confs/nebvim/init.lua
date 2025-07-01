@@ -25,6 +25,7 @@ require("neb.plugins.lsp")
 
 require("neb.plugins.nvim-highlight-colors")
 
+require("neb.plugins.gitsigns")
 require("neb.plugins.avante")
 require("neb.plugins.blink-cmp-avante")
 

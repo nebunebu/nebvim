@@ -56,6 +56,8 @@ mkLazyLoadables [
     nui-nvim
     render-markdown-nvim
 
+    gitsigns-nvim
+
     # lsp
     outline-nvim
     fidget-nvim
