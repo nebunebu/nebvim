@@ -24,18 +24,6 @@ To use without installing,
 nix run github:nebunebu/nebvim
 ```
 
-## Gallery
-
-### Greeter
-
-![Greeter](https://imgur.com/4ztr5CR.png)
-
-<!-- ### Markdown Rendering -->
-
-<!---->
-
-<!-- ![Md](.assets/mdrendering.gif) -->
-
 ## Installation
 
 Add nebvim to your flake inputs.
@@ -67,27 +55,25 @@ And to add as a home-manager package,
 }
 ```
 
-## Configuration
+## Configurations
 
-> [!NOTE]
-> Coming Soon
-
-### Configurations
-
-This repository provides multiple Neovim configurations, each tailored for a specific use case:
+This flake provides two Neovim configurations:
 
 -   **`nebvim` (default)**: A full-featured Neovim IDE, complete with plugins for development, debugging, and more.
 -   **`manvim`**: A minimal configuration designed to be used as a `MANPAGER`, providing a clean and efficient way to read man pages.
 
 ### Plugin Management
 
-The file `confs/nebvim/plugins.nix` serves as the primary plugin manager for this configuration. You can add plugins from three main sources:
+The file `confs/${conf}/plugins.nix` serves as the primary plugin manager for each configuration. You can add plugins from three main sources:
 
 -   **`pkgs.vimPlugins`**: The standard Nixpkgs repository for Vim plugins.
 -   **`pkgs.vimExtraPlugins`**: An overlay providing additional community plugins.
 -   **Flakes**: You can build plugins directly from flake inputs using the `lib.lz.build` helper.
 
 The `plugins.nix` file contains examples of each method.
+
+
+### Runtime Dependencies
 
 Any runtime dependencies required by your plugins (e.g., external commands, libraries) should be added to `confs/nebvim/packages.nix`.
 
@@ -106,14 +92,16 @@ A set of helpers for making plugins compatible with the `lz.n` lazy-loader.
 - `lz.build`: A simple wrapper around `pkgs.vimUtils.buildVimPlugin`.
 - `lz.mkOptional`: Takes a list of plugin derivations and returns an attrset where each plugin is marked as optional.
 
-## Contributing
-
-If you see any issues, or have any feedback or suggestions, feel free to submit
-an issue or make a pull request.
 
 ### Commands
 
 - `:LzCheck`: Prints a list of all configured plugins and their current load status ("Loaded" or "Not Loaded"). This is useful for debugging the lazy-loader.
+
+
+## Contributing
+
+If you see any issues, or have any feedback or suggestions, feel free to submit
+an issue or make a pull request.
 
 ## Special Thanks
 
