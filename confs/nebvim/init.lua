@@ -6,6 +6,7 @@ require("neb.commands")
 require("lz.n").load("neb.lz")
 
 local lz_plugins = {
+	"comment",
 	"triptych",
 	"cellular-automaton",
 	"dap.dap-ui",
@@ -14,7 +15,7 @@ local lz_plugins = {
 	"urlview",
 	"neowiki",
 	"gitsigns",
-	"which-key",
+	-- "which-key",
 	"conform",
 	"oil",
 	"nvim-lint",
@@ -43,6 +44,7 @@ require("neb.lz").setup(lz_plugins)
 require("neb.plugins.lsp")
 
 require("neb.plugins.avante")
+require("neb.plugins.which-key")
 require("neb.plugins.blink-cmp-avante")
 
 require("neb.plugins.direnv")
