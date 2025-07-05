@@ -1,10 +1,9 @@
 { pkgs, ... }:
 {
 
-  # FIX:
-  # inherit (pkgs.luajitPackages)
-  # luacheck
-  # ;
+  inherit (pkgs.lua54Packages)
+    luacheck
+    ;
 
   inherit (pkgs)
     direnv
