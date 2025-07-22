@@ -1,8 +1,10 @@
 local servers = {
+	"astro",
 	"luals",
 	"marksman",
 	"nixd",
 	"qmlls",
+	"typescript",
 }
 
 for _, server in ipairs(servers) do
