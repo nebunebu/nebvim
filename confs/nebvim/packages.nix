@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-
   inherit (pkgs.lua54Packages)
     luacheck
     ;
@@ -8,20 +7,32 @@
   inherit (pkgs)
     direnv
     imagemagick
+    # eslint
 
-    # lua
-    stylua
+    # Shell
+    shellcheck # linter
+    shfmt
+
+    # Json
+    fixjson
+
+    # LaTeX
+    tex-fmt
+    # texlivePackages.chktex
+
+    # Lua
     lua-language-server
-
-    # nix
-    nixd
-    statix
-    deadnix
-    nixfmt-rfc-style
+    stylua
 
     # markdown
-    marksman
     markdownlint-cli2
+    marksman
+
+    # nix
+    deadnix
+    nixd
+    nixfmt-rfc-style
+    statix
 
     # typst
 
@@ -33,5 +44,11 @@
     # openssl
     # prettierd
     # libxml2
+
+    # xml
+    xmlformat
+
+    # yaml
+    yamlfmt
     ;
 }
