@@ -24,5 +24,14 @@
     markdownlint-cli2
 
     # typst
+
+    # kulala-fmt
+    curl
+    jq
+    # grpcurl
+    # websocat
+    # openssl
+    # prettierd
+    # libxml2
     ;
 }

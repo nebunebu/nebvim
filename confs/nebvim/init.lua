@@ -2,6 +2,7 @@ require("neb.options")
 require("neb.colorscheme")
 require("neb.autocmd")
 require("neb.commands")
+require("neb.filetype")
 
 require("lz.n").load("neb.lz")
 
@@ -51,6 +52,7 @@ require("neb.plugins.direnv")
 
 require("neb.plugins.lualine")
 require("neb.plugins.treesitter")
+require("neb.plugins.kulala")
 
 require("neb.plugins.blink")
 require("neb.plugins.snacks").setup()

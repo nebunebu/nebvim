@@ -1,5 +1,35 @@
 { pkgs, lib, ... }:
 let
+  treesitter-kulala-http-grammar = pkgs.stdenv.mkDerivation {
+    pname = "kulala_http-grammar";
+    version = "5.3.3";
+    src = pkgs.fetchFromGitHub {
+      owner = "mistweaverco";
+      repo = "kulala.nvim";
+      rev = "902fc21e8a3fee7ccace37784879327baa6d1ece";
+      hash = "sha256-whQpwZMEvD62lgCrnNryrEvfSwLJJ+IqVCywTq78Vf8=";
+    };
+
+    buildInputs = [ pkgs.tree-sitter ];
+
+    buildPhase = ''
+      cd lua/tree-sitter
+      HOME=$(pwd) ${pkgs.tree-sitter}/bin/tree-sitter build -o kulala_http.so
+    '';
+
+    installPhase = ''
+      mkdir -p $out/parser
+      mv kulala_http.so $out/parser/
+    '';
+  };
+
+  nvim-treesitter-with-kulala = (pkgs.vimPlugins.nvim-treesitter.withAllGrammars).overrideAttrs (finalAttrs: rec {
+    postInstall = finalAttrs.postInstall or "" + ''
+      mkdir -p $out/parser
+      ln -s ${treesitter-kulala-http-grammar}/parser/kulala_http.so $out/parser/
+    '';
+  });
+
   vimPlugins = lib.lz.fromVimPlugins [
     "urlview-nvim"
     "triptych-nvim"
@@ -53,6 +83,7 @@ let
     "tiny-devicons-auto-colors-nvim"
     "tiny-inline-diagnostic-nvim"
     "todo-comments-nvim"
+    "kulala-nvim"
   ];
 
   extraPlugins = lib.lz.fromExtraVimPlugins [
@@ -72,9 +103,6 @@ let
     })
   ];
 
-  optionalPlugins = vimPlugins ++ extraPlugins ++ customPlugins;
+  optionalPlugins = vimPlugins ++ extraPlugins ++ customPlugins ++ [ nvim-treesitter-with-kulala ];
 in
 lib.lz.mkOptional optionalPlugins
-// {
-  inherit (pkgs.vimPlugins.nvim-treesitter) withAllGrammars;
-}

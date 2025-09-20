@@ -59,19 +59,18 @@ And to add as a home-manager package,
 
 This flake provides two Neovim configurations:
 
--   **`nebvim` (default)**: A full-featured Neovim IDE, complete with plugins for development, debugging, and more.
--   **`manvim`**: A minimal configuration designed to be used as a `MANPAGER`, providing a clean and efficient way to read man pages.
+- **`nebvim` (default)**: A full-featured Neovim IDE, complete with plugins for development, debugging, and more.
+- **`manvim`**: A minimal configuration designed to be used as a `MANPAGER`, providing a clean and efficient way to read man pages.
 
 ### Plugin Management
 
 The file `confs/${conf}/plugins.nix` serves as the primary plugin manager for each configuration. You can add plugins from three main sources:
 
--   **`pkgs.vimPlugins`**: The standard Nixpkgs repository for Vim plugins.
--   **`pkgs.vimExtraPlugins`**: An overlay providing additional community plugins.
--   **Flakes**: You can build plugins directly from flake inputs using the `lib.lz.build` helper.
+- **`pkgs.vimPlugins`**: The standard Nixpkgs repository for Vim plugins.
+- **`pkgs.vimExtraPlugins`**: An overlay providing additional community plugins.
+- **Flakes**: You can build plugins directly from flake inputs using the `lib.lz.build` helper.
 
 The `plugins.nix` file contains examples of each method.
-
 
 ### Runtime Dependencies
 
@@ -92,11 +91,9 @@ A set of helpers for making plugins compatible with the `lz.n` lazy-loader.
 - `lz.build`: A simple wrapper around `pkgs.vimUtils.buildVimPlugin`.
 - `lz.mkOptional`: Takes a list of plugin derivations and returns an attrset where each plugin is marked as optional.
 
-
 ### Commands
 
 - `:LzCheck`: Prints a list of all configured plugins and their current load status ("Loaded" or "Not Loaded"). This is useful for debugging the lazy-loader.
-
 
 ## Contributing
 

@@ -6,7 +6,7 @@ return {
 			formatters_by_ft = {
 				css = { "prettierd" },
 				html = { "htmlbeautifier" },
-				-- http = { "kulala-fmt" },
+				http = { "kulala-fmt" },
 				javascript = { "prettierd" },
 				json = { "fixjson" },
 				lua = { "stylua" },
