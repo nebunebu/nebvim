@@ -6,5 +6,6 @@
     lualine-nvim
     vim-tmux-navigator
     outline-nvim
+    vim-plugin-AnsiEsc
     ;
 }
