@@ -1,7 +1,7 @@
 vim.cmd.colorscheme("rose-pine")
 require("lualine").setup({})
 require("man.plugins.outline")
--- require("man.plugins.baleia")
+require("man.plugins.baleia")
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "man",
