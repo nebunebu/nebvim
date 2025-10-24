@@ -1,4 +1,5 @@
 vim.cmd.colorscheme("rose-pine")
+require("man.plugins.options")
 require("lualine").setup({})
 require("man.plugins.outline")
 require("man.plugins.baleia")

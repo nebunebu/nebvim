@@ -12,8 +12,7 @@ set_options("opt", {
 	clipboard = "unnamedplus",
 	autochdir = true,
 	-- numbers
-	number = true,
-	relativenumber = true,
+	number = false,
 	-- tabs
 	expandtab = true,
 	shiftwidth = 2,

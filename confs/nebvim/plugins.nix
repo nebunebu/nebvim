@@ -23,12 +23,14 @@ let
     '';
   };
 
-  nvim-treesitter-with-kulala = (pkgs.vimPlugins.nvim-treesitter.withAllGrammars).overrideAttrs (finalAttrs: rec {
-    postInstall = finalAttrs.postInstall or "" + ''
-      mkdir -p $out/parser
-      ln -s ${treesitter-kulala-http-grammar}/parser/kulala_http.so $out/parser/
-    '';
-  });
+  nvim-treesitter-with-kulala =
+    pkgs.vimPlugins.nvim-treesitter.withAllGrammars.overrideAttrs
+      (finalAttrs: rec {
+        postInstall = finalAttrs.postInstall or "" + ''
+          mkdir -p $out/parser
+          ln -s ${treesitter-kulala-http-grammar}/parser/kulala_http.so $out/parser/
+        '';
+      });
 
   vimPlugins = lib.lz.fromVimPlugins [
     "urlview-nvim"
