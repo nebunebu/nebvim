@@ -42,6 +42,7 @@ let
     "nvim-dap-ui"
     "nvim-nio"
     "nvim-test"
+    "grug-far-nvim"
     "oil-nvim"
     "rustaceanvim"
     "telescope-dap-nvim"

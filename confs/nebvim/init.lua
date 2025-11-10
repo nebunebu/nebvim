@@ -45,6 +45,7 @@ require("neb.lz").setup(lz_plugins)
 require("neb.plugins.lsp")
 
 require("neb.plugins.avante")
+require("neb.plugins.grug-far")
 require("neb.plugins.which-key")
 require("neb.plugins.blink-cmp-avante")
 

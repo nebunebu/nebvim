@@ -6,6 +6,7 @@ end
 
 set_options("g", {
 	mapleader = " ",
+	maplocalleader = ",",
 })
 
 set_options("opt", {
