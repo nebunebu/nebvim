@@ -50,7 +50,7 @@ let
     "blink-cmp-avante"
     "avante-nvim"
     "nui-nvim"
-    "render-markdown-nvim"
+    # "render-markdown-nvim"
     "gitsigns-nvim"
     "outline-nvim"
     "fidget-nvim"

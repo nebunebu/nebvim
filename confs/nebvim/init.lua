@@ -43,6 +43,7 @@ local lz_plugins = {
 require("neb.lz").setup(lz_plugins)
 
 require("neb.plugins.lsp")
+-- require("neb.plugins.render-markdown")
 
 require("neb.plugins.avante")
 require("neb.plugins.grug-far")
