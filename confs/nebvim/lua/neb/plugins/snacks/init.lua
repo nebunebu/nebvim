@@ -5,6 +5,7 @@ function M.setup()
 		bigfile = require("neb.plugins.snacks.bigfile"),
 		-- bufdelete = require("neb.plugins.snacks.bufdelete"),
 		dashboard = require("neb.plugins.snacks.dashboard"),
+		picker = require("neb.plugins.snacks.picker"),
 		image = require("neb.plugins.snacks.image"),
 		debug = require("neb.plugins.snacks.debug"),
 		git = require("neb.plugins.snacks.git"),

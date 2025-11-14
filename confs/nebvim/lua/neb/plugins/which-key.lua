@@ -31,6 +31,19 @@ wk.add({
 
 		{ "<leader>lg", "<cmd>lua Snacks.lazygit.open()<CR>", desc = "Open lazygit" },
 
+		-- Pickers
+		--
+		{ "<leader>f", group = "picker" },
+		{ "<leader>f ", "<cmd>lua Snacks.picker()<CR>", desc = "Find pickers" },
+		{ "<leader>ff", "<cmd>lua Snacks.picker.files()<CR>", desc = "Find files" },
+		{ "<leader>fg", "<cmd>lua Snacks.picker.grep()<CR>", desc = "Find with live_grep" },
+		-- { "<leader>fc", "<cmd>lua Snacks.picker.lines()<CR>", desc = "Find in current buffer" },
+		{ "<leader>fc", "<cmd>lua Snacks.picker.cliphist()<CR>", desc = "Find in current buffer" },
+		{ "<leader>fh", "<cmd>lua Snacks.picker.help()<CR>", desc = "Find help tags" },
+		{ "<leader>fm", "<cmd>lua Snacks.picker.man()<CR>", desc = "Find man pages" },
+		{ "<leader>fo", "<cmd>lua Snacks.picker.recent()<CR>", desc = "Find old files" },
+		{ "<leader>ft", "<cmd>lua Snacks.picker.todo_comments()<CR>", desc = "Find todo comments" },
+		-- },
 		-- Window resizing
 		-- FIX: interfers with tmux binds
 		-- { "<C>", group = "window-resize" },
