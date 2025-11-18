@@ -4,6 +4,10 @@
     luacheck
     ;
 
+  inherit (pkgs.kdePackages)
+    qtdeclarative
+    ;
+
   inherit (pkgs)
     direnv
     imagemagick
