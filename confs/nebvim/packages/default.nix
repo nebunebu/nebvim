@@ -1,57 +1,49 @@
 { pkgs, ... }:
-{
-
-  imports = [
-    ./linters.nix
-    # ./formatters.nix
-    # ./lang-servers.nix
-  ];
-
+(import ./linters.nix { inherit pkgs; })
+# ++ (import ./formatters.nix { inherit pkgs; })
+# ++ (import ./lang-servers.nix { inherit pkgs; })
+++ [
   # pkgs.ast-grep # for grug-far
 
-  inherit (pkgs.kdePackages)
-    qtdeclarative
-    ;
+  pkgs.kdePackages.qtdeclarative
 
-  inherit (pkgs)
-    direnv
-    imagemagick
-    # eslint
+  pkgs.direnv
+  pkgs.imagemagick
+  # pkgs.eslint
 
-    # Shell
-    shfmt
+  # Shell
+  pkgs.shfmt
 
-    # LaTeX
-    tex-fmt
-    # texlivePackages.chktex
+  # LaTeX
+  pkgs.tex-fmt
+  # pkgs.texlivePackages.chktex
 
-    # Lua
-    lua-language-server
-    stylua
+  # Lua
+  pkgs.lua-language-server
+  pkgs.stylua
 
-    # markdown
-    marksman
+  # markdown
+  pkgs.marksman
 
-    # nix
-    nixd
-    nixfmt-rfc-style
-    # statix
+  # nix
+  pkgs.nixd
+  pkgs.nixfmt-rfc-style
+  # pkgs.statix
 
-    # typst
+  # typst
 
-    # kulala-fmt
-    curl
-    jq
-    # grpcurl
-    # websocat
-    # openssl
-    # prettierd
-    # libxml2
+  # kulala-fmt
+  pkgs.curl
+  pkgs.jq
+  # pkgs.grpcurl
+  # pkgs.websocat
+  # pkgs.openssl
+  # pkgs.prettierd
+  # pkgs.libxml2
 
-    # xml
-    xmlformat
+  # xml
+  pkgs.xmlformat
 
-    # yaml
-    yamlfmt
-    ;
-}
+  # yaml
+  pkgs.yamlfmt
+]
