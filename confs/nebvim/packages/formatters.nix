@@ -5,39 +5,41 @@
   # ============================================================================
 
   # CSS & Styling
-  # pkgs.nodePackages.prettierd # Fast Prettier daemon for CSS/SCSS
+  pkgs.prettierd # Fast Prettier daemon for CSS/SCSS (ACTIVE)
   # pkgs.nodePackages.prettier # Standard Prettier for CSS/SCSS/LESS
 
   # HTML
-  # pkgs.htmlbeautifier # Ruby-based HTML formatter
+  pkgs.htmlbeautifier # Ruby-based HTML formatter (ACTIVE)
+
+  # HTTP/REST
+  # kulala-fmt is built into kulala.nvim plugin, no separate package needed
 
   # JavaScript & TypeScript
-  # pkgs.nodePackages.prettierd # Fast Prettier daemon for JS/TS
+  # pkgs.prettierd already included above for CSS (ACTIVE)
   # pkgs.nodePackages.prettier # Standard Prettier for JS/TS
   # pkgs.biome # Fast all-in-one toolchain for web projects
   # pkgs.deno # Deno formatter for JS/TS/JSON/markdown
 
   # JSON
-  pkgs.fixjson # Fixes and formats relaxed JSON5
-  # pkgs.jq # Command-line JSON processor
+  pkgs.fixjson # Fixes and formats relaxed JSON5 (ACTIVE)
+  # pkgs.jq # Command-line JSON processor (used by kulala-fmt)
+  # pkgs.nodePackages.prettier # Prettier for JSON
 
   # Shell Scripts
-  pkgs.shfmt # Shell script formatter with bash support
+  pkgs.shfmt # Shell script formatter with bash support (ACTIVE)
   # pkgs.beautysh # Bash beautifier
   # pkgs.shellharden # Corrective bash syntax highlighter
-
-  # pkgs.nodePackages.prettier # Prettier for JSON
 
   # ============================================================================
   # PROGRAMMING LANGUAGES
   # ============================================================================
 
   # Lua
-  pkgs.stylua # Opinionated Lua formatter
+  pkgs.stylua # Opinionated Lua formatter (ACTIVE)
   # pkgs.lua-format # Alternative: configurable Lua formatter
 
   # Python
-  # pkgs.black # Uncompromising Python formatter
+  pkgs.black # Uncompromising Python formatter (ACTIVE)
   # pkgs.isort # Python import sorting (use with black)
   # pkgs.ruff # Extremely fast Python linter/formatter (Rust)
   # pkgs.blue # Slightly less uncompromising Python formatter
@@ -47,7 +49,7 @@
   # pkgs.pyupgrade # Upgrade syntax for newer Python versions
 
   # Rust
-  # pkgs.rustfmt # Official Rust formatter (usually via rustup)
+  pkgs.rustfmt # Official Rust formatter (ACTIVE)
 
   # Go
   # pkgs.go # Provides gofmt and goimports
@@ -135,7 +137,7 @@
   # ============================================================================
 
   # Markdown
-  pkgs.markdownlint-cli2 # Fast, flexible Markdown linter/formatter
+  pkgs.markdownlint-cli2 # Fast, flexible Markdown linter/formatter (ACTIVE)
   # pkgs.mdformat # Opinionated Markdown formatter
   # pkgs.dprint # Pluggable formatter (supports markdown)
   # pkgs.nodePackages.markdownlint-cli # Original markdownlint
@@ -147,11 +149,11 @@
   # pkgs.python3Packages.docstrfmt # reStructuredText docstring formatter
 
   # LaTeX
-  pkgs.tex-fmt # Fast LaTeX formatter (Rust)
+  pkgs.tex-fmt # Fast LaTeX formatter (Rust) (ACTIVE)
   # pkgs.texlive.combined.scheme-full # Provides latexindent
 
   # XML
-  pkgs.xmlformat # XML formatter
+  pkgs.xmlformat # XML formatter (ACTIVE)
   # pkgs.libxml2 # Provides xmllint
   # pkgs.xmlstarlet # XML command-line toolkit
 
@@ -160,12 +162,12 @@
   # ============================================================================
 
   # Nix
-  pkgs.nixfmt-rfc-style # Official Nix formatter (RFC style)
+  pkgs.nixfmt-rfc-style # Official Nix formatter (RFC style) (ACTIVE)
   # pkgs.alejandra # Uncompromising Nix formatter
   # pkgs.nixpkgs-fmt # nixpkgs code formatter
 
   # YAML
-  pkgs.yamlfmt # Google's YAML formatter
+  pkgs.yamlfmt # Google's YAML formatter (ACTIVE)
   # pkgs.python3Packages.yamlfix # Configurable YAML formatter
   # pkgs.nodePackages.prettier # Prettier for YAML
 
@@ -555,8 +557,9 @@
   # pkgs.cbfmt # Format codeblocks in markdown/org
   # pkgs.mdsf # Format markdown code blocks
 
-  # Whitespace utilities (built into conform.nvim)
+  # Whitespace utilities (built into conform.nvim) (ACTIVE)
   # trim_whitespace - Remove trailing whitespace
   # trim_newlines - Remove extra blank lines at end
   # squeeze_blanks - Squeeze repeated blank lines via cat -s
+  # NOTE: These formatters are built into conform.nvim and don't require packages
 ]
