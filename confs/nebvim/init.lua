@@ -58,7 +58,7 @@ require("neb.plugins.blink")
 require("neb.plugins.snacks").setup()
 
 require("lz.n").load(require("neb.plugins.dap.dap-ui"))
--- require("neb.plugins.dap.bashdb") -- Disabled: bashdb incompatible with Bash 5.3+
+require("neb.plugins.dap.bashdb") -- Patched to work with Bash 5.3+
 require("neb.plugins.dap.one-small-step-for-vimkind")
 require("neb.plugins.dap.delve")
 
