@@ -23,7 +23,7 @@ pkgs.lib.flatten (map importPackageFile packageFiles)
   pkgs.nixd
 
   # Debug Adapters
-  # pkgs.bashdb # Bash debugger - incompatible with Bash 5.3+
+  pkgs.bashdb # Bash debugger - patched to work with Bash 5.3+
   pkgs.delve # Go debugger
 
   # kulala dependencies
