@@ -31,6 +31,7 @@ local lz_plugins = {
 	"rustaceanvim",
 	"snipbrowzurr",
 	"debugmaster",
+	"spellwarn",
 }
 
 -- require("neb.plugins.git-dev")
