@@ -96,6 +96,16 @@ let
         hash = "sha256-soMQN7oDx9HVS/crNcu6ilYoOtGXP/aMk7NfPYUjsXg=";
       };
     })
+    (lib.lz.build {
+      pname = "snipbrowzurr-nvim";
+      version = "stable-2024-10-16";
+      src = pkgs.fetchFromGitHub {
+        owner = "blaze-d83";
+        repo = "snipbrowzurr.nvim";
+        rev = "b32aa902a8b9fd2adf0b11215b9a1523baba4526";
+        hash = "sha256-xr7vI1ViRSMYUG51G7k5/IbLspwXAAQ/VSWOjWIEHj0=";
+      };
+    })
   ];
 
   optionalPlugins = vimPlugins ++ extraPlugins ++ customPlugins ++ [ nvim-treesitter-with-kulala ];

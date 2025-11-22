@@ -29,6 +29,7 @@ local lz_plugins = {
 	"nvim-highlight-colors",
 	"img-clip",
 	"rustaceanvim",
+	"snipbrowzurr",
 }
 
 -- require("neb.plugins.git-dev")
