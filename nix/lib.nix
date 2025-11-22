@@ -25,7 +25,7 @@ rec {
           (builtins.toString (
             # NOTE: Packages
             ":"
-            + pkgs.lib.makeBinPath (builtins.attrValues (import ../confs/${conf}/packages { inherit pkgs; }))
+            + pkgs.lib.makeBinPath (import ../confs/${conf}/packages { inherit pkgs; })
           ))
         ];
       });
