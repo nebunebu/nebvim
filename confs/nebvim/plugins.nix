@@ -39,7 +39,6 @@ let
     "helpview-nvim"
     "nvim-dap-ui"
     "nvim-nio"
-    "nvim-test"
     "grug-far-nvim"
     "oil-nvim"
     "rustaceanvim"

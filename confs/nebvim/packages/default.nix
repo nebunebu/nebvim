@@ -30,7 +30,7 @@ pkgs.lib.flatten (map importPackageFile packageFiles)
 
   # Test Runners (for neotest)
   pkgs.python3Packages.pytest # Python testing
-  pkgs.luaPackages.busted # Lua testing
+  pkgs.luajitPackages.busted # Lua testing (using LuaJIT for Neovim compatibility)
   pkgs.go # Includes go test
   pkgs.cabal-install # Haskell testing (cabal test)
   pkgs.stack # Alternative Haskell testing
