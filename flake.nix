@@ -9,6 +9,8 @@
 
     nixneovimplugins.url = "github:NixNeovim/NixNeovimPlugins";
 
+    statix.url = "github:oppiliappan/statix";
+
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";

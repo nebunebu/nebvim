@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+  # inherit (inputs.statix.packages..default)
   inherit (pkgs.lua54Packages)
     luacheck
     ;
@@ -36,7 +37,7 @@
     deadnix
     nixd
     nixfmt-rfc-style
-    statix
+    # statix
 
     # typst
 

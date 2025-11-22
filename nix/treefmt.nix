@@ -4,7 +4,7 @@
     # nix
     nixfmt.enable = true;
     deadnix.enable = true;
-    statix.enable = true;
+    # statix.enable = true;
     # md
     mdformat.enable = true;
     # lua
