@@ -32,7 +32,7 @@
   # ============================================================================
 
   pkgs.deadnix # Nix dead code scanner
-  # pkgs.statix # Nix linter (excluded deliberately)
+  pkgs.statix # Nix linter
   # pkgs.nix # Nix expression checker (nix-instantiate --parse)
 
   # ============================================================================
@@ -42,6 +42,9 @@
   pkgs.shellcheck # Shell script linter (bash, sh, zsh)
   # pkgs.dash # POSIX shell checker
 
+  # Zsh
+  pkgs.zsh # Zsh syntax checker
+
   # Fish
   # pkgs.fish # Fish shell syntax checker
 
@@ -49,7 +52,7 @@
   # CSS & STYLING
   # ============================================================================
 
-  # pkgs.nodePackages.stylelint # CSS/SCSS/SASS/LESS linter
+  pkgs.nodePackages.stylelint # CSS/SCSS/SASS/LESS linter
 
   # ============================================================================
   # MARKUP & DOCUMENTATION

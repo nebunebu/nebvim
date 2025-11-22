@@ -16,7 +16,6 @@
 
   # LaTeX
   pkgs.tex-fmt
-  # pkgs.texlivePackages.chktex
 
   # Lua
   pkgs.lua-language-server
@@ -28,7 +27,6 @@
   # nix
   pkgs.nixd
   pkgs.nixfmt-rfc-style
-  # pkgs.statix
 
   # typst
 
