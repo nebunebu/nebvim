@@ -74,6 +74,7 @@ let
     "debugmaster-nvim"
     "plenary-nvim"
     "snacks-nvim"
+    "spellwarn-nvim"
     "tiny-devicons-auto-colors-nvim"
     "tiny-inline-diagnostic-nvim"
     "todo-comments-nvim"
