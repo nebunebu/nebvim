@@ -1,9 +1,13 @@
 { pkgs, ... }:
 {
-  # inherit (inputs.statix.packages..default)
-  inherit (pkgs.lua54Packages)
-    luacheck
-    ;
+
+  imports = [
+    ./linters.nix
+    # ./formatters.nix
+    # ./lang-servers.nix
+  ];
+
+  # pkgs.ast-grep # for grug-far
 
   inherit (pkgs.kdePackages)
     qtdeclarative
@@ -15,11 +19,7 @@
     # eslint
 
     # Shell
-    shellcheck # linter
     shfmt
-
-    # Json
-    fixjson
 
     # LaTeX
     tex-fmt
@@ -30,11 +30,9 @@
     stylua
 
     # markdown
-    markdownlint-cli2
     marksman
 
     # nix
-    deadnix
     nixd
     nixfmt-rfc-style
     # statix
@@ -52,8 +50,6 @@
 
     # xml
     xmlformat
-
-    ast-grep
 
     # yaml
     yamlfmt
