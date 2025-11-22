@@ -17,6 +17,7 @@ pkgs.lib.flatten (map importPackageFile packageFiles)
 
   pkgs.direnv
   pkgs.imagemagick
+  pkgs.delta # For tiny-code-action diff backend
   # pkgs.eslint
 
   # Language Servers
