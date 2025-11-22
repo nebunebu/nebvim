@@ -7,7 +7,8 @@ return {
 	},
 	after = function()
 		require("urlview").setup({
-			default_picker = "telescope",
+			-- TODO: set to Snacks.picker
+			-- default_picker = "",
 			default_action = "clipboard",
 		})
 

@@ -12,7 +12,6 @@ local lz_plugins = {
 	"cellular-automaton",
 	"dap.dap-ui",
 	"helpview",
-	-- "telescope",
 	"urlview",
 	"neowiki",
 	"gitsigns",
