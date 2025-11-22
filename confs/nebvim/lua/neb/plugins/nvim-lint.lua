@@ -3,517 +3,566 @@ return {
 	event = "BufWritePost",
 	after = function()
 		require("lint").linters_by_ft = {
-			javascript = { "eslint" },
-			-- markdown = { "markdownlint-cli2" },
-			nix = { "deadnix", "statix" },
-			python = { "pylint" },
-			typescript = { "eslint" },
-
-			-- actionlint - GitHub Actions workflow linter
-			-- yaml = { "actionlint" },
-
-			-- alex - Catch insensitive, inconsiderate writing
-			-- markdown = { "alex" },
-
-			-- ameba - Crystal linter
-			-- crystal = { "ameba" },
-
-			-- ansible-lint - Ansible playbook linter
-			-- yaml = { "ansible_lint" },
-
-			-- bandit - Python security linter
-			-- python = { "bandit" },
-
-			-- bean-check - Beancount syntax checker
-			-- beancount = { "bean_check" },
-
-			-- biomejs - Fast formatter and linter
-			-- javascript = { "biomejs" },
-			-- typescript = { "biomejs" },
-
-			-- blocklint - Regex-based linter
-			-- text = { "blocklint" },
-
-			-- buf_lint - Protobuf linter
-			-- proto = { "buf_lint" },
-
-			-- buildifier - Bazel BUILD file formatter and linter
-			-- bzl = { "buildifier" },
-
-			-- cfn-lint - AWS CloudFormation linter
-			-- yaml = { "cfn_lint" },
-
-			-- cfn_nag - CloudFormation security scanner
-			-- yaml = { "cfn_nag" },
-
-			-- checkmake - Makefile linter
-			-- make = { "checkmake" },
-
-			-- checkpatch - Linux kernel patch checker
-			-- diff = { "checkpatch" },
-
-			-- checkstyle - Java code style checker
-			-- java = { "checkstyle" },
-
-			-- chktex - LaTeX semantic checker
-			tex = { "chktex" },
-
-			-- clang-tidy - C/C++ linter
-			-- c = { "clangtidy" },
-			-- cpp = { "clangtidy" },
-
-			-- clazy - Qt C++ linter
-			-- cpp = { "clazy" },
-
-			-- clippy - Rust linter
-			-- rust = { "clippy" },
-
-			-- clj-kondo - Clojure linter
-			-- clojure = { "clj-kondo" },
-
-			-- cmakelint - CMake linter
-			-- cmake = { "cmakelint" },
-
-			-- cmake-lint - CMake linter (alternative)
-			-- cmake = { "cmake_lint" },
-
-			-- codespell - Spell checker for source code
-			-- text = { "codespell" },
-
-			-- commitlint - Commit message linter
-			-- gitcommit = { "commitlint" },
-
-			-- cppcheck - C/C++ static analyzer
-			-- c = { "cppcheck" },
-			-- cpp = { "cppcheck" },
-
-			-- cpplint - C++ style checker
-			-- cpp = { "cpplint" },
-
-			-- credo - Elixir code analysis tool
-			-- elixir = { "credo" },
-
-			-- cspell - Spell checker
-			-- text = { "cspell" },
-
-			-- cue - CUE validation tool
-			-- cue = { "cue" },
-
-			-- curlylint - HTML template linter
-			-- html = { "curlylint" },
-
-			-- dash - POSIX shell checker
-			-- sh = { "dash" },
-
-			-- dclint - Docker Compose linter
-			-- yaml = { "dclint" },
-
-			-- deadnix - Nix dead code scanner (already enabled)
-			-- nix = { "deadnix" },
-
-			-- deno - JavaScript/TypeScript linter
-			-- javascript = { "deno" },
-			-- typescript = { "deno" },
-
-			-- detect-secrets - Detect secrets in code
-			-- text = { "detect-secrets" },
-
-			-- dmypy - Mypy daemon for faster type checking
-			-- python = { "dmypy" },
-
-			-- dxc - DirectX Shader Compiler
-			-- hlsl = { "dxc" },
-
-			-- djlint - Django/Jinja template linter
-			-- html = { "djlint" },
-
-			-- dotenv-linter - .env file linter
-			-- env = { "dotenv_linter" },
-
-			-- editorconfig-checker - EditorConfig validator
-			-- text = { "editorconfig-checker" },
-
-			-- erb-lint - ERB template linter
-			-- eruby = { "erb_lint" },
-
-			-- eslint - JavaScript/TypeScript linter (already enabled)
-			-- javascript = { "eslint" },
-			-- typescript = { "eslint" },
-
-			-- eslint_d - Faster eslint daemon
-			-- javascript = { "eslint_d" },
-			-- typescript = { "eslint_d" },
-
-			-- eugene - PostgreSQL migration linter
-			-- sql = { "eugene" },
-
-			-- fennel - Fennel compiler linter
-			-- fennel = { "fennel" },
-
-			-- fieldalignment - Go struct field alignment checker
-			-- go = { "fieldalignment" },
-
-			-- fish - Fish shell syntax checker
-			-- fish = { "fish" },
-
-			-- flake8 - Python linter
-			-- python = { "flake8" },
-
-			-- flawfinder - C/C++ security scanner
-			-- c = { "flawfinder" },
-			-- cpp = { "flawfinder" },
-
-			-- fortitude - Fortran linter
-			-- fortran = { "fortitude" },
-
-			-- fsharplint - F# linter
-			-- fsharp = { "fsharplint" },
-
-			-- gawk - AWK syntax checker
-			-- awk = { "gawk" },
-
-			-- gdlint - GDScript linter
-			-- gdscript = { "gdlint" },
-
-			-- ghdl - VHDL compiler/linter
-			-- vhdl = { "ghdl" },
-
-			-- gitlint - Git commit message linter
-			-- gitcommit = { "gitlint" },
-
-			-- glslc - GLSL shader compiler
-			-- glsl = { "glslc" },
-
-			-- golangcilint - Go meta-linter
-			-- go = { "golangcilint" },
-
-			-- hadolint - Dockerfile linter
-			-- dockerfile = { "hadolint" },
-
-			-- hledger - Plain text accounting checker
-			-- ledger = { "hledger" },
-
-			-- hlint - Haskell linter
-			-- haskell = { "hlint" },
-
-			-- htmlhint - HTML linter
-			-- html = { "htmlhint" },
-
-			-- tidy - HTML validator
-			-- html = { "tidy" },
-
-			-- inko - Inko compiler linter
-			-- inko = { "inko" },
-
-			-- janet - Janet linter
-			-- janet = { "janet" },
-
-			-- joker - Clojure linter
-			-- clojure = { "joker" },
-
-			-- jshint - JavaScript linter
-			-- javascript = { "jshint" },
-
-			-- json5 - JSON5 validator
-			-- json5 = { "json5" },
-
-			-- jsonlint - JSON linter
-			-- json = { "jsonlint" },
-
-			-- json_tool - Python JSON validator
-			-- json = { "json_tool" },
-
-			-- ksh - Korn shell checker
-			-- ksh = { "ksh" },
-
-			-- ktlint - Kotlin linter
-			-- kotlin = { "ktlint" },
-
-			-- lacheck - LaTeX checker
-			-- tex = { "lacheck" },
-
-			-- languagetool - Grammar checker
-			-- text = { "languagetool" },
-
-			-- lslint - LSL (Linden Scripting Language) linter
-			-- lsl = { "lslint" },
-
-			-- ls-lint - File/directory name linter
-			-- text = { "ls_lint" },
-
-			-- luac - Lua compiler checker
-			-- lua = { "luac" },
-
-			-- luacheck - Lua linter (already enabled)
-			lua = { "luacheck" },
-
-			-- mado - Markdown linter
-			-- markdown = { "mado" },
-
-			-- mago_lint - PHP linter
-			-- php = { "mago_lint" },
-
-			-- mago_analyze - PHP analyzer
-			-- php = { "mago_analyze" },
-
-			-- markdownlint - Markdown linter
-			-- markdown = { "markdownlint" },
-
-			-- markdownlint-cli2 - Markdown linter
-			markdown = { "markdownlint-cli2" },
-
-			-- markuplint - HTML/template linter
-			-- html = { "markuplint" },
-
-			-- mlint - MATLAB linter
-			-- matlab = { "mlint" },
-
-			-- mypy - Python type checker
-			-- python = { "mypy" },
-
-			-- nagelfar - Tcl linter
-			-- tcl = { "nagelfar" },
-
-			-- nix - Nix expression checker
-			-- nix = { "nix" },
-
-			-- npm-groovy-lint - Groovy linter
-			-- groovy = { "npm-groovy-lint" },
-
-			-- oelint-adv - OpenEmbedded/Yocto linter
-			-- bitbake = { "oelint-adv" },
-
-			-- opa_check - Open Policy Agent checker
-			-- rego = { "opa_check" },
-
-			-- tofu - OpenTofu linter
-			-- tf = { "tofu" },
-
-			-- oxlint - Fast JavaScript linter
-			-- javascript = { "oxlint" },
-			-- typescript = { "oxlint" },
-
-			-- perlcritic - Perl linter
-			-- perl = { "perlcritic" },
-
-			-- perlimports - Perl import checker
-			-- perl = { "perlimports" },
-
-			-- phpcs - PHP CodeSniffer
-			-- php = { "phpcs" },
-
-			-- phpinsights - PHP quality checker
-			-- php = { "phpinsights" },
-
-			-- phpmd - PHP Mess Detector
-			-- php = { "phpmd" },
-
-			-- php - PHP syntax checker
-			-- php = { "php" },
-
-			-- phpstan - PHP static analyzer
-			-- php = { "phpstan" },
-
-			-- pmd - Multi-language static analyzer
-			-- java = { "pmd" },
-
-			-- pony - Pony compiler linter
-			-- pony = { "pony" },
-
-			-- prisma-lint - Prisma schema linter
-			-- prisma = { "prisma-lint" },
-
-			-- proselint - Prose linter
-			-- text = { "proselint" },
-
-			-- protolint - Protocol Buffers linter
-			-- proto = { "protolint" },
-
-			-- psalm - PHP static analyzer
-			-- php = { "psalm" },
-
-			-- puppet-lint - Puppet linter
-			-- puppet = { "puppet-lint" },
-
-			-- pycodestyle - Python style checker
-			-- python = { "pycodestyle" },
-
-			-- pydocstyle - Python docstring checker
-			-- python = { "pydocstyle" },
-
-			-- pylint - Python linter (already enabled)
-			-- python = { "pylint" },
-
-			-- pflake8 - Flake8 with pyproject.toml support
-			-- python = { "pflake8" },
-
-			-- quick-lint-js - Fast JavaScript linter
-			-- javascript = { "quick-lint-js" },
-
-			-- redocly - OpenAPI linter
-			-- yaml = { "redocly" },
-
-			-- regal - Rego linter
-			-- rego = { "regal" },
-
-			-- revive - Go linter
-			-- go = { "revive" },
-
-			-- rflint - Robot Framework linter
-			-- robot = { "rflint" },
-
-			-- robocop - Robot Framework linter
-			-- robot = { "robocop" },
-
-			-- rpmlint - RPM package linter
-			-- spec = { "rpmlint" },
-
-			-- rpmspec - RPM spec file checker
-			-- spec = { "rpmspec" },
-
-			-- rstcheck - reStructuredText checker
-			-- rst = { "rstcheck" },
-
-			-- rstlint - reStructuredText linter
-			-- rst = { "rstlint" },
-
-			-- rubocop - Ruby linter
-			-- ruby = { "rubocop" },
-
-			-- ruby - Ruby syntax checker
-			-- ruby = { "ruby" },
-
-			-- ruff - Fast Python linter
-			-- python = { "ruff" },
-
-			-- rumdl - R Markdown linter
-			-- rmd = { "rumdl" },
-
-			-- saltlint - Salt state linter
-			-- sls = { "saltlint" },
-
-			-- selene - Lua linter
-			-- lua = { "selene" },
-
-			-- shellcheck - Shell script linter (already enabled)
-			bash = { "shellcheck" },
-			sh = { "shellcheck" },
-
-			-- slang - SystemVerilog linter
-			-- systemverilog = { "slang" },
-
-			-- snakemake - Snakemake linter
-			-- snakemake = { "snakemake" },
-
-			-- snyk_iac - Infrastructure as Code security scanner
-			-- yaml = { "snyk_iac" },
-
-			-- solhint - Solidity linter
-			-- solidity = { "solhint" },
-
-			-- spectral - OpenAPI/AsyncAPI linter
-			-- yaml = { "spectral" },
-
-			-- sphinx-lint - Sphinx documentation linter
-			-- rst = { "sphinx-lint" },
-
-			-- sqlfluff - SQL linter
-			-- sql = { "sqlfluff" },
-
-			-- sqruff - SQL linter (Rust version)
-			-- sql = { "sqruff" },
-
-			-- standardjs - JavaScript standard style
-			-- javascript = { "standardjs" },
-
-			-- standardrb - Ruby standard style
-			-- ruby = { "standardrb" },
-
-			-- statix - Nix linter (already enabled)
-			-- nix = { "statix" },
-
-			-- stylelint - CSS/SCSS linter (already enabled)
-			css = { "stylelint" },
-			scss = { "stylelint" },
-
-			-- svlint - SystemVerilog linter
-			-- systemverilog = { "svlint" },
-
-			-- swiftlint - Swift linter
-			-- swift = { "swiftlint" },
-
-			-- systemd-analyze - systemd unit file validator
-			-- systemd = { "systemd-analyze" },
-
-			-- systemdlint - systemd unit file linter
-			-- systemd = { "systemdlint" },
-
-			-- tclint - Tcl linter
-			-- tcl = { "tclint" },
-
-			-- tflint - Terraform linter
-			-- terraform = { "tflint" },
-
-			-- tfsec - Terraform security scanner
-			-- terraform = { "tfsec" },
-
-			-- tlint - Laravel Blade linter
-			-- blade = { "tlint" },
-
-			-- tombi - TOML linter
-			-- toml = { "tombi" },
-
-			-- trivy - Security scanner
-			-- dockerfile = { "trivy" },
-
-			-- ts-standard - TypeScript standard style
-			-- typescript = { "ts-standard" },
-
-			-- twig-cs-fixer - Twig template linter
-			-- twig = { "twig-cs-fixer" },
-
-			-- typos - Source code spell checker
-			-- text = { "typos" },
-
-			-- vala_lint - Vala linter
-			-- vala = { "vala_lint" },
-
-			-- vale - Prose linter
-			-- text = { "vale" },
-
-			-- verilator - Verilog/SystemVerilog linter
-			-- verilog = { "verilator" },
-			-- systemverilog = { "verilator" },
-
-			-- vint - Vim script linter
-			-- vim = { "vint" },
-
-			-- vsg - VHDL Style Guide checker
-			-- vhdl = { "vsg" },
-
-			-- vulture - Python dead code finder
-			-- python = { "vulture" },
-
-			-- woke - Inclusive language linter
-			-- text = { "woke" },
-
-			-- write_good - English prose linter
-			-- text = { "write_good" },
-
-			-- yamllint - YAML linter
-			-- yaml = { "yamllint" },
-
-			-- yq - YAML/JSON/XML processor
-			-- yaml = { "yq" },
-
-			-- zizmor - GitHub Actions security scanner
-			-- yaml = { "zizmor" },
-
-			-- zlint - Zig linter
-			-- zig = { "zlint" },
-
-			-- zsh - Zsh syntax checker
-			zsh = { "zsh" },
+			-- JavaScript & TypeScript
+			javascript = {
+				"eslint", -- JavaScript/TypeScript linter
+				-- "eslint_d", -- Alternative: faster eslint daemon
+				-- "biomejs", -- Alternative: fast all-in-one linter
+				-- "deno", -- Alternative: Deno's built-in linter
+				-- "oxlint", -- Alternative: fast JavaScript linter (Rust)
+				-- "quick-lint-js", -- Alternative: extremely fast JS linter
+				-- "jshint", -- Alternative: JavaScript linter
+				-- "standardjs", -- Alternative: JavaScript standard style
+			},
+			typescript = {
+				"eslint", -- JavaScript/TypeScript linter
+				-- "eslint_d", -- Alternative: faster eslint daemon
+				-- "biomejs", -- Alternative: fast all-in-one linter
+				-- "deno", -- Alternative: Deno's built-in linter
+				-- "oxlint", -- Alternative: fast JavaScript linter (Rust)
+				-- "ts-standard", -- Alternative: TypeScript standard style
+			},
+
+			-- Python
+			python = {
+				"pylint", -- Python linter
+				-- "flake8", -- Alternative: Python linter
+				-- "pflake8", -- Alternative: Flake8 with pyproject.toml support
+				-- "ruff", -- Alternative: extremely fast Python linter (Rust)
+				-- "mypy", -- Alternative: Python type checker
+				-- "dmypy", -- Alternative: Mypy daemon for faster checking
+				-- "bandit", -- Alternative: Python security linter
+				-- "pycodestyle", -- Alternative: Python style checker (PEP 8)
+				-- "pydocstyle", -- Alternative: Python docstring checker
+				-- "vulture", -- Alternative: dead code finder
+			},
+
+			-- Nix
+			nix = {
+				"deadnix", -- Nix dead code scanner
+				"statix", -- Nix linter
+				-- "nix", -- Alternative: Nix expression checker
+			},
+
+			-- Shell Scripts
+			bash = {
+				"shellcheck", -- Shell script linter
+				-- "dash", -- Alternative: POSIX shell checker
+			},
+			sh = {
+				"shellcheck", -- Shell script linter
+				-- "dash", -- Alternative: POSIX shell checker
+			},
+			zsh = {
+				"zsh", -- Zsh syntax checker
+				-- "shellcheck", -- Alternative: works with zsh too
+			},
+			fish = {
+				-- "fish", -- Fish shell syntax checker
+			},
+			ksh = {
+				-- "ksh", -- Korn shell checker
+			},
+
+			-- CSS & Styling
+			css = {
+				"stylelint", -- CSS/SCSS linter
+			},
+			scss = {
+				"stylelint", -- CSS/SCSS linter
+			},
+			sass = {
+				-- "stylelint", -- SASS linter
+			},
+			less = {
+				-- "stylelint", -- LESS linter
+			},
+
+			-- Markup & Documentation
+			markdown = {
+				"markdownlint-cli2", -- Markdown linter (fast, flexible)
+				-- "markdownlint", -- Alternative: original markdownlint
+				-- "mado", -- Alternative: Markdown linter
+				-- "alex", -- Alternative: catch insensitive writing
+				-- "vale", -- Alternative: prose linter
+				-- "write_good", -- Alternative: English prose linter
+				-- "proselint", -- Alternative: prose linter
+			},
+			rst = {
+				-- "rstcheck", -- reStructuredText checker
+				-- "rstlint", -- Alternative: reStructuredText linter
+				-- "sphinx-lint", -- Alternative: Sphinx documentation linter
+			},
+			tex = {
+				"chktex", -- LaTeX semantic checker
+				-- "lacheck", -- Alternative: LaTeX checker
+			},
+			latex = {
+				-- "chktex", -- LaTeX semantic checker
+				-- "lacheck", -- Alternative: LaTeX checker
+			},
+			html = {
+				-- "htmlhint", -- HTML linter
+				-- "tidy", -- Alternative: HTML validator
+				-- "curlylint", -- Alternative: HTML template linter
+				-- "djlint", -- Alternative: Django/Jinja template linter
+				-- "markuplint", -- Alternative: HTML/template linter
+			},
+
+			-- Lua
+			lua = {
+				"luacheck", -- Lua linter
+				-- "selene", -- Alternative: modern Lua linter
+				-- "luac", -- Alternative: Lua compiler checker
+			},
+
+			-- Rust
+			rust = {
+				-- "clippy", -- Rust linter (via rustc)
+			},
+
+			-- Go
+			go = {
+				-- "golangcilint", -- Go meta-linter (runs multiple linters)
+				-- "revive", -- Alternative: fast Go linter
+				-- "fieldalignment", -- Alternative: struct field alignment checker
+			},
+
+			-- C/C++
+			c = {
+				-- "clangtidy", -- C/C++ linter based on clang
+				-- "cppcheck", -- Alternative: C/C++ static analyzer
+				-- "flawfinder", -- Alternative: C/C++ security scanner
+			},
+			cpp = {
+				-- "clangtidy", -- C/C++ linter based on clang
+				-- "cppcheck", -- Alternative: C/C++ static analyzer
+				-- "cpplint", -- Alternative: C++ style checker
+				-- "clazy", -- Alternative: Qt-specific C++ linter
+				-- "flawfinder", -- Alternative: C/C++ security scanner
+			},
+
+			-- Java & JVM
+			java = {
+				-- "checkstyle", -- Java code style checker
+				-- "pmd", -- Alternative: multi-language static analyzer
+			},
+			kotlin = {
+				-- "ktlint", -- Kotlin linter and formatter
+			},
+			groovy = {
+				-- "npm-groovy-lint", -- Groovy/Jenkinsfile/Gradle linter
+			},
+			scala = {
+				-- "scalafmt", -- Scala formatter (has linting features)
+			},
+
+			-- Ruby
+			ruby = {
+				-- "rubocop", -- Ruby linter and formatter
+				-- "ruby", -- Alternative: Ruby syntax checker
+				-- "standardrb", -- Alternative: Ruby standard style
+			},
+
+			-- Elixir & Erlang
+			elixir = {
+				-- "credo", -- Elixir code analysis tool
+			},
+
+			-- Haskell & ML Languages
+			haskell = {
+				-- "hlint", -- Haskell linter
+			},
+			ocaml = {
+				-- "ocamlformat", -- OCaml formatter (has linting)
+			},
+
+			-- F#
+			fsharp = {
+				-- "fsharplint", -- F# linter
+			},
+			["f#"] = {
+				-- "fsharplint", -- F# linter
+			},
+
+			-- Swift & Objective-C
+			swift = {
+				-- "swiftlint", -- Swift linter
+			},
+			["objective-c"] = {
+				-- "clangtidy", -- Objective-C via clang-tidy
+			},
+			objc = {
+				-- "clangtidy", -- Objective-C via clang-tidy
+			},
+
+			-- Crystal
+			crystal = {
+				-- "ameba", -- Crystal linter
+			},
+
+			-- Zig
+			zig = {
+				-- "zlint", -- Zig linter
+			},
+
+			-- Nim
+			nim = {
+				-- "nim", -- Nim compiler linter
+			},
+
+			-- Gleam
+			gleam = {
+				-- "gleam", -- Gleam compiler linter
+			},
+
+			-- Inko
+			inko = {
+				-- "inko", -- Inko compiler linter
+			},
+
+			-- Pony
+			pony = {
+				-- "pony", -- Pony compiler linter
+			},
+
+			-- Vala
+			vala = {
+				-- "vala_lint", -- Vala linter
+			},
+
+			-- Config & Data Files
+			json = {
+				-- "jsonlint", -- JSON linter
+				-- "json_tool", -- Alternative: Python JSON validator
+			},
+			json5 = {
+				-- "json5", -- JSON5 validator
+			},
+			yaml = {
+				-- "yamllint", -- YAML linter
+				-- "actionlint", -- Alternative: GitHub Actions workflow linter
+				-- "ansible_lint", -- Alternative: Ansible playbook linter
+				-- "cfn_lint", -- Alternative: AWS CloudFormation linter
+				-- "cfn_nag", -- Alternative: CloudFormation security scanner
+				-- "dclint", -- Alternative: Docker Compose linter
+				-- "spectral", -- Alternative: OpenAPI/AsyncAPI linter
+				-- "redocly", -- Alternative: OpenAPI linter
+				-- "snyk_iac", -- Alternative: Infrastructure as Code security scanner
+				-- "yq", -- Alternative: YAML/JSON/XML processor
+				-- "zizmor", -- Alternative: GitHub Actions security scanner
+			},
+			toml = {
+				-- "tombi", -- TOML linter
+			},
+			xml = {
+				-- "xmllint", -- XML validator
+			},
+			cue = {
+				-- "cue", -- CUE validation tool
+			},
+			dhall = {
+				-- "dhall", -- Dhall configuration language checker
+			},
+
+			-- Protocol Buffers
+			proto = {
+				-- "buf_lint", -- Protocol Buffers linter (buf)
+				-- "protolint", -- Alternative: Protocol Buffers linter
+			},
+			protobuf = {
+				-- "buf_lint", -- Protocol Buffers linter (buf)
+				-- "protolint", -- Alternative: Protocol Buffers linter
+			},
+
+			-- SQL & Databases
+			sql = {
+				-- "sqlfluff", -- SQL linter and formatter
+				-- "sqruff", -- Alternative: SQL linter (Rust version)
+				-- "eugene", -- Alternative: PostgreSQL migration linter
+			},
+			prisma = {
+				-- "prisma-lint", -- Prisma schema linter
+			},
+
+			-- GraphQL
+			graphql = {
+				-- "graphql", -- GraphQL schema linter
+			},
+
+			-- Docker & Containers
+			dockerfile = {
+				-- "hadolint", -- Dockerfile linter
+				-- "trivy", -- Alternative: security scanner
+			},
+
+			-- Infrastructure as Code
+			terraform = {
+				-- "tflint", -- Terraform linter
+				-- "tfsec", -- Alternative: Terraform security scanner
+			},
+			tf = {
+				-- "tflint", -- Terraform linter
+				-- "tofu", -- Alternative: OpenTofu linter
+			},
+			bicep = {
+				-- "bicep", -- Azure Bicep linter
+			},
+			cloudformation = {
+				-- "cfn_lint", -- AWS CloudFormation linter
+			},
+
+			-- Ansible
+			["yaml.ansible"] = {
+				-- "ansible_lint", -- Ansible playbook linter
+			},
+
+			-- Kubernetes
+			["yaml.kubernetes"] = {
+				-- "kubeval", -- Kubernetes manifest validator
+			},
+
+			-- Open Policy Agent
+			rego = {
+				-- "opa_check", -- OPA Rego checker
+				-- "regal", -- Alternative: Rego linter
+			},
+
+			-- Build Systems
+			make = {
+				-- "checkmake", -- Makefile linter
+			},
+			cmake = {
+				-- "cmakelint", -- CMake linter
+				-- "cmake_lint", -- Alternative: CMake linter
+			},
+			bazel = {
+				-- "buildifier", -- Bazel BUILD file linter
+			},
+			bzl = {
+				-- "buildifier", -- Bazel BUILD/Starlark linter
+			},
+
+			-- Hardware Description Languages
+			vhdl = {
+				-- "ghdl", -- VHDL compiler/linter
+				-- "vsg", -- Alternative: VHDL Style Guide checker
+			},
+			verilog = {
+				-- "verilator", -- Verilog/SystemVerilog linter
+			},
+			systemverilog = {
+				-- "verilator", -- SystemVerilog linter
+				-- "slang", -- Alternative: SystemVerilog linter
+				-- "svlint", -- Alternative: SystemVerilog linter
+			},
+
+			-- Shader Languages
+			glsl = {
+				-- "glslc", -- GLSL shader compiler
+			},
+			hlsl = {
+				-- "dxc", -- DirectX Shader Compiler
+			},
+
+			-- PHP
+			php = {
+				-- "phpcs", -- PHP CodeSniffer
+				-- "phpstan", -- Alternative: PHP static analyzer
+				-- "psalm", -- Alternative: PHP static analyzer
+				-- "phpmd", -- Alternative: PHP Mess Detector
+				-- "php", -- Alternative: PHP syntax checker
+				-- "phpinsights", -- Alternative: PHP quality checker
+				-- "mago_lint", -- Alternative: Mago PHP linter
+				-- "mago_analyze", -- Alternative: Mago PHP analyzer
+			},
+
+			-- Laravel Blade
+			blade = {
+				-- "tlint", -- Laravel Blade linter
+			},
+
+			-- Template Languages
+			jinja = {
+				-- "djlint", -- Jinja template linter
+			},
+			django = {
+				-- "djlint", -- Django template linter
+			},
+			eruby = {
+				-- "erb_lint", -- ERB template linter
+			},
+			erb = {
+				-- "erb_lint", -- ERB template linter
+			},
+			twig = {
+				-- "twig-cs-fixer", -- Twig template linter
+			},
+
+			-- Clojure
+			clojure = {
+				-- "clj-kondo", -- Clojure linter
+				-- "joker", -- Alternative: Clojure linter
+			},
+
+			-- Fennel
+			fennel = {
+				-- "fennel", -- Fennel compiler linter
+			},
+
+			-- Janet
+			janet = {
+				-- "janet", -- Janet linter
+			},
+
+			-- Scheme & Racket
+			scheme = {
+				-- "scheme", -- Scheme checker
+			},
+			racket = {
+				-- "racket", -- Racket checker
+			},
+
+			-- Perl
+			perl = {
+				-- "perlcritic", -- Perl linter
+				-- "perlimports", -- Alternative: Perl import checker
+			},
+
+			-- Tcl
+			tcl = {
+				-- "nagelfar", -- Tcl linter
+				-- "tclint", -- Alternative: Tcl linter
+			},
+
+			-- AWK
+			awk = {
+				-- "gawk", -- AWK syntax checker
+			},
+
+			-- Vim Script
+			vim = {
+				-- "vint", -- Vim script linter
+			},
+
+			-- Git
+			gitcommit = {
+				-- "commitlint", -- Commit message linter
+				-- "gitlint", -- Alternative: Git commit message linter
+			},
+
+			-- Diff/Patch
+			diff = {
+				-- "checkpatch", -- Linux kernel patch checker
+			},
+
+			-- Environment Files
+			env = {
+				-- "dotenv_linter", -- .env file linter
+			},
+			dotenv = {
+				-- "dotenv_linter", -- .env file linter
+			},
+
+			-- Accounting & Finance
+			beancount = {
+				-- "bean_check", -- Beancount syntax checker
+			},
+			ledger = {
+				-- "hledger", -- Plain text accounting checker
+			},
+
+			-- Game Development
+			gdscript = {
+				-- "gdlint", -- GDScript linter (Godot)
+			},
+
+			-- Fortran
+			fortran = {
+				-- "fortitude", -- Fortran linter
+			},
+
+			-- MATLAB
+			matlab = {
+				-- "mlint", -- MATLAB linter
+			},
+
+			-- R
+			r = {
+				-- "lintr", -- R linter
+			},
+			rmd = {
+				-- "rumdl", -- R Markdown linter
+			},
+
+			-- Robot Framework
+			robot = {
+				-- "rflint", -- Robot Framework linter
+				-- "robocop", -- Alternative: Robot Framework linter
+			},
+
+			-- Snakemake
+			snakemake = {
+				-- "snakemake", -- Snakemake linter
+			},
+
+			-- Solidity
+			solidity = {
+				-- "solhint", -- Solidity linter
+			},
+
+			-- LSL (Linden Scripting Language)
+			lsl = {
+				-- "lslint", -- LSL linter
+			},
+
+			-- Puppet
+			puppet = {
+				-- "puppet-lint", -- Puppet linter
+			},
+
+			-- Salt
+			sls = {
+				-- "saltlint", -- Salt state linter
+			},
+
+			-- systemd
+			systemd = {
+				-- "systemd-analyze", -- systemd unit file validator
+				-- "systemdlint", -- Alternative: systemd unit file linter
+			},
+
+			-- OpenEmbedded/Yocto
+			bitbake = {
+				-- "oelint-adv", -- OpenEmbedded/Yocto linter
+			},
+
+			-- RPM
+			spec = {
+				-- "rpmlint", -- RPM package linter
+				-- "rpmspec", -- Alternative: RPM spec file checker
+			},
+
+			-- EditorConfig
+			editorconfig = {
+				-- "editorconfig-checker", -- EditorConfig validator
+			},
+
+			-- General/Multi-purpose
+			text = {
+				-- "codespell", -- Spell checker for source code
+				-- "cspell", -- Alternative: comprehensive spell checker
+				-- "typos", -- Alternative: fast source code spell checker
+				-- "languagetool", -- Alternative: grammar checker
+				-- "vale", -- Alternative: prose linter
+				-- "write_good", -- Alternative: English prose linter
+				-- "proselint", -- Alternative: prose linter
+				-- "alex", -- Alternative: catch insensitive writing
+				-- "woke", -- Alternative: inclusive language linter
+				-- "blocklint", -- Alternative: regex-based linter
+				-- "detect-secrets", -- Alternative: detect secrets in code
+				-- "ls_lint", -- Alternative: file/directory name linter
+			},
 		}
 
 		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
