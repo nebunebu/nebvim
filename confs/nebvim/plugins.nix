@@ -103,7 +103,7 @@ let
         owner = "blaze-d83";
         repo = "snipbrowzurr.nvim";
         rev = "b32aa902a8b9fd2adf0b11215b9a1523baba4526";
-        hash = "sha256-xr7vI1ViRSMYUG51G7k5/IbLspwXAAQ/VSWOjWIEHj0=";
+        hash = "sha256-aDd2bpnWYEOvgpKn+wn0tdf9jM8mVyAOwE0q2sH85Cw=";
       };
     })
   ];

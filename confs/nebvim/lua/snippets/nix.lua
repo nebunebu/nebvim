@@ -22,54 +22,87 @@ local rep = require("luasnip.extras").rep
 
 return {
 	-- Let-in expression
-	s("let", fmt([[
+	s(
+		"let",
+		fmt(
+			[[
 		let
 		  {} = {};
 		in
 		{}
-	]], {
-		i(1, "name"),
-		i(2, "value"),
-		i(3, "expression"),
-	})),
+	]],
+			{
+				i(1, "name"),
+				i(2, "value"),
+				i(3, "expression"),
+			}
+		)
+	),
 
 	-- With expression
-	s("with", fmt([[
+	s(
+		"with",
+		fmt(
+			[[
 		with {}; {}
-	]], {
-		i(1, "pkgs"),
-		i(2, "expression"),
-	})),
+	]],
+			{
+				i(1, "pkgs"),
+				i(2, "expression"),
+			}
+		)
+	),
 
 	-- Attribute set
-	s("attr", fmt([[
+	s(
+		"attr",
+		fmt(
+			[[
 		{{
 		  {} = {};
 		}}
-	]], {
-		i(1, "name"),
-		i(2, "value"),
-	})),
+	]],
+			{
+				i(1, "name"),
+				i(2, "value"),
+			}
+		)
+	),
 
 	-- Function definition
-	s("func", fmt([[
+	s(
+		"func",
+		fmt(
+			[[
 		{}: {}
-	]], {
-		i(1, "args"),
-		i(2, "body"),
-	})),
+	]],
+			{
+				i(1, "args"),
+				i(2, "body"),
+			}
+		)
+	),
 
 	-- Function with @args
-	s("funca", fmt([[
+	s(
+		"funca",
+		fmt(
+			[[
 		{{ {} }}@{}: {}
-	]], {
-		i(1, "arg1, arg2"),
-		i(2, "args"),
-		i(3, "body"),
-	})),
+	]],
+			{
+				i(1, "arg1, arg2"),
+				i(2, "args"),
+				i(3, "body"),
+			}
+		)
+	),
 
 	-- Package derivation
-	s("pkg", fmt([[
+	s(
+		"pkg",
+		fmt(
+			[[
 		stdenv.mkDerivation {{
 		  pname = "{}";
 		  version = "{}";
@@ -83,18 +116,24 @@ return {
 
 		  {}
 		}}
-	]], {
-		i(1, "package-name"),
-		i(2, "version"),
-		i(3, "owner"),
-		i(4, "repo"),
-		i(5, "rev"),
-		i(6, "hash"),
-		i(7, "# build inputs, phases, etc."),
-	})),
+	]],
+			{
+				i(1, "package-name"),
+				i(2, "version"),
+				i(3, "owner"),
+				i(4, "repo"),
+				i(5, "rev"),
+				i(6, "hash"),
+				i(7, "# build inputs, phases, etc."),
+			}
+		)
+	),
 
 	-- shell.nix template
-	s("shell", fmt([[
+	s(
+		"shell",
+		fmt(
+			[[
 		{{ pkgs ? import <nixpkgs> {{}} }}:
 
 		pkgs.mkShell {{
@@ -106,13 +145,19 @@ return {
 		    {}
 		  '';
 		}}
-	]], {
-		i(1, "# packages"),
-		i(2, "# initialization commands"),
-	})),
+	]],
+			{
+				i(1, "# packages"),
+				i(2, "# initialization commands"),
+			}
+		)
+	),
 
 	-- flake.nix template
-	s("flake", fmt([[
+	s(
+		"flake",
+		fmt(
+			[[
 		{{
 		  description = "{}";
 
@@ -125,41 +170,59 @@ return {
 		    {}
 		  }};
 		}}
-	]], {
-		i(1, "Flake description"),
-		i(2, "# additional inputs"),
-		i(3, "# outputs"),
-	})),
+	]],
+			{
+				i(1, "Flake description"),
+				i(2, "# additional inputs"),
+				i(3, "# outputs"),
+			}
+		)
+	),
 
 	-- Flake package output
-	s("flakepkg", fmt([[
+	s(
+		"flakepkg",
+		fmt(
+			[[
 		packages.{}.default = pkgs.{}({});
-	]], {
-		c(1, {
-			t("x86_64-linux"),
-			t("aarch64-linux"),
-			t("x86_64-darwin"),
-			t("aarch64-darwin"),
-		}),
-		i(2, "callPackage"),
-		i(3, "./default.nix"),
-	})),
+	]],
+			{
+				c(1, {
+					t("x86_64-linux"),
+					t("aarch64-linux"),
+					t("x86_64-darwin"),
+					t("aarch64-darwin"),
+				}),
+				i(2, "callPackage"),
+				i(3, "./default.nix"),
+			}
+		)
+	),
 
 	-- Overlay
-	s("overlay", fmt([[
+	s(
+		"overlay",
+		fmt(
+			[[
 		final: prev: {{
 		  {} = prev.{}.overrideAttrs (oldAttrs: {{
 		    {}
 		  }});
 		}}
-	]], {
-		i(1, "package"),
-		rep(1),
-		i(2, "# overrides"),
-	})),
+	]],
+			{
+				i(1, "package"),
+				rep(1),
+				i(2, "# overrides"),
+			}
+		)
+	),
 
 	-- NixOS module
-	s("module", fmt([[
+	s(
+		"module",
+		fmt(
+			[[
 		{{ config, lib, pkgs, ... }}:
 
 		with lib;
@@ -174,81 +237,120 @@ return {
 		    {}
 		  }};
 		}}
-	]], {
-		i(1, "services.myservice"),
-		i(2, "my service"),
-		i(3, "# additional options"),
-		rep(1),
-		i(4, "# configuration"),
-	})),
+	]],
+			{
+				i(1, "services.myservice"),
+				i(2, "my service"),
+				i(3, "# additional options"),
+				rep(1),
+				i(4, "# configuration"),
+			}
+		)
+	),
 
 	-- mkOption
-	s("mkopt", fmt([[
+	s(
+		"mkopt",
+		fmt(
+			[[
 		{} = mkOption {{
 		  type = types.{};
 		  default = {};
 		  description = "{}";
 		}};
-	]], {
-		i(1, "option"),
-		c(2, {
-			t("str"),
-			t("int"),
-			t("bool"),
-			t("listOf str"),
-			t("attrsOf str"),
-			t("path"),
-			t("package"),
-		}),
-		i(3, "default-value"),
-		i(4, "Option description"),
-	})),
+	]],
+			{
+				i(1, "option"),
+				c(2, {
+					t("str"),
+					t("int"),
+					t("bool"),
+					t("listOf str"),
+					t("attrsOf str"),
+					t("path"),
+					t("package"),
+				}),
+				i(3, "default-value"),
+				i(4, "Option description"),
+			}
+		)
+	),
 
 	-- fetchFromGitHub
-	s("fetch", fmt([[
+	s(
+		"fetch",
+		fmt(
+			[[
 		fetchFromGitHub {{
 		  owner = "{}";
 		  repo = "{}";
 		  rev = "{}";
 		  hash = "{}";
 		}}
-	]], {
-		i(1, "owner"),
-		i(2, "repo"),
-		i(3, "rev"),
-		i(4, "hash"),
-	})),
+	]],
+			{
+				i(1, "owner"),
+				i(2, "repo"),
+				i(3, "rev"),
+				i(4, "hash"),
+			}
+		)
+	),
 
 	-- Import
-	s("import", fmt([[
+	s(
+		"import",
+		fmt(
+			[[
 		import {} {{}}
-	]], {
-		i(1, "./path.nix"),
-	})),
+	]],
+			{
+				i(1, "./path.nix"),
+			}
+		)
+	),
 
 	-- Inherit
-	s("inh", fmt([[
+	s(
+		"inh",
+		fmt(
+			[[
 		inherit ({}) {};
-	]], {
-		i(1, "pkgs"),
-		i(2, "stdenv lib"),
-	})),
+	]],
+			{
+				i(1, "pkgs"),
+				i(2, "stdenv lib"),
+			}
+		)
+	),
 
 	-- buildInputs
-	s("buildinputs", fmt([[
+	s(
+		"buildinputs",
+		fmt(
+			[[
 		buildInputs = with pkgs; [
 		  {}
 		];
-	]], {
-		i(1, "# packages"),
-	})),
+	]],
+			{
+				i(1, "# packages"),
+			}
+		)
+	),
 
 	-- nativeBuildInputs
-	s("nativebuildinputs", fmt([[
+	s(
+		"nativebuildinputs",
+		fmt(
+			[[
 		nativeBuildInputs = with pkgs; [
 		  {}
 		];
-	]], {
-		i(1, "# packages"),
-	})),
+	]],
+			{
+				i(1, "# packages"),
+			}
+		)
+	),
 }
