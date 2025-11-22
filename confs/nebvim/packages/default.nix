@@ -7,7 +7,7 @@ let
     # ./lang-servers.nix
   ];
   # Custom bashdb built from GitHub with bash 5.3+ support
-  bashdb = import ../../nix/bashdb.nix { inherit pkgs; };
+  bashdb = import ../packages/bashdb.nix { inherit pkgs; };
 in
 pkgs.lib.flatten (map importPackageFile packageFiles)
 ++ [

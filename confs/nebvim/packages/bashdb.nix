@@ -3,7 +3,7 @@ let
   # Fetch the patch from nixpkgs
   bash-5-or-greater-patch = pkgs.fetchurl {
     url = "https://raw.githubusercontent.com/NixOS/nixpkgs/nixos-unstable/pkgs/by-name/ba/bashdb/bash-5-or-greater.patch";
-    hash = "sha256-vZ8H3lfyakzoh+2kQDD0YxElaCLJB1detduE5BSd+l4=";
+    hash = "sha256-zRc4as4CVXT/fuejf0BOCVP8wMjYdY0Frb27qYT1GOk=";
   };
 in
 pkgs.stdenv.mkDerivation {
