@@ -9,7 +9,6 @@ return {
 		keys = {
 			{ icon = "󱄅", key = "c", desc = "nix-config", action = ":e $HOME/.nix-config/flake.nix" },
 			{ icon = "", key = "n", desc = "nebvim", action = ":e $HOME/.nebvim/flake.nix" },
-			{ icon = "󱉼", key = "v", desc = "obsidian vault", action = ":e $HOME/.vault/index.md" },
 			{ icon = "󰖬", key = "w", desc = "wiki", action = ":e $HOME/.wiki/index.md" },
 			{ icon = "", key = "p", desc = "Projects", action = ":e $HOME/Projects/" },
 			{ icon = "", key = "t", desc = "Typst Documents", action = ":e $HOME/Documents/typst" },
