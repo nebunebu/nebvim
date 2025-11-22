@@ -236,25 +236,17 @@ return {
 	})),
 
 	-- Module template
-	s("module", fmt([[
-		--[[
-		  {}
-
-		  {}
-		--]]
-
-		local M = {{}}
-
-		{}
-
-		return M
-	]], {
+	s("module", {
+		t({ "--[[", "  " }),
 		f(function()
 			return vim.fn.expand("%:t")
 		end),
+		t({ "", "", "  " }),
 		i(1, "Module description"),
+		t({ "", "--]]", "", "", "local M = {}", "", "" }),
 		i(2, "-- Module code"),
-	})),
+		t({ "", "", "return M" }),
+	}),
 
 	-- Protected call (pcall)
 	s("pcall", fmt([[
