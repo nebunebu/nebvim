@@ -73,6 +73,7 @@ let
     "nvim-treesitter-endwise"
     "nvim-web-devicons"
     "one-small-step-for-vimkind"
+    "debugmaster-nvim"
     "plenary-nvim"
     "snacks-nvim"
     "tiny-devicons-auto-colors-nvim"
