@@ -92,6 +92,19 @@ wk.add({
 		{ "<leader>m", group = "markdown", icon = " " },
 		{ "<leader>mv", "<cmd>Markview toggleAll<cr>", desc = "Toggle Markview" },
 		{ "<leader>mc", "<cmd>GenerateTOC<cr>", desc = "Generate Markodwn TOC" },
+
+		-- Testing (Neotest)
+		{ "<leader>n", group = "neotest" },
+		{ "<leader>nn", "<cmd>lua require('neotest').run.run()<CR>", desc = "Run nearest test" },
+		{ "<leader>nf", "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", desc = "Run current file" },
+		{ "<leader>ns", "<cmd>lua require('neotest').summary.toggle()<CR>", desc = "Toggle summary" },
+		{ "<leader>no", "<cmd>lua require('neotest').output.open({ enter = true })<CR>", desc = "Open output" },
+		{ "<leader>nO", "<cmd>lua require('neotest').output_panel.toggle()<CR>", desc = "Toggle output panel" },
+		{ "<leader>nl", "<cmd>lua require('neotest').run.run_last()<CR>", desc = "Run last test" },
+		{ "<leader>nd", "<cmd>lua require('neotest').run.run({ strategy = 'dap' })<CR>", desc = "Debug nearest test" },
+		{ "<leader>nS", "<cmd>lua require('neotest').run.stop()<CR>", desc = "Stop test" },
+		{ "<leader>na", "<cmd>lua require('neotest').run.attach()<CR>", desc = "Attach to test" },
+
 		-- Quickfix
 		{ "<leader>q", group = "quickfix" },
 		{ "<leader>qt", "<cmd>TodoQuickFix<CR>", desc = "QuickFix Todo Comments" },

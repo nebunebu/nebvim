@@ -521,7 +521,7 @@ Major keybinding prefixes (configured in `which-key.lua`):
 | `<leader>d` | Debug (DAP) / Direnv | `<leader>dc` - Continue debugging |
 | `<leader>x` | Diagnostics | `<leader>xl` - Diagnostics to loclist |
 | `<leader>m` | Markdown | `<leader>mv` - Toggle Markview |
-| `<leader>n` | Testing (nvim-test) | `<leader>nn` - Test nearest |
+| `<leader>n` | Testing (neotest) | `<leader>nn` - Run nearest test |
 | `<leader>w` | Wiki | `<leader>ww` - Open wiki |
 | `<leader>R` | HTTP/REST (kulala) | `<leader>Rr` - Run request |
 | `<leader>q` | Quickfix | `<leader>qt` - Todo comments |
@@ -645,26 +645,27 @@ Add parser to `packages.nix` if not in nixpkgs.
 
 ### Testing Framework
 
-**Plugin**: nvim-test
-**Location**: `lua/neb/plugins/nvim-test.lua`
+**Plugin**: neotest
+**Location**: `lua/neb/plugins/neotest.lua`
 
-**Supported test runners:**
-- JavaScript/TypeScript: jest
-- Lua: busted
-- Python: pytest
-- Rust: cargo-test
-- Go: go-test
-- Ruby: rspec
-- C#: dotnet
-- Haskell: hspec
+**Supported test adapters:**
+- Python: neotest-python (pytest)
+- Lua: neotest-busted (busted)
+- Go: neotest-go (go test)
+- Haskell: neotest-haskell
+- Bash: neotest-bash (bats)
+- Plenary: neotest-plenary (for Neovim plugin testing)
 
 **Keybindings:**
-- `<leader>ne` - Edit test
-- `<leader>ni` - Test info
-- `<leader>nl` - Run last test
 - `<leader>nn` - Run nearest test
-- `<leader>ns` - Run test suite
-- `<leader>nv` - Visit test
+- `<leader>nf` - Run current file
+- `<leader>ns` - Toggle summary
+- `<leader>no` - Open output
+- `<leader>nO` - Toggle output panel
+- `<leader>nl` - Run last test
+- `<leader>nd` - Debug nearest test
+- `<leader>nS` - Stop test
+- `<leader>na` - Attach to test
 
 ### Linting (Lua)
 
