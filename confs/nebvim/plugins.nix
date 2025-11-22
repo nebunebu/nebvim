@@ -44,7 +44,6 @@ let
     "oil-nvim"
     "rustaceanvim"
     "nui-nvim"
-    # "render-markdown-nvim"
     "gitsigns-nvim"
     "outline-nvim"
     "fidget-nvim"
