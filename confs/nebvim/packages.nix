@@ -53,6 +53,8 @@
     # xml
     xmlformat
 
+    ast-grep
+
     # yaml
     yamlfmt
     ;
