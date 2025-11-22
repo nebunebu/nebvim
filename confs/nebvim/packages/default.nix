@@ -1,7 +1,13 @@
 { pkgs, ... }:
-(import ./linters.nix { inherit pkgs; })
-++ (import ./formatters.nix { inherit pkgs; })
-# ++ (import ./lang-servers.nix { inherit pkgs; })
+let
+  importPackageFile = file: import file { inherit pkgs; };
+  packageFiles = [
+    ./linters.nix
+    ./formatters.nix
+    # ./lang-servers.nix
+  ];
+in
+pkgs.lib.flatten (map importPackageFile packageFiles)
 ++ [
   # pkgs.ast-grep # for grug-far
 
