@@ -10,7 +10,6 @@ return {
 		require("neowiki").setup({
 			wiki_dirs = {
 				{ name = "Wiki", path = "~/.wiki" },
-				{ name = "Vault", path = "~/.vault" },
 			},
 			index_file = "index.md",
 			keymaps = {
