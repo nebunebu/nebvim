@@ -63,6 +63,6 @@ require("neb.plugins.dap.bashdb") -- Patched to work with Bash 5.3+
 require("neb.plugins.dap.one-small-step-for-vimkind")
 require("neb.plugins.dap.delve")
 
--- require("neb.plugins.tiny.code-action")
+require("neb.plugins.tiny.code-action")
 require("neb.plugins.tiny.devicons-auto-colors")
 require("neb.plugins.tiny.inline-diagnostic")

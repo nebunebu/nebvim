@@ -75,6 +75,7 @@ let
     "plenary-nvim"
     "snacks-nvim"
     "spellwarn-nvim"
+    "tiny-code-action-nvim"
     "tiny-devicons-auto-colors-nvim"
     "tiny-inline-diagnostic-nvim"
     "todo-comments-nvim"
