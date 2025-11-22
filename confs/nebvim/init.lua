@@ -21,7 +21,6 @@ local lz_plugins = {
 	"nvim-lint",
 	"todo-comments",
 	"luasnip",
-	"nvim-test",
 	"neotest",
 	"surround",
 	"endwise",

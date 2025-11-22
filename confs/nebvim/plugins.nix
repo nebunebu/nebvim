@@ -39,7 +39,6 @@ let
     "helpview-nvim"
     "nvim-dap-ui"
     "nvim-nio"
-    "nvim-test"
     "grug-far-nvim"
     "oil-nvim"
     "rustaceanvim"
@@ -85,7 +84,7 @@ let
     "neotest-go"
     "neotest-haskell"
     "neotest-bash"
-    "neotest-busted"
+    # "neotest-busted"
     "neotest-vim-test"
     "vim-test"
   ];
