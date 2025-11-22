@@ -25,12 +25,22 @@ require("blink.cmp").setup({
 
 	sources = {
 		default = {
-			"lsp",
-			"buffer",
-			"path",
-			-- "luasnip",
+			"lsp", -- Language server completions
+			"luasnip", -- Snippet completions (LuaSnip integration)
+			"buffer", -- Current buffer text
+			"path", -- File system paths
 		},
 		providers = {
+			-- LuaSnip provider configuration
+			luasnip = {
+				name = "luasnip",
+				module = "blink.cmp.sources.luasnip",
+				score_offset = 10, -- Prioritize snippets slightly over buffer completions
+				opts = {
+					use_show_condition = true, -- Only show snippets that match the current context
+					show_autosnippets = false, -- Don't show autosnippets in completion menu
+				},
+			},
 		},
 
 		-- cmdline = {
