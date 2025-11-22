@@ -28,6 +28,14 @@ pkgs.lib.flatten (map importPackageFile packageFiles)
   bashdb # Custom build from GitHub with bash 5.3+ support
   pkgs.delve # Go debugger
 
+  # Test Runners (for neotest)
+  pkgs.python3Packages.pytest # Python testing
+  pkgs.luaPackages.busted # Lua testing
+  pkgs.go # Includes go test
+  pkgs.cabal-install # Haskell testing (cabal test)
+  pkgs.stack # Alternative Haskell testing
+  pkgs.bats # Bash Automated Testing System
+
   # kulala dependencies
   pkgs.curl
   pkgs.jq

@@ -79,6 +79,15 @@ let
     "tiny-inline-diagnostic-nvim"
     "todo-comments-nvim"
     "kulala-nvim"
+    "neotest"
+    "neotest-python"
+    "neotest-plenary"
+    "neotest-go"
+    "neotest-haskell"
+    "neotest-bash"
+    "neotest-busted"
+    "neotest-vim-test"
+    "vim-test"
   ];
 
   extraPlugins = lib.lz.fromExtraVimPlugins [
