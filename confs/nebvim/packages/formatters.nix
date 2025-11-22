@@ -9,7 +9,7 @@
   # pkgs.nodePackages.prettier # Standard Prettier for CSS/SCSS/LESS
 
   # HTML
-  pkgs.htmlbeautifier # Ruby-based HTML formatter (ACTIVE)
+  # pkgs.htmlbeautifier # Ruby-based HTML formatter
 
   # HTTP/REST
   # kulala-fmt is built into kulala.nvim plugin, no separate package needed

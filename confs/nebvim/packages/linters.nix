@@ -32,7 +32,7 @@
   # ============================================================================
 
   pkgs.deadnix # Nix dead code scanner
-  pkgs.statix # Nix linter
+  # pkgs.statix # Nix linter
   # pkgs.nix # Nix expression checker (nix-instantiate --parse)
 
   # ============================================================================
