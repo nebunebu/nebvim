@@ -109,10 +109,6 @@ return {
             return file_path:match("_test%.sh$") ~= nil or file_path:match("%.bats$") ~= nil
           end,
         }),
-        -- vim-test integration (fallback for unsupported languages)
-        require("neotest-vim-test")({
-          ignore_file_types = { "python", "lua", "go", "haskell", "sh" },
-        }),
         -- Custom nixtest adapter example
         require("neb.plugins.neotest.nixtest"),
       },

@@ -85,8 +85,6 @@ let
     "neotest-haskell"
     "neotest-bash"
     "neotest-busted"
-    "neotest-vim-test"
-    "vim-test"
   ];
 
   extraPlugins = lib.lz.fromExtraVimPlugins [
