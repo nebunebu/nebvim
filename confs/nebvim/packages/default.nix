@@ -23,7 +23,17 @@ pkgs.lib.flatten (map importPackageFile packageFiles)
   pkgs.nixd
 
   # Debug Adapters
-  pkgs.bashdb # Bash debugger - patched to work with Bash 5.3+
+  # Bash debugger - patched to work with Bash 5.x+
+  # Uses nixpkgs patch approach: patches configure.ac source and regenerates configure
+  (pkgs.bashdb.overrideAttrs (old: {
+    patches = (old.patches or [ ]) ++ [
+      (pkgs.fetchpatch {
+        url = "https://raw.githubusercontent.com/NixOS/nixpkgs/refs/heads/nixos-unstable/pkgs/by-name/ba/bashdb/bash-5-or-greater.patch";
+        hash = "sha256-zRc4as4CVXT/fuejf0BOCVP8wMjYdY0Frb27qYT1GOk=";
+      })
+    ];
+    nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [ pkgs.autoreconfHook ];
+  }))
   pkgs.delve # Go debugger
 
   # kulala dependencies
