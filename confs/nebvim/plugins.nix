@@ -43,8 +43,6 @@ let
     "grug-far-nvim"
     "oil-nvim"
     "rustaceanvim"
-    "blink-cmp-avante"
-    "avante-nvim"
     "nui-nvim"
     # "render-markdown-nvim"
     "gitsigns-nvim"

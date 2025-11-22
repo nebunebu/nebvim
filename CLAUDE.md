@@ -396,7 +396,6 @@ return {
 | gitsigns.nvim | Git signs | BufReadPre | `plugins/gitsigns.lua` |
 | which-key.nvim | Keybinding hints | VeryLazy | `plugins/which-key.lua` |
 | neowiki | Personal wiki | Keys | `plugins/neowiki.lua` |
-| avante.nvim | AI assistance | Keys | `plugins/avante.lua` |
 | rustaceanvim | Rust support | ft=rust | `plugins/rustaceanvim.lua` |
 | kulala.nvim | HTTP/REST client | ft=http,rest | `plugins/kulala.lua` |
 
@@ -433,7 +432,6 @@ nebvim uses **Neovim's built-in LSP client** (no lspconfig plugin).
 ### Completion (blink.cmp)
 
 **Sources (priority order):**
-1. avante (AI completions)
 2. lsp (Language server)
 3. buffer (Current buffer)
 4. path (File paths)
