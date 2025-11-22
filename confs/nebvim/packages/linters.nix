@@ -66,7 +66,7 @@
   # pkgs.python3Packages.doc8 # reStructuredText style checker
 
   # LaTeX
-  pkgs.chktex # LaTeX semantic checker
+  pkgs.texlivePackages.chktex # LaTeX semantic checker
   # pkgs.lacheck # LaTeX checker (basic)
 
   # HTML
