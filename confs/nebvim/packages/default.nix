@@ -22,6 +22,10 @@ pkgs.lib.flatten (map importPackageFile packageFiles)
   pkgs.marksman
   pkgs.nixd
 
+  # Debug Adapters
+  pkgs.bashdb # Bash debugger
+  pkgs.delve # Go debugger
+
   # kulala dependencies
   pkgs.curl
   pkgs.jq

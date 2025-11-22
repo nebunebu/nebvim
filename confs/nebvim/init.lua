@@ -30,6 +30,7 @@ local lz_plugins = {
 	"img-clip",
 	"rustaceanvim",
 	"snipbrowzurr",
+	"debugmaster",
 }
 
 -- require("neb.plugins.git-dev")
@@ -60,6 +61,7 @@ require("neb.plugins.snacks").setup()
 require("lz.n").load(require("neb.plugins.dap.dap-ui"))
 require("neb.plugins.dap.bashdb")
 require("neb.plugins.dap.one-small-step-for-vimkind")
+require("neb.plugins.dap.delve")
 
 -- require("neb.plugins.tiny.code-action")
 require("neb.plugins.tiny.devicons-auto-colors")
