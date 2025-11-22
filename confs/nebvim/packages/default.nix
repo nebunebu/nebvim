@@ -29,7 +29,7 @@ pkgs.lib.flatten (map importPackageFile packageFiles)
     patches = (old.patches or [ ]) ++ [
       (pkgs.fetchpatch {
         url = "https://raw.githubusercontent.com/NixOS/nixpkgs/refs/heads/nixos-unstable/pkgs/by-name/ba/bashdb/bash-5-or-greater.patch";
-        hash = "sha256-zRc4as4CVXT/fuejf0BOCVP8wMjYdY0Frb27qYT1GOk=";
+        hash = "sha256-LJjl+UkNSGQFGMu+6ROu5r7HzrENnw87KVcGiZxkN+Y=";
       })
     ];
     nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [ pkgs.autoreconfHook ];
