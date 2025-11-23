@@ -90,8 +90,12 @@ wk.add({
 
 		-- Markdown
 		{ "<leader>m", group = "markdown", icon = " " },
-		{ "<leader>mv", "<cmd>Markview toggleAll<cr>", desc = "Toggle Markview" },
-		{ "<leader>mc", "<cmd>GenerateTOC<cr>", desc = "Generate Markodwn TOC" },
+		{ "<leader>mt", "<cmd>Markview toggle<cr>", desc = "Toggle Markview" },
+		{ "<leader>me", "<cmd>Markview enable<cr>", desc = "Enable Markview" },
+		{ "<leader>md", "<cmd>Markview disable<cr>", desc = "Disable Markview" },
+		{ "<leader>mh", "<cmd>Markview hybridToggle<cr>", desc = "Toggle hybrid mode" },
+		{ "<leader>ms", "<cmd>Markview splitToggle<cr>", desc = "Toggle split view" },
+		{ "<leader>mc", "<cmd>GenerateTOC<cr>", desc = "Generate Markdown TOC" },
 
 		-- Testing (Neotest)
 		{ "<leader>n", group = "neotest" },

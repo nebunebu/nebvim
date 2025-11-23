@@ -1,0 +1,361 @@
+-- HTML element configuration for markview.nvim
+-- Covers: container elements, void elements, headings, and custom tag rendering
+
+return {
+  enable = true,
+
+  -- Container elements (paired tags)
+  tags = {
+    enable = true,
+
+    -- Emphasis elements
+    em = {
+      on_node = {
+        hl = "MarkviewHtmlEm",
+      },
+    },
+    i = {
+      on_node = {
+        hl = "MarkviewHtmlItalic",
+      },
+    },
+
+    -- Strong/bold elements
+    strong = {
+      on_node = {
+        hl = "MarkviewHtmlStrong",
+      },
+    },
+    b = {
+      on_node = {
+        hl = "MarkviewHtmlBold",
+      },
+    },
+
+    -- Code elements
+    code = {
+      on_opening_tag = {
+        conceal = true,
+      },
+      on_node = {
+        hl = "MarkviewHtmlCode",
+      },
+      on_closing_tag = {
+        conceal = true,
+      },
+    },
+    pre = {
+      on_node = {
+        hl = "MarkviewHtmlPre",
+      },
+    },
+
+    -- Keyboard input
+    kbd = {
+      on_opening_tag = {
+        conceal = true,
+      },
+      on_node = {
+        hl = "MarkviewHtmlKbd",
+        virt_text = function(text)
+          -- Smart keyboard shortcut rendering
+          local keys = vim.split(text, "+", { plain = true })
+          local result = {}
+
+          for i, key in ipairs(keys) do
+            local trimmed = vim.trim(key)
+            local icon = trimmed
+
+            -- Common modifier keys
+            if trimmed:lower() == "ctrl" or trimmed:lower() == "control" then
+              icon = "󰘴"
+            elseif trimmed:lower() == "alt" or trimmed:lower() == "option" then
+              icon = "󰘵"
+            elseif trimmed:lower() == "shift" then
+              icon = "󰘶"
+            elseif trimmed:lower() == "cmd" or trimmed:lower() == "command" then
+              icon = "󰘳"
+            elseif trimmed:lower() == "super" or trimmed:lower() == "meta" then
+              icon = "󰘳"
+            elseif trimmed:lower() == "enter" or trimmed:lower() == "return" then
+              icon = "󰌑"
+            elseif trimmed:lower() == "tab" then
+              icon = "󰌒"
+            elseif trimmed:lower() == "esc" or trimmed:lower() == "escape" then
+              icon = "󱊷"
+            elseif trimmed:lower() == "space" then
+              icon = "󱁐"
+            elseif trimmed:lower() == "backspace" then
+              icon = "󰁮"
+            elseif trimmed:lower() == "delete" or trimmed:lower() == "del" then
+              icon = "󰮣"
+            elseif #trimmed == 1 then
+              icon = trimmed:upper()
+            end
+
+            table.insert(result, { " " .. icon .. " ", "MarkviewHtmlKbd" })
+
+            if i < #keys then
+              table.insert(result, { "+", "MarkviewHtmlKbdSep" })
+            end
+          end
+
+          return result
+        end,
+      },
+      on_closing_tag = {
+        conceal = true,
+      },
+    },
+
+    -- Mark/highlight
+    mark = {
+      on_node = {
+        hl = "MarkviewHtmlMark",
+      },
+    },
+
+    -- Strikethrough
+    s = {
+      on_node = {
+        hl = "MarkviewHtmlStrikethrough",
+      },
+    },
+    strike = {
+      on_node = {
+        hl = "MarkviewHtmlStrikethrough",
+      },
+    },
+    del = {
+      on_node = {
+        hl = "MarkviewHtmlDel",
+      },
+    },
+
+    -- Underline
+    u = {
+      on_node = {
+        hl = "MarkviewHtmlUnderline",
+      },
+    },
+    ins = {
+      on_node = {
+        hl = "MarkviewHtmlIns",
+      },
+    },
+
+    -- Subscript and superscript
+    sub = {
+      on_node = {
+        hl = "MarkviewHtmlSub",
+      },
+    },
+    sup = {
+      on_node = {
+        hl = "MarkviewHtmlSup",
+      },
+    },
+
+    -- Anchors/links
+    a = {
+      on_opening_tag = {
+        conceal = true,
+      },
+      on_node = {
+        hl = "MarkviewHtmlLink",
+      },
+      on_closing_tag = {
+        conceal = true,
+        virt_text = { { "󰌷", "MarkviewHtmlLinkIcon" } },
+        virt_text_pos = "inline",
+      },
+    },
+
+    -- Abbreviations
+    abbr = {
+      on_node = {
+        hl = "MarkviewHtmlAbbr",
+      },
+    },
+
+    -- Quotations
+    q = {
+      on_opening_tag = {
+        virt_text = { { """, "MarkviewHtmlQuote" } },
+        virt_text_pos = "inline",
+      },
+      on_node = {
+        hl = "MarkviewHtmlQuote",
+      },
+      on_closing_tag = {
+        virt_text = { { """, "MarkviewHtmlQuote" } },
+        virt_text_pos = "inline",
+      },
+    },
+
+    -- Details/summary
+    details = {
+      on_node = {
+        hl = "MarkviewHtmlDetails",
+      },
+    },
+    summary = {
+      on_opening_tag = {
+        virt_text = { { "▸ ", "MarkviewHtmlSummaryIcon" } },
+        virt_text_pos = "inline",
+      },
+      on_node = {
+        hl = "MarkviewHtmlSummary",
+      },
+    },
+
+    -- Semantic elements
+    article = {
+      on_node = {
+        hl = "MarkviewHtmlArticle",
+      },
+    },
+    section = {
+      on_node = {
+        hl = "MarkviewHtmlSection",
+      },
+    },
+    aside = {
+      on_node = {
+        hl = "MarkviewHtmlAside",
+      },
+    },
+    nav = {
+      on_node = {
+        hl = "MarkviewHtmlNav",
+      },
+    },
+
+    -- Definition elements
+    dfn = {
+      on_node = {
+        hl = "MarkviewHtmlDfn",
+      },
+    },
+    var = {
+      on_node = {
+        hl = "MarkviewHtmlVar",
+      },
+    },
+    samp = {
+      on_node = {
+        hl = "MarkviewHtmlSamp",
+      },
+    },
+
+    -- Time element
+    time = {
+      on_opening_tag = {
+        virt_text = { { "󰃭 ", "MarkviewHtmlTimeIcon" } },
+        virt_text_pos = "inline",
+      },
+      on_node = {
+        hl = "MarkviewHtmlTime",
+      },
+    },
+
+    -- Small text
+    small = {
+      on_node = {
+        hl = "MarkviewHtmlSmall",
+      },
+    },
+
+    -- Div and span (generic containers)
+    div = {
+      on_node = {
+        hl = "MarkviewHtmlDiv",
+      },
+    },
+    span = {
+      on_node = {
+        hl = "MarkviewHtmlSpan",
+      },
+    },
+  },
+
+  -- Heading elements
+  headings = {
+    enable = true,
+
+    h1 = {
+      hl = "MarkviewHtmlH1",
+    },
+    h2 = {
+      hl = "MarkviewHtmlH2",
+    },
+    h3 = {
+      hl = "MarkviewHtmlH3",
+    },
+    h4 = {
+      hl = "MarkviewHtmlH4",
+    },
+    h5 = {
+      hl = "MarkviewHtmlH5",
+    },
+    h6 = {
+      hl = "MarkviewHtmlH6",
+    },
+  },
+
+  -- Void elements (self-closing tags)
+  void = {
+    enable = true,
+
+    -- Horizontal rule
+    hr = {
+      on_node = {
+        conceal = true,
+        virt_text = {
+          {
+            string.rep("─", vim.o.columns or 80),
+            "MarkviewHtmlHr",
+          },
+        },
+        virt_text_pos = "overlay",
+      },
+    },
+
+    -- Line break
+    br = {
+      on_node = {
+        conceal = true,
+        virt_text = { { "↵", "MarkviewHtmlBr" } },
+        virt_text_pos = "overlay",
+      },
+    },
+
+    -- Image
+    img = {
+      on_node = {
+        virt_text = { { "󰥶 ", "MarkviewHtmlImgIcon" } },
+        virt_text_pos = "inline",
+      },
+    },
+
+    -- Thematic break
+    wbr = {
+      on_node = {
+        virt_text = { { "¬", "MarkviewHtmlWbr" } },
+        virt_text_pos = "inline",
+      },
+    },
+  },
+
+  -- Entity references
+  entities = {
+    enable = true,
+    hl = "MarkviewHtmlEntity",
+  },
+
+  -- Component tags (for frameworks)
+  components = {
+    enable = true,
+    hl = "MarkviewHtmlComponent",
+  },
+}

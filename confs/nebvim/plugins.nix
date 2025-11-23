@@ -62,6 +62,7 @@ let
     "indent-blankline-nvim"
     "luasnip"
     "marks-nvim"
+    "markview-nvim"
     "nerdy-nvim"
     "rainbow-delimiters-nvim"
     "nvim-autopairs"
