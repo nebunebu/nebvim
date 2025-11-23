@@ -32,6 +32,7 @@ local lz_plugins = {
 	"snipbrowzurr",
 	"debugmaster",
 	"spellwarn",
+	"markview",
 }
 
 -- require("neb.plugins.git-dev")
