@@ -5,5 +5,4 @@ let
     # Add package files here as needed
   ];
 in
-pkgs.lib.flatten (map importPackageFile packageFiles)
-++ [ ]
+pkgs.lib.flatten (map importPackageFile packageFiles) ++ [ ]

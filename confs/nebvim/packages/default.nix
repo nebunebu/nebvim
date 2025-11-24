@@ -4,7 +4,9 @@ let
   packageFiles = [
     ./linters.nix
     ./formatters.nix
-    # ./lang-servers.nix
+    ./lang-servers.nix
+    # ./debug-adapters.nix
+    # ./test-runners.nix
   ];
   # Custom bashdb built from GitHub with bash 5.3+ support
   bashdb = import ../packages/bashdb.nix { inherit pkgs; };
@@ -14,16 +16,12 @@ pkgs.lib.flatten (map importPackageFile packageFiles)
   # pkgs.ast-grep # for grug-far
 
   pkgs.kdePackages.qtdeclarative
+  # pkgs.git
 
   pkgs.direnv
   pkgs.imagemagick
   pkgs.delta # For tiny-code-action diff backend
   # pkgs.eslint
-
-  # Language Servers
-  pkgs.lua-language-server
-  pkgs.marksman
-  pkgs.nixd
 
   # Debug Adapters
   bashdb # Custom build from GitHub with bash 5.3+ support

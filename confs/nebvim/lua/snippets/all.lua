@@ -97,22 +97,31 @@ return {
 	}),
 
 	-- Multi-line snippet using fmt
-	s("box", fmt([[
+	s(
+		"box",
+		fmt(
+			[[
 	┌{}┐
 	│ {} │
 	└{}┘
-	]], {
-		f(function(args)
-			return string.rep("─", #args[1][1] + 2)
-		end, { 1 }),
-		i(1, "content"),
-		f(function(args)
-			return string.rep("─", #args[1][1] + 2)
-		end, { 1 }),
-	})),
+	]],
+			{
+				f(function(args)
+					return string.rep("─", #args[1][1] + 2)
+				end, { 1 }),
+				i(1, "content"),
+				f(function(args)
+					return string.rep("─", #args[1][1] + 2)
+				end, { 1 }),
+			}
+		)
+	),
 
 	-- License header snippet
-	s("license", fmt([[
+	s(
+		"license",
+		fmt(
+			[[
 	Copyright (c) {} {}
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -120,10 +129,13 @@ return {
 	in the Software without restriction, including without limitation the rights
 	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 	copies of the Software.
-	]], {
-		f(function()
-			return os.date("%Y")
-		end),
-		i(1, "Author Name"),
-	})),
+	]],
+			{
+				f(function()
+					return os.date("%Y")
+				end),
+				i(1, "Author Name"),
+			}
+		)
+	),
 }

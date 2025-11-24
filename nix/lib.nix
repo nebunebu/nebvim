@@ -10,7 +10,7 @@ rec {
       };
       config = {
         plugins = builtins.attrValues (
-          import ../confs/${conf}/plugins.nix {
+          import ../confs/${conf}/plugins {
             inherit pkgs;
             inherit (pkgs) lib;
           }
@@ -24,8 +24,7 @@ rec {
           ":"
           (builtins.toString (
             # NOTE: Packages
-            ":"
-            + pkgs.lib.makeBinPath (import ../confs/${conf}/packages { inherit pkgs; })
+            ":" + pkgs.lib.makeBinPath (import ../confs/${conf}/packages { inherit pkgs; })
           ))
         ];
       });

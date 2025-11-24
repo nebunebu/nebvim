@@ -15,7 +15,7 @@ return {
 					-- Use bats for bash tests by default
 					-- Can also detect and run other test frameworks
 				}),
-				require("neotest-busted"),
+				-- require("neotest-busted"),
 			},
 			-- Status signs
 			status = {

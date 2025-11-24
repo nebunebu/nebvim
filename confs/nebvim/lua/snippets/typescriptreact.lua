@@ -26,7 +26,10 @@ local ts_snippets = require("snippets.typescript")
 -- React-specific snippets
 local react_snippets = {
 	-- Functional component
-	s("rfc", fmt([[
+	s(
+		"rfc",
+		fmt(
+			[[
 		interface {}Props {{
 		  {}
 		}}
@@ -38,17 +41,23 @@ local react_snippets = {
 		    </div>
 		  )
 		}}
-	]], {
-		i(1, "Component"),
-		i(2, "// props"),
-		rep(1),
-		rep(1),
-		i(3, "// destructured props"),
-		i(4, "{/* content */}"),
-	})),
+	]],
+			{
+				i(1, "Component"),
+				i(2, "// props"),
+				rep(1),
+				rep(1),
+				i(3, "// destructured props"),
+				i(4, "{/* content */}"),
+			}
+		)
+	),
 
 	-- Functional component (simple)
-	s("rfcs", fmt([[
+	s(
+		"rfcs",
+		fmt(
+			[[
 		export const {} = () => {{
 		  return (
 		    <div>
@@ -56,26 +65,38 @@ local react_snippets = {
 		    </div>
 		  )
 		}}
-	]], {
-		i(1, "Component"),
-		i(2, "{/* content */}"),
-	})),
+	]],
+			{
+				i(1, "Component"),
+				i(2, "{/* content */}"),
+			}
+		)
+	),
 
 	-- useState hook
-	s("usestate", fmt([[
+	s(
+		"usestate",
+		fmt(
+			[[
 		const [{}, set{}] = useState<{}>({}]
-	]], {
-		i(1, "state"),
-		f(function(args)
-			local state = args[1][1]
-			return state:sub(1, 1):upper() .. state:sub(2)
-		end, { 1 }),
-		i(2, "type"),
-		i(3, "initialValue"),
-	})),
+	]],
+			{
+				i(1, "state"),
+				f(function(args)
+					local state = args[1][1]
+					return state:sub(1, 1):upper() .. state:sub(2)
+				end, { 1 }),
+				i(2, "type"),
+				i(3, "initialValue"),
+			}
+		)
+	),
 
 	-- useEffect hook
-	s("useeffect", fmt([[
+	s(
+		"useeffect",
+		fmt(
+			[[
 		useEffect(() => {{
 		  {}
 
@@ -83,77 +104,119 @@ local react_snippets = {
 		    {}
 		  }}
 		}}, [{}])
-	]], {
-		i(1, "// effect"),
-		i(2, "// cleanup"),
-		i(3, "// dependencies"),
-	})),
+	]],
+			{
+				i(1, "// effect"),
+				i(2, "// cleanup"),
+				i(3, "// dependencies"),
+			}
+		)
+	),
 
 	-- useRef hook
-	s("useref", fmt([[
+	s(
+		"useref",
+		fmt(
+			[[
 		const {} = useRef<{}>({}]
-	]], {
-		i(1, "ref"),
-		i(2, "HTMLDivElement | null"),
-		i(3, "null"),
-	})),
+	]],
+			{
+				i(1, "ref"),
+				i(2, "HTMLDivElement | null"),
+				i(3, "null"),
+			}
+		)
+	),
 
 	-- useContext hook
-	s("usecontext", fmt([[
+	s(
+		"usecontext",
+		fmt(
+			[[
 		const {} = useContext({})
-	]], {
-		i(1, "context"),
-		i(2, "Context"),
-	})),
+	]],
+			{
+				i(1, "context"),
+				i(2, "Context"),
+			}
+		)
+	),
 
 	-- useCallback hook
-	s("usecallback", fmt([[
+	s(
+		"usecallback",
+		fmt(
+			[[
 		const {} = useCallback(({}) => {{
 		  {}
 		}}, [{}])
-	]], {
-		i(1, "callback"),
-		i(2, "args"),
-		i(3, "// body"),
-		i(4, "// dependencies"),
-	})),
+	]],
+			{
+				i(1, "callback"),
+				i(2, "args"),
+				i(3, "// body"),
+				i(4, "// dependencies"),
+			}
+		)
+	),
 
 	-- useMemo hook
-	s("usememo", fmt([[
+	s(
+		"usememo",
+		fmt(
+			[[
 		const {} = useMemo(() => {{
 		  {}
 		}}, [{}])
-	]], {
-		i(1, "memoized"),
-		i(2, "return value"),
-		i(3, "// dependencies"),
-	})),
+	]],
+			{
+				i(1, "memoized"),
+				i(2, "return value"),
+				i(3, "// dependencies"),
+			}
+		)
+	),
 
 	-- useReducer hook
-	s("usereducer", fmt([[
+	s(
+		"usereducer",
+		fmt(
+			[[
 		const [{}, dispatch] = useReducer({}, {}]
-	]], {
-		i(1, "state"),
-		i(2, "reducer"),
-		i(3, "initialState"),
-	})),
+	]],
+			{
+				i(1, "state"),
+				i(2, "reducer"),
+				i(3, "initialState"),
+			}
+		)
+	),
 
 	-- Custom hook
-	s("hook", fmt([[
+	s(
+		"hook",
+		fmt(
+			[[
 		export const use{} = ({}) => {{
 		  {}
 
 		  return {{ {} }}
 		}}
-	]], {
-		i(1, "Custom"),
-		i(2, "// params"),
-		i(3, "// hook logic"),
-		i(4, "// return values"),
-	})),
+	]],
+			{
+				i(1, "Custom"),
+				i(2, "// params"),
+				i(3, "// hook logic"),
+				i(4, "// return values"),
+			}
+		)
+	),
 
 	-- Context provider
-	s("provider", fmt([[
+	s(
+		"provider",
+		fmt(
+			[[
 		interface {}ContextType {{
 		  {}
 		}}
@@ -181,32 +244,41 @@ local react_snippets = {
 		  }}
 		  return context
 		}}
-	]], {
-		i(1, "Theme"),
-		i(2, "// context type"),
-		rep(1),
-		rep(1),
-		rep(1),
-		i(3, "// state"),
-		i(4, "// value"),
-		rep(1),
-		rep(1),
-		rep(1),
-		rep(1),
-		rep(1),
-		rep(1),
-	})),
+	]],
+			{
+				i(1, "Theme"),
+				i(2, "// context type"),
+				rep(1),
+				rep(1),
+				rep(1),
+				i(3, "// state"),
+				i(4, "// value"),
+				rep(1),
+				rep(1),
+				rep(1),
+				rep(1),
+				rep(1),
+				rep(1),
+			}
+		)
+	),
 
 	-- Props interface
-	s("props", fmt([[
+	s(
+		"props",
+		fmt(
+			[[
 		interface {}Props {{
 		  {}: {};
 		}}
-	]], {
-		i(1, "Component"),
-		i(2, "prop"),
-		i(3, "type"),
-	})),
+	]],
+			{
+				i(1, "Component"),
+				i(2, "prop"),
+				i(3, "type"),
+			}
+		)
+	),
 
 	-- Import React
 	s("imr", {
@@ -224,85 +296,133 @@ local react_snippets = {
 	}),
 
 	-- className
-	s("cn", fmt([[
+	s(
+		"cn",
+		fmt(
+			[[
 		className="{}"
-	]], {
-		i(1, "classes"),
-	})),
+	]],
+			{
+				i(1, "classes"),
+			}
+		)
+	),
 
 	-- style prop
-	s("style", fmt([[
+	s(
+		"style",
+		fmt(
+			[[
 		style={{{{ {}: "{}" }}}}
-	]], {
-		i(1, "property"),
-		i(2, "value"),
-	})),
+	]],
+			{
+				i(1, "property"),
+				i(2, "value"),
+			}
+		)
+	),
 
 	-- Event handler
-	s("handler", fmt([[
+	s(
+		"handler",
+		fmt(
+			[[
 		const handle{} = ({}) => {{
 		  {}
 		}}
-	]], {
-		i(1, "Click"),
-		c(2, {
-			t("e: React.MouseEvent"),
-			t("e: React.ChangeEvent<HTMLInputElement>"),
-			t("e: React.FormEvent"),
-			t("e: React.KeyboardEvent"),
-		}),
-		i(3, "// handler body"),
-	})),
+	]],
+			{
+				i(1, "Click"),
+				c(2, {
+					t("e: React.MouseEvent"),
+					t("e: React.ChangeEvent<HTMLInputElement>"),
+					t("e: React.FormEvent"),
+					t("e: React.KeyboardEvent"),
+				}),
+				i(3, "// handler body"),
+			}
+		)
+	),
 
 	-- onChange handler
-	s("onchange", fmt([[
+	s(
+		"onchange",
+		fmt(
+			[[
 		onChange={{(e) => set{}(e.target.value)}}
-	]], {
-		f(function()
-			-- Try to get a sensible default from context
-			return "Value"
-		end),
-	})),
+	]],
+			{
+				f(function()
+					-- Try to get a sensible default from context
+					return "Value"
+				end),
+			}
+		)
+	),
 
 	-- onClick handler
-	s("onclick", fmt([[
+	s(
+		"onclick",
+		fmt(
+			[[
 		onClick={{() => {{}}}}
-	]], {
-		i(1, "// action"),
-	})),
+	]],
+			{
+				i(1, "// action"),
+			}
+		)
+	),
 
 	-- Conditional rendering
-	s("cond", fmt([[
+	s(
+		"cond",
+		fmt(
+			[[
 		{{{}  && {}}}
-	]], {
-		i(1, "condition"),
-		i(2, "<Component />"),
-	})),
+	]],
+			{
+				i(1, "condition"),
+				i(2, "<Component />"),
+			}
+		)
+	),
 
 	-- Ternary rendering
-	s("tern", fmt([[
+	s(
+		"tern",
+		fmt(
+			[[
 		{{{} ? {} : {}}}
-	]], {
-		i(1, "condition"),
-		i(2, "<TrueComponent />"),
-		i(3, "<FalseComponent />"),
-	})),
+	]],
+			{
+				i(1, "condition"),
+				i(2, "<TrueComponent />"),
+				i(3, "<FalseComponent />"),
+			}
+		)
+	),
 
 	-- Map over array
-	s("map", fmt([[
+	s(
+		"map",
+		fmt(
+			[[
 		{{{}.map(({}) => (
 		  <{} key={{{}}}>
 		    {}
 		  </{}>
 		))}}
-	]], {
-		i(1, "items"),
-		i(2, "item"),
-		i(3, "div"),
-		i(4, "item.id"),
-		i(5, "{item.name}"),
-		rep(3),
-	})),
+	]],
+			{
+				i(1, "items"),
+				i(2, "item"),
+				i(3, "div"),
+				i(4, "item.id"),
+				i(5, "{item.name}"),
+				rep(3),
+			}
+		)
+	),
 }
 
 -- Combine TypeScript and React snippets

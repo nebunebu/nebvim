@@ -5,7 +5,7 @@
 **Last Updated:** 2025-11-18
 **Version:** nebvim (Nix Flake-based Neovim Configuration)
 
----
+______________________________________________________________________
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@
 - [Testing and Quality Assurance](#testing-and-quality-assurance)
 - [Important Files Reference](#important-files-reference)
 
----
+______________________________________________________________________
 
 ## Project Overview
 
@@ -50,7 +50,7 @@
 - `checks` - CI/CD validation
 - `formatter` - Code formatting (treefmt-nix)
 
----
+______________________________________________________________________
 
 ## Architecture
 
@@ -120,7 +120,7 @@ plugin config files (setup on trigger)
 - **blink.cmp**: Modern completion engine
 - **Snacks.nvim**: Modular utility plugin suite
 
----
+______________________________________________________________________
 
 ## Directory Structure
 
@@ -165,7 +165,7 @@ plugin config files (setup on trigger)
 └── README.md                        # User documentation
 ```
 
----
+______________________________________________________________________
 
 ## Development Workflows
 
@@ -314,15 +314,15 @@ nix develop
 :LzCheck
 ```
 
----
+______________________________________________________________________
 
 ## Plugin Management
 
 ### Plugin Sources
 
 1. **nixpkgs (`pkgs.vimPlugins`)**: Standard Nixpkgs plugins
-2. **NixNeovimPlugins overlay (`pkgs.vimExtraPlugins`)**: Community plugins
-3. **Flake inputs + `lib.lz.build`**: Custom/development plugins
+1. **NixNeovimPlugins overlay (`pkgs.vimExtraPlugins`)**: Community plugins
+1. **Flake inputs + `lib.lz.build`**: Custom/development plugins
 
 ### Lazy Loading Triggers
 
@@ -399,7 +399,7 @@ return {
 | rustaceanvim | Rust support | ft=rust | `plugins/rustaceanvim.lua` |
 | kulala.nvim | HTTP/REST client | ft=http,rest | `plugins/kulala.lua` |
 
----
+______________________________________________________________________
 
 ## LSP and Language Configuration
 
@@ -432,11 +432,12 @@ nebvim uses **Neovim's built-in LSP client** (no lspconfig plugin).
 ### Completion (blink.cmp)
 
 **Sources (priority order):**
-2. lsp (Language server)
-3. buffer (Current buffer)
-4. path (File paths)
+2\. lsp (Language server)
+3\. buffer (Current buffer)
+4\. path (File paths)
 
 **Key Bindings:**
+
 - `<Tab>`: Select next / snippet forward
 - `<S-Tab>`: Select previous / snippet backward
 - `<CR>`: Accept completion
@@ -478,6 +479,7 @@ Auto-lint on save. Configured linters:
 ### Treesitter Parsers
 
 42 parsers installed, including:
+
 - Languages: bash, css, html, javascript, json, lua, markdown, nix, python, rust, typescript, yaml, etc.
 - Special: kulala_http (custom HTTP request syntax)
 
@@ -488,7 +490,7 @@ Auto-lint on save. Configured linters:
 
 DAP UI with `nvim-dap-ui` plugin.
 
----
+______________________________________________________________________
 
 ## Key Conventions
 
@@ -535,6 +537,7 @@ Major keybinding prefixes (configured in `which-key.lua`):
 **Location**: `lua/neb/colorscheme.lua`
 
 Custom highlights defined for:
+
 - LSP inlay hints
 - Rainbow delimiters
 - Custom color mappings
@@ -542,15 +545,17 @@ Custom highlights defined for:
 ### Code Style
 
 **Lua:**
+
 - Linter: luacheck (`.luacheckrc`)
 - Formatter: stylua
 - Globals allowed: `vim`, `require`, `pairs`, `ipairs`, `string`, `table`
 
 **Nix:**
+
 - Formatter: nixfmt
 - Linters: deadnix, statix
 
----
+______________________________________________________________________
 
 ## Common Tasks
 
@@ -634,12 +639,12 @@ Add parser to `packages.nix` if not in nixpkgs.
 ### Debug Lazy Loading Issues
 
 1. Run `:LzCheck` to see plugin status
-2. Check `lua/neb/lz.lua` for loaded plugin list
-3. Verify plugin name matches Nix `pname`
-4. Check `init.lua` for plugin in `lz_plugins` list
-5. Test trigger (event, key, command, filetype)
+1. Check `lua/neb/lz.lua` for loaded plugin list
+1. Verify plugin name matches Nix `pname`
+1. Check `init.lua` for plugin in `lz_plugins` list
+1. Test trigger (event, key, command, filetype)
 
----
+______________________________________________________________________
 
 ## Testing and Quality Assurance
 
@@ -649,6 +654,7 @@ Add parser to `packages.nix` if not in nixpkgs.
 **Location**: `lua/neb/plugins/neotest.lua`
 
 **Supported test adapters:**
+
 - Python: neotest-python (pytest)
 - Lua: neotest-busted (busted)
 - Go: neotest-go (go test)
@@ -657,6 +663,7 @@ Add parser to `packages.nix` if not in nixpkgs.
 - Plenary: neotest-plenary (for Neovim plugin testing)
 
 **Keybindings:**
+
 - `<leader>nn` - Run nearest test
 - `<leader>nf` - Run current file
 - `<leader>ns` - Toggle summary
@@ -696,7 +703,7 @@ nix flake check
 
 Runs CI/CD validation checks.
 
----
+______________________________________________________________________
 
 ## Important Files Reference
 
@@ -734,41 +741,41 @@ Runs CI/CD validation checks.
 - **Indentation**: 2 spaces (Lua, Nix)
 - **Quotes**: Prefer double quotes in Lua
 
----
+______________________________________________________________________
 
 ## AI Assistant Guidelines
 
 When working with this codebase:
 
 1. **Always check existing patterns** before creating new files
-2. **Follow the plugin configuration template** for consistency
-3. **Use lazy loading** for new plugins unless eager loading is required
-4. **Add runtime dependencies** to `packages.nix`, not shell.nix
-5. **Test with `:LzCheck`** after adding plugins
-6. **Document keybindings** in which-key.lua
-7. **Keep plugin configs modular** - one file per plugin
-8. **Respect the layer architecture** - don't mix concerns
-9. **Use Nix for dependency management** - avoid manual downloads
-10. **Follow naming conventions** - plugin file names match pname
+1. **Follow the plugin configuration template** for consistency
+1. **Use lazy loading** for new plugins unless eager loading is required
+1. **Add runtime dependencies** to `packages.nix`, not shell.nix
+1. **Test with `:LzCheck`** after adding plugins
+1. **Document keybindings** in which-key.lua
+1. **Keep plugin configs modular** - one file per plugin
+1. **Respect the layer architecture** - don't mix concerns
+1. **Use Nix for dependency management** - avoid manual downloads
+1. **Follow naming conventions** - plugin file names match pname
 
 ### When Adding Features
 
 1. Check if existing plugin provides functionality
-2. Search for similar configurations in `lua/neb/plugins/`
-3. Follow the three-step workflow: Nix declaration → Lua config → init.lua registration
-4. Add necessary packages to `packages.nix`
-5. Test in isolation before committing
-6. Update this CLAUDE.md if introducing new patterns
+1. Search for similar configurations in `lua/neb/plugins/`
+1. Follow the three-step workflow: Nix declaration → Lua config → init.lua registration
+1. Add necessary packages to `packages.nix`
+1. Test in isolation before committing
+1. Update this CLAUDE.md if introducing new patterns
 
 ### When Debugging
 
 1. Run `:LzCheck` to verify plugin load status
-2. Check `:messages` for errors
-3. Verify plugin name matches between Nix and Lua
-4. Test trigger conditions (event, key, cmd, ft)
-5. Check dependencies in `packages.nix`
-6. Use `:Inspect` to check syntax highlighting
-7. Use `:LspInfo` to check LSP status
+1. Check `:messages` for errors
+1. Verify plugin name matches between Nix and Lua
+1. Test trigger conditions (event, key, cmd, ft)
+1. Check dependencies in `packages.nix`
+1. Use `:Inspect` to check syntax highlighting
+1. Use `:LspInfo` to check LSP status
 
 ### Performance Considerations
 
@@ -778,7 +785,7 @@ When working with this codebase:
 - Use `after` callback for plugin initialization
 - Profile with `:Lazy profile` if available
 
----
+______________________________________________________________________
 
 ## Additional Resources
 
@@ -787,9 +794,10 @@ When working with this codebase:
 - **Neovim LSP**: `:help lsp`
 - **NixOS Wiki**: https://nixos.wiki/wiki/Neovim
 
----
+______________________________________________________________________
 
 **For questions or issues**, refer to:
+
 - This CLAUDE.md file
 - README.md for user documentation
 - Individual plugin config files for examples
