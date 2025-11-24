@@ -40,4 +40,9 @@ set_options("opt", {
 
 	-- other
 	fillchars = { eob = " " },
+
+	-- spelling
+	spell = true,
+	spelllang = "en_us",
+	spellfile = os.getenv("HOME") .. "/.config/nvim/spell/en.utf-8.add",
 })

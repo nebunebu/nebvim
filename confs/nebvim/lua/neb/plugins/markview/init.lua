@@ -6,7 +6,7 @@ local M = {}
 -- Import format-specific configurations
 local markdown_config = require("neb.plugins.markview.markdown")
 -- local html_config = require("neb.plugins.markview.html")
-local latex_config = require("neb.plugins.markview.latex")
+-- local latex_config = require("neb.plugins.markview.latex")
 local typst_config = require("neb.plugins.markview.typst")
 local yaml_config = require("neb.plugins.markview.yaml")
 
@@ -22,26 +22,27 @@ M.after = function()
 
 	markview.setup({
 		-- Core settings
-		buf_ignore = {}, -- No buffers ignored
 		max_length = 99999, -- Maximum file size to render
-		debounce = 50, -- Debounce delay in ms
 
-		-- Modes where previews are shown
-		modes = { "n", "i", "no", "c" },
+		preview = {
 
-		-- Hybrid mode configuration
-		hybrid_modes = { "i" }, -- Show both preview and source in insert mode
-
-		-- Callbacks
-		callbacks = {
-			on_enable = function(_, win)
-				vim.wo[win].conceallevel = 2
-				vim.wo[win].concealcursor = "nc"
-			end,
-			on_disable = function(_, win)
-				vim.wo[win].conceallevel = 0
-				vim.wo[win].concealcursor = ""
-			end,
+			-- Modes where previews are shown
+			modes = { "n", "i", "no", "c" },
+			debounce = 50, -- Debounce delay in ms
+			-- Hybrid mode configuration
+			hybrid_modes = { "i" }, -- Show both preview and source in insert mode
+			-- ignore_buftypes = {}, -- No buffers ignored
+			-- Callbacks
+			callbacks = {
+				on_enable = function(_, win)
+					vim.wo[win].conceallevel = 2
+					vim.wo[win].concealcursor = "nc"
+				end,
+				on_disable = function(_, win)
+					vim.wo[win].conceallevel = 0
+					vim.wo[win].concealcursor = ""
+				end,
+			},
 		},
 
 		-- Highlight groups

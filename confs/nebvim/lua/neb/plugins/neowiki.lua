@@ -12,6 +12,8 @@ return {
 				{ name = "Wiki", path = "~/.wiki" },
 			},
 			index_file = "index.md",
+			discover_nested_roots = true,
+
 			keymaps = {
 				-- In Normal mode, follows the link under the cursor.
 				-- In Visual mode, creates a link from the selection.
