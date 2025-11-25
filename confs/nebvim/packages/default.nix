@@ -13,7 +13,7 @@ let
 in
 pkgs.lib.flatten (map importPackageFile packageFiles)
 ++ [
-  # pkgs.ast-grep # for grug-far
+  pkgs.ast-grep # for grug-far
 
   pkgs.kdePackages.qtdeclarative
   # pkgs.git
