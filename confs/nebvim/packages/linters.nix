@@ -59,7 +59,8 @@
   # ============================================================================
 
   # Markdown
-  pkgs.markdownlint-cli2 # Fast, flexible Markdown linter
+  pkgs.markdownlint-cli
+  # pkgs.markdownlint-cli2 # Fast, flexible Markdown linter
   # pkgs.nodePackages.markdownlint-cli # Original markdownlint
   # pkgs.nodePackages.alex # Catch insensitive, inconsiderate writing
   # pkgs.python3Packages.mdit-py-plugins # Markdown linter (mado)
