@@ -36,10 +36,5 @@ vim.api.nvim_create_autocmd({ "StdinReadPost", "BufReadPost" }, {
 		vim.bo[buf].modifiable = was_mod or false
 		vim.bo[buf].modified = false
 		vim.b[buf].baleia_applied = true
-
-		-- sane quit keys for pager use
-		vim.keymap.set("n", "q", "<cmd>q<cr>", { buffer = buf, silent = true })
-		vim.keymap.set("n", "ZZ", "<cmd>q<cr>", { buffer = buf, silent = true })
-		vim.keymap.set("n", "ZQ", "<cmd>q!<cr>", { buffer = buf, silent = true })
 	end,
 })

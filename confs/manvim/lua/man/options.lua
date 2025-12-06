@@ -38,4 +38,5 @@ set_options("opt", {
 
 	-- other
 	fillchars = { eob = " " },
+	timeoutlen = 200,
 })
