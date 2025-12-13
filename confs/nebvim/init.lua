@@ -8,7 +8,8 @@ require("lz.n").load("neb.lz")
 
 local lz_plugins = {
 	"comment",
-	"bufferline",
+	"tabby",
+	-- "bufferline",
 	"triptych",
 	"cellular-automaton",
 	"dap.dap-ui",
@@ -16,6 +17,7 @@ local lz_plugins = {
 	"urlview",
 	"neowiki",
 	"gitsigns",
+	-- "tabline",
 	-- "which-key",
 	"conform",
 	"oil",
