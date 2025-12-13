@@ -27,7 +27,7 @@
         system: _pkgs:
         let
           pkgs = import inputs.nixpkgs {
-            inherit system;
+            localSystem = system;
             overlays = import ./nix/overlays.nix { inherit inputs; };
           };
         in
