@@ -41,7 +41,7 @@ To add as a system package,
 
 {
   enviornment.systemPackages =
-    [ inputs.nebvim.packages."${pkgs.system}".default ];
+    [ inputs.nebvim.packages."${pkgs.stdenv.hostPlatform.system}".default ];
 }
 ```
 
@@ -51,7 +51,7 @@ And to add as a home-manager package,
 { inputs, pkgs, ...}:
 
 {
-  home.packages = [ inputs.nebvim.packages."${pkgs.system}".default ];
+  home.packages = [ inputs.nebvim.packages."${pkgs.stdenv.hostPlatform.system}".default ];
 }
 ```
 

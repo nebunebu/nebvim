@@ -30,3 +30,21 @@ vim.api.nvim_set_hl(0, "LspInlayHint", {
 	bg = "#191724",
 	italic = true,
 })
+
+-- vim.api.nvim_create_autocmd("BufEnter", {
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		if vim.bo.buftype == "help" then
+-- 			vim.cmd("only")
+-- 		end
+-- 	end,
+-- })
+--
+vim.api.nvim_create_autocmd("BufWinEnter", {
+	pattern = "*.txt",
+	callback = function()
+		if vim.bo.buftype == "help" then
+			vim.cmd("wincmd T")
+		end
+	end,
+})

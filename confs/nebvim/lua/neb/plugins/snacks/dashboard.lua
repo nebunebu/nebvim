@@ -15,6 +15,7 @@ return {
 				desc = "wiki",
 				action = function()
 					require("lz.n").trigger_load("neowiki")
+					require("lz.n").trigger_load("bufferline")
 					vim.defer_fn(function()
 						require("neowiki").open_wiki_new_tab()
 					end, 0)

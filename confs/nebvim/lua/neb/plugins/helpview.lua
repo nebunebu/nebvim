@@ -4,6 +4,12 @@ return {
 		"help",
 	},
 	after = function()
-		require("helpview").setup({})
+		require("helpview").setup({
+			-- renderers = {},
+
+			headings = {
+				enable = false,
+			},
+		})
 	end,
 }

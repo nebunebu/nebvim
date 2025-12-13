@@ -8,6 +8,7 @@ require("lz.n").load("neb.lz")
 
 local lz_plugins = {
 	"comment",
+	"bufferline",
 	"triptych",
 	"cellular-automaton",
 	"dap.dap-ui",
@@ -51,7 +52,7 @@ require("neb.plugins.grug-far")
 require("neb.plugins.which-key")
 
 require("neb.plugins.direnv")
-require("neb.plugins.bufferline")
+-- require("neb.plugins.bufferline")
 
 require("neb.plugins.lualine")
 require("neb.plugins.treesitter")
