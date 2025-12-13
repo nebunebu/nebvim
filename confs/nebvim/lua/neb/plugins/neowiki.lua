@@ -10,6 +10,7 @@ return {
 		require("neowiki").setup({
 			wiki_dirs = {
 				{ name = "Wiki", path = "~/.wiki" },
+				{ name = "Scratchpad", path = "~/.wiki/scratchpad" },
 			},
 			index_file = "index.md",
 			discover_nested_roots = true,

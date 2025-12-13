@@ -9,10 +9,19 @@ return {
 		keys = {
 			{ icon = "󱄅", key = "c", desc = "nix-config", action = ":e $HOME/.nix-config/flake.nix" },
 			{ icon = "", key = "n", desc = "nebvim", action = ":e $HOME/.nebvim/flake.nix" },
-			{ icon = "󰖬", key = "w", desc = "wiki", action = "<cmd>lua require('neowiki').open_wiki()<cr>" },
+			{
+				icon = "󰖬",
+				key = "w",
+				desc = "wiki",
+				action = function()
+					require("lz.n").trigger_load("neowiki")
+					vim.defer_fn(function()
+						require("neowiki").open_wiki_new_tab()
+					end, 0)
+				end,
+			},
 			{ icon = "", key = "p", desc = "Projects", action = ":e $HOME/Projects/" },
 			{ icon = "", key = "t", desc = "Typst Documents", action = ":e $HOME/Documents/typst" },
-			{ icon = "", key = "m", desc = "Media", action = ":e $HOME/Media" },
 		},
 	},
 	sections = {
