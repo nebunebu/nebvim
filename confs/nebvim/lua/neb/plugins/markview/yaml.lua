@@ -8,7 +8,7 @@ return {
 	properties = {
 		-- Data type defaults
 		text = {
-			text = "󰗊 ",
+			text = "󰊄",
 			hl = "MarkviewYamlText",
 		},
 		list = {
