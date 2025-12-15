@@ -312,8 +312,8 @@ return {
 	-- List items
 	list_items = {
 		enable = true,
-		shift_width = 2,
-		indent_size = 2,
+		shift_width = 0,
+		indent_size = 0,
 
 		-- Unordered lists
 		marker_minus = {
@@ -322,24 +322,24 @@ return {
 			hl = "MarkviewListItemMinus",
 		},
 		marker_plus = {
-			add_padding = true,
+			add_padding = false,
 			text = "•",
 			hl = "MarkviewListItemPlus",
 		},
 		marker_star = {
-			add_padding = true,
+			add_padding = false,
 			text = "•",
 			hl = "MarkviewListItemStar",
 		},
 
 		-- Ordered lists
 		marker_dot = {
-			add_padding = true,
+			add_padding = false,
 			text = ".",
 			hl = "MarkviewListItemDot",
 		},
 		marker_parenthesis = {
-			add_padding = true,
+			add_padding = false,
 			text = ")",
 			hl = "MarkviewListItemParenthesis",
 		},
