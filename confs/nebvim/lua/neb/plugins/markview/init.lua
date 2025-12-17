@@ -30,7 +30,7 @@ M.after = function()
 			modes = { "n", "i", "no", "c" },
 			debounce = 50, -- Debounce delay in ms
 			-- Hybrid mode configuration
-			hybrid_modes = { "i" }, -- Show both preview and source in insert mode
+			hybrid_modes = { "i", "n" }, -- Show both preview and source in insert mode
 			-- ignore_buftypes = {}, -- No buffers ignored
 			-- Callbacks
 			callbacks = {

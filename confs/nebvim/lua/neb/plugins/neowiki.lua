@@ -56,8 +56,6 @@ return {
 					border = "rounded",
 				},
 
-				-- Options for nvim_win_set_option(). Defines the style
-				-- within the window after it's created.
 				style = {},
 			},
 		})
