@@ -1,6 +1,7 @@
 return {
 	"neowiki",
 	cmd = { "Neowiki" },
+  gt = "markdown",
 	keys = {
 		{ "<leader>ww", "<cmd>lua require('neowiki').open_wiki()<cr>", desc = "Open Wiki" },
 		{ "<leader>wW", "<cmd>lua require('neowiki').open_wiki_floating()<cr>", desc = "Open Floating Wiki" },
