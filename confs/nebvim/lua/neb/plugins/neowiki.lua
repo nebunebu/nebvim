@@ -1,7 +1,7 @@
 return {
 	"neowiki",
 	cmd = { "Neowiki" },
-  gt = "markdown",
+	ft = "markdown",
 	keys = {
 		{ "<leader>ww", "<cmd>lua require('neowiki').open_wiki()<cr>", desc = "Open Wiki" },
 		{ "<leader>wW", "<cmd>lua require('neowiki').open_wiki_floating()<cr>", desc = "Open Floating Wiki" },
@@ -39,12 +39,12 @@ return {
 			},
 
 			-- Configuration for the GTD functionality.
-			gtd = {
-				-- Set to false to disable the progress percentage virtual text.
-				show_gtd_progress = true,
-				-- The highlight group to use for the progress virtual text.
-				gtd_progress_hl_group = "Comment",
-			},
+			-- gtd = {
+			-- 	-- Set to false to disable the progress percentage virtual text.
+			-- 	show_gtd_progress = true,
+			-- 	-- The highlight group to use for the progress virtual text.
+			-- 	gtd_progress_hl_group = "Comment",
+			-- },
 
 			-- Configuration for opening wiki in floating window.
 			floating_wiki = {
