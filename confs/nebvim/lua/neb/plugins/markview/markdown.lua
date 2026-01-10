@@ -311,13 +311,21 @@ return {
 
 	-- List items
 	list_items = {
+
 		enable = true,
-		shift_width = 0,
-		indent_size = 0,
+		wrap = true,
+
+		-- IMPORTANT: these should not be 0
+		indent_size = function(buf)
+			return (type(buf) == "number" and (vim.bo[buf].shiftwidth or 4)) or (vim.bo.shiftwidth or 4)
+		end,
+		shift_width = function(buf)
+			return (type(buf) == "number" and (vim.bo[buf].shiftwidth or 4)) or (vim.bo.shiftwidth or 4)
+		end,
 
 		-- Unordered lists
 		marker_minus = {
-			add_padding = true,
+			add_padding = false,
 			text = "•",
 			hl = "MarkviewListItemMinus",
 		},
@@ -332,15 +340,19 @@ return {
 			hl = "MarkviewListItemStar",
 		},
 
-		-- Ordered lists
+		-- Ordered lists (include the number)
 		marker_dot = {
 			add_padding = false,
-			text = ".",
+			text = function(_, item)
+				return string.format("%d.", item.n)
+			end,
 			hl = "MarkviewListItemDot",
 		},
 		marker_parenthesis = {
 			add_padding = false,
-			text = ")",
+			text = function(_, item)
+				return string.format("%d)", item.n)
+			end,
 			hl = "MarkviewListItemParenthesis",
 		},
 	},

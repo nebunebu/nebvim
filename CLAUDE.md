@@ -789,10 +789,10 @@ ______________________________________________________________________
 
 ## Additional Resources
 
-- **tolerable-nvim-nix**: https://github.com/wires-org/tolerable-nvim-nix
+- **tolerable-nvim-nix**: <https://github.com/wires-org/tolerable-nvim-nix>
 - **lz.n documentation**: Plugin lazy loading specs
 - **Neovim LSP**: `:help lsp`
-- **NixOS Wiki**: https://nixos.wiki/wiki/Neovim
+- **NixOS Wiki**: <https://nixos.wiki/wiki/Neovim>
 
 ______________________________________________________________________
 
