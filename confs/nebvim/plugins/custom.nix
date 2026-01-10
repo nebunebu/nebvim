@@ -1,13 +1,13 @@
 { lib, pkgs, ... }:
 [
-  (lib.lz.build {
+  (lib.lz.build rec {
     pname = "neowiki-nvim";
-    version = "unstable-2025-06-27";
+    version = "v1.0";
     src = pkgs.fetchFromGitHub {
       owner = "echaya";
       repo = "neowiki.nvim";
-      rev = "411766d31c76dc2613fca6ec45d025bac7ee1ac4";
-      hash = "sha256-soMQN7oDx9HVS/crNcu6ilYoOtGXP/aMk7NfPYUjsXg=";
+      rev = "v${version}";
+      hash = "sha256-PXJhaX9pqIgDWZZbzK8z9SstW0kQ9SuB5IMPq7EjYic=";
     };
   })
   (lib.lz.build {
