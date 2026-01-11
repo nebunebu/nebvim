@@ -2,7 +2,7 @@
 [
   (lib.lz.build rec {
     pname = "neowiki-nvim";
-    version = "v1.0";
+    version = "1.0";
     src = pkgs.fetchFromGitHub {
       owner = "echaya";
       repo = "neowiki.nvim";
