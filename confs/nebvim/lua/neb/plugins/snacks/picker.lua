@@ -46,7 +46,11 @@ return {
 
 				-- Open the file
 				if item.file then
-					vim.cmd("edit " .. vim.fn.fnameescape(item.file))
+					local file = item.file
+					if picker.opts and picker.opts.cwd and file:sub(1, 1) ~= "/" then
+						file = picker.opts.cwd .. "/" .. file
+					end
+					vim.cmd("edit " .. vim.fn.fnameescape(file))
 				elseif item.buf then
 					vim.cmd("buffer " .. item.buf)
 				end
