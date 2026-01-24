@@ -1,5 +1,6 @@
 local servers = {
 	"astro",
+	"harper",
 	"luals",
 	"marksman",
 	"nixd",

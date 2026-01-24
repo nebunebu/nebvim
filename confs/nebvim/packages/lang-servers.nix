@@ -3,5 +3,6 @@
   # Language Servers
   pkgs.lua-language-server
   pkgs.marksman
+  pkgs.harper
   pkgs.nixd
 ]

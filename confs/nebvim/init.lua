@@ -34,7 +34,7 @@ local lz_plugins = {
 	"rustaceanvim",
 	"snipbrowzurr",
 	"debugmaster",
-	"spellwarn",
+	-- "spellwarn",
 	"markview",
 }
 
