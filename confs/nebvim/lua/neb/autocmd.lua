@@ -24,6 +24,13 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "wiki", "mediawiki", "wikitext" },
+	callback = function()
+		vim.opt_local.foldenable = false
+	end,
+})
+
 -- Set up the highlight group
 vim.api.nvim_set_hl(0, "LspInlayHint", {
 	fg = "#c4a7e7",
