@@ -1,13 +1,16 @@
 { pkgs, lib, ... }:
 let
-  treesitter-kulala-http-grammar = import ./kulala-http-grammar.nix { inherit pkgs; };
 
-  nvim-treesitter-with-kulala =
+  # FIX: this could be done with `pkgs.tree-sitter.buildGrammar`
+  treesitter-kulala-http-grammar = import ./kulala-http-grammar.nix { inherit pkgs; };
+  treesitter-mediawiki-grammar = import ./mediawiki-grammar.nix { inherit pkgs; };
+  nvim-treesitter-with-extra-grammars =
     pkgs.vimPlugins.nvim-treesitter.withAllGrammars.overrideAttrs
       (finalAttrs: {
         postInstall = finalAttrs.postInstall or "" + ''
           mkdir -p $out/parser
           ln -s ${treesitter-kulala-http-grammar}/parser/kulala_http.so $out/parser/
+          ln -s ${treesitter-mediawiki-grammar}/parser/mediawiki.so $out/parser/
         '';
       });
 
@@ -81,7 +84,12 @@ let
   customPlugins = import ./custom.nix { inherit pkgs lib; };
 
   optionalPlugins =
-    vimPlugins ++ extraPlugins ++ customPlugins ++ [ nvim-treesitter-with-kulala ]
+    vimPlugins
+    ++ extraPlugins
+    ++ customPlugins
+    ++ [
+      nvim-treesitter-with-extra-grammars
+    ]
   # [ pkgs.vimPlugins.nvim-treesitter.withAllGrammars ]
   ;
 in

@@ -53,6 +53,15 @@ require("neb.plugins.lsp")
 require("neb.plugins.grug-far")
 require("neb.plugins.which-key")
 
+local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+parser_config.mediawiki = {
+	install_info = {
+		url = "https://github.com/Ordoviz/tree-sitter-mediawiki",
+		files = { "src/parser.c" },
+	},
+	filetype = { "wiki", "mediawiki", "wikitext" },
+}
+
 require("neb.plugins.direnv")
 -- require("neb.plugins.bufferline")
 
