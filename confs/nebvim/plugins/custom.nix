@@ -20,4 +20,14 @@
       hash = "sha256-aDd2bpnWYEOvgpKn+wn0tdf9jM8mVyAOwE0q2sH85Cw=";
     };
   })
+  (lib.lz.build {
+    pname = "line-numbers-nvim";
+    version = "2026-03-30";
+    src = pkgs.fetchFromGitHub {
+      owner = "shrynx";
+      repo = "line-numbers.nvim";
+      rev = "2b4e1ddf00c11bee26cb790e64c53223d38f5597";
+      hash = "sha256-cktt0sBQ0BcXicIPoGLyQrwcwhsrZ2k3NA1TxbOqkVk=";
+    };
+  })
 ]
