@@ -23,14 +23,11 @@
       url = "github:NixNeovim/NixNeovimPlugins";
       inputs = {
         nixpkgs.follows = "nixpkgs";
+        flake-utils.follows = "flake-utils";
       };
     };
 
-    # {
-    #   "flake-utils": "flake-utils",
-    #   "nixpkgs": "nixpkgs",
-    #   "poetry2nix": "poetry2nix"
-    # }
+    flake-utils.url = "github:numtide/flake-utils";
 
     statix = {
       url = "github:oppiliappan/statix";
