@@ -2,14 +2,43 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixpkgs-unstable";
 
-    tolerable = {
-      url = "github:wires-org/tolerable-nvim-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
+    nightly = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
     };
 
-    nixneovimplugins.url = "github:NixNeovim/NixNeovimPlugins";
+    flake-parts.url = "github:hercules-ci/flake-parts";
 
-    statix.url = "github:oppiliappan/statix";
+    tolerable = {
+      url = "github:wires-org/tolerable-nvim-nix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        nightly.follows = "nightly";
+      };
+    };
+
+    nixneovimplugins = {
+      url = "github:NixNeovim/NixNeovimPlugins";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
+
+    # {
+    #   "flake-utils": "flake-utils",
+    #   "nixpkgs": "nixpkgs",
+    #   "poetry2nix": "poetry2nix"
+    # }
+
+    statix = {
+      url = "github:oppiliappan/statix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+      };
+    };
 
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
