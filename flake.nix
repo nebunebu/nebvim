@@ -21,10 +21,10 @@
 
     nixneovimplugins = {
       url = "github:NixNeovim/NixNeovimPlugins";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-utils.follows = "flake-utils";
-      };
+      # inputs = {
+      #   nixpkgs.follows = "nixpkgs";
+      #   flake-utils.follows = "flake-utils";
+      # };
     };
 
     flake-utils.url = "github:numtide/flake-utils";
