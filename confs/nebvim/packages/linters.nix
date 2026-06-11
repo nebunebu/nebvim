@@ -4,7 +4,7 @@
   # JAVASCRIPT & TYPESCRIPT
   # ============================================================================
 
-  pkgs.nodePackages.eslint # JavaScript/TypeScript linter
+  pkgs.eslint # JavaScript/TypeScript linter
   # pkgs.nodePackages.eslint_d # Faster eslint daemon
   # pkgs.nodePackages.jshint # Alternative JavaScript linter
   # pkgs.nodePackages.typescript # TypeScript compiler (tsc for type checking)
@@ -17,7 +17,7 @@
   # PYTHON
   # ============================================================================
 
-  pkgs.python3Packages.pylint # Comprehensive Python linter
+  pkgs.pylint # Comprehensive Python linter
   # pkgs.python3Packages.flake8 # Python linter
   # pkgs.python3Packages.mypy # Python type checker
   # pkgs.python3Packages.bandit # Python security linter
@@ -52,7 +52,7 @@
   # CSS & STYLING
   # ============================================================================
 
-  pkgs.nodePackages.stylelint # CSS/SCSS/SASS/LESS linter
+  pkgs.stylelint # CSS/SCSS/SASS/LESS linter
 
   # ============================================================================
   # MARKUP & DOCUMENTATION
