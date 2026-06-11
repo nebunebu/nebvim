@@ -44,7 +44,7 @@ let
   # from NixNeovimPlugins
   extraPlugins =
     lib.lz.fromExtraVimPlugins [
-      "direnv-nvim" # not in nixpkgs
+      "direnv-nvim-notashelf" # not in nixpkgs
       "tiny-code-action-nvim" # not in nixpkgs
       "tabby-nvim"
       # "nvim-tabline"
