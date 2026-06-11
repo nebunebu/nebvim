@@ -44,7 +44,7 @@ local lz_plugins = {
 -- require("neb.plugins.px-to-rem")
 --
 -- NOTE: prob should be in ./lua/neb/plugins/lsp/ui/
--- require("neb.plugins.barbecue")
+require("neb.plugins.barbecue")
 require("neb.plugins.line-numbers")
 
 require("neb.lz").setup(lz_plugins)
