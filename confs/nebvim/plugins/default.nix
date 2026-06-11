@@ -34,52 +34,60 @@ let
     # "neotest-busted"
   ];
 
-  # from NixNeovimPlugins
-  extraPlugins = lib.lz.fromExtraVimPlugins [
-    "direnv-nvim" # not in nixpkgs
-    "tiny-code-action-nvim" # not in nixpkgs
-    "tabby-nvim"
-    # "nvim-tabline"
-    # "bufferline-nvim"
-    "Comment-nvim"
-    "markview-nvim"
-    "nvim-lint"
-    "conform-nvim"
+  # barbecue-nvim requires nvim-navic at check time; add it as a dependency
+  barbecuePlugin = pkgs.vimExtraPlugins.barbecue-nvim.overrideAttrs (old: {
+    passthru = (old.passthru or { }) // {
+      dependencies = (old.passthru.dependencies or [ ]) ++ [ pkgs.vimExtraPlugins.nvim-navic ];
+    };
+  });
 
-    "urlview-nvim"
-    "triptych-nvim"
-    "cellular-automaton-nvim"
-    "helpview-nvim"
-    "nvim-dap-ui"
-    "nvim-nio"
-    "grug-far-nvim"
-    "oil-nvim"
-    "rustaceanvim"
-    "nui-nvim"
-    "gitsigns-nvim"
-    "outline-nvim"
-    "fidget-nvim"
-    "nvim-highlight-colors"
-    "rose-pine"
-    "which-key-nvim"
-    "lualine-nvim"
-    "barbecue-nvim"
-    "dressing-nvim"
-    "img-clip-nvim"
-    "indent-blankline-nvim"
-    "marks-nvim"
-    "rainbow-delimiters-nvim"
-    "nvim-autopairs"
-    "nvim-navic"
-    "nvim-surround"
-    "nvim-web-devicons"
-    "one-small-step-for-vimkind"
-    "plenary-nvim"
-    "snacks-nvim"
-    "tiny-devicons-auto-colors-nvim"
-    "tiny-inline-diagnostic-nvim"
-    "todo-comments-nvim"
-  ];
+  # from NixNeovimPlugins
+  extraPlugins =
+    lib.lz.fromExtraVimPlugins [
+      "direnv-nvim" # not in nixpkgs
+      "tiny-code-action-nvim" # not in nixpkgs
+      "tabby-nvim"
+      # "nvim-tabline"
+      # "bufferline-nvim"
+      "Comment-nvim"
+      "markview-nvim"
+      "nvim-lint"
+      "conform-nvim"
+
+      "urlview-nvim"
+      "triptych-nvim"
+      "cellular-automaton-nvim"
+      "helpview-nvim"
+      "nvim-dap-ui"
+      "nvim-nio"
+      "grug-far-nvim"
+      "oil-nvim"
+      "rustaceanvim"
+      "nui-nvim"
+      "gitsigns-nvim"
+      "outline-nvim"
+      "fidget-nvim"
+      "nvim-highlight-colors"
+      "rose-pine"
+      "which-key-nvim"
+      "lualine-nvim"
+      "dressing-nvim"
+      "img-clip-nvim"
+      "indent-blankline-nvim"
+      "marks-nvim"
+      "rainbow-delimiters-nvim"
+      "nvim-autopairs"
+      "nvim-navic"
+      "nvim-surround"
+      "nvim-web-devicons"
+      "one-small-step-for-vimkind"
+      "plenary-nvim"
+      "snacks-nvim"
+      "tiny-devicons-auto-colors-nvim"
+      "tiny-inline-diagnostic-nvim"
+      "todo-comments-nvim"
+    ]
+    ++ [ barbecuePlugin ];
 
   customPlugins = import ./custom.nix { inherit pkgs lib; };
 
