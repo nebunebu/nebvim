@@ -45,8 +45,6 @@ let
   extraPlugins =
     lib.lz.fromExtraVimPlugins [
       "direnv-nvim-notashelf" # not in nixpkgs
-      "tiny-code-action-nvim" # not in nixpkgs
-      "tabby-nvim"
       # "nvim-tabline"
       # "bufferline-nvim"
       "Comment-nvim"
